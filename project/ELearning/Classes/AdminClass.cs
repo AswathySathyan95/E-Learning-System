@@ -62,6 +62,12 @@ namespace ELearning.Classes
         private string user_type;
         private int p_id;
         private int s_id;
+        private string organisation;
+        private string designation;
+        private DateTime from_date;
+        private DateTime to_date;
+        private string duration;
+
         public string User_id
         {
             get
@@ -506,6 +512,72 @@ namespace ELearning.Classes
             }
         }
 
+       
+        public string Designation
+        {
+            get
+            {
+                return designation;
+            }
+
+            set
+            {
+                designation = value;
+            }
+        }
+
+        public DateTime From_date
+        {
+            get
+            {
+                return from_date;
+            }
+
+            set
+            {
+                from_date = value;
+            }
+        }
+
+        public DateTime To_date
+        {
+            get
+            {
+                return to_date;
+            }
+
+            set
+            {
+                to_date = value;
+            }
+        }
+
+        public string Duration
+        {
+            get
+            {
+                return duration;
+            }
+
+            set
+            {
+                duration = value;
+            }
+        }
+
+        public string Organisation
+        {
+            get
+            {
+                return organisation;
+            }
+
+            set
+            {
+                organisation = value;
+            }
+        }
+
         public DataTable AddDistrict()
         {
             OpenConnection();
@@ -526,6 +598,16 @@ namespace ELearning.Classes
             da.Fill(dtABranch);
             CloseConnection();
             return dtABranch;
+        }
+        public DataTable QualificationDetails()
+        {
+            OpenConnection();
+            DataTable dtQual = new DataTable();
+            SqlCommand command = new SqlCommand("Select * from Qualification where User_Id='" + user_id+"' ", con);
+            SqlDataAdapter da = new SqlDataAdapter(command);
+            da.Fill(dtQual);
+            CloseConnection();
+            return dtQual;
         }
         public void InsertDetails()
         {
@@ -595,6 +677,30 @@ namespace ELearning.Classes
             cmd.Parameters.AddWithValue("@scgpa", Cgpa);
             cmd.Parameters.AddWithValue("@spercent", Percent);
             cmd.ExecuteNonQuery();
+            CloseConnection();
+        }
+        public void InsertExperience()
+        {
+            OpenConnection();
+            string qry = "insert into Qualification values('" + user_id + "',@sorganisation,@sdesignation,@sfrom,@sto,@sduration)";
+            SqlCommand cmd = new SqlCommand(qry, con);
+            cmd.Parameters.AddWithValue("@sorganisation", organisation);
+            cmd.Parameters.AddWithValue("@sdesignation", designation);
+            cmd.Parameters.AddWithValue("@sfrom", from_date);
+            cmd.Parameters.AddWithValue("@sto", to_date);
+            cmd.Parameters.AddWithValue("@sduration", duration);
+            cmd.ExecuteNonQuery();
+            CloseConnection();
+        }
+        public DataTable ExperienceDetails()
+        {
+            OpenConnection();
+            DataTable dtExp = new DataTable();
+            SqlCommand command = new SqlCommand("Select * from Experience where User_Id='" + user_id + "' ", con);
+            SqlDataAdapter da = new SqlDataAdapter(command);
+            da.Fill(dtExp);
+            CloseConnection();
+            return dtExp;
         }
     }
 }

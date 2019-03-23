@@ -15,14 +15,14 @@ namespace ELearning.Admin
         AdminClass objAdnReg = new AdminClass();
         protected void Page_Load(object sender, EventArgs e)
         {
-            if(Session["usertype"].ToString() == "Faculty")
+            /*if (Session["utype"].ToString() == "Faculty")
             {
                 PanelExperience.Visible = true;
             }
-            else
+            else if (Session["utype"].ToString() == "Student")
             {
                 PanelExperience.Visible = false;
-            }
+            }*/
         }
 
         protected void Button1_Click(object sender, EventArgs e)
@@ -39,12 +39,7 @@ namespace ELearning.Admin
         {
             lbltest.Visible = false;
             PanelQual.Visible = true;
-            txtCgpa.Text = "";
-            txtCollege.Text = "";
-            txtPercent.Text = "";
-            txtQual.Text = "";
-            txtSep.Text = "";
-            txtUniversity.Text = "";
+           
          }
 
         protected void btnsave_Click(object sender, EventArgs e)
@@ -57,9 +52,63 @@ namespace ELearning.Admin
             objAdnReg.Cgpa = Convert.ToDouble(txtCgpa.Text.ToString());
             objAdnReg.Percent = Convert.ToDouble(txtPercent.Text.ToString());
             objAdnReg.InsertQualification();
-            PanelQual.Visible = false;
+            DataTable dtQual = new DataTable();
+            dtQual = objAdnReg.QualificationDetails();
+            if(dtQual.Rows.Count>0)
+            {
+                gvQual.Visible = true;
+                gvQual.DataSource = dtQual;
+                gvQual.DataBind();
+            }
             lbltest.Visible = true;
             lbltest.Text = "Click Here To Add More Qualification Details.";
+            txtCgpa.Text = "";
+            txtCollege.Text = "";
+            txtPercent.Text = "";
+            txtQual.Text = "";
+            txtSep.Text = "";
+            txtUniversity.Text = "";
+        }
+
+        protected void txtTo_TextChanged(object sender, EventArgs e)
+        {
+            DateTime from = Convert.ToDateTime(txtFrom.Text);
+            DateTime to = Convert.ToDateTime(txtTo.Text);
+            int years = to.Year - from.Year;
+            int month = to.Month - from.Month;
+            txtDuration.Text = ((years*12)+month) +" "+ "Months";
+        }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            objAdnReg.User_id = Session["userid"].ToString();
+            objAdnReg.Organisation = txtOrg.Text.ToString();
+            objAdnReg.Designation = txtDesg.Text.ToString();
+            objAdnReg.From_date =Convert.ToDateTime(txtFrom.Text.ToString());
+            objAdnReg.To_date = Convert.ToDateTime(txtTo.Text.ToString());
+            objAdnReg.Duration = txtDuration.Text.ToString();
+            objAdnReg.InsertExperience();
+            DataTable dtExp = new DataTable();
+            dtExp = objAdnReg.ExperienceDetails();
+            if (dtExp.Rows.Count > 0)
+            {
+                gvExper.Visible = true;
+                gvExper.DataSource = dtExp;
+                gvExper.DataBind();
+            }
+            lblExperience.Visible = true;
+            lblExperience.Text = "Click Here To Add More Details.";
+            txtOrg.Text = "";
+            txtDesg.Text = "";
+            txtFrom.Text = "";
+            txtTo.Text = "";
+            txtDuration.Text = "";
+        }
+
+        protected void btnExper_Click(object sender, EventArgs e)
+        {
+            lblExperience.Visible = false;
+            
         }
     }
 }

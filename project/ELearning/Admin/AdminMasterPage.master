@@ -5,7 +5,7 @@
             <td rowspan="3" style="width: 117px">
                 <asp:Menu ID="Menu1" runat="server">
                     <Items>
-                        <asp:MenuItem NavigateUrl="~/Admin/Registration.aspx" Text="User Registration" Value="User Registration"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/Admin/Reg_Home.aspx" Text="User Registration" Value="User Registration"></asp:MenuItem>
                         <asp:MenuItem Text="View User Details" Value="View User Details"></asp:MenuItem>
                     </Items>
                 </asp:Menu>

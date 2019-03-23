@@ -56,6 +56,7 @@ namespace ELearning.Admin
             objAdn.F_mobno = Convert.ToDouble(txtFMob.Text.ToString());            
             objAdn.InsertDetails();
             Session["userid"] = objAdn.User_id;
+            Session["utype"] = objAdn.User_type;
             Response.Redirect("~/Admin/Reg_Qualification.aspx");
         }
 
@@ -100,8 +101,7 @@ namespace ELearning.Admin
                 string picpath = "~/Photo/" + pname  + ".JPG";
                 imgPhoto.Visible = true;
                 imgPhoto.ImageUrl = picpath;
-                Session["photopath"] = picpath;
-                
+                Session["photopath"] = picpath;                
             }
             else
             {

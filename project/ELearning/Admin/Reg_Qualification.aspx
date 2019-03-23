@@ -38,7 +38,7 @@
     <tr>
         <td style="width: 12px">&nbsp;</td>
         <td colspan="3">
-            <asp:Panel ID="PanelQual" runat="server" Visible="False">
+            <asp:Panel ID="PanelQual" runat="server">
                 <table class="nav-justified">
                     <tr>
                         <td>&nbsp;</td>
@@ -89,6 +89,22 @@
                         </td>
                     </tr>
                     <tr>
+                        <td colspan="6">
+                            <asp:GridView ID="gvQual" runat="server" BackColor="White" BorderColor="#E7E7FF" BorderStyle="None" BorderWidth="1px" CellPadding="3" GridLines="Horizontal" Visible="False" Width="328px">
+                                <AlternatingRowStyle BackColor="#F7F7F7" />
+                                <FooterStyle BackColor="#B5C7DE" ForeColor="#4A3C8C" />
+                                <HeaderStyle BackColor="#4A3C8C" Font-Bold="True" ForeColor="#F7F7F7" />
+                                <PagerStyle BackColor="#E7E7FF" ForeColor="#4A3C8C" HorizontalAlign="Right" />
+                                <RowStyle BackColor="#E7E7FF" ForeColor="#4A3C8C" />
+                                <SelectedRowStyle BackColor="#738A9C" Font-Bold="True" ForeColor="#F7F7F7" />
+                                <SortedAscendingCellStyle BackColor="#F4F4FD" />
+                                <SortedAscendingHeaderStyle BackColor="#5A4C9D" />
+                                <SortedDescendingCellStyle BackColor="#D8D8F0" />
+                                <SortedDescendingHeaderStyle BackColor="#3E3277" />
+                            </asp:GridView>
+                        </td>
+                    </tr>
+                    <tr>
                         <td>&nbsp;</td>
                         <td>&nbsp;</td>
                         <td>&nbsp;</td>
@@ -126,7 +142,7 @@
     <tr>
         <td style="height: 22px; width: 12px;"></td>
         <td class="text-left" colspan="3" rowspan="7">
-            <asp:Panel ID="PanelExperience" runat="server" Visible="False">
+            <asp:Panel ID="PanelExperience" runat="server">
                 <table class="nav-justified">
                     <tr>
                         <td colspan="4" style="height: 22px"><strong>
@@ -141,7 +157,7 @@
                     </tr>
                     <tr>
                         <td>
-                            <asp:Button ID="btnAddExperience" runat="server" OnClick="btnAddQual_Click" Text="Add Qualification" />
+                            <asp:Button ID="btnExper" runat="server" Font-Size="Medium" OnClick="btnExper_Click" Text="Add Experience" />
                             <asp:Label ID="lblExperience" runat="server" ForeColor="Red" Text="Label" Visible="False"></asp:Label>
                         </td>
                         <td>&nbsp;</td>
@@ -149,28 +165,80 @@
                         <td>&nbsp;</td>
                     </tr>
                     <tr>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
+                        <td style="height: 22px"></td>
+                        <td style="height: 22px"></td>
+                        <td style="height: 22px"></td>
+                        <td style="height: 22px"></td>
                     </tr>
                     <tr>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                    </tr>
-                    <tr>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                    </tr>
-                    <tr>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
+                        <td colspan="4">
+                            <table class="nav-justified">
+                                <tr>
+                                    <td>
+                                        <asp:Label ID="Label59" runat="server" style="font-weight: 700" Text="Organization Worked"></asp:Label>
+                                    </td>
+                                    <td>
+                                        <asp:Label ID="Label60" runat="server" style="font-weight: 700" Text="Designation"></asp:Label>
+                                    </td>
+                                    <td>
+                                        <asp:Label ID="Label61" runat="server" style="font-weight: 700" Text="From"></asp:Label>
+                                    </td>
+                                    <td>
+                                        <asp:Label ID="Label62" runat="server" style="font-weight: 700" Text="To"></asp:Label>
+                                    </td>
+                                    <td>
+                                        <asp:Label ID="Label63" runat="server" style="font-weight: 700" Text="Duration"></asp:Label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <asp:TextBox ID="txtOrg" runat="server"></asp:TextBox>
+                                    </td>
+                                    <td>
+                                        <asp:TextBox ID="txtDesg" runat="server"></asp:TextBox>
+                                    </td>
+                                    <td>
+                                        <asp:TextBox ID="txtFrom" runat="server" TextMode="Date"></asp:TextBox>
+                                    </td>
+                                    <td>
+                                        <asp:TextBox ID="txtTo" runat="server" AutoPostBack="True" OnTextChanged="txtTo_TextChanged" TextMode="Date"></asp:TextBox>
+                                    </td>
+                                    <td>
+                                        <asp:TextBox ID="txtDuration" runat="server"></asp:TextBox>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="5">
+                                        <asp:GridView ID="gvExper" runat="server" BackColor="White" BorderColor="#E7E7FF" BorderStyle="None" BorderWidth="1px" CellPadding="3" GridLines="Horizontal" Visible="False">
+                                            <AlternatingRowStyle BackColor="#F7F7F7" />
+                                            <FooterStyle BackColor="#B5C7DE" ForeColor="#4A3C8C" />
+                                            <HeaderStyle BackColor="#4A3C8C" Font-Bold="True" ForeColor="#F7F7F7" />
+                                            <PagerStyle BackColor="#E7E7FF" ForeColor="#4A3C8C" HorizontalAlign="Right" />
+                                            <RowStyle BackColor="#E7E7FF" ForeColor="#4A3C8C" />
+                                            <SelectedRowStyle BackColor="#738A9C" Font-Bold="True" ForeColor="#F7F7F7" />
+                                            <SortedAscendingCellStyle BackColor="#F4F4FD" />
+                                            <SortedAscendingHeaderStyle BackColor="#5A4C9D" />
+                                            <SortedDescendingCellStyle BackColor="#D8D8F0" />
+                                            <SortedDescendingHeaderStyle BackColor="#3E3277" />
+                                        </asp:GridView>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>&nbsp;</td>
+                                    <td colspan="3" style="text-align: center">
+                                        <asp:Button ID="btnExpSave" runat="server" OnClick="Button2_Click" Text="Save Details" />
+                                    </td>
+                                    <td>&nbsp;</td>
+                                </tr>
+                            </table>
+                        </td>
                     </tr>
                     <tr>
                         <td>&nbsp;</td>
