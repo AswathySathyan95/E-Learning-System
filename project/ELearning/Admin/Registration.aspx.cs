@@ -31,8 +31,10 @@ namespace ELearning.Admin
             objAdn.User_type = Session["usertype"].ToString();
             string lastmob = txtMobNo.Text.ToString();
             lastmob = lastmob.Substring(lastmob.Length - 4);
-            objAdn.Username = txtFName.Text.ToString() + lastmob;
-            objAdn.Password = txtFName.Text.ToString() + lastmob;
+            Session["username"]= txtFName.Text.ToString() + lastmob;
+            Session["password"] = txtFName.Text.ToString() + lastmob;
+            // objAdn.Username = txtFName.Text.ToString() + lastmob;
+            //  objAdn.Password = txtFName.Text.ToString() + lastmob;
             objAdn.Name = txtFName.Text.ToString() + " " + txtMName.Text.ToString() + " " + txtLName.Text.ToString();
             objAdn.Mob_no = Convert.ToDouble(txtMobNo.Text);
             objAdn.Dob = Convert.ToDateTime(txtDob.Text.ToString());

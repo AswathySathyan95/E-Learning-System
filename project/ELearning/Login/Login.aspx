@@ -49,7 +49,7 @@
                     </tr>
                     <tr>
                         <td style="text-align: center">
-                            <asp:Button ID="btnlogin" runat="server" Text="Login" />
+                            <asp:Button ID="btnlogin" runat="server" Text="Login" OnClick="btnlogin_Click" />
                         </td>
                     </tr>
                     <tr>

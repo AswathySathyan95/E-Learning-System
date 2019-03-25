@@ -70,22 +70,22 @@
                     </tr>
                     <tr>
                         <td>
-                            <asp:TextBox ID="txtQual" runat="server"></asp:TextBox>
+                            <asp:TextBox ID="txtQual" runat="server" Visible="False" Width="128px"></asp:TextBox>
                         </td>
                         <td>
-                            <asp:TextBox ID="txtSep" runat="server"></asp:TextBox>
+                            <asp:TextBox ID="txtSep" runat="server" Visible="False"></asp:TextBox>
                         </td>
                         <td>
-                            <asp:TextBox ID="txtCollege" runat="server" OnTextChanged="txtC_pg_TextChanged"></asp:TextBox>
+                            <asp:TextBox ID="txtCollege" runat="server" OnTextChanged="txtC_pg_TextChanged" Visible="False"></asp:TextBox>
                         </td>
                         <td>
-                            <asp:TextBox ID="txtUniversity" runat="server"></asp:TextBox>
+                            <asp:TextBox ID="txtUniversity" runat="server" Visible="False"></asp:TextBox>
                         </td>
                         <td>
-                            <asp:TextBox ID="txtCgpa" runat="server"></asp:TextBox>
+                            <asp:TextBox ID="txtCgpa" runat="server" Visible="False"></asp:TextBox>
                         </td>
                         <td>
-                            <asp:TextBox ID="txtPercent" runat="server"></asp:TextBox>
+                            <asp:TextBox ID="txtPercent" runat="server" Visible="False"></asp:TextBox>
                         </td>
                     </tr>
                     <tr>
@@ -142,7 +142,7 @@
     <tr>
         <td style="height: 22px; width: 12px;"></td>
         <td class="text-left" colspan="3" rowspan="7">
-            <asp:Panel ID="PanelExperience" runat="server">
+            <asp:Panel ID="PanelExperience" runat="server" Visible="False">
                 <table class="nav-justified">
                     <tr>
                         <td colspan="4" style="height: 22px"><strong>
@@ -192,19 +192,26 @@
                                 </tr>
                                 <tr>
                                     <td>
-                                        <asp:TextBox ID="txtOrg" runat="server"></asp:TextBox>
+                                        <asp:TextBox ID="txtOrg" runat="server" Visible="False"></asp:TextBox>
                                     </td>
                                     <td>
-                                        <asp:TextBox ID="txtDesg" runat="server"></asp:TextBox>
+                                        <asp:TextBox ID="txtDesg" runat="server" Visible="False"></asp:TextBox>
                                     </td>
                                     <td>
-                                        <asp:TextBox ID="txtFrom" runat="server" TextMode="Date"></asp:TextBox>
+                                        <asp:TextBox ID="txtFrom" runat="server" TextMode="Date" Visible="False"></asp:TextBox>
                                     </td>
                                     <td>
-                                        <asp:TextBox ID="txtTo" runat="server" AutoPostBack="True" OnTextChanged="txtTo_TextChanged" TextMode="Date"></asp:TextBox>
+                                        <asp:TextBox ID="txtTo" runat="server" AutoPostBack="True" OnTextChanged="txtTo_TextChanged" TextMode="Date" Visible="False"></asp:TextBox>
                                     </td>
                                     <td>
-                                        <asp:TextBox ID="txtDuration" runat="server"></asp:TextBox>
+                                        <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                                            <ContentTemplate>
+                                                <asp:TextBox ID="txtDuration" runat="server" Visible="False"></asp:TextBox>
+                                            </ContentTemplate>
+                                            <Triggers>
+                                                <asp:AsyncPostBackTrigger ControlID="txtDuration" EventName="TextChanged" />
+                                            </Triggers>
+                                        </asp:UpdatePanel>
                                     </td>
                                 </tr>
                                 <tr>
@@ -290,7 +297,7 @@
     <tr>
         <td style="width: 12px">&nbsp;</td>
         <td class="text-center">
-            <asp:Button ID="Button1" runat="server" Text="Submit" OnClick="Button1_Click" />
+            <asp:Button ID="btnSubmitall" runat="server" Text="Submit" OnClick="Button1_Click" />
         </td>
         <td>&nbsp;</td>
         <td>&nbsp;</td>

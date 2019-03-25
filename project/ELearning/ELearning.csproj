@@ -211,6 +211,7 @@
     <Content Include="DesignImage\login.jpg" />
     <Content Include="DesignImage\logo.jpg" />
     <Content Include="DesignImage\student-reg.jpg" />
+    <Content Include="Faculty\Faculty_Home.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
@@ -220,6 +221,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Admin\AdminMasterPage.master" />
+    <Content Include="Faculty\FacultyMasterPage.master" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Login\Login.aspx" />
     <Content Include="Scripts\ai.0.22.9-build00167.js" />
@@ -257,6 +259,7 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Site.Master" />
+    <Content Include="Student\Student_Home.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
@@ -264,6 +267,7 @@
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Site.Mobile.Master" />
+    <Content Include="Student\StudentMasterPage.master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -417,6 +421,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Classes\AdminClass.cs" />
+    <Compile Include="Classes\LoginClass.cs" />
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -430,6 +435,20 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Faculty\FacultyMasterPage.master.cs">
+      <DependentUpon>FacultyMasterPage.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Faculty\FacultyMasterPage.master.designer.cs">
+      <DependentUpon>FacultyMasterPage.master</DependentUpon>
+    </Compile>
+    <Compile Include="Faculty\Faculty_Home.aspx.cs">
+      <DependentUpon>Faculty_Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Faculty\Faculty_Home.aspx.designer.cs">
+      <DependentUpon>Faculty_Home.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -458,6 +477,20 @@
       <DependentUpon>Site.Mobile.Master</DependentUpon>
     </Compile>
     <Compile Include="Startup.cs" />
+    <Compile Include="Student\StudentMasterPage.master.cs">
+      <DependentUpon>StudentMasterPage.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Student\StudentMasterPage.master.designer.cs">
+      <DependentUpon>StudentMasterPage.master</DependentUpon>
+    </Compile>
+    <Compile Include="Student\Student_Home.aspx.cs">
+      <DependentUpon>Student_Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Student\Student_Home.aspx.designer.cs">
+      <DependentUpon>Student_Home.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -468,9 +501,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Faculty\" />
     <Folder Include="Photo\" />
-    <Folder Include="Student\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

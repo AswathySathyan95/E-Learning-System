@@ -301,6 +301,15 @@ namespace ELearning.Admin {
         protected global::System.Web.UI.WebControls.TextBox txtTo;
         
         /// <summary>
+        /// UpdatePanel1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.UpdatePanel UpdatePanel1;
+        
+        /// <summary>
         /// txtDuration control.
         /// </summary>
         /// <remarks>
@@ -328,12 +337,12 @@ namespace ELearning.Admin {
         protected global::System.Web.UI.WebControls.Button btnExpSave;
         
         /// <summary>
-        /// Button1 control.
+        /// btnSubmitall control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
+        protected global::System.Web.UI.WebControls.Button btnSubmitall;
     }
 }

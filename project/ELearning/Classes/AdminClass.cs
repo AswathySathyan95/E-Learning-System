@@ -634,7 +634,7 @@ namespace ELearning.Classes
             }
 
             //       string qry = "insert into User_Details values('"+user_id+ "','"+user_type+"','"+name+"','"+gender+"','"+mob_no+"','"+dob+"','"+email+"','"+religion+"','"+category+"','"+nationality+"','"+blood_group+"','"+photo+"','"+address+"','"+district+"','"+state+"','"+pincode+"','"+f_name+"','"+occupation+"','"+f_mobno+"','"+doa+"','"+program+"','"+branch+"','"+dept+"','"+admission_no+"','"+username+"','"+password+"')";
-            string qry = "insert into User_Details values('" + user_id + "',@utype,@sname,@sgender,@smobno,@sdob,@semail,@sreligion,@scategory,@snationality,@sblood,@sphoto,@saddress,@sdistrict,@sstate,@spincode,@sfname,@soccupation,@sfmobno,@sdoa,@sprogram,@sbranch,@sdept,@sadmsnno,@susername,@spassword)";
+            string qry = "insert into User_Details(User_Id,User_Type,Name,Gender,Mobile_No,Dob,Email_Id,Religion,Category,Nationality,Blood_Group,Photo,Address,District,State,Pincode,Father_Name,Occupation,F_Mob_No,Joining_Date,Admitted_Program,Branch,Department,Admission_No) values('" + user_id + "',@utype,@sname,@sgender,@smobno,@sdob,@semail,@sreligion,@scategory,@snationality,@sblood,@sphoto,@saddress,@sdistrict,@sstate,@spincode,@sfname,@soccupation,@sfmobno,@sdoa,@sprogram,@sbranch,@sdept,@sadmsnno)";
             SqlCommand cmd = new SqlCommand(qry, con);
             cmd.Parameters.AddWithValue("@sname", name);
             cmd.Parameters.AddWithValue("@sgender", gender);
@@ -658,9 +658,7 @@ namespace ELearning.Classes
             cmd.Parameters.AddWithValue("@soccupation",occupation);
             cmd.Parameters.AddWithValue("@sfmobno",f_mobno);
             cmd.Parameters.AddWithValue("@sphoto", photo);
-            cmd.Parameters.AddWithValue("@utype", user_type);
-            cmd.Parameters.AddWithValue("@susername", username);
-            cmd.Parameters.AddWithValue("@spassword", password);
+            cmd.Parameters.AddWithValue("@utype", user_type);            
             cmd.ExecuteNonQuery();
             //ExecuteQueries(qry);
             CloseConnection();
@@ -682,13 +680,24 @@ namespace ELearning.Classes
         public void InsertExperience()
         {
             OpenConnection();
-            string qry = "insert into Qualification values('" + user_id + "',@sorganisation,@sdesignation,@sfrom,@sto,@sduration)";
-            SqlCommand cmd = new SqlCommand(qry, con);
+            string qry = "insert into Experience values('"+user_id+"',@sorganisation,@sdesignation,@sfrom,@sto,@sduration)";
+            SqlCommand cmd = new SqlCommand(qry, con);      
             cmd.Parameters.AddWithValue("@sorganisation", organisation);
             cmd.Parameters.AddWithValue("@sdesignation", designation);
             cmd.Parameters.AddWithValue("@sfrom", from_date);
             cmd.Parameters.AddWithValue("@sto", to_date);
             cmd.Parameters.AddWithValue("@sduration", duration);
+            cmd.ExecuteNonQuery();
+            CloseConnection();
+        }
+        public void UpdateRegistration()
+        {
+            OpenConnection();
+            string qry = "update User_Details set Username=@susername,Password=@spassword where User_Id=@suserid";
+            SqlCommand cmd = new SqlCommand(qry, con);
+            cmd.Parameters.AddWithValue("@suserid", user_id);
+            cmd.Parameters.AddWithValue("@susername", username);
+            cmd.Parameters.AddWithValue("@spassword", password);
             cmd.ExecuteNonQuery();
             CloseConnection();
         }
