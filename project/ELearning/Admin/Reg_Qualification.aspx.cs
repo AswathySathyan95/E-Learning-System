@@ -15,7 +15,7 @@ namespace ELearning.Admin
         AdminClass objAdnReg = new AdminClass();
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["usertype"].ToString() == "Faculty")
+            if (Session["usertype"].ToString() == "Faculty" || Session["usertype"].ToString() == "Admin")
             {
                 PanelExperience.Visible = true;
             }
@@ -31,7 +31,8 @@ namespace ELearning.Admin
             objAdnReg.Username = Session["username"].ToString();
             objAdnReg.Password = Session["password"].ToString();
             objAdnReg.UpdateRegistration();
-            Response.Write("Registration Has Been Successfully Completed.");
+            Response.Write("<script LANGUAGE='JavaScript' >alert('Registration Has Been Successfully Completed.')</script>");
+            Response.Redirect("Reg_Home.aspx");
         }
 
         protected void txtC_pg_TextChanged(object sender, EventArgs e)

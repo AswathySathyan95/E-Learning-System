@@ -2,19 +2,54 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <table class="nav-justified">
         <tr>
-            <td style="background-color: #99CCFF">&nbsp;</td>
+            <td style="background-color: #99CCFF; width: 243px;" rowspan="3">
+                <table class="nav-justified">
+                    <tr>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center">
+                            <asp:HyperLink ID="HyperLink1" runat="server" Font-Bold="True" ForeColor="Black" NavigateUrl="~/Student/Stud_Profile.aspx">View Profile</asp:HyperLink>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-center">
+                            <asp:HyperLink ID="HyperLink2" runat="server" Font-Bold="True" ForeColor="Black" NavigateUrl="~/Student/View_Documents.aspx">View Documents</asp:HyperLink>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                    </tr>
+                </table>
+            </td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
         </tr>
         <tr>
-            <td style="background-color: #99CCFF">&nbsp;</td>
-            <td colspan="2">
+            <td colspan="2" style="height: 21px">
                 <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                 </asp:ContentPlaceHolder>
             </td>
         </tr>
         <tr>
-            <td style="background-color: #99CCFF">&nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
         </tr>

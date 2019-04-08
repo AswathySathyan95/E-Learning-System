@@ -198,6 +198,7 @@
     <Content Include="Account\ResetPasswordConfirmation.aspx" />
     <Content Include="Account\TwoFactorAuthenticationSignIn.aspx" />
     <Content Include="Account\VerifyPhoneNumber.aspx" />
+    <Content Include="Admin\Admin_Home.aspx" />
     <Content Include="Admin\Registration.aspx" />
     <Content Include="Admin\Reg_Home.aspx" />
     <Content Include="Admin\Reg_Qualification.aspx" />
@@ -205,6 +206,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
+    <Content Include="DesignImage\adminreg.png" />
     <Content Include="DesignImage\E-Learning.jpg" />
     <Content Include="DesignImage\facultyReg.jpg" />
     <Content Include="DesignImage\keyboard.png" />
@@ -260,6 +262,8 @@
     <Content Include="Global.asax" />
     <Content Include="Site.Master" />
     <Content Include="Student\Student_Home.aspx" />
+    <Content Include="Student\Stud_Profile.aspx" />
+    <Content Include="Student\View_Documents.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
@@ -388,6 +392,13 @@
     <Compile Include="Admin\AdminMasterPage.master.designer.cs">
       <DependentUpon>AdminMasterPage.master</DependentUpon>
     </Compile>
+    <Compile Include="Admin\Admin_Home.aspx.cs">
+      <DependentUpon>Admin_Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Admin_Home.aspx.designer.cs">
+      <DependentUpon>Admin_Home.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admin\Registration.aspx.cs">
       <DependentUpon>Registration.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -422,6 +433,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Classes\AdminClass.cs" />
     <Compile Include="Classes\LoginClass.cs" />
+    <Compile Include="Classes\StudentClass.cs" />
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -490,6 +502,20 @@
     </Compile>
     <Compile Include="Student\Student_Home.aspx.designer.cs">
       <DependentUpon>Student_Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Student\Stud_Profile.aspx.cs">
+      <DependentUpon>Stud_Profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Student\Stud_Profile.aspx.designer.cs">
+      <DependentUpon>Stud_Profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Student\View_Documents.aspx.cs">
+      <DependentUpon>View_Documents.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Student\View_Documents.aspx.designer.cs">
+      <DependentUpon>View_Documents.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>

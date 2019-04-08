@@ -628,9 +628,13 @@ namespace ELearning.Classes
             {
                 user_id = "Fclty" + Convert.ToString(count);
             }
-            else
+            else if(user_type == "Student")
             {
                 user_id = "Stud" + Convert.ToString(count);
+            }
+            else if (user_type == "Admin")
+            {
+                user_id = "Admin" + Convert.ToString(count);
             }
 
             //       string qry = "insert into User_Details values('"+user_id+ "','"+user_type+"','"+name+"','"+gender+"','"+mob_no+"','"+dob+"','"+email+"','"+religion+"','"+category+"','"+nationality+"','"+blood_group+"','"+photo+"','"+address+"','"+district+"','"+state+"','"+pincode+"','"+f_name+"','"+occupation+"','"+f_mobno+"','"+doa+"','"+program+"','"+branch+"','"+dept+"','"+admission_no+"','"+username+"','"+password+"')";

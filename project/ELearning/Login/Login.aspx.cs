@@ -20,27 +20,36 @@ namespace ELearning.Login
 
         protected void btnlogin_Click(object sender, EventArgs e)
         {
+        }   
+        protected void btnlogin_Click1(object sender, EventArgs e)
+        {
             objlgn.Username = txtUsername.Text.ToString();
             objlgn.Password = txtPassword.Text.ToString();
             DataTable dtLogin = new DataTable();
             dtLogin = objlgn.LoginDetails();
-            if(dtLogin.Rows.Count>0)
+            if (dtLogin.Rows.Count > 0)
             {
                 objlgn.User_id = dtLogin.Rows[0]["User_Id"].ToString();
-                objlgn.User_type= dtLogin.Rows[0]["User_Type"].ToString();
+                objlgn.User_type = dtLogin.Rows[0]["User_Type"].ToString();
+                Session["u_id"] = objlgn.User_id;
             }
             else
             {
                 Response.Write("<script LANGUAGE='JavaScript' >alert('Incorrect Username or Password')</script>");
             }
-            if(objlgn.User_type=="Faculty")
+            if (objlgn.User_type == "Faculty")
             {
-                Response.Redirect("Faculty_Home.aspx");
+                Response.Redirect("~/Faculty/Faculty_Home.aspx");
             }
-            else if(objlgn.User_type=="Student")
+            else if (objlgn.User_type == "Student")
             {
-                Response.Redirect("Student_Home.aspx");
+                Response.Redirect("~/Student/Student_Home.aspx");
+            }
+            else if (objlgn.User_type == "Admin")
+            {
+                Response.Redirect("~/Admin/Admin_Home.aspx");
             }
         }
+
     }
 }

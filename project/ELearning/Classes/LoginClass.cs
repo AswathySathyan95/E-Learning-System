@@ -80,12 +80,12 @@ namespace ELearning.Classes
         {
               OpenConnection();
               DataTable dtLogin = new DataTable();
-              SqlCommand command = new SqlCommand("Select User_Id,User_Type from User_Details where Username=@uname and Password= @pswd", con);
-              SqlDataAdapter da = new SqlDataAdapter(command);
-              command.Parameters.AddWithValue("@uname", username);
+              SqlCommand command = new SqlCommand("Select User_Id,User_Type from User_Details where Username='"+username+"' and Password= '"+password+"'", con);
+             /* command.Parameters.AddWithValue("@uname", username);
               command.Parameters.AddWithValue("@utype", user_type);
               command.Parameters.AddWithValue("@pswd", password);
-              command.Parameters.AddWithValue("@uid", user_id);
+              command.Parameters.AddWithValue("@uid", user_id);*/
+              SqlDataAdapter da = new SqlDataAdapter(command);             
               da.Fill(dtLogin);
               CloseConnection();
               return dtLogin;

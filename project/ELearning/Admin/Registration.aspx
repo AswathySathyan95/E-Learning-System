@@ -3,12 +3,25 @@
      <table class="nav-justified">
         <tr>
             <td style="width: 1%; height: 15px;"></td>
-            <td style="width: 20%; height: 15px;"></td>
-            <td style="width: 28%; height: 15px;"></td>
-            <td style="width: 16%; height: 15px;"></td>
-            <td style="width: 30%; height: 15px;"></td>
-            <td colspan="2" rowspan="2">&nbsp;</td>
+            <td style="height: 15px; color: #FF0000;" colspan="4"><strong>All Fields marked with * are Mandatory</strong></td>
+            <td colspan="2" rowspan="4">&nbsp;</td>
             <td style="width: 1%; height: 15px;"></td>
+        </tr>
+        <tr>
+            <td style="width: 1%; height: 15px;">&nbsp;</td>
+            <td style="width: 20%; height: 15px;">&nbsp;</td>
+            <td style="width: 28%; height: 15px;">&nbsp;</td>
+            <td style="width: 16%; height: 15px;">&nbsp;</td>
+            <td style="width: 30%; height: 15px;">&nbsp;</td>
+            <td style="width: 1%; height: 15px;">&nbsp;</td>
+        </tr>
+        <tr>
+            <td style="width: 1%; height: 15px;">&nbsp;</td>
+            <td style="width: 20%; height: 15px;">&nbsp;</td>
+            <td style="width: 28%; height: 15px;">&nbsp;</td>
+            <td style="width: 16%; height: 15px;">&nbsp;</td>
+            <td style="width: 30%; height: 15px;">&nbsp;</td>
+            <td style="width: 1%; height: 15px;">&nbsp;</td>
         </tr>
         <tr>
             <td style="width: 1%">&nbsp;</td>
@@ -439,7 +452,7 @@
                 <asp:Button ID="btnRegister" runat="server" Text="Save and Continue" Width="141px" OnClick="btnRegister_Click" />
             </td>
             <td style="height: 22px; width: 16%" class="text-center">
-                <asp:Button ID="Button1" runat="server" Text="Clear" />
+                <asp:Button ID="Button1" runat="server" Text="Clear" OnClick="Button1_Click" />
             </td>
             <td style="height: 22px; width: 30%"></td>
             <td style="width: 10px; height: 22px;"></td>

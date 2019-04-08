@@ -110,5 +110,10 @@ namespace ELearning.Admin
                 Response.Write("Please Select An Image File....");
             }
         }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Admin/Registration.aspx");
+        }
     }
 }

@@ -28,5 +28,12 @@ namespace ELearning.Admin
             Session["usertype"] = "Student";
             Response.Redirect("~/Admin/Registration.aspx");            
         }
+
+        protected void ibtnadminReg_Click(object sender, ImageClickEventArgs e)
+        {
+
+            Session["usertype"] = "Admin";
+            Response.Redirect("~/Admin/Registration.aspx");
+        }
     }
 }

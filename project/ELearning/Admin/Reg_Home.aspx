@@ -63,7 +63,9 @@
         </tr>
         <tr>
             <td style="width: 315px">&nbsp;</td>
-            <td>&nbsp;</td>
+            <td>
+                <asp:ImageButton ID="ibtnadminReg" runat="server" Height="80px" ImageUrl="~/DesignImage/adminreg.png" OnClick="ibtnadminReg_Click" Width="301px" />
+            </td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
