@@ -2,27 +2,26 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <table class="nav-justified">
         <tr>
-            <td style="width: 160px; background-color: #99CCFF">
-                <asp:HyperLink ID="HyperLink1" runat="server">Upload Documents</asp:HyperLink>
+            <td style="width: 160px; background-color: #FFFFFF" rowspan="2">
+                <asp:Menu ID="Menu1" runat="server" StaticSubMenuIndent="16px">
+                    <Items>
+                        <asp:MenuItem Text="Upload Documents" Value="Upload Documents">
+                            <asp:MenuItem NavigateUrl="~/Faculty/Upload_Videos.aspx" Text="Video Tutorials" Value="Video Tutorials"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Faculty/Upload_Notes.aspx" Text="Notes" Value="Notes"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Faculty/Upload_Reports.aspx" Text="Assignments/Seminar Reports" Value="Assignments/Seminar Reports"></asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Student Details" Value="Student Details"></asp:MenuItem>
+                        <asp:MenuItem Text="Quiz Report" Value="Quiz Report"></asp:MenuItem>
+                        <asp:MenuItem Text="View Queries" Value="View Queries"></asp:MenuItem>
+                    </Items>
+                </asp:Menu>
             </td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
         </tr>
         <tr>
-            <td style="width: 160px; background-color: #99CCFF">&nbsp;</td>
-            <td colspan="4">
+            <td>
                 <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                 </asp:ContentPlaceHolder>
             </td>
         </tr>
-        <tr>
-            <td style="width: 160px; background-color: #99CCFF">&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-        </tr>
-    </table>
+        </table>
 </asp:Content>

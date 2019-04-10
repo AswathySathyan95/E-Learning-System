@@ -214,6 +214,9 @@
     <Content Include="DesignImage\logo.jpg" />
     <Content Include="DesignImage\student-reg.jpg" />
     <Content Include="Faculty\Faculty_Home.aspx" />
+    <Content Include="Faculty\Upload_Notes.aspx" />
+    <Content Include="Faculty\Upload_Reports.aspx" />
+    <Content Include="Faculty\Upload_Videos.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
@@ -432,6 +435,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Classes\AdminClass.cs" />
+    <Compile Include="Classes\FacultyClass.cs" />
     <Compile Include="Classes\LoginClass.cs" />
     <Compile Include="Classes\StudentClass.cs" />
     <Compile Include="Contact.aspx.cs">
@@ -461,6 +465,27 @@
     </Compile>
     <Compile Include="Faculty\Faculty_Home.aspx.designer.cs">
       <DependentUpon>Faculty_Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Faculty\Upload_Notes.aspx.cs">
+      <DependentUpon>Upload_Notes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Faculty\Upload_Notes.aspx.designer.cs">
+      <DependentUpon>Upload_Notes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Faculty\Upload_Reports.aspx.cs">
+      <DependentUpon>Upload_Reports.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Faculty\Upload_Reports.aspx.designer.cs">
+      <DependentUpon>Upload_Reports.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Faculty\Upload_Videos.aspx.cs">
+      <DependentUpon>Upload_Videos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Faculty\Upload_Videos.aspx.designer.cs">
+      <DependentUpon>Upload_Videos.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -527,6 +552,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Documents\" />
     <Folder Include="Photo\" />
   </ItemGroup>
   <PropertyGroup>
