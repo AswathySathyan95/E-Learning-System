@@ -38,8 +38,8 @@
     <tr>
         <td style="width: 12px">&nbsp;</td>
         <td colspan="3">
-            <asp:Panel ID="PanelQual" runat="server">
-                <table class="nav-justified">
+            <asp:Panel ID="PanelQual" runat="server" Width="780px">
+                <table class="nav-justified" style="width: 101%">
                     <tr>
                         <td>&nbsp;</td>
                         <td>&nbsp;</td>
@@ -90,7 +90,7 @@
                     </tr>
                     <tr>
                         <td colspan="6">
-                            <asp:GridView ID="gvQual" runat="server" BackColor="White" BorderColor="#E7E7FF" BorderStyle="None" BorderWidth="1px" CellPadding="3" GridLines="Horizontal" Visible="False" Width="328px">
+                            <asp:GridView ID="gvQual" runat="server" BackColor="White" BorderColor="#E7E7FF" BorderStyle="None" BorderWidth="1px" CellPadding="3" GridLines="Horizontal" Visible="False" Width="484px">
                                 <AlternatingRowStyle BackColor="#F7F7F7" />
                                 <FooterStyle BackColor="#B5C7DE" ForeColor="#4A3C8C" />
                                 <HeaderStyle BackColor="#4A3C8C" Font-Bold="True" ForeColor="#F7F7F7" />

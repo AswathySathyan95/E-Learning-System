@@ -8,7 +8,7 @@
                         <td>&nbsp;</td>
                     </tr>
                     <tr>
-                        <td class="text-center">
+                        <td class="text-center" style="height: 23px">
                             <asp:HyperLink ID="HyperLink1" runat="server" Font-Bold="True" ForeColor="Black" NavigateUrl="~/Student/Stud_Profile.aspx">View Profile</asp:HyperLink>
                         </td>
                     </tr>
@@ -18,7 +18,9 @@
                         </td>
                     </tr>
                     <tr>
-                        <td>&nbsp;</td>
+                        <td class="text-center"><strong>
+                            <asp:HyperLink ID="HyperLink3" runat="server" ForeColor="Black" NavigateUrl="~/Login/Change_Password.aspx">Change Password</asp:HyperLink>
+                            </strong></td>
                     </tr>
                     <tr>
                         <td>&nbsp;</td>

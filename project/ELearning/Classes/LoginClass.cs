@@ -24,7 +24,11 @@ namespace ELearning.Classes
         private string password;
         private string user_id;
         private string user_type;
-
+        private string cuser;
+        private string pswd;
+        private string newpswd;
+        private string cnewpswd;
+        private string cusertype;
         public string Username
         {
             get
@@ -76,6 +80,72 @@ namespace ELearning.Classes
                 user_type = value;
             }
         }
+
+        public string Cuser
+        {
+            get
+            {
+                return cuser;
+            }
+
+            set
+            {
+                cuser = value;
+            }
+        }
+
+        public string Pswd
+        {
+            get
+            {
+                return pswd;
+            }
+
+            set
+            {
+                pswd = value;
+            }
+        }
+
+        public string Newpswd
+        {
+            get
+            {
+                return newpswd;
+            }
+
+            set
+            {
+                newpswd = value;
+            }
+        }
+
+        public string Cnewpswd
+        {
+            get
+            {
+                return cnewpswd;
+            }
+
+            set
+            {
+                cnewpswd = value;
+            }
+        }
+
+        public string Cusertype
+        {
+            get
+            {
+                return cusertype;
+            }
+
+            set
+            {
+                cusertype = value;
+            }
+        }
+
         public DataTable LoginDetails()
         {
               OpenConnection();
@@ -89,6 +159,17 @@ namespace ELearning.Classes
               da.Fill(dtLogin);
               CloseConnection();
               return dtLogin;
+        }
+        public void ChangePassword()
+        {
+            OpenConnection();
+            string qry = "update User_Details set Password=@spassword where User_Id=@suserid and User_Type=@usertype";
+            SqlCommand cmd = new SqlCommand(qry, con);
+            cmd.Parameters.AddWithValue("@suserid", cuser);
+            cmd.Parameters.AddWithValue("@spassword", newpswd);
+            cmd.Parameters.AddWithValue("@usertype", cusertype);
+            cmd.ExecuteNonQuery();
+            CloseConnection();
         }
     }
     

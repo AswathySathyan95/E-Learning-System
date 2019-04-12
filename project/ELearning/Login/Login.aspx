@@ -45,7 +45,7 @@
                                     <asp:TextBox ID="txtPassword" runat="server" TextMode="Password"></asp:TextBox>
                             <br />
                             <strong>
-                            <asp:HyperLink ID="HyperLink1" runat="server" ForeColor="Blue">Forgot Password?</asp:HyperLink>
+                            <asp:HyperLink ID="HyperLink1" runat="server" ForeColor="Blue" NavigateUrl="~/Login/Forgot_Password.aspx">Forgot Password?</asp:HyperLink>
                             </strong></td>
                     </tr>
                     <tr>

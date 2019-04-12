@@ -13,6 +13,7 @@
                         <asp:MenuItem Text="Student Details" Value="Student Details"></asp:MenuItem>
                         <asp:MenuItem Text="Quiz Report" Value="Quiz Report"></asp:MenuItem>
                         <asp:MenuItem Text="View Queries" Value="View Queries"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/Login/Change_Password.aspx" Text="Change Password" Value="Change Password"></asp:MenuItem>
                     </Items>
                 </asp:Menu>
             </td>

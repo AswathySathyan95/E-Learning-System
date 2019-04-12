@@ -32,6 +32,7 @@ namespace ELearning.Login
                 objlgn.User_id = dtLogin.Rows[0]["User_Id"].ToString();
                 objlgn.User_type = dtLogin.Rows[0]["User_Type"].ToString();
                 Session["u_id"] = objlgn.User_id;
+                Session["u_type"] = objlgn.User_type;
             }
             else
             {
