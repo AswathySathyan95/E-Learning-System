@@ -10,7 +10,7 @@
 namespace ELearning.Login {
     
     
-    public partial class Login {
+    public partial class Loginaspx {
         
         /// <summary>
         /// Image1 control.
@@ -22,6 +22,15 @@ namespace ELearning.Login {
         protected global::System.Web.UI.WebControls.Image Image1;
         
         /// <summary>
+        /// form2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlForm form2;
+        
+        /// <summary>
         /// Label1 control.
         /// </summary>
         /// <remarks>
@@ -31,13 +40,13 @@ namespace ELearning.Login {
         protected global::System.Web.UI.WebControls.Label Label1;
         
         /// <summary>
-        /// txtUsername control.
+        /// TxtUsername control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtUsername;
+        protected global::System.Web.UI.WebControls.TextBox TxtUsername;
         
         /// <summary>
         /// Label2 control.
@@ -49,13 +58,13 @@ namespace ELearning.Login {
         protected global::System.Web.UI.WebControls.Label Label2;
         
         /// <summary>
-        /// txtPassword control.
+        /// TxtPassword control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPassword;
+        protected global::System.Web.UI.WebControls.TextBox TxtPassword;
         
         /// <summary>
         /// HyperLink1 control.
@@ -67,12 +76,12 @@ namespace ELearning.Login {
         protected global::System.Web.UI.WebControls.HyperLink HyperLink1;
         
         /// <summary>
-        /// btnlogin control.
+        /// BtnLogin control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnlogin;
+        protected global::System.Web.UI.WebControls.Button BtnLogin;
     }
 }

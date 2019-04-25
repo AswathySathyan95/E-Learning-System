@@ -1,116 +1,119 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin/AdminMasterPage.master" AutoEventWireup="true" CodeBehind="Registration.aspx.cs" Inherits="ELearning.Admin.Registration" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin/AdminMaster.master" AutoEventWireup="true" CodeBehind="Registration.aspx.cs" Inherits="ELearning.Admin.Registration" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-     <table class="nav-justified">
+    <table style="width: 100%">
         <tr>
-            <td style="width: 1%; height: 15px;"></td>
-            <td style="height: 15px; color: #FF0000;" colspan="4"><strong>All Fields marked with * are Mandatory</strong></td>
-            <td colspan="2" rowspan="4">&nbsp;</td>
-            <td style="width: 1%; height: 15px;"></td>
+            <td style="width: 33px">&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
         </tr>
         <tr>
-            <td style="width: 1%; height: 15px;">&nbsp;</td>
-            <td style="width: 20%; height: 15px;">&nbsp;</td>
-            <td style="width: 28%; height: 15px;">&nbsp;</td>
-            <td style="width: 16%; height: 15px;">&nbsp;</td>
-            <td style="width: 30%; height: 15px;">&nbsp;</td>
-            <td style="width: 1%; height: 15px;">&nbsp;</td>
+            <td style="color: #FF0000; width: 33px">&nbsp;</td>
+            <td colspan="6" style="color: #FF0000"><strong>&nbsp; All Fields marked with * are Mandatory</strong></td>
+            <td style="color: #FF0000">&nbsp;</td>
         </tr>
         <tr>
-            <td style="width: 1%; height: 15px;">&nbsp;</td>
-            <td style="width: 20%; height: 15px;">&nbsp;</td>
-            <td style="width: 28%; height: 15px;">&nbsp;</td>
-            <td style="width: 16%; height: 15px;">&nbsp;</td>
-            <td style="width: 30%; height: 15px;">&nbsp;</td>
-            <td style="width: 1%; height: 15px;">&nbsp;</td>
+            <td style="width: 33px">&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
         </tr>
         <tr>
-            <td style="width: 1%">&nbsp;</td>
-            <td style="width: 20%">
-                <asp:Label ID="Label1" runat="server" ForeColor="Black" style="font-weight: 700" Text="Personal Details"></asp:Label>
+            <td style="height: 20px; width: 33px">&nbsp;</td>
+            <td colspan="2" style="height: 20px">
+                <asp:Label ID="Label2" runat="server" ForeColor="Black" style="font-weight: 700" Text="Personal Details"></asp:Label>
             </td>
-            <td style="width: 28%">&nbsp;</td>
-            <td style="width: 16%">&nbsp;</td>
-            <td style="width: 30%">&nbsp;</td>
-            <td style="width: 1%">&nbsp;</td>
+            <td style="height: 20px"></td>
+            <td style="height: 20px"></td>
+            <td style="height: 20px"></td>
+            <td style="height: 20px"></td>
+            <td style="height: 20px">&nbsp;</td>
         </tr>
         <tr>
-            <td style="width: 1%">&nbsp;</td>
-            <td colspan="6">
-                <table class="nav-justified">
+            <td style="height: 20px; width: 33px">&nbsp;</td>
+            <td colspan="6" style="height: 20px">
+                <table style="width: 100%">
                     <tr>
                         <td>
-                            <asp:Label ID="Label2" runat="server" Text="First Name"></asp:Label>
-                            <asp:Label ID="Label32" runat="server" Font-Size="Medium" ForeColor="Red" Text="*"></asp:Label>
+                            <asp:Label ID="Label1" runat="server" Text="First Name"></asp:Label>
+                            <asp:Label ID="Label34" runat="server" Font-Size="Medium" ForeColor="Red" Text="*"></asp:Label>
                         </td>
                         <td>
-                            <asp:TextBox ID="txtFName" runat="server"></asp:TextBox>
+                            <asp:TextBox ID="txtfname" runat="server"></asp:TextBox>
                         </td>
                         <td>
-                            <asp:Label ID="Label31" runat="server" Text="Middle Name"></asp:Label>
+                            <asp:Label ID="Label3" runat="server" Text="Middle Name"></asp:Label>
                         </td>
                         <td>
-                            <asp:TextBox ID="txtMName" runat="server"></asp:TextBox>
+                            <asp:TextBox ID="txtmname" runat="server"></asp:TextBox>
                         </td>
                         <td>
-                            <asp:Label ID="Label30" runat="server" Text="Last Name"></asp:Label>
-                            <asp:Label ID="Label33" runat="server" Font-Size="Medium" ForeColor="Red" Text="*"></asp:Label>
+                            <asp:Label ID="Label4" runat="server" Text="Last Name"></asp:Label>
+                            <asp:Label ID="Label40" runat="server" Font-Size="Medium" ForeColor="Red" Text="*"></asp:Label>
                         </td>
                         <td>
-                            <asp:TextBox ID="txtLName" runat="server"></asp:TextBox>
+                            <asp:TextBox ID="txtlname" runat="server"></asp:TextBox>
                         </td>
                     </tr>
                 </table>
             </td>
-            <td style="width: 1%">&nbsp;</td>
+            <td style="height: 20px">&nbsp;</td>
         </tr>
         <tr>
-            <td style="width: 1%">&nbsp;</td>
-            <td style="width: 20%">
-                <asp:Label ID="Label4" runat="server" Text="Gender"></asp:Label>
-                <asp:Label ID="Label37" runat="server" Font-Size="Medium" ForeColor="Red" Text="*"></asp:Label>
+            <td style="width: 33px; height: 28px"></td>
+            <td style="height: 28px">
+                <asp:Label ID="Label5" runat="server" Text="Gender"></asp:Label>
+                <asp:Label ID="Label39" runat="server" Font-Size="Medium" ForeColor="Red" Text="*"></asp:Label>
             </td>
-            <td style="width: 28%">
-&nbsp;
+            <td style="height: 28px">
                 <asp:RadioButton ID="rdmale" runat="server" GroupName="g" Text="Male" />
                 <asp:RadioButton ID="rdfemale" runat="server" GroupName="g" Text="Female" />
             </td>
-            <td style="width: 16%">
-                <asp:Label ID="Label5" runat="server" Text="Mobile No"></asp:Label>
-                <asp:Label ID="Label34" runat="server" Font-Size="Medium" ForeColor="Red" Text="*"></asp:Label>
+            <td style="height: 28px">
+                <asp:Label ID="Label38" runat="server" Text="Mobile No"></asp:Label>
+                <asp:Label ID="Label41" runat="server" Font-Size="Medium" ForeColor="Red" Text="*"></asp:Label>
             </td>
-            <td style="width: 30%">
+            <td style="height: 28px">
                 <asp:TextBox ID="txtMobNo" runat="server"></asp:TextBox>
             </td>
-            <td style="width: 10px">&nbsp;</td>
-            <td style="width: 6%">&nbsp;</td>
-            <td style="width: 1%">&nbsp;</td>
+            <td style="height: 28px"></td>
+            <td style="height: 28px"></td>
+            <td style="height: 28px"></td>
         </tr>
         <tr>
-            <td style="height: 22px; width: 1%;"></td>
-            <td style="height: 22px; width: 20%;">
+            <td style="width: 33px">&nbsp;</td>
+            <td>
                 <asp:Label ID="Label6" runat="server" Text="Date Of Birth"></asp:Label>
                 <asp:Label ID="Label36" runat="server" Font-Size="Medium" ForeColor="Red" Text="*"></asp:Label>
             </td>
-            <td style="height: 22px; width: 28%;">
+            <td>
                 <asp:TextBox ID="txtDob" runat="server" TextMode="Date"></asp:TextBox>
             </td>
-            <td style="height: 22px; width: 16%;">
-                <asp:Label ID="Label3" runat="server" Text="Email ID"></asp:Label>
+            <td>
+                <asp:Label ID="Label42" runat="server" Text="Email ID"></asp:Label>
                 <asp:Label ID="Label35" runat="server" Font-Size="Medium" ForeColor="Red" Text="*"></asp:Label>
             </td>
-            <td style="height: 22px; width: 30%;">
+            <td>
                 <asp:TextBox ID="txtemailid" runat="server"></asp:TextBox>
             </td>
-            <td style="height: 22px; width: 10px"></td>
-            <td style="height: 22px; width: 6%;"></td>
-            <td style="height: 22px; width: 1%;"></td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
         </tr>
         <tr>
-            <td style="height: 22px; width: 1%;"></td>
-            <td style="height: 22px; width: 20%;">
+            <td style="width: 33px">&nbsp;</td>
+            <td>
                 <asp:Label ID="Label8" runat="server" Text="Religion"></asp:Label>
             </td>
-            <td style="height: 22px; width: 28%;">
+            <td>
                 <asp:DropDownList ID="ddlReligion" runat="server">
                     <asp:ListItem>---Select---</asp:ListItem>
                     <asp:ListItem>Hindu</asp:ListItem>
@@ -118,32 +121,32 @@
                     <asp:ListItem>Muslim</asp:ListItem>
                 </asp:DropDownList>
             </td>
-            <td style="height: 22px; width: 16%;">
+            <td>
                 <asp:Label ID="Label9" runat="server" Text="Category"></asp:Label>
             </td>
-            <td style="height: 22px; width: 30%;">
+            <td>
                 <asp:TextBox ID="txtCategory" runat="server"></asp:TextBox>
             </td>
-            <td colspan="2" rowspan="3">
-                &nbsp;</td>
-            <td style="height: 22px; width: 1%;"></td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
         </tr>
         <tr>
-            <td style="width: 1%">&nbsp;</td>
-            <td style="width: 20%">
+            <td style="width: 33px">&nbsp;</td>
+            <td>
                 <asp:Label ID="Label7" runat="server" Text="Nationality"></asp:Label>
             </td>
-            <td style="width: 28%">
+            <td>
                 <asp:DropDownList ID="ddlNationality" runat="server">
                     <asp:ListItem>---Select---</asp:ListItem>
                     <asp:ListItem>Indian</asp:ListItem>
                     <asp:ListItem>Others</asp:ListItem>
                 </asp:DropDownList>
             </td>
-            <td style="width: 16%">
+            <td>
                 <asp:Label ID="Label11" runat="server" Text="Blood Group"></asp:Label>
             </td>
-            <td style="width: 30%">
+            <td>
                 <asp:DropDownList ID="ddlBloodgroup" runat="server">
                     <asp:ListItem>---Select---</asp:ListItem>
                     <asp:ListItem>A+</asp:ListItem>
@@ -156,77 +159,84 @@
                     <asp:ListItem>O-</asp:ListItem>
                 </asp:DropDownList>
             </td>
-            <td style="width: 1%">&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
         </tr>
         <tr>
-            <td style="width: 1%">&nbsp;</td>
-            <td style="width: 20%">
+            <td style="width: 33px">&nbsp;</td>
+            <td>
                 <asp:Label ID="Label12" runat="server" Text="Upload Photo"></asp:Label>
-                <asp:Label ID="Label38" runat="server" Font-Size="Medium" ForeColor="Red" Text="*"></asp:Label>
+                <asp:Label ID="Label43" runat="server" Font-Size="Medium" ForeColor="Red" Text="*"></asp:Label>
             </td>
-            <td style="width: 28%">
-                &nbsp;<table class="nav-justified">
-                    <tr>
-                        <td>
+            <td>
                 <asp:FileUpload ID="fuPhoto" runat="server" Width="187px" />
-                        </td>
-                        <td>
-                            <asp:Button ID="btnupload" runat="server" OnClick="btnupload_Click" Text="Upload Image" Width="110px" />
-                        </td>
-                    </tr>
-                </table>
             </td>
-            <td colspan="2" rowspan="2">
-                <asp:Image ID="imgPhoto" runat="server" Height="100px" Width="100px" Visible="False" />
+            <td>
+                <asp:Button ID="BtnUploadd" runat="server" OnClick="btnUploadd_Click" Text="Upload" />
             </td>
-            <td style="width: 1%">&nbsp;</td>
+            <td rowspan="3">
+                        <asp:Image ID="imgPhoto" runat="server" Height="139px" Visible="False" Width="119px" />
+            </td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
         </tr>
         <tr>
-            <td style="width: 1%">&nbsp;</td>
-            <td style="width: 20%">&nbsp;</td>
-            <td style="width: 28%">&nbsp;</td>
-            <td style="width: 10px">&nbsp;</td>
-            <td style="width: 6%">&nbsp;</td>
-            <td style="width: 1%">&nbsp;</td>
+            <td style="width: 33px">&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
         </tr>
         <tr>
-            <td style="width: 1%">&nbsp;</td>
-            <td colspan="6">
+            <td style="width: 33px">&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td style="width: 33px">&nbsp;</td>
+            <td colspan="7">
                 <asp:Label ID="Label14" runat="server" ForeColor="Black" style="font-weight: 700" Text="Address"></asp:Label>
-                <asp:Label ID="Label39" runat="server" Font-Size="Medium" ForeColor="Red" Text="*"></asp:Label>
+                <asp:Label ID="Label44" runat="server" Font-Size="Medium" ForeColor="Red" Text="*"></asp:Label>
             </td>
-            <td style="width: 1%">&nbsp;</td>
         </tr>
         <tr>
-            <td style="height: 22px; width: 1%;"></td>
-            <td style="height: 22px; width: 20%;">
+            <td style="width: 33px">&nbsp;</td>
+            <td>
                 <asp:Label ID="Label15" runat="server" Text="House No. /House Name"></asp:Label>
             </td>
-            <td style="height: 22px; width: 28%;">
+            <td>
                 <asp:TextBox ID="txtAddress" runat="server"></asp:TextBox>
             </td>
-            <td style="height: 22px; width: 16%;">
+            <td>
                 <asp:Label ID="Label16" runat="server" Text="Street"></asp:Label>
             </td>
-            <td style="height: 22px; width: 30%;">
+            <td>
                 <asp:TextBox ID="txtStreet" runat="server"></asp:TextBox>
             </td>
-            <td style="height: 22px; width: 10px"></td>
-            <td style="height: 22px; width: 6%;"></td>
-            <td style="height: 22px; width: 1%;"></td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
         </tr>
         <tr>
-            <td style="width: 1%">&nbsp;</td>
-            <td style="width: 20%">
+            <td style="width: 33px; height: 22px;"></td>
+            <td style="height: 22px">
                 <asp:Label ID="Label17" runat="server" Text="City"></asp:Label>
             </td>
-            <td style="width: 28%">
+            <td style="height: 22px">
                 <asp:TextBox ID="txtCity" runat="server"></asp:TextBox>
             </td>
-            <td style="width: 16%">
+            <td style="height: 22px">
                 <asp:Label ID="Label18" runat="server" Text="District"></asp:Label>
             </td>
-            <td style="width: 30%">
+            <td style="height: 22px">
                 <asp:UpdatePanel ID="UpdatePanel1" runat="server">
                     <ContentTemplate>
                         <asp:DropDownList ID="ddlDistrict" runat="server">
@@ -238,16 +248,16 @@
                     </Triggers>
                 </asp:UpdatePanel>
             </td>
-            <td style="width: 10px">&nbsp;</td>
-            <td style="width: 6%">&nbsp;</td>
-            <td style="width: 1%">&nbsp;</td>
+            <td style="height: 22px"></td>
+            <td style="height: 22px"></td>
+            <td style="height: 22px"></td>
         </tr>
         <tr>
-            <td style="width: 1%">&nbsp;</td>
-            <td style="width: 20%">
+            <td style="width: 33px; height: 22px;"></td>
+            <td style="height: 22px">
                 <asp:Label ID="Label19" runat="server" Text="State"></asp:Label>
             </td>
-            <td style="width: 28%">
+            <td style="height: 22px">
                 <asp:DropDownList ID="ddlState" runat="server" AutoPostBack="True" OnSelectedIndexChanged="ddlState_SelectedIndexChanged">
                     <asp:ListItem>---Select---</asp:ListItem>
                     <asp:ListItem Value="1">Andhra Pradesh</asp:ListItem>
@@ -281,91 +291,45 @@
                     <asp:ListItem Value="29">West Bengal</asp:ListItem>
                 </asp:DropDownList>
             </td>
-            <td style="width: 16%">
+            <td style="height: 22px">
                 <asp:Label ID="Label20" runat="server" Text="Pin Code"></asp:Label>
             </td>
-            <td style="width: 30%">
-                <asp:TextBox ID="txtPin" runat="server"></asp:TextBox>
+            <td style="height: 22px">
+                <asp:TextBox ID="txtPin" runat="server" OnTextChanged="txtPin_TextChanged"></asp:TextBox>
             </td>
-            <td style="width: 10px">&nbsp;</td>
-            <td style="width: 6%">&nbsp;</td>
-            <td style="width: 1%">&nbsp;</td>
+            <td style="height: 22px"></td>
+            <td style="height: 22px"></td>
+            <td style="height: 22px"></td>
         </tr>
         <tr>
-            <td style="width: 1%">&nbsp;</td>
-            <td style="width: 20%">&nbsp;</td>
-            <td style="width: 28%">&nbsp;</td>
-            <td style="width: 16%">&nbsp;</td>
-            <td style="width: 30%">&nbsp;</td>
-            <td style="width: 10px">&nbsp;</td>
-            <td style="width: 6%">&nbsp;</td>
-            <td style="width: 1%">&nbsp;</td>
+            <td style="width: 33px">&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
         </tr>
         <tr>
-            <td style="height: 21px; width: 1%;"></td>
-            <td colspan="6" style="height: 21px">
+            <td style="width: 33px; height: 20px"></td>
+            <td colspan="7" style="height: 20px">
                 <asp:Label ID="Label21" runat="server" ForeColor="Black" style="font-weight: 700" Text="Admission Details"></asp:Label>
-                <asp:Label ID="Label40" runat="server" Font-Size="Medium" ForeColor="Red" Text="*"></asp:Label>
+                <asp:Label ID="Label45" runat="server" Font-Size="Medium" ForeColor="Red" Text="*"></asp:Label>
             </td>
-            <td style="height: 21px; width: 1%;"></td>
         </tr>
         <tr>
-            <td style="width: 1%">&nbsp;</td>
-            <td style="width: 20%">
-                <asp:Label ID="Label22" runat="server" Text="Date Of Admission"></asp:Label>
+            <td style="width: 33px; height: 20px"></td>
+            <td style="height: 20px">
+                <asp:Label ID="Label22" runat="server" Text="Date Of Joining"></asp:Label>
             </td>
-            <td style="width: 28%">
+            <td style="height: 20px">
                 <asp:TextBox ID="txtDoa" runat="server" TextMode="Date"></asp:TextBox>
             </td>
-            <td style="width: 16%">
-                <asp:Label ID="Label23" runat="server" Text="Admitted Program"></asp:Label>
-            </td>
-            <td style="width: 30%">
-                <asp:DropDownList ID="ddlProgram" runat="server" AutoPostBack="True" OnSelectedIndexChanged="ddlProgram_SelectedIndexChanged">
-                    <asp:ListItem>---Select---</asp:ListItem>
-                    <asp:ListItem Value="1">Btech</asp:ListItem>
-                    <asp:ListItem Value="2">Mtech</asp:ListItem>
-                    <asp:ListItem Value="3">MCA</asp:ListItem>
-                    <asp:ListItem Value="4">MBA</asp:ListItem>
-                </asp:DropDownList>
-            </td>
-            <td style="width: 10px">&nbsp;</td>
-            <td style="width: 6%">&nbsp;</td>
-            <td style="width: 1%">&nbsp;</td>
-        </tr>
-        <tr>
-            <td style="width: 1%">&nbsp;</td>
-            <td style="width: 20%">
-                <asp:Label ID="Label24" runat="server" Text="Admitted Branch"></asp:Label>
-            </td>
-            <td style="width: 28%">
-                <asp:UpdatePanel ID="UpdatePanel2" runat="server">
-                    <ContentTemplate>
-                        <asp:DropDownList ID="ddlBranch" runat="server">
-                            <asp:ListItem>---Select---</asp:ListItem>
-                        </asp:DropDownList>
-                    </ContentTemplate>
-                    <Triggers>
-                        <asp:AsyncPostBackTrigger ControlID="ddlProgram" EventName="SelectedIndexChanged" />
-                    </Triggers>
-                </asp:UpdatePanel>
-            </td>
-            <td style="width: 16%">
-                <asp:Label ID="Label25" runat="server" Text="Admission no"></asp:Label>
-            </td>
-            <td style="width: 30%">
-                <asp:TextBox ID="txtAdmsnNo" runat="server"></asp:TextBox>
-            </td>
-            <td style="width: 10px">&nbsp;</td>
-            <td style="width: 6%">&nbsp;</td>
-            <td style="width: 1%">&nbsp;</td>
-        </tr>
-        <tr>
-            <td style="height: 22px; width: 1%;"></td>
-            <td style="height: 22px; width: 20%;">
+            <td style="height: 20px">
                 <asp:Label ID="Label58" runat="server" Text="Department"></asp:Label>
             </td>
-            <td style="height: 22px; width: 28%;">
+            <td style="height: 20px">
                 <asp:DropDownList ID="ddlDept" runat="server">
                     <asp:ListItem>---Select---</asp:ListItem>
                     <asp:ListItem>Civil Engineering</asp:ListItem>
@@ -378,218 +342,139 @@
                     <asp:ListItem>Master of Business Administration</asp:ListItem>
                 </asp:DropDownList>
             </td>
-            <td style="height: 22px; width: 16%;"></td>
-            <td style="height: 22px; width: 30%;"></td>
-            <td style="width: 10px; height: 22px"></td>
-            <td style="height: 22px; width: 6%;"></td>
-            <td style="height: 22px; width: 1%;"></td>
+            <td style="height: 20px"></td>
+            <td style="height: 20px"></td>
+            <td style="height: 20px"></td>
         </tr>
         <tr>
-            <td style="height: 22px; width: 1%;">&nbsp;</td>
-            <td style="height: 22px; width: 20%;">
+            <td style="width: 33px">&nbsp;</td>
+            <td>
+                <asp:Label ID="Label25" runat="server" Text="Admission no"></asp:Label>
+            </td>
+            <td>
+                <asp:TextBox ID="txtAdmsnNo" runat="server"></asp:TextBox>
+            </td>
+            <td>
                 &nbsp;</td>
-            <td style="height: 22px; width: 28%;">
+            <td>
                 &nbsp;</td>
-            <td style="height: 22px; width: 16%;">&nbsp;</td>
-            <td style="height: 22px; width: 30%;">&nbsp;</td>
-            <td style="width: 10px; height: 22px">&nbsp;</td>
-            <td style="height: 22px; width: 6%;">&nbsp;</td>
-            <td style="height: 22px; width: 1%;">&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
         </tr>
         <tr>
-            <td style="width: 1%">&nbsp;</td>
-            <td colspan="6">
+            <td style="width: 33px">&nbsp;</td>
+            <td>
+                &nbsp;</td>
+            <td>
+                &nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td style="width: 33px">&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td style="width: 33px">&nbsp;</td>
+            <td colspan="7">
                 <asp:Label ID="Label26" runat="server" ForeColor="Black" style="font-weight: 700" Text="Guardian Details"></asp:Label>
             </td>
-            <td style="width: 1%">&nbsp;</td>
         </tr>
         <tr>
-            <td style="height: 22px; width: 1%;"></td>
-            <td style="height: 22px; width: 20%;">
+            <td style="width: 33px">&nbsp;</td>
+            <td>
                 <asp:Label ID="Label27" runat="server" Text="Father Name"></asp:Label>
             </td>
-            <td style="height: 22px; width: 28%;">
+            <td>
                 <asp:TextBox ID="txtFathername" runat="server"></asp:TextBox>
             </td>
-            <td style="height: 22px; width: 16%;">
+            <td>
                 <asp:Label ID="Label29" runat="server" Text="Occupation"></asp:Label>
             </td>
-            <td style="height: 22px; width: 30%;">
-                <asp:TextBox ID="txtOccupation" runat="server"></asp:TextBox>
+            <td>
+                <asp:TextBox ID="txtOccupation" runat="server" style="margin-bottom: 4"></asp:TextBox>
             </td>
-            <td style="width: 10px; height: 22px"></td>
-            <td style="height: 22px; width: 6%;"></td>
-            <td style="height: 22px; width: 1%;"></td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
         </tr>
         <tr>
-            <td style="width: 1%; height: 24px;"></td>
-            <td style="width: 20%; height: 24px;">
+            <td style="width: 33px">&nbsp;</td>
+            <td>
                 <asp:Label ID="Label28" runat="server" Text="Mobile No"></asp:Label>
             </td>
-            <td style="width: 28%; height: 24px;">
+            <td>
                 <asp:TextBox ID="txtFMob" runat="server"></asp:TextBox>
             </td>
-            <td style="width: 16%; height: 24px;"></td>
-            <td style="width: 30%; height: 24px;"></td>
-            <td style="width: 10px; height: 24px;"></td>
-            <td style="width: 6%; height: 24px;"></td>
-            <td style="width: 1%; height: 24px;"></td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
         </tr>
         <tr>
-            <td style="width: 1%">&nbsp;</td>
-            <td style="width: 20%">&nbsp;</td>
-            <td style="width: 28%">&nbsp;</td>
-            <td style="width: 16%">&nbsp;</td>
-            <td style="width: 30%">&nbsp;</td>
-            <td style="width: 10px">&nbsp;</td>
-            <td style="width: 6%">&nbsp;</td>
-            <td style="width: 1%">&nbsp;</td>
+            <td style="width: 33px">&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
         </tr>
         <tr>
-            <td style="height: 22px; width: 1%"></td>
-            <td style="height: 22px; width: 20%"></td>
-            <td style="height: 22px; width: 28%" class="text-center">
-                <asp:Button ID="btnRegister" runat="server" Text="Save and Continue" Width="141px" OnClick="btnRegister_Click" />
-            </td>
-            <td style="height: 22px; width: 16%" class="text-center">
-                <asp:Button ID="Button1" runat="server" Text="Clear" OnClick="Button1_Click" />
-            </td>
-            <td style="height: 22px; width: 30%"></td>
-            <td style="width: 10px; height: 22px;"></td>
-            <td style="height: 22px; width: 6%"></td>
-            <td style="height: 22px; width: 1%"></td>
+            <td style="width: 33px; height: 20px"></td>
+            <td style="height: 20px"></td>
+            <td class="text-center" style="height: 20px"><strong>
+                <asp:Button ID="btnRegister" runat="server" OnClick="btnRegister_Click" style="font-weight: bold" Text="Save and Continue" Width="141px" />
+                </strong></td>
+            <td style="height: 20px"><strong>
+                <asp:Button ID="btnClear" runat="server" OnClick="Button1_Click" style="font-weight: bold" Text="Clear" />
+                </strong></td>
+            <td style="height: 20px"></td>
+            <td style="height: 20px"></td>
+            <td style="height: 20px"></td>
+            <td style="height: 20px"></td>
         </tr>
         <tr>
-            <td style="width: 1%">&nbsp;</td>
-            <td style="width: 20%">&nbsp;</td>
-            <td style="text-align: center; width: 28%">
-                &nbsp;</td>
-            <td style="text-align: center; width: 16%">
-                &nbsp;</td>
-            <td style="width: 30%">&nbsp;</td>
-            <td style="width: 10px">&nbsp;</td>
-            <td style="width: 6%">&nbsp;</td>
-            <td style="width: 1%">&nbsp;</td>
+            <td style="width: 33px">&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
         </tr>
         <tr>
-            <td style="width: 1%">&nbsp;</td>
-            <td style="width: 20%">&nbsp;</td>
-            <td style="width: 28%">&nbsp;</td>
-            <td style="width: 16%">&nbsp;</td>
-            <td style="width: 30%">&nbsp;</td>
-            <td style="width: 10px">&nbsp;</td>
-            <td style="width: 6%">&nbsp;</td>
-            <td style="width: 1%">&nbsp;</td>
+            <td style="width: 33px">&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
         </tr>
         <tr>
-            <td style="width: 1%">&nbsp;</td>
-            <td style="width: 20%">&nbsp;</td>
-            <td style="width: 28%">&nbsp;</td>
-            <td style="width: 16%">&nbsp;</td>
-            <td style="width: 30%">&nbsp;</td>
-            <td style="width: 10px">&nbsp;</td>
-            <td style="width: 6%">&nbsp;</td>
-            <td style="width: 1%">&nbsp;</td>
-        </tr>
-        <tr>
-            <td style="width: 1%">&nbsp;</td>
-            <td style="width: 20%">&nbsp;</td>
-            <td style="width: 28%">&nbsp;</td>
-            <td style="width: 16%">&nbsp;</td>
-            <td style="width: 30%">&nbsp;</td>
-            <td style="width: 10px">&nbsp;</td>
-            <td style="width: 6%">&nbsp;</td>
-            <td style="width: 1%">&nbsp;</td>
-        </tr>
-        <tr>
-            <td style="width: 1%">&nbsp;</td>
-            <td style="width: 20%">&nbsp;</td>
-            <td style="width: 28%">&nbsp;</td>
-            <td style="width: 16%">&nbsp;</td>
-            <td style="width: 30%">&nbsp;</td>
-            <td style="width: 10px">&nbsp;</td>
-            <td style="width: 6%">&nbsp;</td>
-            <td style="width: 1%">&nbsp;</td>
-        </tr>
-        <tr>
-            <td style="width: 1%">&nbsp;</td>
-            <td style="width: 20%">&nbsp;</td>
-            <td style="width: 28%">&nbsp;</td>
-            <td style="width: 16%">&nbsp;</td>
-            <td style="width: 30%">&nbsp;</td>
-            <td style="width: 10px">&nbsp;</td>
-            <td style="width: 6%">&nbsp;</td>
-            <td style="width: 1%">&nbsp;</td>
-        </tr>
-        <tr>
-            <td style="width: 1%">&nbsp;</td>
-            <td style="width: 20%">&nbsp;</td>
-            <td style="width: 28%">&nbsp;</td>
-            <td style="width: 16%">&nbsp;</td>
-            <td style="width: 30%">&nbsp;</td>
-            <td style="width: 10px">&nbsp;</td>
-            <td style="width: 6%">&nbsp;</td>
-            <td style="width: 1%">&nbsp;</td>
-        </tr>
-        <tr>
-            <td style="width: 1%">&nbsp;</td>
-            <td style="width: 20%">&nbsp;</td>
-            <td style="width: 28%">&nbsp;</td>
-            <td style="width: 16%">&nbsp;</td>
-            <td style="width: 30%">&nbsp;</td>
-            <td style="width: 10px">&nbsp;</td>
-            <td style="width: 6%">&nbsp;</td>
-            <td style="width: 1%">&nbsp;</td>
-        </tr>
-        <tr>
-            <td style="width: 1%">&nbsp;</td>
-            <td style="width: 20%">&nbsp;</td>
-            <td style="width: 28%">&nbsp;</td>
-            <td style="width: 16%">&nbsp;</td>
-            <td style="width: 30%">&nbsp;</td>
-            <td style="width: 10px">&nbsp;</td>
-            <td style="width: 6%">&nbsp;</td>
-            <td style="width: 1%">&nbsp;</td>
-        </tr>
-        <tr>
-            <td style="width: 1%">&nbsp;</td>
-            <td style="width: 20%">&nbsp;</td>
-            <td style="width: 28%">&nbsp;</td>
-            <td style="width: 16%">&nbsp;</td>
-            <td style="width: 30%">&nbsp;</td>
-            <td style="width: 10px">&nbsp;</td>
-            <td style="width: 6%">&nbsp;</td>
-            <td style="width: 1%">&nbsp;</td>
-        </tr>
-        <tr>
-            <td style="width: 1%">&nbsp;</td>
-            <td style="width: 20%">&nbsp;</td>
-            <td style="width: 28%">&nbsp;</td>
-            <td style="width: 16%">&nbsp;</td>
-            <td style="width: 30%">&nbsp;</td>
-            <td style="width: 10px">&nbsp;</td>
-            <td style="width: 6%">&nbsp;</td>
-            <td style="width: 1%">&nbsp;</td>
-        </tr>
-        <tr>
-            <td style="width: 1%">&nbsp;</td>
-            <td style="width: 20%">&nbsp;</td>
-            <td style="width: 28%">&nbsp;</td>
-            <td style="width: 16%">&nbsp;</td>
-            <td style="width: 30%">&nbsp;</td>
-            <td style="width: 10px">&nbsp;</td>
-            <td style="width: 6%">&nbsp;</td>
-            <td style="width: 1%">&nbsp;</td>
-        </tr>
-        <tr>
-            <td style="width: 1%">&nbsp;</td>
-            <td style="width: 20%">&nbsp;</td>
-            <td style="width: 28%">&nbsp;</td>
-            <td style="width: 16%">&nbsp;</td>
-            <td style="width: 30%">&nbsp;</td>
-            <td style="width: 10px">&nbsp;</td>
-            <td style="width: 6%">&nbsp;</td>
-            <td style="width: 1%">&nbsp;</td>
+            <td style="width: 33px">&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
         </tr>
     </table>
 </asp:Content>

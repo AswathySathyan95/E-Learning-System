@@ -7,31 +7,31 @@ using System.Web.UI.WebControls;
 using System.Data;
 using System.Data.SqlClient;
 using ELearning.Classes;
+
 namespace ELearning.Admin
 {
     public partial class Reg_Home : System.Web.UI.Page
     {
-        AdminClass objadnreg = new AdminClass();
+        AdminClass objuserreg = new AdminClass();
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
 
-        protected void ibtnFacultyReg_Click(object sender, ImageClickEventArgs e)
+        protected void imgbtnFaculty_Click(object sender, ImageClickEventArgs e)
         {
-            Session["usertype"] = "Faculty";           
-            Response.Redirect("~/Admin/Registration.aspx");      
+            Session["usertype"] = "Faculty";
+            Response.Redirect("~/Admin/Registration.aspx");
         }
 
-        protected void ibtnstudent_Click(object sender, ImageClickEventArgs e)
+        protected void imgbtnStudent_Click(object sender, ImageClickEventArgs e)
         {
             Session["usertype"] = "Student";
-            Response.Redirect("~/Admin/Registration.aspx");            
+            Response.Redirect("~/Admin/StudReg.aspx");
         }
 
-        protected void ibtnadminReg_Click(object sender, ImageClickEventArgs e)
+        protected void imgbtnAdmin_Click(object sender, ImageClickEventArgs e)
         {
-
             Session["usertype"] = "Admin";
             Response.Redirect("~/Admin/Registration.aspx");
         }

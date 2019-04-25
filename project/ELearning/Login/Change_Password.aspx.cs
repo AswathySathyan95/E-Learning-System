@@ -18,13 +18,13 @@ namespace ELearning.Login
 
         }
 
-        protected void btnConfirm_Click(object sender, EventArgs e)
+        protected void BtnSave_Click(object sender, EventArgs e)
         {
-            objLgn.Cuser = Session["u_id"].ToString();
-            objLgn.Cusertype = Session["u_type"].ToString();
-            objLgn.Pswd = txtPassword.Text.ToString();
-            objLgn.Newpswd = txtNewPswd.Text.ToString();
-            objLgn.Cnewpswd = txtCNew_Pswd.Text.ToString();
+            objLgn.User_id = Session["u_id"].ToString();
+            objLgn.User_type = Session["u_type"].ToString();
+            objLgn.Cpassword = TxtCPswd.Text.ToString();
+            objLgn.New_pswd = TxtNPswd.Text.ToString();
+            objLgn.Cnew_pswd = TxtCNPswd.Text.ToString();
             objLgn.ChangePassword();
             Response.Redirect("~/Login/Login.aspx");
         }

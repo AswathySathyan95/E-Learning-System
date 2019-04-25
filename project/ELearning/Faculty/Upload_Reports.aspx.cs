@@ -16,17 +16,31 @@ namespace ELearning.Faculty
         FacultyClass objFctly = new FacultyClass();
         protected void Page_Load(object sender, EventArgs e)
         {
-           if(!IsPostBack)
+            if(!IsPostBack)
             {
                 DataTable dtDept = new DataTable();
                 dtDept = objFctly.FetchDept();
-                if (dtDept.Rows.Count > 0)
+                if(dtDept.Rows.Count>0)
                 {
                     ddlDepartment.DataSource = dtDept;
                     ddlDepartment.DataTextField = "Branch_Name";
                     ddlDepartment.DataValueField = "B_Id";
                     ddlDepartment.DataBind();
                 }
+            }
+        }
+
+        protected void ddlDepartment_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            objFctly.NDept = ddlDepartment.SelectedItem.Text.ToString();
+            DataTable dtSubject = new DataTable();
+            dtSubject = objFctly.FetchSubject();
+            if (dtSubject.Rows.Count > 0)
+            {
+                ddlSubject.DataSource = dtSubject;
+                ddlSubject.DataTextField = "Subject";
+                ddlSubject.DataValueField = "Sub_Id";
+                ddlSubject.DataBind();
             }
         }
 
@@ -44,10 +58,10 @@ namespace ELearning.Faculty
                 ViewState["DocPath"] = doc;
                 //Inserting values to database
                 objFctly.Userid = Session["u_id"].ToString();
-                objFctly.Rsubject = ddlSubject.SelectedItem.ToString();
-                objFctly.Rtopic = txtTopic.Text.ToString();
-                objFctly.Report = Convert.ToString(ViewState["DocPath"]);
-                objFctly.Rdescription = txtDescription.Text.ToString();
+                objFctly.RSubject = ddlSubject.SelectedItem.ToString();
+                objFctly.RTopic = txtTopic.Text.ToString();
+                objFctly.Reports = Convert.ToString(ViewState["DocPath"]);
+                objFctly.RDescription = txtDescription.Text.ToString();
                 objFctly.UploadReports();
                 Response.Write("<script LANGUAGE='JavaScript' >alert('Successfully uploaded the document...')</script>");
                 txtTopic.Text = "";
@@ -56,20 +70,6 @@ namespace ELearning.Faculty
             else
             {
                 Response.Write("<script LANGUAGE='JavaScript' >alert('Please select a document file...')</script>");
-            }
-        }
-
-        protected void ddlDepartment_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            objFctly.Dept = ddlDepartment.SelectedItem.Text.ToString();
-            DataTable dtSubject = new DataTable();
-            dtSubject = objFctly.FetchSubject();
-            if (dtSubject.Rows.Count > 0)
-            {
-                ddlSubject.DataSource = dtSubject;
-                ddlSubject.DataTextField = "Subject";
-                ddlSubject.DataValueField = "Sub_Id";
-                ddlSubject.DataBind();
             }
         }
     }

@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using System.Data.SqlClient;
 using System.Data;
+using System.Data.SqlClient;
 
 namespace ELearning.Classes
 {
@@ -20,30 +20,10 @@ namespace ELearning.Classes
         {
             con.Close();
         }
-        private string userid;
-
-        public string Userid
+        public void ExecuteQueries(string Query_)
         {
-            get
-            {
-                return userid;
-            }
-
-            set
-            {
-                userid = value;
-            }
-        }
-
-        public DataTable DisUserDetails()
-        {
-            OpenConnection();
-            DataTable dtStudDetails = new DataTable();
-            SqlCommand command = new SqlCommand("Select * from User_Details where User_Id='"+userid+"'", con);
-            SqlDataAdapter da = new SqlDataAdapter(command);
-            da.Fill(dtStudDetails);
-            CloseConnection();
-            return dtStudDetails;
+            SqlCommand cmd = new SqlCommand(Query_, con);
+            cmd.ExecuteNonQuery();
         }
     }
 }

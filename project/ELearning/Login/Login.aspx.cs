@@ -4,53 +4,49 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using System.Data.SqlClient;
 using System.Data;
+using System.Data.SqlClient;
 using ELearning.Classes;
 
 namespace ELearning.Login
 {
-    public partial class Login : System.Web.UI.Page
+    public partial class Loginaspx : System.Web.UI.Page
     {
-        LoginClass objlgn = new LoginClass();
+        LoginClass objLgn = new LoginClass();
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
 
-        protected void btnlogin_Click(object sender, EventArgs e)
+        protected void BtnLogin_Click(object sender, EventArgs e)
         {
-        }   
-        protected void btnlogin_Click1(object sender, EventArgs e)
-        {
-            objlgn.Username = txtUsername.Text.ToString();
-            objlgn.Password = txtPassword.Text.ToString();
+            objLgn.Username = TxtUsername.Text.ToString();
+            objLgn.Password = TxtPassword.Text.ToString();
             DataTable dtLogin = new DataTable();
-            dtLogin = objlgn.LoginDetails();
+            dtLogin = objLgn.LoginDetails();
             if (dtLogin.Rows.Count > 0)
             {
-                objlgn.User_id = dtLogin.Rows[0]["User_Id"].ToString();
-                objlgn.User_type = dtLogin.Rows[0]["User_Type"].ToString();
-                Session["u_id"] = objlgn.User_id;
-                Session["u_type"] = objlgn.User_type;
+                objLgn.User_id = dtLogin.Rows[0]["User_Id"].ToString();
+                objLgn.User_type = dtLogin.Rows[0]["User_Type"].ToString();
+                Session["u_id"] = objLgn.User_id;
+                Session["u_type"] = objLgn.User_type;
             }
             else
             {
                 Response.Write("<script LANGUAGE='JavaScript' >alert('Incorrect Username or Password')</script>");
             }
-            if (objlgn.User_type == "Faculty")
+            if (objLgn.User_type == "Faculty")
             {
-                Response.Redirect("~/Faculty/Faculty_Home.aspx");
+                Response.Redirect("~/Faculty/FacultyHome.aspx");
             }
-            else if (objlgn.User_type == "Student")
+            else if (objLgn.User_type == "Student")
             {
-                Response.Redirect("~/Student/Student_Home.aspx");
+                Response.Redirect("~/Student/StudentHome.aspx");
             }
-            else if (objlgn.User_type == "Admin")
+            else if (objLgn.User_type == "Admin")
             {
-                Response.Redirect("~/Admin/Admin_Home.aspx");
+                Response.Redirect("~/Admin/AdminHome.aspx");
             }
         }
-
     }
 }

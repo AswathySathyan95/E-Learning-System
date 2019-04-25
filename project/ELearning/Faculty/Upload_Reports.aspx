@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Faculty/FacultyMasterPage.master" AutoEventWireup="true" CodeBehind="Upload_Reports.aspx.cs" Inherits="ELearning.Faculty.Upload_Reports" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Faculty/FacultyMaster.master" AutoEventWireup="true" CodeBehind="Upload_Reports.aspx.cs" Inherits="ELearning.Faculty.Upload_Reports" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <table class="nav-justified">
         <tr>
@@ -83,7 +83,9 @@
             <td style="width: 205px">&nbsp;</td>
             <td>&nbsp;</td>
             <td>
-                <asp:Button ID="btnReport" runat="server" OnClick="btnReport_Click" Text="Upload Report" />
+                <strong>
+                <asp:Button ID="btnReport" runat="server" OnClick="btnReport_Click" Text="Upload Report" Height="33px" style="font-weight: bold" Width="162px" />
+                </strong>
             </td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
@@ -96,11 +98,11 @@
             <td>&nbsp;</td>
         </tr>
         <tr>
-            <td style="width: 205px">&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
+            <td style="width: 205px; height: 20px;"></td>
+            <td style="height: 20px"></td>
+            <td style="height: 20px"></td>
+            <td style="height: 20px"></td>
+            <td style="height: 20px"></td>
         </tr>
         <tr>
             <td style="width: 205px">&nbsp;</td>

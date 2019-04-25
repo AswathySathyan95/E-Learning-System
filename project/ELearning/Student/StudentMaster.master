@@ -1,0 +1,21 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="StudentMaster.master.cs" Inherits="ELearning.Student.StudentMaster" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+    <table class="nav-justified">
+        <tr>
+            <td style="width: 332px">
+                <br />
+                <br />
+                <div class="text-center" style="width: 319px">
+                    <strong>
+                    <asp:HyperLink ID="HyperLink1" runat="server" ForeColor="Black" NavigateUrl="~/Login/Change_Password.aspx">Change Password</asp:HyperLink>
+                    </strong>
+                </div>
+                <br />
+            </td>
+            <td>
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </td>
+        </tr>
+    </table>
+</asp:Content>

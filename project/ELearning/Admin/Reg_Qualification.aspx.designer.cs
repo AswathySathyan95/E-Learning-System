@@ -31,31 +31,31 @@ namespace ELearning.Admin {
         protected global::System.Web.UI.WebControls.Label Label52;
         
         /// <summary>
-        /// btnAddQual control.
+        /// BtnAddQual control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnAddQual;
+        protected global::System.Web.UI.WebControls.Button BtnAddQual;
         
         /// <summary>
-        /// lbltest control.
+        /// LblQual control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbltest;
+        protected global::System.Web.UI.WebControls.Label LblQual;
         
         /// <summary>
-        /// PanelQual control.
+        /// PanelQualification control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel PanelQual;
+        protected global::System.Web.UI.WebControls.Panel PanelQualification;
         
         /// <summary>
         /// Label42 control.
@@ -67,6 +67,15 @@ namespace ELearning.Admin {
         protected global::System.Web.UI.WebControls.Label Label42;
         
         /// <summary>
+        /// TxtQual control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TxtQual;
+        
+        /// <summary>
         /// Label57 control.
         /// </summary>
         /// <remarks>
@@ -74,6 +83,15 @@ namespace ELearning.Admin {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label57;
+        
+        /// <summary>
+        /// TxtSpecialization control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TxtSpecialization;
         
         /// <summary>
         /// Label43 control.
@@ -85,6 +103,15 @@ namespace ELearning.Admin {
         protected global::System.Web.UI.WebControls.Label Label43;
         
         /// <summary>
+        /// TxtCollege control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TxtCollege;
+        
+        /// <summary>
         /// Label44 control.
         /// </summary>
         /// <remarks>
@@ -92,6 +119,15 @@ namespace ELearning.Admin {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label44;
+        
+        /// <summary>
+        /// TxtUniversity control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TxtUniversity;
         
         /// <summary>
         /// Label45 control.
@@ -103,6 +139,15 @@ namespace ELearning.Admin {
         protected global::System.Web.UI.WebControls.Label Label45;
         
         /// <summary>
+        /// TxtCgpa control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TxtCgpa;
+        
+        /// <summary>
         /// Label46 control.
         /// </summary>
         /// <remarks>
@@ -112,76 +157,40 @@ namespace ELearning.Admin {
         protected global::System.Web.UI.WebControls.Label Label46;
         
         /// <summary>
-        /// txtQual control.
+        /// TxtPercent control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtQual;
+        protected global::System.Web.UI.WebControls.TextBox TxtPercent;
         
         /// <summary>
-        /// txtSep control.
+        /// BtnSaveQual control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtSep;
+        protected global::System.Web.UI.WebControls.Button BtnSaveQual;
         
         /// <summary>
-        /// txtCollege control.
+        /// GvQual control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCollege;
+        protected global::System.Web.UI.WebControls.GridView GvQual;
         
         /// <summary>
-        /// txtUniversity control.
+        /// BtnSubmit control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtUniversity;
-        
-        /// <summary>
-        /// txtCgpa control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCgpa;
-        
-        /// <summary>
-        /// txtPercent control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPercent;
-        
-        /// <summary>
-        /// gvQual control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gvQual;
-        
-        /// <summary>
-        /// btnsave control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnsave;
+        protected global::System.Web.UI.WebControls.Button BtnSubmit;
         
         /// <summary>
         /// PanelExperience control.
@@ -202,22 +211,31 @@ namespace ELearning.Admin {
         protected global::System.Web.UI.WebControls.Label Label58;
         
         /// <summary>
-        /// btnExper control.
+        /// BtnAddExperience control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnExper;
+        protected global::System.Web.UI.WebControls.Button BtnAddExperience;
         
         /// <summary>
-        /// lblExperience control.
+        /// LblExperience control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblExperience;
+        protected global::System.Web.UI.WebControls.Label LblExperience;
+        
+        /// <summary>
+        /// PanelAddExperience control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel PanelAddExperience;
         
         /// <summary>
         /// Label59 control.
@@ -229,6 +247,15 @@ namespace ELearning.Admin {
         protected global::System.Web.UI.WebControls.Label Label59;
         
         /// <summary>
+        /// TxtOrganization control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TxtOrganization;
+        
+        /// <summary>
         /// Label60 control.
         /// </summary>
         /// <remarks>
@@ -236,6 +263,15 @@ namespace ELearning.Admin {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label60;
+        
+        /// <summary>
+        /// TxtDesg control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TxtDesg;
         
         /// <summary>
         /// Label61 control.
@@ -247,6 +283,15 @@ namespace ELearning.Admin {
         protected global::System.Web.UI.WebControls.Label Label61;
         
         /// <summary>
+        /// TxtFrom_date control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TxtFrom_date;
+        
+        /// <summary>
         /// Label62 control.
         /// </summary>
         /// <remarks>
@@ -254,6 +299,15 @@ namespace ELearning.Admin {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label62;
+        
+        /// <summary>
+        /// TxtTo_date control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TxtTo_date;
         
         /// <summary>
         /// Label63 control.
@@ -265,42 +319,6 @@ namespace ELearning.Admin {
         protected global::System.Web.UI.WebControls.Label Label63;
         
         /// <summary>
-        /// txtOrg control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtOrg;
-        
-        /// <summary>
-        /// txtDesg control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtDesg;
-        
-        /// <summary>
-        /// txtFrom control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtFrom;
-        
-        /// <summary>
-        /// txtTo control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtTo;
-        
-        /// <summary>
         /// UpdatePanel1 control.
         /// </summary>
         /// <remarks>
@@ -310,39 +328,39 @@ namespace ELearning.Admin {
         protected global::System.Web.UI.UpdatePanel UpdatePanel1;
         
         /// <summary>
-        /// txtDuration control.
+        /// TxtDuration control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtDuration;
+        protected global::System.Web.UI.WebControls.TextBox TxtDuration;
         
         /// <summary>
-        /// gvExper control.
+        /// BtnSaveExp control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gvExper;
+        protected global::System.Web.UI.WebControls.Button BtnSaveExp;
         
         /// <summary>
-        /// btnExpSave control.
+        /// GvExperience control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnExpSave;
+        protected global::System.Web.UI.WebControls.GridView GvExperience;
         
         /// <summary>
-        /// btnSubmitall control.
+        /// BtnSubmitAll control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSubmitall;
+        protected global::System.Web.UI.WebControls.Button BtnSubmitAll;
     }
 }

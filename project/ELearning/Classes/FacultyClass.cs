@@ -8,172 +8,49 @@ using System.Data.SqlClient;
 namespace ELearning.Classes
 {
     public class FacultyClass
-    {       
-            string ConnectionString = System.Configuration.ConfigurationManager.ConnectionStrings["myConn"].ConnectionString;
-            SqlConnection con;
-            public void OpenConnection()
-            {
-                con = new SqlConnection(ConnectionString);
-                con.Open();
-            }
-            public void CloseConnection()
-            {
-                con.Close();
-            }
-            private string nsubject;
-            private string ntopic;
-            private string notes;
-            private string userid;
-            private string doc_type;
-            private string doc_id;
-            private string rsubject;
-            private string rtopic;
-            private string report;
-            private string rdescription;
-            private string dept;
-
-            public string Nsubject
-            {
-                get
-                {
-                    return nsubject;
-                }
-
-                set
-                {
-                    nsubject = value;
-                }
-            }
-
-            public string Ntopic
-            {
-                get
-                {
-                    return ntopic;
-                }
-
-                set
-                {
-                    ntopic = value;
-                }
-            }
-
-            public string Notes
-            {
-                get
-                {
-                    return notes;
-                }
-
-                set
-                {
-                    notes = value;
-                }
-            }
-
-            public string Userid
-            {
-                get
-                {
-                    return userid;
-                }
-
-                set
-                {
-                    userid = value;
-                }
-            }
-
-            public string Doc_type
-            {
-                get
-                {
-                    return doc_type;
-                }
-
-                set
-                {
-                    doc_type = value;
-                }
-            }
-
-            public string Doc_id
-            {
-                get
-                {
-                    return doc_id;
-                }
-
-                set
-                {
-                    doc_id = value;
-                }
-            }
-
-        public string Rsubject
+    {
+        string ConnectionString = System.Configuration.ConfigurationManager.ConnectionStrings["myConn"].ConnectionString;
+        SqlConnection con;
+        public void OpenConnection()
         {
-            get
-            {
-                return rsubject;
-            }
-
-            set
-            {
-                rsubject = value;
-            }
+            con = new SqlConnection(ConnectionString);
+            con.Open();
         }
-
-        public string Rtopic
+        public void CloseConnection()
         {
-            get
-            {
-                return rtopic;
-            }
-
-            set
-            {
-                rtopic = value;
-            }
+            con.Close();
         }
-
-        public string Report
+        public void ExecuteQueries(string Query_)
         {
-            get
-            {
-                return report;
-            }
-
-            set
-            {
-                report = value;
-            }
+            SqlCommand cmd = new SqlCommand(Query_, con);
+            cmd.ExecuteNonQuery();
         }
+        private string nDept;
+        private string nSubject;
+        private string nTopic;
+        private string notes;
+        private string userid;
+        private string doc_type;
+        private string doc_id;
 
-        public string Rdescription
-        {
-            get
-            {
-                return rdescription;
-            }
+        private string rDept;
+        private string rSubject;
+        private string rTopic;
+        private string rDescription;
+        private string reports;
 
-            set
-            {
-                rdescription = value;
-            }
-        }
-
-        public string Dept
-        {
-            get
-            {
-                return dept;
-            }
-
-            set
-            {
-                dept = value;
-            }
-        }
+        public string NDept { get => nDept; set => nDept = value; }
+        public string NSubject { get => nSubject; set => nSubject = value; }
+        public string NTopic { get => nTopic; set => nTopic = value; }
+        public string Notes { get => notes; set => notes = value; }
+        public string Userid { get => userid; set => userid = value; }
+        public string Doc_type { get => doc_type; set => doc_type = value; }
+        public string Doc_id { get => doc_id; set => doc_id = value; }
+        public string RDept { get => rDept; set => rDept = value; }
+        public string RSubject { get => rSubject; set => rSubject = value; }
+        public string RTopic { get => rTopic; set => rTopic = value; }
+        public string RDescription { get => rDescription; set => rDescription = value; }
+        public string Reports { get => reports; set => reports = value; }
 
         public DataTable FetchDept()
         {
@@ -189,7 +66,7 @@ namespace ELearning.Classes
         {
             OpenConnection();
             DataTable dtSubject = new DataTable();
-            SqlCommand command = new SqlCommand("Select s.Sub_Id,s.Subject from Subject_Details s inner join Branch_Details b on s.Dept_Id=b.B_Id where b.Branch_Name='"+dept+"'", con);
+            SqlCommand command = new SqlCommand("Select s.Sub_Id,s.Subject from Subject_Details s inner join Branch_Details b on s.Dept_Id=b.B_Id where b.Branch_Name='" + nDept + "'", con);
             SqlDataAdapter da = new SqlDataAdapter(command);// this will query your database and return the result to your datatable
             da.Fill(dtSubject);
             CloseConnection();
@@ -197,57 +74,57 @@ namespace ELearning.Classes
         }
 
         public void UploadNotes()
+        {
+            OpenConnection();
+            doc_type = "Notes";
+            SqlCommand command = new SqlCommand("select count(Doc_Id) from Uploaded_Document where Doc_Type = '" + doc_type + "'", con);
+            int count;
+            object cnt = command.ExecuteScalar();
+            if (cnt != DBNull.Value)
             {
-                OpenConnection();
-                doc_type = "Notes";
-                SqlCommand command = new SqlCommand("select count(Doc_Id) from Uploaded_Document where Doc_Type = '"+doc_type+"'", con);
-                int count;
-                object cnt = command.ExecuteScalar();
-                if (cnt != DBNull.Value)
-                {
-                    count = (int)cnt;
-                    count++;
-                }
-                else
-                {
-                    count = 1;
-                }
-                doc_id = "Note" + count;                                
-                string qry = "insert into Uploaded_Document(Doc_Id,Doc_Type,User_Id,Subject,Topic,Document_File)values('" + doc_id + "','"+doc_type+ "',@suserid,@sub,@stopic,@path)";
-                SqlCommand cmd = new SqlCommand(qry, con);
-                cmd.Parameters.AddWithValue("@suserid", userid);
-                cmd.Parameters.AddWithValue("@sub",nsubject);
-                cmd.Parameters.AddWithValue("@stopic",ntopic);
-                cmd.Parameters.AddWithValue("@path", notes);
-                cmd.ExecuteNonQuery();
-                CloseConnection();
+                count = (int)cnt;
+                count++;
             }
-            public void UploadReports()
+            else
             {
-                OpenConnection();
-                doc_type = "Reports";
-                SqlCommand command = new SqlCommand("select count(Doc_Id) from Uploaded_Document where Doc_Type = '" + doc_type + "'", con);
-                int count;
-                object cnt = command.ExecuteScalar();
-                if (cnt != DBNull.Value)
-                {
-                    count = (int)cnt;
-                    count++;
-                }
-                else
-                {
-                    count = 1;
-                }
-                doc_id = "Report" + count;
-                string qry = "insert into Uploaded_Document(Doc_Id,Doc_Type,User_Id,Subject,Topic,Document_File,Description)values('" + doc_id + "','" + doc_type + "',@ruserid,@rsub,@rtopic,@rpath,@rdscrptn)";
-                SqlCommand cmd = new SqlCommand(qry, con);
-                cmd.Parameters.AddWithValue("@ruserid", userid);
-                cmd.Parameters.AddWithValue("@rsub", rsubject);
-                cmd.Parameters.AddWithValue("@rtopic", rtopic);
-                cmd.Parameters.AddWithValue("@rpath", report);
-                cmd.Parameters.AddWithValue("@rdscrptn", rdescription);
-                cmd.ExecuteNonQuery();
-                CloseConnection();
+                count = 1;
             }
-   }
+            doc_id = "Note" + count;
+            string qry = "insert into Uploaded_Document(Doc_Id,Doc_Type,User_Id,Subject,Topic,Document_File)values('" + doc_id + "','" + doc_type + "',@suserid,@sub,@stopic,@path)";
+            SqlCommand cmd = new SqlCommand(qry, con);
+            cmd.Parameters.AddWithValue("@suserid", userid);
+            cmd.Parameters.AddWithValue("@sub", nSubject);
+            cmd.Parameters.AddWithValue("@stopic", nTopic);
+            cmd.Parameters.AddWithValue("@path", notes);
+            cmd.ExecuteNonQuery();
+            CloseConnection();
+        }
+        public void UploadReports()
+        {
+            OpenConnection();
+            doc_type = "Reports";
+            SqlCommand command = new SqlCommand("select count(Doc_Id) from Uploaded_Document where Doc_Type = '" + doc_type + "'", con);
+            int count;
+            object cnt = command.ExecuteScalar();
+            if (cnt != DBNull.Value)
+            {
+                count = (int)cnt;
+                count++;
+            }
+            else
+            {
+                count = 1;
+            }
+            doc_id = "Report" + count;
+            string qry = "insert into Uploaded_Document(Doc_Id,Doc_Type,User_Id,Subject,Topic,Document_File,Description)values('" + doc_id + "','" + doc_type + "',@ruserid,@rsub,@rtopic,@rpath,@rdscrptn)";
+            SqlCommand cmd = new SqlCommand(qry, con);
+            cmd.Parameters.AddWithValue("@ruserid", userid);
+            cmd.Parameters.AddWithValue("@rsub", rSubject);
+            cmd.Parameters.AddWithValue("@rtopic", rTopic);
+            cmd.Parameters.AddWithValue("@rpath", reports);
+            cmd.Parameters.AddWithValue("@rdscrptn", rDescription);
+            cmd.ExecuteNonQuery();
+            CloseConnection();
+        }
+    }
 }

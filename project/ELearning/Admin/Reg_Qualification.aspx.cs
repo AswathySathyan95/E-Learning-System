@@ -4,15 +4,18 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using System.Data.SqlClient;
 using System.Data;
+using System.Data.SqlClient;
+using Twilio;
+using Twilio.Rest.Api.V2010.Account;
 using ELearning.Classes;
+
 
 namespace ELearning.Admin
 {
     public partial class Reg_Qualification : System.Web.UI.Page
     {
-        AdminClass objAdnReg = new AdminClass();
+        AdminClass objAdmnReg = new AdminClass();
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Session["usertype"].ToString() == "Faculty" || Session["usertype"].ToString() == "Admin")
@@ -21,119 +24,116 @@ namespace ELearning.Admin
             }
             else if (Session["usertype"].ToString() == "Student")
             {
+                BtnSubmit.Visible = true;
                 PanelExperience.Visible = false;
+
             }
+        }
+
+        protected void BtnSaveQual_Click(object sender, EventArgs e)
+        {
+            objAdmnReg.User_id = Session["userid"].ToString();
+            objAdmnReg.Qualification = TxtQual.Text.ToString();
+            objAdmnReg.Specialization = TxtSpecialization.Text.ToString();
+            objAdmnReg.College = TxtCollege.Text.ToString();
+            objAdmnReg.University = TxtUniversity.Text.ToString();
+            objAdmnReg.Cgpa = Convert.ToDouble(TxtCgpa.Text.ToString());
+            objAdmnReg.Percentage = Convert.ToDouble(TxtPercent.Text.ToString());
+            objAdmnReg.InsertQualification();
+            DataTable dtQual = new DataTable();
+            dtQual = objAdmnReg.QualificationDetails();
+            if (dtQual.Rows.Count > 0)
+            {
+                GvQual.Visible = true;
+                GvQual.DataSource = dtQual;
+                GvQual.DataBind();
+            }
+            LblQual.Visible = true;
+            PanelQualification.Visible = false;
+        }
+
+        protected void BtnAddQual_Click(object sender, EventArgs e)
+        {
+            LblQual.Visible = false;
+            PanelQualification.Visible = true;
+            TxtQual.Text = "";
+            TxtSpecialization.Text = "";
+            TxtCollege.Text = "";
+            TxtUniversity.Text = "";
+            TxtCgpa.Text = "";
+            TxtPercent.Text = "";
+        }
+
+        protected void BtnSaveExp_Click(object sender, EventArgs e)
+        {
+            objAdmnReg.User_id = Session["userid"].ToString();
+            objAdmnReg.Organisation = TxtOrganization.Text.ToString();
+            objAdmnReg.Designation = TxtDesg.Text.ToString();
+            objAdmnReg.From_date = Convert.ToDateTime(TxtFrom_date.Text.ToString());
+            objAdmnReg.To_date = Convert.ToDateTime(TxtTo_date.Text.ToString());
+            objAdmnReg.Duration = TxtDuration.Text.ToString();
+            objAdmnReg.InsertExperience();
+            DataTable dtExp = new DataTable();
+            dtExp = objAdmnReg.ExperienceDetails();
+            if (dtExp.Rows.Count > 0)
+            {
+                GvExperience.Visible = true;
+                GvExperience.DataSource = dtExp;
+                GvExperience.DataBind();
+            }
+            LblExperience.Visible = true;
+            PanelAddExperience.Visible = false;
         }
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            objAdnReg.User_id = Session["userid"].ToString();
-            objAdnReg.Username = Session["username"].ToString();
-            objAdnReg.Password = Session["password"].ToString();
-            objAdnReg.UpdateRegistration();
+            LblExperience.Visible = false;
+            PanelAddExperience.Visible = true;
+            TxtOrganization.Text = "";
+            TxtDesg.Text = "";
+            TxtFrom_date.Text = "";
+            TxtTo_date.Text = "";
+            TxtDuration.Text = "";
+        }
+
+        protected void TxtTo_date_TextChanged(object sender, EventArgs e)
+        {
+            DateTime from = Convert.ToDateTime(TxtFrom_date.Text.ToString());
+            DateTime to = Convert.ToDateTime(TxtTo_date.Text.ToString());
+            int years = to.Year - from.Year;
+            int month = to.Month - from.Month;
+            TxtDuration.Text = ((years * 12) + month) + " " + "Months";
+        }
+
+        protected void BtnSubmit_Click(object sender, EventArgs e)
+        {
+            objAdmnReg.User_id = Session["userid"].ToString();
+            objAdmnReg.Username = Session["username"].ToString();
+            objAdmnReg.Password = Session["password"].ToString();
+            objAdmnReg.UpdateRegistration();
+            //Sending username and password to the user
+           /* const string accountSid = "AC1eb08c6f5419018f0d858442a88dd229";
+            const string authToken = "97a6238b492ead699b3a6d8a88cebb49";
+            TwilioClient.Init(accountSid, authToken);
+            var message = MessageResource.Create(
+                body: "Registration completed successfully",
+                from: new Twilio.Types.PhoneNumber("+16037694884"),
+                to: new Twilio.Types.PhoneNumber("+919747628288")
+            );
+            Console.WriteLine(message.Sid);*/
+
             Response.Write("<script LANGUAGE='JavaScript' >alert('Registration Has Been Successfully Completed.')</script>");
             Response.Redirect("Reg_Home.aspx");
         }
 
-        protected void txtC_pg_TextChanged(object sender, EventArgs e)
+        protected void BtnSubmitAll_Click(object sender, EventArgs e)
         {
-
-        }
-
-        protected void btnAddQual_Click(object sender, EventArgs e)
-        {
-            lbltest.Visible = false;
-            txtCgpa.Visible = true;
-            txtCollege.Visible = true;
-            txtPercent.Visible = true;
-            txtQual.Visible = true;
-            txtSep.Visible = true;
-            txtUniversity.Visible = true;
-        }
-
-        protected void btnsave_Click(object sender, EventArgs e)
-        {
-            objAdnReg.User_id = Session["userid"].ToString();
-            objAdnReg.Qualification = txtQual.Text.ToString();
-            objAdnReg.Sepcialization = txtSep.Text.ToString();
-            objAdnReg.College = txtCollege.Text.ToString();
-            objAdnReg.University = txtUniversity.Text.ToString();
-            objAdnReg.Cgpa = Convert.ToDouble(txtCgpa.Text.ToString());
-            objAdnReg.Percent = Convert.ToDouble(txtPercent.Text.ToString());
-            objAdnReg.InsertQualification();
-            DataTable dtQual = new DataTable();
-            dtQual = objAdnReg.QualificationDetails();
-            if(dtQual.Rows.Count>0)
-            {
-                gvQual.Visible = true;
-                gvQual.DataSource = dtQual;
-                gvQual.DataBind();
-            }
-            lbltest.Visible = true;
-            lbltest.Text = "Click Here To Add More Qualification Details.";
-            txtCgpa.Text = "";
-            txtCollege.Text = "";
-            txtPercent.Text = "";
-            txtQual.Text = "";
-            txtSep.Text = "";
-            txtUniversity.Text = "";
-            txtCgpa.Visible = false;
-            txtCollege.Visible = false;
-            txtPercent.Visible = false;
-            txtQual.Visible = false;
-            txtSep.Visible = false;
-            txtUniversity.Visible = false;
-
-        }
-
-        protected void txtTo_TextChanged(object sender, EventArgs e)
-        {
-            DateTime from = Convert.ToDateTime(txtFrom.Text);
-            DateTime to = Convert.ToDateTime(txtTo.Text);
-            int years = to.Year - from.Year;
-            int month = to.Month - from.Month;
-            txtDuration.Text = ((years*12)+month) +" "+ "Months";
-        }
-
-        protected void Button2_Click(object sender, EventArgs e)
-        {
-            objAdnReg.User_id = Session["userid"].ToString();
-            objAdnReg.Organisation = txtOrg.Text.ToString();
-            objAdnReg.Designation = txtDesg.Text.ToString();
-            objAdnReg.From_date =Convert.ToDateTime(txtFrom.Text.ToString());
-            objAdnReg.To_date = Convert.ToDateTime(txtTo.Text.ToString());
-            objAdnReg.Duration = txtDuration.Text.ToString();
-            objAdnReg.InsertExperience();
-            DataTable dtExp = new DataTable();
-            dtExp = objAdnReg.ExperienceDetails();
-            if (dtExp.Rows.Count > 0)
-            {
-                gvExper.Visible = true;
-                gvExper.DataSource = dtExp;
-                gvExper.DataBind();
-            }
-            lblExperience.Visible = true;
-            lblExperience.Text = "Click Here To Add More Details.";
-            txtOrg.Text = "";
-            txtDesg.Text = "";
-            txtFrom.Text = "";
-            txtTo.Text = "";
-            txtDuration.Text = "";
-            txtOrg.Visible = false;
-            txtDesg.Visible = false;
-            txtFrom.Visible = false;
-            txtTo.Visible = false;
-            txtDuration.Visible = false;
-        }
-
-        protected void btnExper_Click(object sender, EventArgs e)
-        {
-            lblExperience.Visible = false;
-            txtOrg.Visible = true;
-            txtDesg.Visible = true;
-            txtFrom.Visible = true;
-            txtTo.Visible = true;
-            txtDuration.Visible = true;
+            objAdmnReg.User_id = Session["userid"].ToString();
+            objAdmnReg.Username = Session["username"].ToString();
+            objAdmnReg.Password = Session["password"].ToString();
+            objAdmnReg.UpdateRegistration();
+            Response.Write("<script LANGUAGE='JavaScript' >alert('Registration Has Been Successfully Completed.')</script>");
+            Response.Redirect("Reg_Home.aspx");
         }
     }
 }

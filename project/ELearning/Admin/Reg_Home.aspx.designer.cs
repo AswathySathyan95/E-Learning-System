@@ -13,30 +13,30 @@ namespace ELearning.Admin {
     public partial class Reg_Home {
         
         /// <summary>
-        /// ibtnFacultyReg control.
+        /// imgbtnFaculty control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton ibtnFacultyReg;
+        protected global::System.Web.UI.WebControls.ImageButton imgbtnFaculty;
         
         /// <summary>
-        /// ibtnstudent control.
+        /// imgbtnStudent control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton ibtnstudent;
+        protected global::System.Web.UI.WebControls.ImageButton imgbtnStudent;
         
         /// <summary>
-        /// ibtnadminReg control.
+        /// imgbtnAdmin control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton ibtnadminReg;
+        protected global::System.Web.UI.WebControls.ImageButton imgbtnAdmin;
     }
 }
