@@ -7,10 +7,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ELearning.Admin {
+namespace ELearning.Faculty {
     
     
-    public partial class Add_Questions {
+    public partial class FAdd_Qstn {
         
         /// <summary>
         /// Label1 control.

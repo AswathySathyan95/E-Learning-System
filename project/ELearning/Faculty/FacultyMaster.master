@@ -16,6 +16,7 @@
                             <asp:MenuItem NavigateUrl="~/Faculty/Stud_Details.aspx" Text="Student Details" Value="Student Details"></asp:MenuItem>
                             <asp:MenuItem NavigateUrl="~/Faculty/Quiz_Report.aspx" Text="Quiz Reports" Value="Quiz Reports"></asp:MenuItem>
                             <asp:MenuItem Text="Add Quiz" Value="Add Quiz"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Login/Change_Password.aspx" Text="Change Password" Value="Change Password"></asp:MenuItem>
                         </Items>
                     </asp:Menu>
                 </div>

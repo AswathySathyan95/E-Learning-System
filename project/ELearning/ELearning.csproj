@@ -145,6 +145,8 @@
     <Content Include="DesignImages\logo.jpg" />
     <Content Include="DesignImages\student-reg.jpg" />
     <Content Include="Faculty\FacultyHome.aspx" />
+    <Content Include="Faculty\FAdd_Category.aspx" />
+    <Content Include="Faculty\FAdd_Qstn.aspx" />
     <Content Include="Faculty\Quiz_Report.aspx" />
     <Content Include="Faculty\Stud_Details.aspx" />
     <Content Include="Faculty\Upload_Note.aspx" />
@@ -301,6 +303,20 @@
     </Compile>
     <Compile Include="Faculty\FacultyMaster.master.designer.cs">
       <DependentUpon>FacultyMaster.master</DependentUpon>
+    </Compile>
+    <Compile Include="Faculty\FAdd_Category.aspx.cs">
+      <DependentUpon>FAdd_Category.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Faculty\FAdd_Category.aspx.designer.cs">
+      <DependentUpon>FAdd_Category.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Faculty\FAdd_Qstn.aspx.cs">
+      <DependentUpon>FAdd_Qstn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Faculty\FAdd_Qstn.aspx.designer.cs">
+      <DependentUpon>FAdd_Qstn.aspx</DependentUpon>
     </Compile>
     <Compile Include="Faculty\Quiz_Report.aspx.cs">
       <DependentUpon>Quiz_Report.aspx</DependentUpon>

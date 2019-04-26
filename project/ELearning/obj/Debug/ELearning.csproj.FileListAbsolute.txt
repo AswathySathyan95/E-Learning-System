@@ -64,7 +64,6 @@ D:\Project\ELearning\ELearning\bin\Newtonsoft.Json.xml
 D:\Project\ELearning\ELearning\bin\Antlr3.Runtime.pdb
 D:\Project\ELearning\ELearning\bin\Microsoft.AspNet.FriendlyUrls.xml
 D:\Project\ELearning\ELearning\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-D:\Project\ELearning\ELearning\obj\Debug\ELearning.csprojAssemblyReference.cache
 D:\Project\ELearning\ELearning\obj\Debug\ELearning.csproj.CoreCompileInputs.cache
 D:\Project\ELearning\ELearning\obj\Debug\ELearning.csproj.CopyComplete
 D:\Project\ELearning\ELearning\obj\Debug\ELearning.dll
@@ -76,3 +75,4 @@ D:\Project\ELearning\ELearning\bin\Twilio.dll
 D:\Project\ELearning\ELearning\bin\Microsoft.IdentityModel.Tokens.xml
 D:\Project\ELearning\ELearning\bin\System.IdentityModel.Tokens.Jwt.xml
 D:\Project\ELearning\ELearning\bin\Twilio.xml
+D:\Project\ELearning\ELearning\obj\Debug\ELearning.csprojAssemblyReference.cache

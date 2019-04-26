@@ -26,6 +26,7 @@ namespace ELearning.Classes
             cmd.ExecuteNonQuery();
         }
 
+        //Registration
         private string user_id;
         private string user_type;
         private string name;
@@ -52,14 +53,14 @@ namespace ELearning.Classes
         private double f_mobno;
         private int s_id;
         private int p_id;
-
+        //Qualification
         private string qualification;
         private string specialization;
         private string college;
         private string university;
         private double cgpa;
         private double percentage;
-
+        //Experience
         private string organisation;
         private string designation;
         private DateTime from_date;
@@ -68,15 +69,25 @@ namespace ELearning.Classes
 
         private string username;
         private string password;
-
+        //Add Category
         private string c_id;
         private string q_category;
         private string sub_category;
         private string cdate;
         private string userid;
-
-        private string ctgy_id;
-        private string 
+        //Add Questions
+        private string ctgy;
+        private string q_id;
+        private string sub_catgy;
+        private string qustn;
+        private string optnA;
+        private string optnB;
+        private string optnC;
+        private string optnD;
+        private string answer;
+        private string ans_description;
+        private string created_by;
+        private string created_on;
 
         public string User_id { get => user_id; set => user_id = value; }
         public string User_type { get => user_type; set => user_type = value; }
@@ -122,62 +133,81 @@ namespace ELearning.Classes
         public string Sub_category { get => sub_category; set => sub_category = value; }
         public string Userid { get => userid; set => userid = value; }
         public string Cdate { get => cdate; set => cdate = value; }
+        public string Q_id { get => q_id; set => q_id = value; }
+        public string Sub_catgy { get => sub_catgy; set => sub_catgy = value; }
+        public string Qustn { get => qustn; set => qustn = value; }
+        public string OptnA { get => optnA; set => optnA = value; }
+        public string OptnB { get => optnB; set => optnB = value; }
+        public string OptnC { get => optnC; set => optnC = value; }
+        public string OptnD { get => optnD; set => optnD = value; }
+        public string Answer { get => answer; set => answer = value; }
+        public string Ans_description { get => ans_description; set => ans_description = value; }
+        public string Ctgy { get => ctgy; set => ctgy = value; }
+        public string Created_by { get => created_by; set => created_by = value; }
+        public string Created_on { get => created_on; set => created_on = value; }
 
+        //Fetching District from District_Details
         public DataTable AddDistrict()
         {
             OpenConnection();
             DataTable dtADistrict = new DataTable();
             SqlCommand command = new SqlCommand("Select * from District_Details where S_Id='" + s_id + "' ", con);
-            SqlDataAdapter da = new SqlDataAdapter(command);// this will query your database and return the result to your datatable
+            SqlDataAdapter da = new SqlDataAdapter(command);
             da.Fill(dtADistrict);
             CloseConnection();
             return dtADistrict;
         }
 
+        //Fetching Branch Details from the table Branch_Details
         public DataTable AdmittedBranch()
         {
             OpenConnection();
             DataTable dtABranch = new DataTable();
             SqlCommand command = new SqlCommand("Select * from Branch_Details where P_Id='" + p_id + "' ", con);
-            SqlDataAdapter da = new SqlDataAdapter(command);// this will query your database and return the result to your datatable
+            SqlDataAdapter da = new SqlDataAdapter(command);
             da.Fill(dtABranch);
             CloseConnection();
             return dtABranch;
         }
 
+        //Fetching category from the table Quiz_Category
         public DataTable FetchCategory()
         {
             OpenConnection();
             DataTable dtCategory = new DataTable();
             SqlCommand command = new SqlCommand("Select C_Id,Category,Sub_Category from Quiz_Category", con);
-            SqlDataAdapter da = new SqlDataAdapter(command);// this will query your database and return the result to your datatable
+            SqlDataAdapter da = new SqlDataAdapter(command);
             da.Fill(dtCategory);
             CloseConnection();
             return dtCategory;
         }
 
+        //Fetching Sub category from the table Quiz_Category
         public DataTable FetchSubCategory()
         {
             OpenConnection();
             DataTable dtSubCategory = new DataTable();
-            SqlCommand command = new SqlCommand("Select Sub_Category from Quiz_Category where C_Id=", con);
+            SqlCommand command = new SqlCommand("Select C_Id,Sub_Category from Quiz_Category where Category=@sctgry", con);
+            command.Parameters.AddWithValue("@sctgry", ctgy);
             SqlDataAdapter da = new SqlDataAdapter(command);// this will query your database and return the result to your datatable
             da.Fill(dtSubCategory);
             CloseConnection();
             return dtSubCategory;
         }
 
+        //Fetching Branch Details from the table Branch_Details
         public DataTable RegAdmittedBranch()
         {
             OpenConnection();
             DataTable dtARegBranch = new DataTable();
             SqlCommand command = new SqlCommand("Select * from Branch_Details  ", con);
-            SqlDataAdapter da = new SqlDataAdapter(command);// this will query your database and return the result to your datatable
+            SqlDataAdapter da = new SqlDataAdapter(command);
             da.Fill(dtARegBranch);
             CloseConnection();
             return dtARegBranch;
         }
 
+        //Fetching Qualification Details from the table Qualification
         public DataTable QualificationDetails()
         {
             OpenConnection();
@@ -189,6 +219,7 @@ namespace ELearning.Classes
             return dtQual;
         }
 
+        //Inserting Student Details into the table User_Details
         public void InsertDetails()
         {
             OpenConnection();
@@ -248,6 +279,7 @@ namespace ELearning.Classes
             CloseConnection();
         }
 
+        //Inserting Staff Details into the table User_Details
         public void RegInsertDetails()
         {
             OpenConnection();
@@ -304,6 +336,7 @@ namespace ELearning.Classes
             CloseConnection();
         }
 
+        //Inserting Staffs and Students Qualification details
         public void InsertQualification()
         {
             OpenConnection();
@@ -319,6 +352,7 @@ namespace ELearning.Classes
             CloseConnection();
         }
 
+        //Adding Staff Experience details to the table
         public void InsertExperience()
         {
             OpenConnection();
@@ -333,6 +367,7 @@ namespace ELearning.Classes
             CloseConnection();
         }
 
+        //Updating the table USer_Details by adding Username and Password
         public void UpdateRegistration()
         {
             OpenConnection();
@@ -345,6 +380,7 @@ namespace ELearning.Classes
             CloseConnection();
         }
 
+        //Fetching Experience Details from the table to display
         public DataTable ExperienceDetails()
         {
             OpenConnection();
@@ -356,6 +392,7 @@ namespace ELearning.Classes
             return dtExp;
         }
 
+        //Adding Category List into the table
         public void CategoryDetails()
         {
             OpenConnection();
@@ -371,15 +408,52 @@ namespace ELearning.Classes
             {
                 count = 1;
             }
-            c_id = "Ctgry" + count;
-            string qry = "insert into Quiz_Category(C_Id,Category,Sub_Category,Created_On,Created_By)values('"+c_id+ "',@qcategory,@ssubctgry,@scdate,@suserid)";
+            q_id = "Ctgry" + count;
+            string qry = "insert into Quiz_Category(C_Id,Category,Sub_Category,Created_On,Created_By)values('"+q_id+ "',@qcategory,@ssubctgry,@scdate,@suserid)";
             SqlCommand cmd = new SqlCommand(qry, con);
-            cmd.Parameters.AddWithValue("@qcategory", q_category);
-            cmd.Parameters.AddWithValue("@ssubctgry", sub_category);
-            cmd.Parameters.AddWithValue("@suserid", userid);
-            cmd.Parameters.AddWithValue("@scdate", Cdate);
+            
             cmd.ExecuteNonQuery();
             CloseConnection();
+        }
+
+        //Inserting Quiz Questions into the table
+        public void InsertQuestions()
+        {
+            OpenConnection();           
+            string qry = "insert into Quiz_Questions(Q_Id,Category_Id,Question,Option_A,Option_B,Option_C,Option_D,Answer,Description,Created_By,Created_On)values('" + q_id + "',@ssub_ctgyId,@squstn,@soptnA,@soptnB,@soptnC,@soptnD,@sanswer,@sans_dscrptn,@screatedby,@screatedon)";
+            SqlCommand cmd = new SqlCommand(qry, con);
+            cmd.Parameters.AddWithValue("@ssub_ctgyId", sub_catgy);
+            cmd.Parameters.AddWithValue("@squstn", qustn);
+            cmd.Parameters.AddWithValue("@soptnA", optnA);
+            cmd.Parameters.AddWithValue("@soptnB", optnB);
+            cmd.Parameters.AddWithValue("@soptnC", optnC);
+            cmd.Parameters.AddWithValue("@soptnD", optnD);
+            cmd.Parameters.AddWithValue("@sanswer", answer);
+            cmd.Parameters.AddWithValue("@sans_dscrptn", ans_description);
+            cmd.Parameters.AddWithValue("@screatedby", created_by);
+            cmd.Parameters.AddWithValue("@screatedon", created_on);
+            cmd.ExecuteNonQuery();
+            CloseConnection();
+        }
+
+        //Generate Question Id
+        public string GenerateQId()
+        {
+            OpenConnection();
+            SqlCommand command = new SqlCommand("select count(Q_Id) from Quiz_Questions", con);
+            int count;
+            object cnt = command.ExecuteScalar();
+            if (cnt != DBNull.Value)
+            {
+                count = (int)cnt;
+                count++;
+            }
+            else
+            {
+                count = 1;
+            }
+            q_id = "Qstn" + count;
+            return q_id;
         }
     }
 }

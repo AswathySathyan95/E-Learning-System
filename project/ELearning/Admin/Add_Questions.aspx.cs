@@ -17,13 +17,15 @@ namespace ELearning.Admin
         {
             if(!IsPostBack)
             {
+                TxtQ_Id.Text = objAdmnQ.GenerateQId();
+
                 DataTable dtCategory = new DataTable();
                 dtCategory = objAdmnQ.FetchCategory();
                 if (dtCategory.Rows.Count > 0)
                 {
                     DdlCategory.DataSource = dtCategory;
                     DdlCategory.DataTextField = "Category";
-                    DdlCategory.DataValueField = "C_Id";
+                    DdlCategory.DataValueField = "Category";
                     DdlCategory.DataBind();
                 }
             }
@@ -31,7 +33,33 @@ namespace ELearning.Admin
 
         protected void DdlCategory_SelectedIndexChanged(object sender, EventArgs e)
         {
+            objAdmnQ.Ctgy = DdlCategory.SelectedItem.ToString();
+            DataTable dtSubCategory = new DataTable();
+            dtSubCategory = objAdmnQ.FetchSubCategory();
+            if (dtSubCategory.Rows.Count > 0)
+            {
+                DdlSubcategory.DataSource = dtSubCategory;
+                DdlSubcategory.DataTextField = "Sub_Category";
+                DdlSubcategory.DataValueField = "C_Id";
+                DdlSubcategory.DataBind();
+            }
+        }
 
+        protected void BtnSave_Click(object sender, EventArgs e)
+        {
+            objAdmnQ.Q_id = TxtQ_Id.Text.ToString();
+            objAdmnQ.Ctgy = DdlCategory.SelectedItem.ToString();
+            objAdmnQ.Sub_catgy = DdlSubcategory.SelectedValue.ToString();
+            objAdmnQ.Qustn = TxtQuestion.Text.ToString();
+            objAdmnQ.OptnA = TxtOptn1.Text.ToString();
+            objAdmnQ.OptnB = TxtOptn2.Text.ToString();
+            objAdmnQ.OptnC = TxtOptn3.Text.ToString();
+            objAdmnQ.OptnD = TxtOptn4.Text.ToString();
+            objAdmnQ.Answer = TxtCorrectAns.Text.ToString();
+            objAdmnQ.Ans_description = TxtDescription.Text.ToString();
+            objAdmnQ.Created_by = Session["u_id"].ToString();
+            objAdmnQ.Created_on = System.DateTime.Now.ToShortDateString();
+            objAdmnQ.InsertQuestions();
         }
     }
 }

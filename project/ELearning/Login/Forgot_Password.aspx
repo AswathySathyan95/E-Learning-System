@@ -85,7 +85,7 @@
                                 <tr>
                                     <td class="auto-style6">&nbsp;</td>
                                     <td><strong>
-                                        <asp:Label ID="LblPswd" runat="server" Text="Please Check Your Registered Email"></asp:Label>
+                                        <asp:Label ID="LblPswd" runat="server" Text="Please Check Your Registered Email" Visible="False"></asp:Label>
                                         </strong></td>
                                     <td>&nbsp;</td>
                                 </tr>

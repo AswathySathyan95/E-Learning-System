@@ -15,6 +15,18 @@
                     </strong>
 
                 </div>
+                <div class="text-center">
+                    <strong>
+                    <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/Admin/Add_Questions.aspx" style="color: #000000">Quiz Questions</asp:HyperLink>
+                    </strong>
+                </div>
+                <div class="text-center">
+
+                    <strong>
+                    <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Login/Change_Password.aspx" style="color: #000000">Change Password</asp:HyperLink>
+                    </strong>
+
+                </div>
             </td>
             <td>
                 <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
