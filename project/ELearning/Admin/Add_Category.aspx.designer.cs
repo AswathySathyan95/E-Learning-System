@@ -22,13 +22,31 @@ namespace ELearning.Admin {
         protected global::System.Web.UI.WebControls.Label Label1;
         
         /// <summary>
-        /// TxtCategory control.
+        /// DdlCategory control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtCategory;
+        protected global::System.Web.UI.WebControls.DropDownList DdlCategory;
+        
+        /// <summary>
+        /// BtnAddCategory control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button BtnAddCategory;
+        
+        /// <summary>
+        /// TxtCategoryAdd control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TxtCategoryAdd;
         
         /// <summary>
         /// Label2 control.

@@ -1,12 +1,12 @@
 ﻿<%@ Master Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="FacultyMaster.master.cs" Inherits="ELearning.Faculty.FacultyMaster" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <table class="nav-justified">
+    <table class="nav-justified" style="height: 479px">
         <tr>
-            <td style="width: 258px" class="modal-sm">
+            <td style="width: 172px" class="modal-sm">
                 <br />
                 <br />
-                <div style="width: 249px" class="text-left">
-                    <asp:Menu ID="Menu1" runat="server">
+                <div style="width: 168px; height: 189px;" class="text-left">
+                    <asp:Menu ID="Menu1" runat="server" style="font-size: small">
                         <Items>
                             <asp:MenuItem Text="Upload Documents" Value="Upload Documents">
                                 <asp:MenuItem NavigateUrl="~/Faculty/Upload_Video.aspx" Text="Video Tutorials" Value="Video Tutorials"></asp:MenuItem>

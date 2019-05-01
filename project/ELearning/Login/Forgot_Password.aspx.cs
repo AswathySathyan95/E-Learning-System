@@ -38,7 +38,7 @@ namespace ELearning.Login
               {
                   Response.Write("<script LANGUAGE='JavaScript' >alert('Please Enter Registered Email Address')</script>");
               }
-              string msg = "Hi " + objLgn.Name + ",<br>" + "You recently submitted a forgot password request on Elearning System." + "<br>" + "Your Username and Password are as follow: <br>" + "Username :" + objLgn.Uname + "<br>Password :" + objLgn.Pswd;
+              string msg = "Hi " + objLgn.Name + ",<br>" + "You have recently submitted a forgot password request on Elearning System." + "<br>" + "Your Username and Password are as follow: <br>" + "Username :" + objLgn.Uname + "<br>Password :" + objLgn.Pswd;
               
               using (StringWriter sw = new StringWriter())
               {

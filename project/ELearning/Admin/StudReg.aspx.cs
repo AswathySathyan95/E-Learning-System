@@ -39,7 +39,7 @@ namespace ELearning.Admin
             objAdmReg.Name = txtfname.Text.ToString() + " " + txtmname.Text.ToString() + " " + txtlname.Text.ToString();
             Session["name"] = objAdmReg.Name;
             objAdmReg.Mob_no = Convert.ToDouble(txtMobNo.Text);
-            Session["mobno"] = objAdmReg.Mob_no;
+            Session["mobno"] = txtMobNo.Text.ToString();
             objAdmReg.Dob = Convert.ToDateTime(txtDob.Text.ToString());
             objAdmReg.Email = txtemailid.Text.ToString();
             objAdmReg.Religion = ddlReligion.SelectedItem.Text.ToString();

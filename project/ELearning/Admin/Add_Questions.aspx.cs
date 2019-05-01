@@ -25,7 +25,7 @@ namespace ELearning.Admin
                 {
                     DdlCategory.DataSource = dtCategory;
                     DdlCategory.DataTextField = "Category";
-                    DdlCategory.DataValueField = "Category";
+                    DdlCategory.DataValueField = "C_Id";
                     DdlCategory.DataBind();
                 }
             }
@@ -33,7 +33,7 @@ namespace ELearning.Admin
 
         protected void DdlCategory_SelectedIndexChanged(object sender, EventArgs e)
         {
-            objAdmnQ.Ctgy = DdlCategory.SelectedItem.ToString();
+            objAdmnQ.Ctgy = DdlCategory.SelectedValue.ToString();
             DataTable dtSubCategory = new DataTable();
             dtSubCategory = objAdmnQ.FetchSubCategory();
             if (dtSubCategory.Rows.Count > 0)

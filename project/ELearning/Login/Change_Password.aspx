@@ -65,7 +65,7 @@
         }
     </style>
 </head>
-<body>
+<body >
     <form id="form1" runat="server">
         <div>
             <table class="auto-style1">

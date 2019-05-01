@@ -1,18 +1,26 @@
 ﻿<%@ Master Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="StudentMaster.master.cs" Inherits="ELearning.Student.StudentMaster" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <table class="nav-justified">
+    <table class="nav-justified" style="height: 568px">
         <tr>
-            <td style="width: 332px">
+            <td style="width: 187px; height: 348px;">
                 <br />
                 <br />
-                <div class="text-center" style="width: 319px">
+                <div class="text-left" style="width: 187px; height: 79px;">
                     <strong>
                     <asp:HyperLink ID="HyperLink1" runat="server" ForeColor="Black" NavigateUrl="~/Login/Change_Password.aspx">Change Password</asp:HyperLink>
                     </strong>
                 </div>
-                <br />
+                <div style="height: 69px">
+
+                </div>
+                <div style="height: 69px">
+
+                </div>
+                <div style="height: 91px">
+
+                </div>
             </td>
-            <td>
+            <td style="height: 348px">
                 <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                 </asp:ContentPlaceHolder>
             </td>
