@@ -25,16 +25,31 @@ namespace ELearning.Faculty
                 {
                     DdlCategory.DataSource = dtCategory;
                     DdlCategory.DataTextField = "Category";
-                    DdlCategory.DataValueField = "Category";
+                    DdlCategory.DataValueField = "C_Id";
                     DdlCategory.DataBind();
                 }
             }
-
-
         }
 
         protected void BtnSave_Click(object sender, EventArgs e)
         {
+            if (RbOptnA.Checked)
+            {
+                objFctly.Answer = RbOptnA.Text.ToString();
+            }
+            else if (RbOptnB.Checked)
+            {
+                objFctly.Answer = RbOptnB.Text.ToString();
+            }
+            else if (RbOptnC.Checked)
+            {
+                objFctly.Answer = RbOptnC.Text.ToString();
+            }
+            else if (RbOptnD.Checked)
+            {
+                objFctly.Answer = RbOptnD.Text.ToString();
+            }
+
             objFctly.Q_id = TxtQ_Id.Text.ToString();
             objFctly.Ctgy = DdlCategory.SelectedItem.ToString();
             objFctly.Sub_catgy = DdlSubcategory.SelectedValue.ToString();
@@ -43,26 +58,40 @@ namespace ELearning.Faculty
             objFctly.OptnB = TxtOptn2.Text.ToString();
             objFctly.OptnC = TxtOptn3.Text.ToString();
             objFctly.OptnD = TxtOptn4.Text.ToString();
-            objFctly.Answer = TxtCorrectAns.Text.ToString();
+            //objAdmnQ.Answer = TxtCorrectAns.Text.ToString();
             objFctly.Ans_description = TxtDescription.Text.ToString();
             objFctly.Created_by = Session["u_id"].ToString();
             objFctly.Created_on = System.DateTime.Now.ToShortDateString();
             objFctly.InsertQuestions();
+            Response.Write("<script LANGUAGE='JavaScript' >alert('Details Added Successfully!!!')</script>");
 
+            Response.Redirect("FAdd_Qstn.aspx");
         }
 
         protected void DdlCategory_SelectedIndexChanged(object sender, EventArgs e)
         {
-            objFctly.Ctgy = DdlCategory.SelectedItem.ToString();
+            objFctly.Ctgy = DdlCategory.SelectedValue.ToString();
             DataTable dtSubCategory = new DataTable();
             dtSubCategory = objFctly.FetchSubCategory();
             if (dtSubCategory.Rows.Count > 0)
             {
                 DdlSubcategory.DataSource = dtSubCategory;
-                DdlSubcategory.DataTextField = "Sub_Category";
-                DdlSubcategory.DataValueField = "C_Id";
+                DdlSubcategory.DataTextField = "SubCategory";
+                DdlSubcategory.DataValueField = "SubCat_Id";
                 DdlSubcategory.DataBind();
             }
+        }
+
+        protected void TxtOptn4_TextChanged(object sender, EventArgs e)
+        {
+            RbOptnA.Text = TxtOptn1.Text.ToString();
+            RbOptnB.Text = TxtOptn2.Text.ToString();
+            RbOptnC.Text = TxtOptn3.Text.ToString();
+            RbOptnD.Text = TxtOptn4.Text.ToString();
+            /* RbOptnA.Visible = true;
+             RbOptnB.Visible = true;
+             RbOptnC.Visible = true;
+             RbOptnD.Visible = true;*/
         }
     }
 }

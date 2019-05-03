@@ -91,10 +91,14 @@ namespace ELearning.Admin
             dtADistrict = objAdmReg.AddDistrict();
             if (dtADistrict.Rows.Count > 0)
             {
-                ddlDistrict.DataSource = dtADistrict;
+                for(int i=0;i<dtADistrict.Rows.Count;i++)
+                {
+                    ddlDistrict.Items.Add(dtADistrict.Rows[i]["District"].ToString());
+                }
+                /*ddlDistrict.DataSource = dtADistrict;
                 ddlDistrict.DataTextField = "District";
                 ddlDistrict.DataValueField = "D_Id";
-                ddlDistrict.DataBind();
+                ddlDistrict.DataBind();*/
             }
         }
 

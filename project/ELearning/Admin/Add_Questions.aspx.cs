@@ -39,14 +39,31 @@ namespace ELearning.Admin
             if (dtSubCategory.Rows.Count > 0)
             {
                 DdlSubcategory.DataSource = dtSubCategory;
-                DdlSubcategory.DataTextField = "Sub_Category";
-                DdlSubcategory.DataValueField = "C_Id";
+                DdlSubcategory.DataTextField = "SubCategory";
+                DdlSubcategory.DataValueField = "SubCat_Id";
                 DdlSubcategory.DataBind();
             }
         }
 
         protected void BtnSave_Click(object sender, EventArgs e)
         {
+            if(RbOptnA.Checked)
+            {
+                objAdmnQ.Answer = RbOptnA.Text.ToString();
+            }
+            else if(RbOptnB.Checked)
+            {
+                objAdmnQ.Answer = RbOptnB.Text.ToString();
+            }
+            else if(RbOptnC.Checked)
+            {
+                objAdmnQ.Answer = RbOptnC.Text.ToString();
+            }
+            else if(RbOptnD.Checked)
+            {
+                objAdmnQ.Answer = RbOptnD.Text.ToString();
+            }
+                
             objAdmnQ.Q_id = TxtQ_Id.Text.ToString();
             objAdmnQ.Ctgy = DdlCategory.SelectedItem.ToString();
             objAdmnQ.Sub_catgy = DdlSubcategory.SelectedValue.ToString();
@@ -55,11 +72,27 @@ namespace ELearning.Admin
             objAdmnQ.OptnB = TxtOptn2.Text.ToString();
             objAdmnQ.OptnC = TxtOptn3.Text.ToString();
             objAdmnQ.OptnD = TxtOptn4.Text.ToString();
-            objAdmnQ.Answer = TxtCorrectAns.Text.ToString();
+            //objAdmnQ.Answer = TxtCorrectAns.Text.ToString();
             objAdmnQ.Ans_description = TxtDescription.Text.ToString();
             objAdmnQ.Created_by = Session["u_id"].ToString();
             objAdmnQ.Created_on = System.DateTime.Now.ToShortDateString();
             objAdmnQ.InsertQuestions();
+            Response.Write("<script LANGUAGE='JavaScript' >alert('Details Added Successfully!!!')</script>");
+
+            Response.Redirect("Add_Questions.aspx");
+
+        }
+
+        protected void TxtOptn4_TextChanged(object sender, EventArgs e)
+        {
+            RbOptnA.Text = TxtOptn1.Text.ToString();
+            RbOptnB.Text = TxtOptn2.Text.ToString();
+            RbOptnC.Text = TxtOptn3.Text.ToString();
+            RbOptnD.Text = TxtOptn4.Text.ToString();
+           /* RbOptnA.Visible = true;
+            RbOptnB.Visible = true;
+            RbOptnC.Visible = true;
+            RbOptnD.Visible = true;*/
         }
     }
 }

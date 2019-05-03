@@ -56,11 +56,26 @@ namespace ELearning.Admin
         }
 
         protected void TxtCategoryAdd_TextChanged(object sender, EventArgs e)
-        {            
+        {
+            /*DataTable dtCtgry = new DataTable();
+            dtCtgry = objAdmn.FetchCategory();
+            if (dtCtgry.Rows.Count > 0)
+            {
+                DdlCategory.Items.Add("---Select---");
+                for (int i = 0; i < dtCtgry.Rows.Count; i++)
+                {
+                    DdlCategory.Items.Add(dtCtgry.Rows[i]["Category"].ToString());
+                }
+            }*/
             objAdmn.C_id=objAdmn.CategoryIdGenerate();
             ViewState["cyid"] = objAdmn.C_id;
             objAdmn.Q_category = TxtCategoryAdd.Text.ToString();
             objAdmn.CategoryDetails();
+        }
+
+        protected void DdlCategory_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -59,6 +59,7 @@ namespace ELearning.Admin
             objAdmReg.Occupation = txtOccupation.Text.ToString();
             objAdmReg.Photo = Session["photopath"].ToString();
             objAdmReg.F_mobno = Convert.ToDouble(txtFMob.Text.ToString());
+            objAdmReg.Sem = Convert.ToInt32(TxtSemester.Text.ToString());
             objAdmReg.InsertDetails();
             Session["userid"] = objAdmReg.User_id;
             Session["utype"] = objAdmReg.User_type;
@@ -77,10 +78,15 @@ namespace ELearning.Admin
             dtADistrict = objAdmReg.AddDistrict();
             if (dtADistrict.Rows.Count > 0)
             {
-                ddlDistrict.DataSource = dtADistrict;
+                ddlDistrict.Items.Add("---Select---");
+                for (int i = 0; i < dtADistrict.Rows.Count; i++)
+                {
+                    ddlDistrict.Items.Add(dtADistrict.Rows[i]["District"].ToString());
+                }
+                /*ddlDistrict.DataSource = dtADistrict;
                 ddlDistrict.DataTextField = "District";
                 ddlDistrict.DataValueField = "D_Id";
-                ddlDistrict.DataBind();
+                ddlDistrict.DataBind();*/
             }
         }
 
@@ -112,10 +118,14 @@ namespace ELearning.Admin
             dtABranch = objAdmReg.AdmittedBranch();
             if (dtABranch.Rows.Count > 0)
             {
-                ddlBranch.DataSource = dtABranch;
+                for (int i = 0; i < dtABranch.Rows.Count; i++)
+                {
+                    ddlBranch.Items.Add(dtABranch.Rows[i]["Branch_Name"].ToString());
+                }
+                /*ddlBranch.DataSource = dtABranch;
                 ddlBranch.DataTextField = "Branch_Name";
                 ddlBranch.DataValueField = "B_Id";
-                ddlBranch.DataBind();
+                ddlBranch.DataBind();*/
             }
         }
 

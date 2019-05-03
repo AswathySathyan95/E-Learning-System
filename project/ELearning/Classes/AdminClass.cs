@@ -51,6 +51,7 @@ namespace ELearning.Classes
         private string f_name;
         private string occupation;
         private double f_mobno;
+        private int sem;
         private int s_id;
         private int p_id;
         //Qualification
@@ -153,6 +154,7 @@ namespace ELearning.Classes
         public string Sub_id { get => sub_id; set => sub_id = value; }
         public string Sb_category { get => sb_category; set => sb_category = value; }
         public string CtgryId { get => ctgryId; set => ctgryId = value; }
+        public int Sem { get => sem; set => sem = value; }
 
         //Fetching District from District_Details
         public DataTable AddDistrict()
@@ -257,7 +259,7 @@ namespace ELearning.Classes
             }
 
             //       string qry = "insert into User_Details values('"+user_id+ "','"+user_type+"','"+name+"','"+gender+"','"+mob_no+"','"+dob+"','"+email+"','"+religion+"','"+category+"','"+nationality+"','"+blood_group+"','"+photo+"','"+address+"','"+district+"','"+state+"','"+pincode+"','"+f_name+"','"+occupation+"','"+f_mobno+"','"+doa+"','"+program+"','"+branch+"','"+dept+"','"+admission_no+"','"+username+"','"+password+"')";
-            string qry = "insert into User_Details(User_Id,User_Type,Name,Gender,Mobile_No,Dob,Email_Id,Religion,Category,Nationality,Blood_Group,Photo,Address,District,State,Pincode,Father_Name,Occupation,F_Mob_No,Joining_Date,Admitted_Program,Branch,Department,Admission_No) values('" + user_id + "',@utype,@sname,@sgender,@smobno,@sdob,@semail,@sreligion,@scategory,@snationality,@sblood,@sphoto,@saddress,@sdistrict,@sstate,@spincode,@sfname,@soccupation,@sfmobno,@sdoa,@sprogram,@sbranch,@sdept,@sadmsnno)";
+            string qry = "insert into User_Details(User_Id,User_Type,Name,Gender,Mobile_No,Dob,Email_Id,Religion,Category,Nationality,Blood_Group,Photo,Address,District,State,Pincode,Father_Name,Occupation,F_Mob_No,Joining_Date,Admitted_Program,Branch,Department,Admission_No,Semester) values('" + user_id + "',@utype,@sname,@sgender,@smobno,@sdob,@semail,@sreligion,@scategory,@snationality,@sblood,@sphoto,@saddress,@sdistrict,@sstate,@spincode,@sfname,@soccupation,@sfmobno,@sdoa,@sprogram,@sbranch,@sdept,@sadmsnno,@semester)";
             SqlCommand cmd = new SqlCommand(qry, con);
             cmd.Parameters.AddWithValue("@sname", name);
             cmd.Parameters.AddWithValue("@sgender", gender);
@@ -282,6 +284,7 @@ namespace ELearning.Classes
             cmd.Parameters.AddWithValue("@sfmobno", f_mobno);
             cmd.Parameters.AddWithValue("@sphoto", photo);
             cmd.Parameters.AddWithValue("@utype", user_type);
+            cmd.Parameters.AddWithValue("@semester", sem);
             cmd.ExecuteNonQuery();
             //ExecuteQueries(qry);
             CloseConnection();

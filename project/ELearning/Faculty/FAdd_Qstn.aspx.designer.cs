@@ -94,13 +94,13 @@ namespace ELearning.Faculty {
         protected global::System.Web.UI.WebControls.TextBox TxtQuestion;
         
         /// <summary>
-        /// Panel1 control.
+        /// Label11 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel Panel1;
+        protected global::System.Web.UI.WebControls.Label Label11;
         
         /// <summary>
         /// Label3 control.
@@ -175,22 +175,58 @@ namespace ELearning.Faculty {
         protected global::System.Web.UI.WebControls.TextBox TxtOptn4;
         
         /// <summary>
-        /// Label9 control.
+        /// LblAns control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label9;
+        protected global::System.Web.UI.WebControls.Label LblAns;
         
         /// <summary>
-        /// TxtCorrectAns control.
+        /// UpdatePanel2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtCorrectAns;
+        protected global::System.Web.UI.UpdatePanel UpdatePanel2;
+        
+        /// <summary>
+        /// RbOptnA control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButton RbOptnA;
+        
+        /// <summary>
+        /// RbOptnB control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButton RbOptnB;
+        
+        /// <summary>
+        /// RbOptnC control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButton RbOptnC;
+        
+        /// <summary>
+        /// RbOptnD control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButton RbOptnD;
         
         /// <summary>
         /// Label10 control.

@@ -40,8 +40,8 @@
             <table class="nav-justified">
                 <tr>
                     <td>
-                        <asp:DropDownList ID="DdlCategory" runat="server">
-                            <asp:ListItem>---Select---</asp:ListItem>
+                        <asp:DropDownList ID="DdlCategory" runat="server" OnSelectedIndexChanged="DdlCategory_SelectedIndexChanged">
+                            <asp:ListItem></asp:ListItem>
                         </asp:DropDownList>
                     </td>
                     <td><strong>

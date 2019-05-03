@@ -347,11 +347,11 @@
             <td style="height: 20px"></td>
         </tr>
         <tr>
-            <td style="width: 33px">&nbsp;</td>
-            <td>
+            <td style="width: 33px; height: 22px;"></td>
+            <td style="height: 22px">
                 <asp:Label ID="Label23" runat="server" Text="Admitted Program"></asp:Label>
             </td>
-            <td>
+            <td style="height: 22px">
                 <asp:DropDownList ID="ddlProgram" runat="server" AutoPostBack="True" OnSelectedIndexChanged="ddlProgram_SelectedIndexChanged" style="margin-bottom: 0">
                     <asp:ListItem>---Select---</asp:ListItem>
                     <asp:ListItem Value="1">Btech</asp:ListItem>
@@ -360,10 +360,10 @@
                     <asp:ListItem Value="4">MBA</asp:ListItem>
                 </asp:DropDownList>
             </td>
-            <td>
+            <td style="height: 22px">
                 <asp:Label ID="Label24" runat="server" Text="Admitted Branch"></asp:Label>
             </td>
-            <td>
+            <td style="height: 22px">
                 <asp:UpdatePanel ID="UpdatePanel2" runat="server">
                     <ContentTemplate>
                         <asp:DropDownList ID="ddlBranch" runat="server">
@@ -375,23 +375,27 @@
                     </Triggers>
                 </asp:UpdatePanel>
             </td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
+            <td style="height: 22px"></td>
+            <td style="height: 22px"></td>
+            <td style="height: 22px"></td>
         </tr>
         <tr>
-            <td style="width: 33px">&nbsp;</td>
-            <td>
+            <td style="width: 33px; height: 22px;"></td>
+            <td style="height: 22px">
                 <asp:Label ID="Label25" runat="server" Text="Admission no"></asp:Label>
             </td>
-            <td>
+            <td style="height: 22px">
                 <asp:TextBox ID="txtAdmsnNo" runat="server"></asp:TextBox>
             </td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
+            <td style="height: 22px">
+                <asp:Label ID="Label59" runat="server" Text="Semester"></asp:Label>
+            </td>
+            <td style="height: 22px">
+                <asp:TextBox ID="TxtSemester" runat="server"></asp:TextBox>
+            </td>
+            <td style="height: 22px"></td>
+            <td style="height: 22px"></td>
+            <td style="height: 22px"></td>
         </tr>
         <tr>
             <td style="width: 33px">&nbsp;</td>

@@ -17,6 +17,8 @@
                             <asp:MenuItem NavigateUrl="~/Faculty/Quiz_Report.aspx" Text="Quiz Reports" Value="Quiz Reports"></asp:MenuItem>
                             <asp:MenuItem Text="Add Quiz" Value="Add Quiz"></asp:MenuItem>
                             <asp:MenuItem NavigateUrl="~/Login/Change_Password.aspx" Text="Change Password" Value="Change Password"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Faculty/FAdd_Category.aspx" Text="Quiz Category" Value="Quiz Category"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Faculty/FAdd_Qstn.aspx" Text="Quiz Questions" Value="Quiz Questions"></asp:MenuItem>
                         </Items>
                     </asp:Menu>
                 </div>

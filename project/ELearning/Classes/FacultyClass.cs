@@ -41,10 +41,14 @@ namespace ELearning.Classes
 
         //Add Category
         private string c_id;
+        private string ctgryId;
         private string q_category;
         private string sub_category;
+        private string sb_category;
+        private string sub_id;
         private string cdate;
         private string user_id;
+
         //Add Questions
         private string ctgy;
         private string q_id;
@@ -72,8 +76,11 @@ namespace ELearning.Classes
         public string RDescription { get => rDescription; set => rDescription = value; }
         public string Reports { get => reports; set => reports = value; }
         public string C_id { get => c_id; set => c_id = value; }
+        public string CtgryId { get => ctgryId; set => ctgryId = value; }
         public string Q_category { get => q_category; set => q_category = value; }
         public string Sub_category { get => sub_category; set => sub_category = value; }
+        public string Sb_category { get => sb_category; set => sb_category = value; }
+        public string Sub_id { get => sub_id; set => sub_id = value; }
         public string Cdate { get => cdate; set => cdate = value; }
         public string User_id { get => user_id; set => user_id = value; }
         public string Ctgy { get => ctgy; set => ctgy = value; }
@@ -164,33 +171,7 @@ namespace ELearning.Classes
             CloseConnection();
         }
 
-        //Fetching category from the table Quiz_Category
-        public DataTable FetchCategory()
-        {
-            OpenConnection();
-            DataTable dtCategory = new DataTable();
-            SqlCommand command = new SqlCommand("Select C_Id,Category,Sub_Category from Quiz_Category", con);
-            SqlDataAdapter da = new SqlDataAdapter(command);
-            da.Fill(dtCategory);
-            CloseConnection();
-            return dtCategory;
-        }
-
-        //Fetching Sub category from the table Quiz_Category
-        public DataTable FetchSubCategory()
-        {
-            OpenConnection();
-            DataTable dtSubCategory = new DataTable();
-            SqlCommand command = new SqlCommand("Select C_Id,Sub_Category from Quiz_Category where Category=@sctgry", con);
-            command.Parameters.AddWithValue("@sctgry", ctgy);
-            SqlDataAdapter da = new SqlDataAdapter(command);// this will query your database and return the result to your datatable
-            da.Fill(dtSubCategory);
-            CloseConnection();
-            return dtSubCategory;
-        }
-
-        //Adding Category List into the table
-        public void CategoryDetails()
+        public string CategoryIdGenerate()
         {
             OpenConnection();
             SqlCommand command = new SqlCommand("select count(C_Id) from Quiz_Category", con);
@@ -205,10 +186,45 @@ namespace ELearning.Classes
             {
                 count = 1;
             }
-            q_id = "Ctgry" + count;
-            string qry = "insert into Quiz_Category(C_Id,Category,Sub_Category,Created_On,Created_By)values('" + q_id + "',@qcategory,@ssubctgry,@scdate,@suserid)";
-            SqlCommand cmd = new SqlCommand(qry, con);
+            ctgryId = "C" + count;
+            return ctgryId;
+        }
 
+        //Adding Category List into the table
+        public void CategoryDetails()
+        {
+            OpenConnection();
+            string qry = "insert into Quiz_Category(C_Id,Category)values(@ctgryid,@Ctgry)";
+            SqlCommand cmd = new SqlCommand(qry, con);
+            cmd.Parameters.AddWithValue("@ctgryid", c_id);
+            cmd.Parameters.AddWithValue("@Ctgry", q_category);
+            cmd.ExecuteNonQuery();
+            CloseConnection();
+        }
+
+        //Adding Sub Category into the table
+        public void InsertSubCategory()
+        {
+            OpenConnection();
+            SqlCommand command = new SqlCommand("select count(SubCat_Id) from Quiz_Subcategory", con);
+            int count;
+            object cnt = command.ExecuteScalar();
+            if (cnt != DBNull.Value)
+            {
+                count = (int)cnt;
+                count++;
+            }
+            else
+            {
+                count = 1;
+            }
+            sub_id = "SCtgry" + count;
+            string qry = "insert into Quiz_Subcategory(SubCat_Id,SubCategory,C_Id,Created_By,Created_On)values('" + sub_id + "',@subctgy,@cid,@cuser,@scdate)";
+            SqlCommand cmd = new SqlCommand(qry, con);
+            cmd.Parameters.AddWithValue("@subctgy", sub_category);
+            cmd.Parameters.AddWithValue("@cid", sb_category);
+            cmd.Parameters.AddWithValue("@cuser", userid);
+            cmd.Parameters.AddWithValue("@scdate", cdate);
             cmd.ExecuteNonQuery();
             CloseConnection();
         }
@@ -233,6 +249,31 @@ namespace ELearning.Classes
             CloseConnection();
         }
 
+        //Fetching Sub category from the table Quiz_Category
+        public DataTable FetchSubCategory()
+        {
+            OpenConnection();
+            DataTable dtSubCategory = new DataTable();
+            SqlCommand command = new SqlCommand("Select SubCat_Id,SubCategory from Quiz_Subcategory where C_Id=@sctgry", con);
+            command.Parameters.AddWithValue("@sctgry", ctgy);
+            SqlDataAdapter da = new SqlDataAdapter(command);// this will query your database and return the result to your datatable
+            da.Fill(dtSubCategory);
+            CloseConnection();
+            return dtSubCategory;
+        }
+
+        //Fetching category from the table Quiz_Category
+        public DataTable FetchCategory()
+        {
+            OpenConnection();
+            DataTable dtCategory = new DataTable();
+            SqlCommand command = new SqlCommand("Select C_Id,Category from Quiz_Category", con);
+            SqlDataAdapter da = new SqlDataAdapter(command);
+            da.Fill(dtCategory);
+            CloseConnection();
+            return dtCategory;
+        }
+
         //Generate Question Id
         public string GenerateQId()
         {
@@ -252,5 +293,5 @@ namespace ELearning.Classes
             q_id = "Qstn" + count;
             return q_id;
         }
-    }
+    }   
 }

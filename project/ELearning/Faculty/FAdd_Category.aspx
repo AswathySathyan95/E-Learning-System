@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Faculty/FacultyMaster.master" AutoEventWireup="true" CodeBehind="FAdd_Category.aspx.cs" Inherits="ELearning.Faculty.FAdd_Category" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-     <table class="nav-justified">
+      <table class="nav-justified">
     <tr>
         <td class="modal-sm" style="width: 18px">&nbsp;</td>
         <td style="width: 283px">&nbsp;</td>
@@ -37,8 +37,30 @@
             <asp:Label ID="Label1" runat="server" style="font-size: small" Text="Category"></asp:Label>
             </strong></td>
         <td>
-            <asp:TextBox ID="TxtCategory" runat="server"></asp:TextBox>
+            <table class="nav-justified">
+                <tr>
+                    <td>
+                        <asp:DropDownList ID="DdlCategory" runat="server" OnSelectedIndexChanged="DdlCategory_SelectedIndexChanged">
+                            <asp:ListItem></asp:ListItem>
+                        </asp:DropDownList>
+                    </td>
+                    <td><strong>
+                        <asp:Button ID="BtnAddCategory" runat="server" OnClick="BtnAddCategory_Click" style="font-weight: bold" Text="Add Category" />
+                        </strong></td>
+                    <td>
+                        <asp:TextBox ID="TxtCategoryAdd" runat="server" OnTextChanged="TxtCategoryAdd_TextChanged" Visible="False"></asp:TextBox>
+                    </td>
+                </tr>
+            </table>
         </td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td class="modal-sm" style="width: 18px">&nbsp;</td>
+        <td style="width: 283px">&nbsp;</td>
+        <td>
+            &nbsp;</td>
         <td>&nbsp;</td>
         <td>&nbsp;</td>
     </tr>
