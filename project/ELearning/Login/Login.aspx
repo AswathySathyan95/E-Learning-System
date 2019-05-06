@@ -37,9 +37,7 @@
         }
     </style>
 </head>
-<body>
-    
-    
+<body>    
         <table class="auto-style1">
             <tr>
                 <td>&nbsp;</td>
@@ -66,13 +64,14 @@
                         <asp:TextBox ID="TxtUsername" runat="server"></asp:TextBox>
                         <br />
                         <div class="auto-style9">
+                            <br />
                             <strong>
                             <asp:Label ID="Label2" runat="server" Text="Password"></asp:Label>
                             </strong>
                         </div>
                         <div class="auto-style11">
                             <asp:TextBox ID="TxtPassword" runat="server" TextMode="Password"></asp:TextBox>
-&nbsp;</div>
+                            &nbsp;</div>
                             <strong>
                             <asp:HyperLink ID="HyperLink1" runat="server" ForeColor="#0033CC" NavigateUrl="~/Login/Forgot_Password.aspx">Forgot Password</asp:HyperLink>
                             </strong>

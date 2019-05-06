@@ -144,6 +144,8 @@
     <Content Include="DesignImages\Login1.jpg" />
     <Content Include="DesignImages\login2.jpg" />
     <Content Include="DesignImages\logo.jpg" />
+    <Content Include="DesignImages\sjcet-logo.jpg" />
+    <Content Include="DesignImages\SJC_TOP-BANNER.jpg" />
     <Content Include="DesignImages\student-reg.jpg" />
     <Content Include="Faculty\FacultyHome.aspx" />
     <Content Include="Faculty\FAdd_Category.aspx" />
@@ -169,6 +171,7 @@
     <Content Include="Login\Change_Password.aspx" />
     <Content Include="Login\Forgot_Password.aspx" />
     <Content Include="Login\Login.aspx" />
+    <Content Include="Student\Online_Quiz.aspx" />
     <Content Include="Student\Quiz_Category.aspx" />
     <Content Include="Student\Quiz_Instruction.aspx" />
     <Content Include="Student\StudentHome.aspx" />
@@ -412,6 +415,13 @@
     </Compile>
     <Compile Include="Site.Mobile.Master.designer.cs">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Student\Online_Quiz.aspx.cs">
+      <DependentUpon>Online_Quiz.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Student\Online_Quiz.aspx.designer.cs">
+      <DependentUpon>Online_Quiz.aspx</DependentUpon>
     </Compile>
     <Compile Include="Student\Quiz_Category.aspx.cs">
       <DependentUpon>Quiz_Category.aspx</DependentUpon>

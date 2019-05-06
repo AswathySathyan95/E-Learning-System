@@ -1,37 +1,41 @@
 ﻿<%@ Master Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="AdminMaster.master.cs" Inherits="ELearning.Admin.AdminMaster" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <table class="nav-justified" style="height: 589px; width: 98%;">
+    <table class="nav-justified" style="height: 632px; width: 98%;">
         <tr>
             <td class="modal-sm" style="width: 152px" background-color: #000099>
-                <div style="height: 61px; width: 206px">
+                <div id="linkss" style="height: 543px; margin-top: 0px; background-color: #FFFFFF;">
+                    <div style="height: 61px; width: 206px">
+                    </div>
+                    <div style="height: 61px; width: 206px">
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <strong><asp:HyperLink ID="HlRegHome" runat="server" ForeColor="Black" NavigateUrl="~/Admin/Reg_Home.aspx" style="font-size: small">User Registration</asp:HyperLink>
+                    <strong><asp:HyperLink ID="HlRegHome" runat="server" ForeColor="White" NavigateUrl="~/Admin/Reg_Home.aspx" style="font-size: small; color: #000000;">User Registration</asp:HyperLink>
                     </strong>
                 </div>
                 <div style="height: 61px; width: 206px">
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <strong><asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Admin/Add_Category.aspx" style="color: #000000; font-size: small;">Quiz Category</asp:HyperLink>
-                    </strong>
-
-                </div>
-                <div style="height: 61px; width: 206px">
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <strong>
-                    <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/Admin/Add_Questions.aspx" style="color: #000000; font-size: small;">Quiz Questions</asp:HyperLink>
+                    <strong><asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Admin/Add_Category.aspx" style="color: #000000; font-size: small;" CssClass="auto-style2" ForeColor="White">Quiz Category</asp:HyperLink>
                     </strong>
 
                 </div>
                 <div style="height: 61px; width: 206px">
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <strong>
-                    <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Login/Change_Password.aspx" style="color: #000000; font-size: small;">Change Password</asp:HyperLink>
+                    <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/Admin/Add_Questions.aspx" style="color: #000000; font-size: small;" CssClass="auto-style2" ForeColor="White">Quiz Questions</asp:HyperLink>
+                    </strong>
+
+                </div>
+                <div style="height: 61px; width: 206px">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <strong>
+                    <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Login/Change_Password.aspx" style="color: #000000; font-size: small;" CssClass="auto-style2" ForeColor="White">Change Password</asp:HyperLink>
                     </strong>
 
                 </div>
                 <div style="height: 61px; width: 206px">
                 </div>
-                <div style="height: 61px; width: 206px">
+                
                 </div>
+                
             </td>
             <td>
                 <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
