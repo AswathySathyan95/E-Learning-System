@@ -28,10 +28,37 @@ namespace ELearning.Classes
         private string ctgry;
         private string subid;
         private string rsubid;
+        private string quiz_category;
 
         public string Ctgry { get => ctgry; set => ctgry = value; }
         public string Subid { get => subid; set => subid = value; }
         public string Rsubid { get => rsubid; set => rsubid = value; }
+        public string Quiz_category { get => quiz_category; set => quiz_category = value; }
+
+        //Fetching Sub category from the table Quiz_Category
+        public DataTable FetchSubCategory()
+        {
+            OpenConnection();
+            DataTable dtSubCategory = new DataTable();
+            SqlCommand command = new SqlCommand("Select SubCat_Id,SubCategory,Image from Quiz_Subcategory where C_Id=@sctgry", con);
+            command.Parameters.AddWithValue("@sctgry", quiz_category);
+            SqlDataAdapter da = new SqlDataAdapter(command);// this will query your database and return the result to your datatable
+            da.Fill(dtSubCategory);
+            CloseConnection();
+            return dtSubCategory;
+        }
+
+        //Fetching category from the table Quiz_Category
+        public DataTable FetchCategory()
+        {
+            OpenConnection();
+            DataTable dtCategory = new DataTable();
+            SqlCommand command = new SqlCommand("Select C_Id,Category,Image from Quiz_Category", con);
+            SqlDataAdapter da = new SqlDataAdapter(command);
+            da.Fill(dtCategory);
+            CloseConnection();
+            return dtCategory;
+        }
 
         public DataTable FetchQuestions()
         {

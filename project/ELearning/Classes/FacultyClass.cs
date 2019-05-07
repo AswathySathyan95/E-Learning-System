@@ -41,13 +41,17 @@ namespace ELearning.Classes
 
         //Add Category
         private string c_id;
-        private string ctgryId;
-        private string q_category;
-        private string sub_category;
-        private string sb_category;
-        private string sub_id;
+        private string generate_Cid;
+        private string quiz_category;
+        private string category_image;
+        private string cuser;
         private string cdate;
-        private string user_id;
+        private string quiz_subcategory;
+        private string subcategory_image;
+        private string subcategory_cid;
+        private string sub_id;
+        private string ctgry_check;
+        private string subctgry_check;
 
         //Add Questions
         private string ctgy;
@@ -75,14 +79,6 @@ namespace ELearning.Classes
         public string RTopic { get => rTopic; set => rTopic = value; }
         public string RDescription { get => rDescription; set => rDescription = value; }
         public string Reports { get => reports; set => reports = value; }
-        public string C_id { get => c_id; set => c_id = value; }
-        public string CtgryId { get => ctgryId; set => ctgryId = value; }
-        public string Q_category { get => q_category; set => q_category = value; }
-        public string Sub_category { get => sub_category; set => sub_category = value; }
-        public string Sb_category { get => sb_category; set => sb_category = value; }
-        public string Sub_id { get => sub_id; set => sub_id = value; }
-        public string Cdate { get => cdate; set => cdate = value; }
-        public string User_id { get => user_id; set => user_id = value; }
         public string Ctgy { get => ctgy; set => ctgy = value; }
         public string Q_id { get => q_id; set => q_id = value; }
         public string Sub_catgy { get => sub_catgy; set => sub_catgy = value; }
@@ -95,6 +91,44 @@ namespace ELearning.Classes
         public string Ans_description { get => ans_description; set => ans_description = value; }
         public string Created_by { get => created_by; set => created_by = value; }
         public string Created_on { get => created_on; set => created_on = value; }
+        public string C_id { get => c_id; set => c_id = value; }
+        public string Generate_Cid { get => generate_Cid; set => generate_Cid = value; }
+        public string Quiz_category { get => quiz_category; set => quiz_category = value; }
+        public string Category_image { get => category_image; set => category_image = value; }
+        public string Cuser { get => cuser; set => cuser = value; }
+        public string Cdate { get => cdate; set => cdate = value; }
+        public string Quiz_subcategory { get => quiz_subcategory; set => quiz_subcategory = value; }
+        public string Subcategory_image { get => subcategory_image; set => subcategory_image = value; }
+        public string Subcategory_cid { get => subcategory_cid; set => subcategory_cid = value; }
+        public string Sub_id { get => sub_id; set => sub_id = value; }
+        public string Ctgry_check { get => ctgry_check; set => ctgry_check = value; }
+        public string Subctgry_check { get => subctgry_check; set => subctgry_check = value; }
+
+        //Checking whether the category is already added or not
+        public DataTable CheckCategory()
+        {
+            OpenConnection();
+            DataTable dtChkCategory = new DataTable();
+            SqlCommand command = new SqlCommand("Select C_Id from Quiz_Category where Category=@chkctgry", con);
+            command.Parameters.AddWithValue("@chkctgry", Ctgry_check);
+            SqlDataAdapter da = new SqlDataAdapter(command);
+            da.Fill(dtChkCategory);
+            CloseConnection();
+            return dtChkCategory;
+        }
+
+        //Checking whether the Sub category is already added or not
+        public DataTable CheckSubCategory()
+        {
+            OpenConnection();
+            DataTable dtChkSubCategory = new DataTable();
+            SqlCommand command = new SqlCommand("Select SubCat_Id from Quiz_Subcategory where SubCategory=@chksubctgry", con);
+            command.Parameters.AddWithValue("@chksubctgry", Subctgry_check);
+            SqlDataAdapter da = new SqlDataAdapter(command);
+            da.Fill(dtChkSubCategory);
+            CloseConnection();
+            return dtChkSubCategory;
+        }
 
         public DataTable FetchDept()
         {
@@ -186,18 +220,21 @@ namespace ELearning.Classes
             {
                 count = 1;
             }
-            ctgryId = "C" + count;
-            return ctgryId;
+            generate_Cid = "C" + count;
+            return generate_Cid;
         }
 
         //Adding Category List into the table
         public void CategoryDetails()
         {
             OpenConnection();
-            string qry = "insert into Quiz_Category(C_Id,Category)values(@ctgryid,@Ctgry)";
+            string qry = "insert into Quiz_Category(C_Id,Category,Image,Created_By,Created_on)values(@ctgryid,@Ctgry,@ctgryImage,@cyuser,@cydate)";
             SqlCommand cmd = new SqlCommand(qry, con);
-            cmd.Parameters.AddWithValue("@ctgryid", c_id);
-            cmd.Parameters.AddWithValue("@Ctgry", q_category);
+            cmd.Parameters.AddWithValue("@ctgryid", C_id);
+            cmd.Parameters.AddWithValue("@Ctgry", quiz_category);
+            cmd.Parameters.AddWithValue("@ctgryImage", category_image);
+            cmd.Parameters.AddWithValue("@cyuser", cuser);
+            cmd.Parameters.AddWithValue("@cydate", cdate);
             cmd.ExecuteNonQuery();
             CloseConnection();
         }
@@ -218,13 +255,13 @@ namespace ELearning.Classes
             {
                 count = 1;
             }
-            sub_id = "SCtgry" + count;
-            string qry = "insert into Quiz_Subcategory(SubCat_Id,SubCategory,C_Id,Created_By,Created_On)values('" + sub_id + "',@subctgy,@cid,@cuser,@scdate)";
+            Sub_id = "SCtgry" + count;
+            string qry = "insert into Quiz_Subcategory(SubCat_Id,SubCategory,C_Id,Created_By,Created_On)values('" + Sub_id + "',@subctgy,@cid,@cuser,@scdate)";
             SqlCommand cmd = new SqlCommand(qry, con);
-            cmd.Parameters.AddWithValue("@subctgy", sub_category);
-            cmd.Parameters.AddWithValue("@cid", sb_category);
-            cmd.Parameters.AddWithValue("@cuser", userid);
-            cmd.Parameters.AddWithValue("@scdate", cdate);
+            cmd.Parameters.AddWithValue("@subctgy", quiz_subcategory);
+            cmd.Parameters.AddWithValue("@cid", subcategory_cid);
+            cmd.Parameters.AddWithValue("@cuser", cuser);
+            cmd.Parameters.AddWithValue("@scdate", Cdate);
             cmd.ExecuteNonQuery();
             CloseConnection();
         }

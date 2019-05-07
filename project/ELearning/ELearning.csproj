@@ -174,6 +174,7 @@
     <Content Include="Student\Online_Quiz.aspx" />
     <Content Include="Student\Quiz_Category.aspx" />
     <Content Include="Student\Quiz_Instruction.aspx" />
+    <Content Include="Student\Quiz_SubCategory.aspx" />
     <Content Include="Student\StudentHome.aspx" />
     <Content Include="Student\View_Student_Profile.aspx" />
     <Content Include="WebForm1.aspx" />
@@ -437,6 +438,13 @@
     <Compile Include="Student\Quiz_Instruction.aspx.designer.cs">
       <DependentUpon>Quiz_Instruction.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Student\Quiz_SubCategory.aspx.cs">
+      <DependentUpon>Quiz_SubCategory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Student\Quiz_SubCategory.aspx.designer.cs">
+      <DependentUpon>Quiz_SubCategory.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Student\StudentHome.aspx.cs">
       <DependentUpon>StudentHome.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -475,6 +483,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="CategoryImage\" />
     <Folder Include="Documents\" />
     <Folder Include="Photos\" />
   </ItemGroup>

@@ -15,17 +15,25 @@ namespace ELearning.Student
         StudentClass objStud = new StudentClass();
         protected void Page_Load(object sender, EventArgs e)
         {
-            objStud.Ctgry = Session["quizcategory"].ToString();
-            objStud.Rsubid = objStud.subcategoryid();
+            objStud.Rsubid = Session["subcategory"].ToString();
+            //objStud.Rsubid = objStud.subcategoryid();
             DataTable dtQstn = new DataTable();
             dtQstn = objStud.FetchQuestions();
             if(dtQstn.Rows.Count>0)
             {
-                LblQustn.Text = dtQstn.Rows[0]["Question"].ToString();
+                LblQstn.Text = dtQstn.Rows[0]["Question"].ToString();
                 RbAOptn.Text = dtQstn.Rows[0]["Option_A"].ToString();
                 RbBOptn.Text= dtQstn.Rows[0]["Option_B"].ToString();
                 RbCOptn.Text= dtQstn.Rows[0]["Option_C"].ToString();
                 RbDOptn.Text= dtQstn.Rows[0]["Option_D"].ToString();
+            }
+        }
+
+        protected void Timer1_Tick(object sender, EventArgs e)
+        {
+            foreach(Control c in PanelQstn.Controls)
+            {
+                
             }
         }
     }

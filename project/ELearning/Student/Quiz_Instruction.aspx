@@ -43,9 +43,11 @@
                                 </li>
                             </ul>
                         </div>
-                        <div id="submitbtn" class="text-center" style="height: 62px">
+                        <div id="submitbtn" class="text-center">
 
                             <asp:Button ID="BtnStart" runat="server" BackColor="#009D00" Font-Bold="True" Font-Size="Large" ForeColor="Black" Text="START TEST" OnClick="BtnStart_Click" />
+
+                            <br />
 
                         </div>
                     </asp:Panel>
