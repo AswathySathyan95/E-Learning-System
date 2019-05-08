@@ -58,13 +58,13 @@ namespace ELearning.Student {
         protected global::System.Web.UI.WebControls.Panel PanelQstn;
         
         /// <summary>
-        /// Button1 control.
+        /// Button01 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
+        protected global::System.Web.UI.WebControls.Button Button01;
         
         /// <summary>
         /// Button2 control.
@@ -283,6 +283,15 @@ namespace ELearning.Student {
         protected global::System.Web.UI.WebControls.Button Button25;
         
         /// <summary>
+        /// UpdatePanel5 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.UpdatePanel UpdatePanel5;
+        
+        /// <summary>
         /// LblQstnNo control.
         /// </summary>
         /// <remarks>
@@ -299,6 +308,15 @@ namespace ELearning.Student {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label LblQstn;
+        
+        /// <summary>
+        /// LblTest control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LblTest;
         
         /// <summary>
         /// RbAOptn control.
@@ -344,6 +362,15 @@ namespace ELearning.Student {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button BtnNxtQstn;
+        
+        /// <summary>
+        /// BtnSubmit control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button BtnSubmit;
         
         /// <summary>
         /// HiddenField2 control.

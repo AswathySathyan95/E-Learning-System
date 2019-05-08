@@ -20,6 +20,8 @@ namespace ELearning.Student
 
         protected void BtnStart_Click(object sender, EventArgs e)
         {
+            objStudnt.Rsubid = Session["subcategory"].ToString();
+            objStudnt.FetchQuestions();
             Response.Redirect("Online_Quiz.aspx");
         }
     }

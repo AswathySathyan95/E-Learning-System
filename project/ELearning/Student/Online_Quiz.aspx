@@ -4,7 +4,7 @@
           <table class="nav-justified" style="height: 425px">
             <tr>
                 <td style="width: 78px">
-                    <asp:Timer ID="Timer2" runat="server" OnTick="Timer1_Tick">
+                    <asp:Timer ID="Timer2" runat="server" OnTick="Timer1_Tick" Interval="1000">
                     </asp:Timer>
                 </td>
                 <td style="width: 79px">&nbsp;</td>
@@ -13,8 +13,11 @@
                 <td class="text-right">
                     <asp:UpdatePanel ID="UpdatePanel3" runat="server">
                         <ContentTemplate>
-                            <asp:TextBox ID="TxtDisTime" runat="server" BorderStyle="None" Font-Bold="True" Font-Size="X-Large" ReadOnly="True" Width="123px">00:00:00</asp:TextBox>
+                            <asp:TextBox ID="TxtDisTime" runat="server" BorderStyle="None" Font-Bold="True" Font-Size="X-Large" ReadOnly="True" Width="123px">25:00</asp:TextBox>
                         </ContentTemplate>
+                        <Triggers>
+                            <asp:AsyncPostBackTrigger ControlID="Timer2" EventName="Tick" />
+                        </Triggers>
                     </asp:UpdatePanel>
                 </td>
             </tr>
@@ -30,7 +33,7 @@
                                     <table class="nav-justified">
                                         <tr>
                                             <td style="width: 50px; height: 52px">
-                                                <asp:Button ID="Button1" runat="server" Text="1" BackColor="#CCCCCC" BorderStyle="Solid" Font-Bold="True" Font-Size="Large" ForeColor="Black" Height="45px" Width="45px" />
+                                                <asp:Button ID="Button01" runat="server" Text="1" BackColor="#CCCCCC" BorderStyle="Solid" Font-Bold="True" Font-Size="Large" ForeColor="Black" Height="45px" Width="45px" />
                                                 &nbsp;</td>
                                             <td style="width: 50px; height: 52px">
                                                 <asp:Button ID="Button2" runat="server" Text="2" BackColor="#CCCCCC" BorderStyle="Solid" Font-Bold="True" Font-Size="Large" ForeColor="Black" Height="45px" Width="45px" />
@@ -127,65 +130,79 @@
 
                         <table class="nav-justified" style="height: 306px">
                             <tr>
-                                <td>&nbsp;</td>
-                                <td class="modal-sm" style="width: 336px">&nbsp;</td>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
-                            </tr>
-                            <tr>
-                                <td class="text-left" colspan="4"><strong>
-                                    <asp:Label ID="LblQstnNo" runat="server" Font-Size="Medium"></asp:Label>
-                                    &nbsp;
-                                    <asp:Label ID="LblQstn" runat="server" Font-Size="Medium"></asp:Label>
-                                    </strong></td>
-                            </tr>
-                            <tr>
-                                <td style="height: 33px"></td>
-                                <td class="modal-sm" style="width: 336px; height: 33px"></td>
-                                <td style="height: 33px"></td>
-                                <td style="height: 33px"></td>
-                            </tr>
-                            <tr>
-                                <td style="height: 20px"></td>
-                                <td class="text-left" style="height: 20px; width: 336px">
-                                    <asp:RadioButton ID="RbAOptn" runat="server" GroupName="optn" />
+                                <td colspan="4" style="height: 190px">
+                                    <asp:UpdatePanel ID="UpdatePanel5" runat="server">
+                                        <ContentTemplate>
+                                            <table class="nav-justified" style="height: 195px">
+                                                <tr>
+                                                    <td>&nbsp;</td>
+                                                    <td colspan="3"><strong>
+                                                        <asp:Label ID="LblQstnNo" runat="server" Font-Size="Medium">1</asp:Label>
+                                                        </strong>&nbsp; <strong>
+                                                        <asp:Label ID="LblQstn" runat="server" Font-Size="Medium"></asp:Label>
+                                                        </strong></td>
+                                                    <td>&nbsp;</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>&nbsp;</td>
+                                                    <td>
+                                                        <asp:Label ID="LblTest" runat="server" Visible="False"></asp:Label>
+                                                    </td>
+                                                    <td>&nbsp;</td>
+                                                    <td>&nbsp;</td>
+                                                    <td>&nbsp;</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>&nbsp;</td>
+                                                    <td>
+                                                        <asp:RadioButton ID="RbAOptn" runat="server" GroupName="optn" OnCheckedChanged="RbAOptn_CheckedChanged" />
+                                                    </td>
+                                                    <td>
+                                                        <asp:RadioButton ID="RbBOptn" runat="server" GroupName="optn" OnCheckedChanged="RbBOptn_CheckedChanged" />
+                                                    </td>
+                                                    <td>&nbsp;</td>
+                                                    <td>&nbsp;</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>&nbsp;</td>
+                                                    <td>&nbsp;</td>
+                                                    <td>&nbsp;</td>
+                                                    <td>&nbsp;</td>
+                                                    <td>&nbsp;</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>&nbsp;</td>
+                                                    <td>
+                                                        <asp:RadioButton ID="RbCOptn" runat="server" GroupName="optn" OnCheckedChanged="RbCOptn_CheckedChanged" />
+                                                    </td>
+                                                    <td>
+                                                        <asp:RadioButton ID="RbDOptn" runat="server" GroupName="optn" OnCheckedChanged="RbDOptn_CheckedChanged" />
+                                                    </td>
+                                                    <td>&nbsp;</td>
+                                                    <td>&nbsp;</td>
+                                                </tr>
+                                            </table>
+                                        </ContentTemplate>
+                                        <Triggers>
+                                            <asp:AsyncPostBackTrigger ControlID="BtnNxtQstn" EventName="Click" />
+                                        </Triggers>
+                                    </asp:UpdatePanel>
                                 </td>
-                                <td class="text-left" style="height: 20px">
-                                    <asp:RadioButton ID="RbBOptn" runat="server" GroupName="optn" />
-                                </td>
-                                <td style="height: 20px"></td>
-                            </tr>
-                            <tr>
-                                <td>&nbsp;</td>
-                                <td class="modal-sm" style="width: 336px">&nbsp;</td>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
-                            </tr>
-                            <tr>
-                                <td>&nbsp;</td>
-                                <td class="text-left" style="width: 336px">
-                                    <asp:RadioButton ID="RbCOptn" runat="server" GroupName="optn" />
-                                </td>
-                                <td class="text-left">
-                                    <asp:RadioButton ID="RbDOptn" runat="server" GroupName="optn" />
-                                </td>
-                                <td>&nbsp;</td>
-                            </tr>
-                            <tr>
-                                <td>&nbsp;</td>
-                                <td class="modal-sm" style="width: 336px">&nbsp;</td>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
                             </tr>
                             <tr>
                                 <td>&nbsp;</td>
                                 <td class="modal-sm" style="width: 336px">&nbsp;</td>
                                 <td class="text-right"><strong>
-                                    <asp:Button ID="BtnNxtQstn" runat="server" Font-Size="Large" style="font-weight: bold" Text="Next Question &gt;&gt;" Width="215px" BackColor="#CC3300" />
+                                    <asp:Button ID="BtnNxtQstn" runat="server" Font-Size="Large" style="font-weight: bold" Text="Next Question &gt;&gt;" Width="215px" BackColor="#CC3300" OnClick="BtnNxtQstn_Click" />
                                     </strong></td>
                                 <td>&nbsp;</td>
                             </tr>
                         </table>
+
+                    </div>
+                    <div id="submit" class="text-center" style="height: 61px">
+
+                        <asp:Button ID="BtnSubmit" runat="server" BackColor="#CC0000" Font-Bold="True" Font-Size="X-Large" ForeColor="Black" OnClick="BtnSubmit_Click" Text="Finish Test" Visible="False" />
 
                     </div>
                     &nbsp;</td>

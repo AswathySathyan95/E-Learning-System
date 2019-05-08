@@ -29,11 +29,21 @@ namespace ELearning.Classes
         private string subid;
         private string rsubid;
         private string quiz_category;
+        private string seleted_optn;
+        private Int32 q_id;
+        private string user_id;
+        private string start_time;
+        private string end_time;
 
         public string Ctgry { get => ctgry; set => ctgry = value; }
         public string Subid { get => subid; set => subid = value; }
         public string Rsubid { get => rsubid; set => rsubid = value; }
         public string Quiz_category { get => quiz_category; set => quiz_category = value; }
+        public string Seleted_optn { get => seleted_optn; set => seleted_optn = value; }
+        public int Q_id { get => q_id; set => q_id = value; }
+        public string User_id { get => user_id; set => user_id = value; }
+        public string Start_time { get => start_time; set => start_time = value; }
+        public string End_time { get => end_time; set => end_time = value; }
 
         //Fetching Sub category from the table Quiz_Category
         public DataTable FetchSubCategory()
@@ -60,16 +70,48 @@ namespace ELearning.Classes
             return dtCategory;
         }
 
-        public DataTable FetchQuestions()
+        public DataTable FetchQuizQuestion()
         {
             OpenConnection();
             DataTable dtQuestion = new DataTable();
-            SqlCommand command1 = new SqlCommand("Select Question,Option_A,Option_B,Option_C,Option_D from Quiz_Questions where Category_Id=@rsubid", con);
-            command1.Parameters.AddWithValue("@rsubid", rsubid);
-            SqlDataAdapter da = new SqlDataAdapter(command1);
+            SqlCommand command = new SqlCommand("Select * from Temporary_Qstn where Status='Not Attempeted'", con);
+            SqlDataAdapter da = new SqlDataAdapter(command);
             da.Fill(dtQuestion);
             CloseConnection();
             return dtQuestion;
+        }
+
+        //Update
+        public void UpdateTemp()
+        {
+            OpenConnection();
+            string qry = "update Temporary_Qstn set Selected_Option=@soptn where Qstn_No=@Qstnno";
+            SqlCommand cmd = new SqlCommand(qry, con);
+            cmd.Parameters.AddWithValue("@soptn", seleted_optn);
+            cmd.Parameters.AddWithValue("@Qstnno", Q_id);
+            cmd.ExecuteNonQuery();
+            CloseConnection();
+        }
+
+        public void UpdateStatus()
+        {
+            OpenConnection();
+            string qry = "update Temporary_Qstn set Status='Attended' where Qstn_No=@Qstnno";
+            SqlCommand cmd = new SqlCommand(qry, con);
+            cmd.Parameters.AddWithValue("@Qstnno", Q_id);
+            cmd.ExecuteNonQuery();
+            CloseConnection();
+        }
+
+        //fetch and insert data into new table
+        public void FetchQuestions()
+        {
+            OpenConnection();
+            string qry = "insert into Temporary_Qstn(Qstn_Id,Question,OptionA,OptionB,OptionC,OptionD,Answer)Select top 10 Q_Id,Question,Option_A,Option_B,Option_C,Option_D,Answer from Quiz_Questions where Category_Id=@rsubid ORDER BY NEWID() ";
+            SqlCommand cmd = new SqlCommand(qry, con);
+            cmd.Parameters.AddWithValue("@rsubid", rsubid);
+            cmd.ExecuteNonQuery();
+            CloseConnection();
         }
         public string subcategoryid()
         {
