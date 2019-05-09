@@ -1,5 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Student/StudentMaster.master" AutoEventWireup="true" CodeBehind="Quiz_SubCategory.aspx.cs" Inherits="ELearning.Student.Quiz_SubCategory" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+<asp:Content ID="Content1" ContentPlaceHolderID="maincontent" runat="server">
     
     <div id="main" style="height: 328px">
         <br />

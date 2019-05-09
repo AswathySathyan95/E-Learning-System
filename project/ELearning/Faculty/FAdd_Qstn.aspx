@@ -1,5 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Faculty/FacultyMaster.master" AutoEventWireup="true" CodeBehind="FAdd_Qstn.aspx.cs" Inherits="ELearning.Faculty.FAdd_Qstn" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+<asp:Content ID="Content1" ContentPlaceHolderID="maincontent" runat="server">
     <table class="nav-justified">
         <tr>
             <td>&nbsp;</td>
@@ -17,7 +17,10 @@
         </tr>
         <tr>
             <td>&nbsp;</td>
-            <td style="width: 311px">&nbsp;</td>
+            <td style="width: 311px">
+                <asp:ScriptManager ID="ScriptManager1" runat="server">
+                </asp:ScriptManager>
+            </td>
             <td style="width: 677px">&nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>

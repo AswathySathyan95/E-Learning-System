@@ -13,21 +13,39 @@ namespace ELearning.Faculty {
     public partial class FacultyMaster {
         
         /// <summary>
-        /// Menu1 control.
+        /// headplaceholder control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Menu Menu1;
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder headplaceholder;
         
         /// <summary>
-        /// ContentPlaceHolder1 control.
+        /// adminsmaster control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolder1;
+        protected global::System.Web.UI.HtmlControls.HtmlForm adminsmaster;
+        
+        /// <summary>
+        /// link_loginout control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton link_loginout;
+        
+        /// <summary>
+        /// maincontent control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder maincontent;
     }
 }

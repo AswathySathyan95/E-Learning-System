@@ -1,5 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin/AdminMaster.master" AutoEventWireup="true" CodeBehind="Add_Category.aspx.cs" Inherits="ELearning.Admin.Add_Category" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+<asp:Content ID="Content1" ContentPlaceHolderID="maincontent" runat="server">
     <div id="maincontent" style="height: 566px">
         <div id="heading" class="text-center" style="font-family: 'Tw Cen MT'">
             <br />
@@ -7,16 +7,19 @@
         </div>
         <div id="categorycnt" style="height: 507px">
 
-            <table class="nav-justified" style="height: 473px">
+            <table class="auto-style1">
                 <tr>
-                    <td style="height: 20px"></td>
-                    <td style="height: 20px; width: 218px;"></td>
+                    <td class="auto-style3"></td>
+                    <td style="height: 20px; width: 218px;">
+                        <asp:ScriptManager ID="ScriptManager1" runat="server">
+                        </asp:ScriptManager>
+                    </td>
                     <td style="height: 20px"></td>
                     <td style="height: 20px"></td>
                     <td style="height: 20px"></td>
                 </tr>
                 <tr>
-                    <td>&nbsp;</td>
+                    <td class="auto-style4">&nbsp;</td>
                     <td style="width: 218px">
                         <strong>
                         <asp:Label ID="Label1" runat="server" Text="Category"></asp:Label>
@@ -49,7 +52,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td>&nbsp;</td>
+                    <td class="auto-style4">&nbsp;</td>
                     <td style="width: 218px">
                         <strong>
                         <asp:Label ID="Label2" runat="server" Text="Category Image"></asp:Label>
@@ -60,12 +63,12 @@
                     </td>
                 </tr>
                 <tr>
-                    <td style="height: 20px"></td>
+                    <td class="auto-style3"></td>
                     <td style="height: 20px; width: 218px;"></td>
                     <td style="height: 20px">&nbsp;</td>
                 </tr>
                 <tr>
-                    <td>&nbsp;</td>
+                    <td class="auto-style4">&nbsp;</td>
                     <td style="width: 218px">&nbsp;</td>
                     <td>
                         <strong>
@@ -74,24 +77,24 @@
                     </td>
                 </tr>
                 <tr>
-                    <td>&nbsp;</td>
+                    <td class="auto-style4">&nbsp;</td>
                     <td style="width: 218px">&nbsp;</td>
                     <td>
                         &nbsp;</td>
                 </tr>
                 <tr>
-                    <td>&nbsp;</td>
+                    <td class="auto-style4">&nbsp;</td>
                     <td style="width: 218px">&nbsp;</td>
                     <td>
                         <strong>
-                        <asp:Button ID="BtnSubctgry" runat="server" Height="29px" OnClick="BtnSubctgry_Click" style="font-weight: bold" Text="Click To Add SubCategory" />
+                        <asp:Button ID="BtnSubctgry" runat="server" Height="39px" OnClick="BtnSubctgry_Click" style="font-weight: bold" Text="Click To Add SubCategory" />
                         </strong>
                     </td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
                 </tr>
                 <tr>
-                    <td>&nbsp;</td>
+                    <td class="auto-style4">&nbsp;</td>
                     <td style="width: 218px">&nbsp;</td>
                     <td>
                         &nbsp;</td>
@@ -99,10 +102,10 @@
                     <td>&nbsp;</td>
                 </tr>
                 <tr>
-                    <td style="height: 253px"></td>
+                    <td class="auto-style5"></td>
                     <td colspan="3" style="height: 253px">
-                        <asp:Panel ID="PanelSubctgry" runat="server" Height="240px" Visible="False">
-                            <table class="nav-justified" style="height: 229px">
+                        <asp:Panel ID="PanelSubctgry" runat="server" Height="240px" Visible="False" Width="1235px">
+                            <table class="auto-style2">
                                 <tr>
                                     <td class="text-center" colspan="3" style="color: #003399; font-size: xx-large; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; height: 64px;"><strong><em>Sub Category</em></strong></td>
                                 </tr>
@@ -173,3 +176,27 @@
         </div>
     </div>
 </asp:Content>
+<asp:Content ID="Content2" runat="server" contentplaceholderid="headplaceholder">
+    <style type="text/css">
+        .auto-style1 {
+            height: 595px;
+            width: 1295px;
+        }
+        .auto-style2 {
+            height: 278px;
+            width: 1201px;
+        }
+        .auto-style3 {
+            height: 20px;
+            width: 57px;
+        }
+        .auto-style4 {
+            width: 57px;
+        }
+        .auto-style5 {
+            height: 253px;
+            width: 57px;
+        }
+    </style>
+</asp:Content>
+

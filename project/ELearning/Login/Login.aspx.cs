@@ -20,6 +20,9 @@ namespace ELearning.Login
 
         protected void BtnLogin_Click(object sender, EventArgs e)
         {
+            HttpCookie user = new HttpCookie("admin_cookies");
+            user.Expires = DateTime.Now.AddYears(3); // give the time/duration of cookie
+            Response.Cookies.Add(user);
             objLgn.Username = TxtUsername.Text.ToString();
             objLgn.Password = TxtPassword.Text.ToString();
             DataTable dtLogin = new DataTable();

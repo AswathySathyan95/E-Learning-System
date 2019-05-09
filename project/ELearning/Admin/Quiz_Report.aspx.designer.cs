@@ -7,11 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ELearning.Student
+namespace ELearning.Admin
 {
 
 
-    public partial class StudentHome
+    public partial class Quiz_Report
     {
     }
 }

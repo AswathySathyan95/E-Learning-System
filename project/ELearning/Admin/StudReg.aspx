@@ -1,9 +1,12 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin/AdminMaster.master" AutoEventWireup="true" CodeBehind="StudReg.aspx.cs" Inherits="ELearning.Admin.StudReg" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+<asp:Content ID="Content1" ContentPlaceHolderID="maincontent" runat="server">
     <table style="width: 100%">
         <tr>
             <td style="width: 33px">&nbsp;</td>
-            <td>&nbsp;</td>
+            <td>
+                <asp:ScriptManager ID="ScriptManager1" runat="server">
+                </asp:ScriptManager>
+            </td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
@@ -459,10 +462,10 @@
             <td style="width: 33px; height: 20px"></td>
             <td style="height: 20px"></td>
             <td class="text-center" style="height: 20px"><strong>
-                <asp:Button ID="btnRegister" runat="server" OnClick="btnRegister_Click" style="font-weight: bold" Text="Save and Continue" Width="141px" />
+                <asp:Button ID="btnRegister" runat="server" OnClick="btnRegister_Click" style="font-weight: bold" Text="Save and Continue" Width="204px" Height="46px" />
                 </strong></td>
             <td style="height: 20px"><strong>
-                <asp:Button ID="btnClear" runat="server" OnClick="Button1_Click" style="font-weight: bold" Text="Clear" />
+                <asp:Button ID="btnClear" runat="server" OnClick="Button1_Click" style="font-weight: bold" Text="Clear" Height="46px" Width="132px" />
                 </strong></td>
             <td style="height: 20px"></td>
             <td style="height: 20px"></td>

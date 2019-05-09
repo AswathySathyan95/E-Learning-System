@@ -1,9 +1,12 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin/AdminMaster.master" AutoEventWireup="true" CodeBehind="Registration.aspx.cs" Inherits="ELearning.Admin.Registration" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <table style="width: 100%">
+<asp:Content ID="Content1" ContentPlaceHolderID="maincontent" runat="server">
+    <table class="auto-style1">
         <tr>
             <td style="width: 33px">&nbsp;</td>
-            <td>&nbsp;</td>
+            <td>
+                <asp:ScriptManager ID="ScriptManager1" runat="server">
+                </asp:ScriptManager>
+            </td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
@@ -173,10 +176,10 @@
                 <asp:FileUpload ID="fuPhoto" runat="server" Width="187px" />
             </td>
             <td>
-                <asp:Button ID="BtnUploadd" runat="server" OnClick="btnUploadd_Click" Text="Upload" />
+                <asp:Button ID="BtnUploadd" runat="server" OnClick="btnUploadd_Click" Text="Upload" Width="114px" />
             </td>
             <td rowspan="3">
-                        <asp:Image ID="imgPhoto" runat="server" Height="139px" Visible="False" Width="119px" />
+                        <asp:Image ID="imgPhoto" runat="server" Height="146px" Visible="False" Width="130px" />
             </td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
@@ -436,10 +439,10 @@
             <td style="width: 33px; height: 20px"></td>
             <td style="height: 20px"></td>
             <td class="text-center" style="height: 20px"><strong>
-                <asp:Button ID="btnRegister" runat="server" OnClick="btnRegister_Click" style="font-weight: bold" Text="Save and Continue" Width="141px" />
+                <asp:Button ID="btnRegister" runat="server" OnClick="btnRegister_Click" style="font-weight: bold" Text="Save and Continue" Width="204px" />
                 </strong></td>
             <td style="height: 20px"><strong>
-                <asp:Button ID="btnClear" runat="server" OnClick="Button1_Click" style="font-weight: bold" Text="Clear" />
+                <asp:Button ID="btnClear" runat="server" OnClick="Button1_Click" style="font-weight: bold" Text="Clear" Width="99px" />
                 </strong></td>
             <td style="height: 20px"></td>
             <td style="height: 20px"></td>
@@ -478,3 +481,12 @@
         </tr>
     </table>
 </asp:Content>
+<asp:Content ID="Content2" runat="server" contentplaceholderid="headplaceholder">
+    <style type="text/css">
+        .auto-style1 {
+            width: 100%;
+            height: 1048px;
+        }
+    </style>
+</asp:Content>
+

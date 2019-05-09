@@ -13,30 +13,39 @@ namespace ELearning.Student {
     public partial class StudentMaster {
         
         /// <summary>
-        /// HyperLink1 control.
+        /// headplaceholder control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HyperLink1;
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder headplaceholder;
         
         /// <summary>
-        /// HyperLink2 control.
+        /// adminsmaster control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HyperLink2;
+        protected global::System.Web.UI.HtmlControls.HtmlForm adminsmaster;
         
         /// <summary>
-        /// ContentPlaceHolder1 control.
+        /// link_loginout control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolder1;
+        protected global::System.Web.UI.WebControls.LinkButton link_loginout;
+        
+        /// <summary>
+        /// maincontent control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder maincontent;
     }
 }

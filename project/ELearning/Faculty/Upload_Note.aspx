@@ -1,5 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Faculty/FacultyMaster.master" AutoEventWireup="true" CodeBehind="Upload_Note.aspx.cs" Inherits="ELearning.Faculty.Upload_Note" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+<asp:Content ID="Content1" ContentPlaceHolderID="maincontent" runat="server">
     <table class="nav-justified">
         <tr>
             <td style="height: 22px; width: 212px;"></td>
@@ -23,7 +23,10 @@
             <td style="height: 22px">&nbsp;</td>
         </tr>
         <tr>
-            <td style="height: 22px; width: 212px;">&nbsp;</td>
+            <td style="height: 22px; width: 212px;">
+                <asp:ScriptManager ID="ScriptManager1" runat="server">
+                </asp:ScriptManager>
+            </td>
             <td style="height: 22px">&nbsp;</td>
             <td style="height: 22px">&nbsp;</td>
             <td style="height: 22px">&nbsp;</td>

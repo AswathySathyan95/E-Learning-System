@@ -1,5 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Faculty/FacultyMaster.master" AutoEventWireup="true" CodeBehind="FAdd_Category.aspx.cs" Inherits="ELearning.Faculty.FAdd_Category" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+<asp:Content ID="Content1" ContentPlaceHolderID="maincontent" runat="server">
        <div id="maincontent" style="height: 566px">
         <div id="heading" class="text-center" style="font-family: 'Tw Cen MT'">
             <br />
@@ -10,7 +10,10 @@
             <table class="nav-justified" style="height: 473px">
                 <tr>
                     <td style="height: 20px"></td>
-                    <td style="height: 20px; width: 218px;"></td>
+                    <td style="height: 20px; width: 218px;">
+                        <asp:ScriptManager ID="ScriptManager1" runat="server">
+                        </asp:ScriptManager>
+                    </td>
                     <td style="height: 20px"></td>
                     <td style="height: 20px"></td>
                     <td style="height: 20px"></td>

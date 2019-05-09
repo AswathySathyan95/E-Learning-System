@@ -1,26 +1,21 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin/AdminMaster.master" AutoEventWireup="true" CodeBehind="Add_Questions.aspx.cs" Inherits="ELearning.Admin.Add_Questions" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <table class="nav-justified">
+<asp:Content ID="Content1" ContentPlaceHolderID="maincontent" runat="server">
+    <table class="auto-style1">
         <tr>
-            <td>&nbsp;</td>
-            <td style="width: 311px">&nbsp;</td>
-            <td style="width: 677px">&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
+            <td></td>
+            <td class="auto-style4">
+                <asp:ScriptManager ID="ScriptManager1" runat="server">
+                </asp:ScriptManager>
+            </td>
+            <td class="auto-style5"></td>
+            <td></td>
+            <td></td>
         </tr>
         <tr>
             <td style="height: 20px"></td>
-            <td style="width: 311px; height: 20px;"></td>
-            <td style="height: 20px; width: 677px;"></td>
+            <td class="auto-style2" colspan="3">
+            <strong><em><span style="font-size: xx-large; color: #003399; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Quiz Questions</span></em></strong> </td>
             <td style="height: 20px"></td>
-            <td style="height: 20px"></td>
-        </tr>
-        <tr>
-            <td>&nbsp;</td>
-            <td style="width: 311px">&nbsp;</td>
-            <td style="width: 677px">&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
         </tr>
         <tr>
             <td>&nbsp;</td>
@@ -232,75 +227,24 @@
             <td>&nbsp;</td>
             <td>&nbsp;</td>
         </tr>
-        <tr>
-            <td>&nbsp;</td>
-            <td style="width: 311px">&nbsp;</td>
-            <td style="width: 677px">&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td>&nbsp;</td>
-            <td style="width: 311px">&nbsp;</td>
-            <td style="width: 677px">&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td>&nbsp;</td>
-            <td style="width: 311px">&nbsp;</td>
-            <td style="width: 677px">&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td>&nbsp;</td>
-            <td style="width: 311px">&nbsp;</td>
-            <td style="width: 677px">&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td>&nbsp;</td>
-            <td style="width: 311px">&nbsp;</td>
-            <td style="width: 677px">&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td>&nbsp;</td>
-            <td style="width: 311px">&nbsp;</td>
-            <td style="width: 677px">&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td>&nbsp;</td>
-            <td style="width: 311px">&nbsp;</td>
-            <td style="width: 677px">&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td>&nbsp;</td>
-            <td style="width: 311px">&nbsp;</td>
-            <td style="width: 677px">&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td>&nbsp;</td>
-            <td style="width: 311px">&nbsp;</td>
-            <td style="width: 677px">&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td>&nbsp;</td>
-            <td style="width: 311px">&nbsp;</td>
-            <td style="width: 677px">&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-        </tr>
-    </table>
+        </table>
 </asp:Content>
+<asp:Content ID="Content2" runat="server" contentplaceholderid="headplaceholder">
+    <style type="text/css">
+        .auto-style1 {
+            width: 1203px;
+            height: 1227px;
+        }
+        .auto-style2 {
+            height: 20px;
+            text-align: center;
+        }
+        .auto-style4 {
+            width: 311px;
+        }
+        .auto-style5 {
+            width: 677px;
+        }
+    </style>
+</asp:Content>
+

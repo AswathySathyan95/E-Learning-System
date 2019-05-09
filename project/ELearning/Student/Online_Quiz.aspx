@@ -1,18 +1,20 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Student/StudentMaster.master" AutoEventWireup="true" CodeBehind="Online_Quiz.aspx.cs" Inherits="ELearning.Student.Online_Quiz" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+<asp:Content ID="Content1" ContentPlaceHolderID="maincontent" runat="server">
     <div id="maincontent" style="width: 1305px">
           <table class="nav-justified" style="height: 425px; width: 101%;">
             <tr>
                 <td style="width: 78px">
                     <asp:Timer ID="Timer2" runat="server" OnTick="Timer1_Tick" Interval="1000">
                     </asp:Timer>
+                    <asp:ScriptManager ID="ScriptManager1" runat="server">
+                    </asp:ScriptManager>
                 </td>
                 <td style="width: 79px">&nbsp;</td>
                 <td style="width: 857px">&nbsp;</td>
                 <td>
                     <asp:UpdatePanel ID="UpdatePanel3" runat="server">
                         <ContentTemplate>
-                            <asp:TextBox ID="TxtDisTime" runat="server" BorderStyle="None" Font-Bold="True" Font-Size="X-Large" ReadOnly="True" Width="123px">25:00</asp:TextBox>
+                            <asp:TextBox ID="TxtDisTime" runat="server" BorderStyle="None" Font-Bold="True" Font-Size="X-Large" ReadOnly="True" Width="82px">25:00</asp:TextBox>
                         </ContentTemplate>
                         <Triggers>
                             <asp:AsyncPostBackTrigger ControlID="Timer2" EventName="Tick" />

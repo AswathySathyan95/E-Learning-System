@@ -1,22 +1,25 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin/AdminMaster.master" AutoEventWireup="true" CodeBehind="Reg_Qualification.aspx.cs" Inherits="ELearning.Admin.Reg_Qualification" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+<asp:Content ID="Content1" ContentPlaceHolderID="maincontent" runat="server">
     <table style="width: 109%">
         <tr>
-            <td style="width: 12px">&nbsp;</td>
-            <td>&nbsp;</td>
+            <td class="auto-style1">&nbsp;</td>
+            <td>
+                <asp:ScriptManager ID="ScriptManager1" runat="server">
+                </asp:ScriptManager>
+            </td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
         </tr>
         <tr>
-            <td style="width: 12px; height: 20px;"></td>
+            <td class="auto-style2"></td>
             <td style="height: 20px"></td>
             <td style="height: 20px"></td>
             <td style="height: 20px"></td>
             <td style="height: 20px"></td>
         </tr>
         <tr>
-            <td style="width: 12px">&nbsp;</td>
+            <td class="auto-style1">&nbsp;</td>
             <td colspan="3">
                 <asp:Label ID="Label41" runat="server" Font-Size="Medium" ForeColor="Black" style="font-weight: 700" Text="Qualification Details"></asp:Label>
                 <asp:Label ID="Label52" runat="server" Font-Size="Medium" ForeColor="Red" Text="*"></asp:Label>
@@ -24,7 +27,7 @@
             <td>&nbsp;</td>
         </tr>
         <tr>
-            <td style="height: 20px; width: 12px"></td>
+            <td class="auto-style2"></td>
             <td style="height: 20px" colspan="3"><strong>
                 <asp:Button ID="BtnAddQual" runat="server" style="font-weight: bold" Text="Add Qualification" OnClick="BtnAddQual_Click" />
                 <asp:Label ID="LblQual" runat="server" ForeColor="Red" Visible="False">Click Here To Add More Qualification Details</asp:Label>
@@ -32,7 +35,7 @@
             <td style="height: 20px"></td>
         </tr>
         <tr>
-            <td style="width: 12px">&nbsp;</td>
+            <td class="auto-style1">&nbsp;</td>
             <td colspan="3">
                 <table style="width: 100%">
                     <tr>
@@ -123,14 +126,14 @@
             <td>&nbsp;</td>
         </tr>
         <tr>
-            <td style="height: 20px; width: 12px"></td>
+            <td class="auto-style2"></td>
             <td class="text-center" style="height: 20px">&nbsp;</td>
             <td style="height: 20px"></td>
             <td style="height: 20px"></td>
             <td style="height: 20px"></td>
         </tr>
         <tr>
-            <td style="width: 12px">&nbsp;</td>
+            <td class="auto-style1">&nbsp;</td>
             <td class="text-center"><strong __designer:mapid="15f">
                 <asp:Button ID="BtnSubmit" runat="server" Font-Size="Large" Height="42px" style="font-weight: bold" Text="Submit " Width="151px" OnClick="BtnSubmit_Click" Visible="False" />
                 </strong></td>
@@ -139,7 +142,7 @@
             <td>&nbsp;</td>
         </tr>
         <tr>
-            <td style="width: 12px; height: 427px;"></td>
+            <td class="auto-style3"></td>
             <td colspan="3" style="height: 427px">
                 <asp:Panel ID="PanelExperience" runat="server" Visible="False" Height="427px">
                     <table style="width: 100%; height: 241px;">
@@ -293,35 +296,35 @@
             <td style="height: 427px"></td>
         </tr>
         <tr>
-            <td style="width: 12px">&nbsp;</td>
+            <td class="auto-style1">&nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
         </tr>
         <tr>
-            <td style="width: 12px">&nbsp;</td>
+            <td class="auto-style1">&nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
         </tr>
         <tr>
-            <td style="width: 12px">&nbsp;</td>
+            <td class="auto-style1">&nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
         </tr>
         <tr>
-            <td style="width: 12px">&nbsp;</td>
+            <td class="auto-style1">&nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
         </tr>
         <tr>
-            <td style="width: 12px">&nbsp;</td>
+            <td class="auto-style1">&nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
@@ -329,3 +332,19 @@
         </tr>
     </table>
 </asp:Content>
+<asp:Content ID="Content2" runat="server" contentplaceholderid="headplaceholder">
+    <style type="text/css">
+        .auto-style1 {
+            width: 76px;
+        }
+        .auto-style2 {
+            height: 20px;
+            width: 76px;
+        }
+        .auto-style3 {
+            height: 427px;
+            width: 76px;
+        }
+    </style>
+</asp:Content>
+

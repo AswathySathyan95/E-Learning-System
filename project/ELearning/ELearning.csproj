@@ -123,9 +123,11 @@
     <Content Include="Admin\Add_Category.aspx" />
     <Content Include="Admin\Add_Questions.aspx" />
     <Content Include="Admin\AdminHome.aspx" />
+    <Content Include="Admin\Quiz_Report.aspx" />
     <Content Include="Admin\Registration.aspx" />
     <Content Include="Admin\Reg_Home.aspx" />
     <Content Include="Admin\Reg_Qualification.aspx" />
+    <Content Include="Admin\Student_Details.aspx" />
     <Content Include="Admin\StudReg.aspx" />
     <Content Include="Admin\View_Admin_profile.aspx" />
     <Content Include="assets\css\bootstrap-grid.css" />
@@ -187,7 +189,6 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
-    <Content Include="Admin\AdminMaster.master" />
     <Content Include="Login\Change_Password.aspx" />
     <Content Include="Login\Forgot_Password.aspx" />
     <Content Include="Login\Login.aspx" />
@@ -198,7 +199,6 @@
     <Content Include="Student\StudentHome.aspx" />
     <Content Include="Student\View_Student_Profile.aspx" />
     <Content Include="WebForm1.aspx" />
-    <Content Include="Faculty\FacultyMaster.master" />
     <Content Include="assets\css\bootstrap.css.map" />
     <Content Include="assets\css\bootstrap.min.css.map" />
     <Content Include="assets\font-awesome\css\font-awesome.css.map" />
@@ -239,6 +239,8 @@
     <Content Include="assets\js\bootstrap.bundle.min.js.map" />
     <Content Include="assets\js\bootstrap.js.map" />
     <Content Include="assets\js\bootstrap.min.js.map" />
+    <Content Include="Faculty\FacultyMaster.Master" />
+    <Content Include="Admin\AdminMaster.Master" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -275,7 +277,6 @@
     </Content>
     <Content Include="Bundle.config" />
     <Content Include="Site.Mobile.Master" />
-    <Content Include="Student\StudentMaster.master" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Admin\Add_Category.aspx.cs">
@@ -299,12 +300,19 @@
     <Compile Include="Admin\AdminHome.aspx.designer.cs">
       <DependentUpon>AdminHome.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\AdminMaster.master.cs">
-      <DependentUpon>AdminMaster.master</DependentUpon>
+    <Compile Include="Admin\AdminMaster.Master.cs">
+      <DependentUpon>AdminMaster.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\AdminMaster.master.designer.cs">
-      <DependentUpon>AdminMaster.master</DependentUpon>
+    <Compile Include="Admin\AdminMaster.Master.designer.cs">
+      <DependentUpon>AdminMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Quiz_Report.aspx.cs">
+      <DependentUpon>Quiz_Report.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Quiz_Report.aspx.designer.cs">
+      <DependentUpon>Quiz_Report.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\Registration.aspx.cs">
       <DependentUpon>Registration.aspx</DependentUpon>
@@ -326,6 +334,13 @@
     </Compile>
     <Compile Include="Admin\Reg_Qualification.aspx.designer.cs">
       <DependentUpon>Reg_Qualification.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Student_Details.aspx.cs">
+      <DependentUpon>Student_Details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Student_Details.aspx.designer.cs">
+      <DependentUpon>Student_Details.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\StudReg.aspx.cs">
       <DependentUpon>StudReg.aspx</DependentUpon>
@@ -375,12 +390,12 @@
     <Compile Include="Faculty\FacultyHome.aspx.designer.cs">
       <DependentUpon>FacultyHome.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Faculty\FacultyMaster.master.cs">
-      <DependentUpon>FacultyMaster.master</DependentUpon>
+    <Compile Include="Faculty\FacultyMaster.Master.cs">
+      <DependentUpon>FacultyMaster.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Faculty\FacultyMaster.master.designer.cs">
-      <DependentUpon>FacultyMaster.master</DependentUpon>
+    <Compile Include="Faculty\FacultyMaster.Master.designer.cs">
+      <DependentUpon>FacultyMaster.Master</DependentUpon>
     </Compile>
     <Compile Include="Faculty\FAdd_Category.aspx.cs">
       <DependentUpon>FAdd_Category.aspx</DependentUpon>
@@ -512,12 +527,12 @@
     <Compile Include="Student\StudentHome.aspx.designer.cs">
       <DependentUpon>StudentHome.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Student\StudentMaster.master.cs">
-      <DependentUpon>StudentMaster.master</DependentUpon>
+    <Compile Include="Student\StudentMaster.Master.cs">
+      <DependentUpon>StudentMaster.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Student\StudentMaster.master.designer.cs">
-      <DependentUpon>StudentMaster.master</DependentUpon>
+    <Compile Include="Student\StudentMaster.Master.designer.cs">
+      <DependentUpon>StudentMaster.Master</DependentUpon>
     </Compile>
     <Compile Include="Student\View_Student_Profile.aspx.cs">
       <DependentUpon>View_Student_Profile.aspx</DependentUpon>
@@ -551,6 +566,7 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
+    <Content Include="Student\StudentMaster.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

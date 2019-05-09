@@ -101,7 +101,7 @@
                     <td class="auto-style4">&nbsp;</td>
                     <td colspan="3" rowspan="16">
                         <fieldset class="auto-style5">
-                            <legend class="auto-style3"><strong><em> Change Password</em></strong></legend>
+                            <legend class="auto-style3" style="border: thick"><strong><em> Change Password</em></strong></legend>
                             <div class="auto-style20">
                                 <table class="auto-style14">
                                     <tr>
