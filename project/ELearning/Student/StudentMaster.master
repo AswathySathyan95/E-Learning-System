@@ -3,21 +3,21 @@
     <table class="nav-justified" style="height: 615px">
         <tr>
             <td style="width: 187px; height: 348px;">
-                <div id="linkss" style="height: 543px; margin-top: 0px; background-color: #FFFFFF;">
+                <div id="linkss" style="height: 623px; margin-top: 0px; background-color: #343A40; border-style:">
                     <div style="height: 61px; width: 206px">
 
                     </div>
                     <div class="text-left" style="height: 61px; width: 206px">
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         <strong>
-                        <asp:HyperLink ID="HyperLink1" runat="server" ForeColor="Black" NavigateUrl="~/Login/Change_Password.aspx">Change Password</asp:HyperLink>
+                        <asp:HyperLink ID="HyperLink1" runat="server" ForeColor="White" NavigateUrl="~/Login/Change_Password.aspx" CssClass="auto-style2">Change Password</asp:HyperLink>
                         </strong>
                     </div>
                     <div style="height: 61px; width: 206px">
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
                     <strong>
-                        <asp:HyperLink ID="HyperLink2" runat="server" ForeColor="Black" NavigateUrl="~/Student/Quiz_Category.aspx">Online Quiz</asp:HyperLink>
+                        <asp:HyperLink ID="HyperLink2" runat="server" ForeColor="White" NavigateUrl="~/Student/Quiz_Category.aspx" CssClass="auto-style2">Online Quiz</asp:HyperLink>
                         </strong>
 
                     </div>

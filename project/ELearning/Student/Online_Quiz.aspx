@@ -1,16 +1,15 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Student/StudentMaster.master" AutoEventWireup="true" CodeBehind="Online_Quiz.aspx.cs" Inherits="ELearning.Student.Online_Quiz" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div id="maincontent">
-          <table class="nav-justified" style="height: 425px">
+    <div id="maincontent" style="width: 1305px">
+          <table class="nav-justified" style="height: 425px; width: 101%;">
             <tr>
                 <td style="width: 78px">
                     <asp:Timer ID="Timer2" runat="server" OnTick="Timer1_Tick" Interval="1000">
                     </asp:Timer>
                 </td>
                 <td style="width: 79px">&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td class="text-right">
+                <td style="width: 857px">&nbsp;</td>
+                <td>
                     <asp:UpdatePanel ID="UpdatePanel3" runat="server">
                         <ContentTemplate>
                             <asp:TextBox ID="TxtDisTime" runat="server" BorderStyle="None" Font-Bold="True" Font-Size="X-Large" ReadOnly="True" Width="123px">25:00</asp:TextBox>
@@ -20,6 +19,8 @@
                         </Triggers>
                     </asp:UpdatePanel>
                 </td>
+                <td class="text-right">
+                    &nbsp;</td>
             </tr>
             <tr>
                 <td rowspan="8" style="width: 78px">
@@ -33,7 +34,7 @@
                                     <table class="nav-justified">
                                         <tr>
                                             <td style="width: 50px; height: 52px">
-                                                <asp:Button ID="Button01" runat="server" Text="1" BackColor="#CCCCCC" BorderStyle="Solid" Font-Bold="True" Font-Size="Large" ForeColor="Black" Height="45px" Width="45px" />
+                                                <asp:Button ID="Button1" runat="server" Text="1" BackColor="#CCCCCC" BorderStyle="Solid" Font-Bold="True" Font-Size="Large" ForeColor="Black" Height="45px" Width="45px" />
                                                 &nbsp;</td>
                                             <td style="width: 50px; height: 52px">
                                                 <asp:Button ID="Button2" runat="server" Text="2" BackColor="#CCCCCC" BorderStyle="Solid" Font-Bold="True" Font-Size="Large" ForeColor="Black" Height="45px" Width="45px" />
@@ -126,14 +127,14 @@
                 <td rowspan="8" style="width: 79px">
                     &nbsp;</td>
                 <td colspan="2" rowspan="8">
-                    <div id="qstn" style="width: 737px; height: 320px">
+                    <div id="qstn" style="width: 1024px; height: 320px">
 
                         <table class="nav-justified" style="height: 306px">
                             <tr>
                                 <td colspan="4" style="height: 190px">
                                     <asp:UpdatePanel ID="UpdatePanel5" runat="server">
                                         <ContentTemplate>
-                                            <table class="nav-justified" style="height: 195px">
+                                            <table class="nav-justified" style="height: 231px">
                                                 <tr>
                                                     <td>&nbsp;</td>
                                                     <td colspan="3"><strong>
@@ -155,10 +156,13 @@
                                                 <tr>
                                                     <td>&nbsp;</td>
                                                     <td>
-                                                        <asp:RadioButton ID="RbAOptn" runat="server" GroupName="optn" OnCheckedChanged="RbAOptn_CheckedChanged" />
+                                                        <asp:RadioButton ID="RbAOptn" runat="server" GroupName="optn" OnCheckedChanged="RbAOptn_CheckedChanged" Width="500px" Height="50px" />
+     
                                                     </td>
                                                     <td>
-                                                        <asp:RadioButton ID="RbBOptn" runat="server" GroupName="optn" OnCheckedChanged="RbBOptn_CheckedChanged" />
+                                                        
+                                                            <asp:RadioButton ID="RbBOptn" runat="server" GroupName="optn" OnCheckedChanged="RbBOptn_CheckedChanged" Width="500px" Height="50px" />
+                                                        
                                                     </td>
                                                     <td>&nbsp;</td>
                                                     <td>&nbsp;</td>
@@ -173,10 +177,14 @@
                                                 <tr>
                                                     <td>&nbsp;</td>
                                                     <td>
-                                                        <asp:RadioButton ID="RbCOptn" runat="server" GroupName="optn" OnCheckedChanged="RbCOptn_CheckedChanged" />
+                                                      
+                                                            <asp:RadioButton ID="RbCOptn" runat="server" GroupName="optn" OnCheckedChanged="RbCOptn_CheckedChanged" Width="500px" Height="50px" />
+                                                        
                                                     </td>
                                                     <td>
-                                                        <asp:RadioButton ID="RbDOptn" runat="server" GroupName="optn" OnCheckedChanged="RbDOptn_CheckedChanged" />
+                                                        
+                                                            <asp:RadioButton ID="RbDOptn" runat="server" GroupName="optn" OnCheckedChanged="RbDOptn_CheckedChanged" Width="500px" Height="50px" />
+                                                        
                                                     </td>
                                                     <td>&nbsp;</td>
                                                     <td>&nbsp;</td>
@@ -234,7 +242,7 @@
                     <asp:HiddenField ID="HiddenField2" runat="server" />
                 </td>
                 <td style="width: 79px">&nbsp;</td>
-                <td>&nbsp;</td>
+                <td style="width: 857px">&nbsp;</td>
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
             </tr>

@@ -30,20 +30,22 @@ namespace ELearning.Classes
         private string rsubid;
         private string quiz_category;
         private string seleted_optn;
-        private Int32 q_id;
+        private string q_id;
         private string user_id;
         private string start_time;
         private string end_time;
+        private int qsn_no;
 
         public string Ctgry { get => ctgry; set => ctgry = value; }
         public string Subid { get => subid; set => subid = value; }
         public string Rsubid { get => rsubid; set => rsubid = value; }
         public string Quiz_category { get => quiz_category; set => quiz_category = value; }
         public string Seleted_optn { get => seleted_optn; set => seleted_optn = value; }
-        public int Q_id { get => q_id; set => q_id = value; }
         public string User_id { get => user_id; set => user_id = value; }
         public string Start_time { get => start_time; set => start_time = value; }
         public string End_time { get => end_time; set => end_time = value; }
+        public int Qsn_no { get => qsn_no; set => qsn_no = value; }
+        public string Q_id { get => q_id; set => q_id = value; }
 
         //Fetching Sub category from the table Quiz_Category
         public DataTable FetchSubCategory()
@@ -85,10 +87,11 @@ namespace ELearning.Classes
         public void UpdateTemp()
         {
             OpenConnection();
-            string qry = "update Temporary_Qstn set Selected_Option=@soptn where Qstn_No=@Qstnno";
+            string qry = "update Temporary_Qstn set Selected_Option=@soptn where Qstn_Id=@qsid";
             SqlCommand cmd = new SqlCommand(qry, con);
             cmd.Parameters.AddWithValue("@soptn", seleted_optn);
-            cmd.Parameters.AddWithValue("@Qstnno", Q_id);
+            cmd.Parameters.AddWithValue("@qsid", Q_id);
+            
             cmd.ExecuteNonQuery();
             CloseConnection();
         }
@@ -96,9 +99,10 @@ namespace ELearning.Classes
         public void UpdateStatus()
         {
             OpenConnection();
-            string qry = "update Temporary_Qstn set Status='Attended' where Qstn_No=@Qstnno";
+            string qry = "update Temporary_Qstn set Status='Attended',Qstn_No=@qstnno where Qstn_Id=@qstid";
             SqlCommand cmd = new SqlCommand(qry, con);
-            cmd.Parameters.AddWithValue("@Qstnno", Q_id);
+            cmd.Parameters.AddWithValue("@qstid", Q_id);
+            cmd.Parameters.AddWithValue("@qstnno", qsn_no);
             cmd.ExecuteNonQuery();
             CloseConnection();
         }

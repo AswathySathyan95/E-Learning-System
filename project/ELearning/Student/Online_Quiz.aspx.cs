@@ -26,7 +26,7 @@ namespace ELearning.Student
                 dtQuestion = objStud.FetchQuizQuestion();
                 if (dtQuestion.Rows.Count > 0)
                 {
-                    LblTest.Text = dtQuestion.Rows[0]["Qstn_No"].ToString();
+                    LblTest.Text = dtQuestion.Rows[0]["Qstn_Id"].ToString();
                     LblQstn.Text = dtQuestion.Rows[0]["Question"].ToString();
                     RbAOptn.Text = dtQuestion.Rows[0]["OptionA"].ToString();
                     RbBOptn.Text = dtQuestion.Rows[0]["OptionB"].ToString();
@@ -68,9 +68,10 @@ namespace ELearning.Student
                         }
                     }
                 }
-            }
+             }
              // counter++;
-            objStud.Q_id = Convert.ToInt32(LblTest.Text.ToString());
+            objStud.Q_id = LblTest.Text.ToString();
+            objStud.Qsn_no = Convert.ToInt32(LblQstnNo.Text.ToString());
             objStud.UpdateStatus();
             RbAOptn.Checked = false;
             RbBOptn.Checked = false;
@@ -85,7 +86,7 @@ namespace ELearning.Student
                 int nmbr = Convert.ToInt16(LblQstnNo.Text.ToString());
                 nmbr++;
                 LblQstnNo.Text = nmbr.ToString();
-                LblTest.Text= dtQuestion.Rows[0]["Qstn_No"].ToString();
+                LblTest.Text= dtQuestion.Rows[0]["Qstn_Id"].ToString();
                 LblQstn.Text = dtQuestion.Rows[0]["Question"].ToString();
                 RbAOptn.Text = dtQuestion.Rows[0]["OptionA"].ToString();
                 RbBOptn.Text = dtQuestion.Rows[0]["OptionB"].ToString();
@@ -124,7 +125,7 @@ namespace ELearning.Student
         protected void RbAOptn_CheckedChanged(object sender, EventArgs e)
         {
             objStud.Seleted_optn = RbAOptn.Text.ToString();
-            objStud.Q_id = Convert.ToInt32(LblTest.Text.ToString());
+            objStud.Q_id = LblTest.Text.ToString();
             objStud.UpdateTemp();
             changecolor();
         }
@@ -132,7 +133,7 @@ namespace ELearning.Student
         protected void RbBOptn_CheckedChanged(object sender, EventArgs e)
         {
             objStud.Seleted_optn = RbBOptn.Text.ToString();
-            objStud.Q_id = Convert.ToInt32(LblTest.Text.ToString());
+            objStud.Q_id = LblTest.Text.ToString();
             objStud.UpdateTemp();
             changecolor();
         }
@@ -140,7 +141,7 @@ namespace ELearning.Student
         protected void RbCOptn_CheckedChanged(object sender, EventArgs e)
         {
             objStud.Seleted_optn = RbCOptn.Text.ToString();
-            objStud.Q_id = Convert.ToInt32(LblTest.Text.ToString());
+            objStud.Q_id = LblTest.Text.ToString();
             objStud.UpdateTemp();
             changecolor();
         }
@@ -148,7 +149,7 @@ namespace ELearning.Student
         protected void RbDOptn_CheckedChanged(object sender, EventArgs e)
         {
             objStud.Seleted_optn = RbDOptn.Text.ToString();
-            objStud.Q_id = Convert.ToInt32(LblTest.Text.ToString());
+            objStud.Q_id = LblTest.Text.ToString();
             objStud.UpdateTemp();
             changecolor();
         }
