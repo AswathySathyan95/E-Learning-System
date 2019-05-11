@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Faculty/FacultyMaster.master" AutoEventWireup="true" CodeBehind="Upload_Note.aspx.cs" Inherits="ELearning.Faculty.Upload_Note" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="maincontent" runat="server">
-    <table class="nav-justified">
+    <table class="auto-style1">
         <tr>
             <td style="height: 22px; width: 212px;"></td>
             <td style="height: 22px"></td>
@@ -17,8 +17,7 @@
         </tr>
         <tr>
             <td style="height: 22px; width: 212px;">&nbsp;</td>
-            <td style="height: 22px">&nbsp;</td>
-            <td style="height: 22px">&nbsp;</td>
+            <td class="auto-style2" colspan="2"><span class="newStyle1">Upload Notes</span></td>
             <td style="height: 22px">&nbsp;</td>
             <td style="height: 22px">&nbsp;</td>
         </tr>
@@ -203,3 +202,21 @@
         </tr>
     </table>
 </asp:Content>
+<asp:Content ID="Content2" runat="server" contentplaceholderid="headplaceholder">
+    <style type="text/css">
+        .auto-style1 {
+            width: 1266px;
+        }
+        .auto-style2 {
+            height: 22px;
+            text-align: center;
+        }
+        .newStyle1 {
+            font-family: "Colonna MT";
+            font-size: 50px;
+            font-weight: bolder;
+            color: #000080;
+        }
+    </style>
+</asp:Content>
+

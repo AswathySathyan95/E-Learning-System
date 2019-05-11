@@ -35,6 +35,7 @@ namespace ELearning.Classes
         private string start_time;
         private string end_time;
         private int qsn_no;
+        private int btnqstn;
 
         public string Ctgry { get => ctgry; set => ctgry = value; }
         public string Subid { get => subid; set => subid = value; }
@@ -46,6 +47,7 @@ namespace ELearning.Classes
         public string End_time { get => end_time; set => end_time = value; }
         public int Qsn_no { get => qsn_no; set => qsn_no = value; }
         public string Q_id { get => q_id; set => q_id = value; }
+        public int Btnqstn { get => btnqstn; set => btnqstn = value; }
 
         //Fetching Sub category from the table Quiz_Category
         public DataTable FetchSubCategory()
@@ -72,11 +74,23 @@ namespace ELearning.Classes
             return dtCategory;
         }
 
+        public DataTable QuestionFetch()
+        {
+            OpenConnection();
+            DataTable dtqstnno = new DataTable();
+            SqlCommand command = new SqlCommand("Select * from Temporary_Qstn where Qstn_No=@qno", con);
+            SqlDataAdapter da = new SqlDataAdapter(command);
+            command.Parameters.AddWithValue("@qno", btnqstn);
+            da.Fill(dtqstnno);
+            CloseConnection();
+            return dtqstnno;
+        }
+
         public DataTable FetchQuizQuestion()
         {
             OpenConnection();
             DataTable dtQuestion = new DataTable();
-            SqlCommand command = new SqlCommand("Select * from Temporary_Qstn where Status='Not Attempeted'", con);
+            SqlCommand command = new SqlCommand("Select * from Temporary_Qstn where Status='Not Attempted'", con);
             SqlDataAdapter da = new SqlDataAdapter(command);
             da.Fill(dtQuestion);
             CloseConnection();
@@ -99,10 +113,19 @@ namespace ELearning.Classes
         public void UpdateStatus()
         {
             OpenConnection();
-            string qry = "update Temporary_Qstn set Status='Attended',Qstn_No=@qstnno where Qstn_Id=@qstid";
+            string qry = "update Temporary_Qstn set Status='Attended' where Qstn_Id=@qstid";
             SqlCommand cmd = new SqlCommand(qry, con);
             cmd.Parameters.AddWithValue("@qstid", Q_id);
-            cmd.Parameters.AddWithValue("@qstnno", qsn_no);
+            //cmd.Parameters.AddWithValue("@qstnno", qsn_no);
+            cmd.ExecuteNonQuery();
+            CloseConnection();
+        }
+
+        public void createtable()
+        {
+            OpenConnection();
+            string qry = "create table Temporary_Qstn(Qstn_No INT IDENTITY(1,1) NOT NULL,Qstn_Id VARCHAR(20),Question VARCHAR(MAX),OptionA VARCHAR(MAX),OptionB VARCHAR(MAX),OptionC VARCHAR(MAX),OptionD VARCHAR(MAX),Answer VARCHAR(MAX),Selected_Option VARCHAR(MAX),Status VARCHAR(MAX) DEFAULT('Not Attempted'))";
+            SqlCommand cmd = new SqlCommand(qry, con);
             cmd.ExecuteNonQuery();
             CloseConnection();
         }

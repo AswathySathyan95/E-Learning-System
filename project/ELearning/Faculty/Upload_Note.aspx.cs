@@ -47,7 +47,7 @@ namespace ELearning.Faculty
         protected void btnNoteUpload_Click(object sender, EventArgs e)
         {
             //Setting document path
-            string pname = ddlSubject.SelectedItem.Text.ToString() + "_" + Session["u_id"].ToString();
+            string pname = ddlSubject.SelectedItem.Text.ToString().Substring(0, 5)+"_Note" + "_" + Session["u_id"].ToString();
             string filename = Path.GetFileName(fuNotes.PostedFile.FileName);
             string ext = Path.GetExtension(filename);
             if (ext.ToLower() == ".doc" || ext.ToLower() == ".docx" || ext.ToLower() == ".html" || ext.ToLower() == ".htm" || ext.ToLower() == ".pdf" || ext.ToLower() == ".xls" || ext.ToLower() == ".ppt" || ext.ToLower() == ".pptx" || ext.ToLower() == ".txt")

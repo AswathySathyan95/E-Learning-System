@@ -41,13 +41,13 @@
                 </li>
                 <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Exam">
                     <a class="nav-link" href="Upload_Note.aspx">
-                        <i class="fa fa-book" aria-hidden="true"></i>
+                        <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
                         <span class="nav-link-text"> Notes</span>
                     </a>
                 </li>
                 <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Exam">
                     <a class="nav-link" href="Upload_Video.aspx">
-                        <i class="fa fa-video" aria-hidden="true"></i>
+                        <i class="fa fa-file-video-o" aria-hidden="true"></i>
                         <span class="nav-link-text"> Video Tutorials</span>
                     </a>
                 </li>

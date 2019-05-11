@@ -14,26 +14,26 @@
         <tr>
             <td style="height: 20px"></td>
             <td class="auto-style2" colspan="3">
-            <strong><em><span style="font-size: xx-large; color: #003399; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Quiz Questions</span></em></strong> </td>
+                <span class="newStyle2">QUIZ QUESTIONS</span></td>
             <td style="height: 20px"></td>
         </tr>
         <tr>
-            <td>&nbsp;</td>
-            <td style="width: 311px"><strong>
+            <td class="auto-style18"></td>
+            <td class="auto-style19"><strong>
                 <asp:Label ID="Label1" runat="server" Text="Question Id"></asp:Label>
                 </strong></td>
-            <td style="width: 677px">
+            <td class="auto-style20">
                 <asp:TextBox ID="TxtQ_Id" runat="server"></asp:TextBox>
             </td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
+            <td class="auto-style18"></td>
+            <td class="auto-style18"></td>
         </tr>
         <tr>
             <td style="height: 36px"></td>
             <td style="width: 311px; height: 36px"><strong>
                 <asp:Label ID="Label7" runat="server" Text="Category"></asp:Label>
                 </strong></td>
-            <td style="height: 36px; width: 677px;">
+            <td class="auto-style13">
                 <asp:DropDownList ID="DdlCategory" runat="server" AutoPostBack="True" OnSelectedIndexChanged="DdlCategory_SelectedIndexChanged" Height="25px" Width="222px">
                 </asp:DropDownList>
             </td>
@@ -45,7 +45,7 @@
             <td style="width: 311px; height: 37px;"><strong>
                 <asp:Label ID="Label8" runat="server" Text="Sub Category"></asp:Label>
                 </strong></td>
-            <td style="width: 677px; height: 37px;">
+            <td class="auto-style14">
                 <asp:UpdatePanel ID="UpdatePanel1" runat="server">
                     <ContentTemplate>
                         <asp:DropDownList ID="DdlSubcategory" runat="server" Height="25px" Width="224px">
@@ -61,36 +61,22 @@
         </tr>
         <tr>
             <td>&nbsp;</td>
-            <td style="width: 311px">&nbsp;</td>
-            <td style="width: 677px">&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td>&nbsp;</td>
             <td style="width: 311px"><strong>
                 <asp:Label ID="Label2" runat="server" Text="Question"></asp:Label>
                 </strong></td>
-            <td style="width: 677px">
-                <asp:TextBox ID="TxtQuestion" runat="server" Height="76px" TextMode="MultiLine" Width="628px"></asp:TextBox>
+            <td class="auto-style5">
+                <asp:TextBox ID="TxtQuestion" runat="server" Height="76px" TextMode="MultiLine" Width="628px" CausesValidation="True"></asp:TextBox>
             </td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
+            <td colspan="2"><strong>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="TxtQuestion" ErrorMessage="Please Enter Question" ForeColor="Red"></asp:RequiredFieldValidator>
+                </strong></td>
         </tr>
         <tr>
-            <td>&nbsp;</td>
-            <td style="width: 311px">&nbsp;</td>
-            <td style="width: 677px">
-                &nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td>&nbsp;</td>
-            <td style="width: 311px"><strong>
+            <td class="auto-style6"></td>
+            <td class="auto-style7"><strong>
                 <asp:Label ID="Label11" runat="server" Text="Options"></asp:Label>
                 </strong></td>
-            <td style="width: 677px">
+            <td class="auto-style8">
                     <table class="nav-justified" style="height: 85px" __designer:mapid="1b">
                         <tr __designer:mapid="1c">
                             <td class="modal-sm" style="width: 345px; height: 20px;" __designer:mapid="1d"><strong __designer:mapid="1e">
@@ -124,14 +110,11 @@
                                 <asp:TextBox ID="TxtOptn4" runat="server" AutoPostBack="True" OnTextChanged="TxtOptn4_TextChanged" Height="25px" Width="135px"></asp:TextBox>
                             </td>
                         </tr>
-                        <tr __designer:mapid="34">
-                            <td class="modal-sm" style="width: 345px" __designer:mapid="35">&nbsp;</td>
-                            <td __designer:mapid="36">&nbsp;</td>
-                        </tr>
-                    </table>
+                        </table>
                 </td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
+            <td class="auto-style6" colspan="2"><strong>
+                <asp:Label ID="LblError" runat="server" ForeColor="Red" Text="Please Enter all Options" Visible="False"></asp:Label>
+                </strong></td>
         </tr>
         <tr>
             <td style="height: 40px"></td>
@@ -142,7 +125,7 @@
                 </strong>
                 <br />
             </td>
-            <td style="height: 40px; width: 677px;">
+            <td class="auto-style15">
                 <br />
                 <asp:UpdatePanel ID="UpdatePanel2" runat="server">
                     <ContentTemplate>
@@ -173,8 +156,9 @@
 
                 <br />
             </td>
-            <td style="height: 40px"></td>
-            <td style="height: 40px"></td>
+            <td class="auto-style17" colspan="2"><strong>
+                <asp:Label ID="LblErrorAns" runat="server" ForeColor="Red" Text="Please Select Answer" Visible="False"></asp:Label>
+                </strong></td>
         </tr>
         <tr>
             <td style="height: 20px"></td>
@@ -183,7 +167,7 @@
                 <asp:Label ID="Label10" runat="server" Text="Description"></asp:Label>
                 </strong>
                 </td>
-            <td style="height: 20px; width: 677px;">
+            <td class="auto-style16">
                 <asp:TextBox ID="TxtDescription" runat="server" Height="82px" TextMode="MultiLine" Width="622px"></asp:TextBox>
             </td>
             <td style="height: 20px"></td>
@@ -192,38 +176,30 @@
         <tr>
             <td style="height: 20px">&nbsp;</td>
             <td style="width: 311px; height: 20px;">&nbsp;</td>
-            <td style="height: 20px; width: 677px;">&nbsp;</td>
+            <td class="auto-style16">&nbsp;</td>
             <td style="height: 20px">&nbsp;</td>
             <td style="height: 20px">&nbsp;</td>
         </tr>
         <tr>
-            <td style="height: 20px">&nbsp;</td>
-            <td style="width: 311px; height: 20px;">&nbsp;</td>
-            <td style="height: 20px; width: 677px;">
-                &nbsp;</td>
-            <td style="height: 20px">&nbsp;</td>
-            <td style="height: 20px">&nbsp;</td>
-        </tr>
-        <tr>
-            <td>&nbsp;</td>
-            <td style="width: 311px" class="text-right">
+            <td class="auto-style11"></td>
+            <td class="auto-style10">
                 <br />
                 <br />
             </td>
-            <td style="width: 677px">
+            <td class="auto-style12">
                 <br />
                 <strong>
                 <asp:Button ID="BtnSave" runat="server" style="font-weight: bold" Text="Save Question" OnClick="BtnSave_Click" />
                 </strong>
                 <br />
             </td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
+            <td class="auto-style11"></td>
+            <td class="auto-style11"></td>
         </tr>
         <tr>
             <td>&nbsp;</td>
             <td style="width: 311px">&nbsp;</td>
-            <td style="width: 677px">&nbsp;</td>
+            <td class="auto-style5">&nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
         </tr>
@@ -238,12 +214,78 @@
         .auto-style2 {
             height: 20px;
             text-align: center;
+            font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+            font-weight: bold;
+            font-size: xx-large;
+            color: #003399;
         }
         .auto-style4 {
             width: 311px;
         }
         .auto-style5 {
-            width: 677px;
+            width: 647px;
+        }
+        .auto-style6 {
+            height: 160px;
+        }
+        .auto-style7 {
+            width: 311px;
+            height: 160px;
+        }
+        .auto-style8 {
+            width: 647px;
+            height: 160px;
+        }
+        .auto-style10 {
+            text-align: right;
+            width: 311px;
+            height: 42px;
+        }
+        .auto-style11 {
+            height: 42px;
+        }
+        .auto-style12 {
+            width: 647px;
+            height: 42px;
+        }
+        .newStyle1 {
+            font-family: "Colonna MT";
+        }
+        .newStyle2 {
+            font-family: "Colonna MT";
+            font-size: 50px;
+            font-weight: bolder;
+            color: #000080;
+        }
+        .auto-style13 {
+            height: 36px;
+            width: 647px;
+        }
+        .auto-style14 {
+            height: 37px;
+            width: 647px;
+        }
+        .auto-style15 {
+            height: 40px;
+            width: 647px;
+        }
+        .auto-style16 {
+            height: 20px;
+            width: 647px;
+        }
+        .auto-style17 {
+            height: 40px;
+        }
+        .auto-style18 {
+            height: 45px;
+        }
+        .auto-style19 {
+            width: 311px;
+            height: 45px;
+        }
+        .auto-style20 {
+            width: 647px;
+            height: 45px;
         }
     </style>
 </asp:Content>

@@ -99,6 +99,11 @@ namespace ELearning.Classes
         private string created_by;
         private string created_on;
 
+        //Document Verification
+        private string doc_type;
+        private string doc_id;
+        private string docid;
+
         public string User_id { get => user_id; set => user_id = value; }
         public string User_type { get => user_type; set => user_type = value; }
         public string Name { get => name; set => name = value; }
@@ -163,6 +168,9 @@ namespace ELearning.Classes
         public string Sub_id { get => sub_id; set => sub_id = value; }
         public string Ctgry_check { get => ctgry_check; set => ctgry_check = value; }
         public string Subctgry_check { get => subctgry_check; set => subctgry_check = value; }
+        public string Doc_type { get => doc_type; set => doc_type = value; }
+        public string Doc_id { get => doc_id; set => doc_id = value; }
+        public string Docid { get => docid; set => docid = value; }
 
         //Checking whether the category is already added or not
         public DataTable CheckCategory()
@@ -262,6 +270,47 @@ namespace ELearning.Classes
             CloseConnection();
             return dtSubCategory;
         }
+
+        //Fetching document dedtails
+        public DataTable FectchDocument()
+        {
+            OpenConnection();
+            DataTable dtDoc = new DataTable();
+            string qry = "select Doc_Id,Subject,Topic,Description,Document_File,Status, " +
+                        " CASE WHEN Status='Not Verified' THEN 'NOT VERIFIED' " +
+                        " ELSE 'VERIFIED' END AS APR_STATUS " +
+                        " from Uploaded_Document where Status='Not Verified' and Doc_Type=@doctype ";
+            SqlCommand cmd = new SqlCommand(qry, con);
+            cmd.Parameters.AddWithValue("@doctype", doc_type);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dtDoc);
+            CloseConnection();
+            return dtDoc;
+        }
+
+        //document Id
+        public string documentId()
+        {
+            OpenConnection();
+            SqlCommand command = new SqlCommand("select Document_File from Uploaded_Document where Doc_Id=@docid", con);
+            command.Parameters.AddWithValue("@docid", docid);
+            object cnt = command.ExecuteScalar();
+            if (cnt != DBNull.Value)
+            {
+                Docid = (string)cnt;
+            }
+            return Docid;
+        }
+
+        //Update Document Table
+        public void UpdateTable()
+        {
+            OpenConnection();
+            SqlCommand cmd = new SqlCommand("update Uploaded_Document set Status='Verified' where Doc_Id=@doc", con);
+            cmd.Parameters.AddWithValue("@doc", doc_id);
+            cmd.ExecuteNonQuery();
+        }
+
 
         //Inserting Student Details into the table User_Details
         public void InsertDetails()

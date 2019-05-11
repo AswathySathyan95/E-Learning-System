@@ -14,11 +14,12 @@ namespace ELearning.Student
     public partial class Online_Quiz : System.Web.UI.Page
     {
         StudentClass objStud = new StudentClass();
-       // int counter=0;
+        int counter = 0;
         protected void Page_Load(object sender, EventArgs e)
         {
-            if(!IsPostBack)
+            if (!IsPostBack)
             {
+               
                 Session["starttime"] = DateTime.Now.AddMinutes(25).ToString();
                 objStud.User_id = Session["u_id"].ToString();
                 objStud.Start_time =System.DateTime.Now.ToShortTimeString();
@@ -26,6 +27,7 @@ namespace ELearning.Student
                 dtQuestion = objStud.FetchQuizQuestion();
                 if (dtQuestion.Rows.Count > 0)
                 {
+                    LblQstnNo.Text = dtQuestion.Rows[0]["Qstn_No"].ToString();
                     LblTest.Text = dtQuestion.Rows[0]["Qstn_Id"].ToString();
                     LblQstn.Text = dtQuestion.Rows[0]["Question"].ToString();
                     RbAOptn.Text = dtQuestion.Rows[0]["OptionA"].ToString();
@@ -33,10 +35,7 @@ namespace ELearning.Student
                     RbCOptn.Text = dtQuestion.Rows[0]["OptionC"].ToString();
                     RbDOptn.Text = dtQuestion.Rows[0]["OptionD"].ToString();
                 }
-                
             }
-            
-            
         }
 
         protected void Timer1_Tick(object sender, EventArgs e)
@@ -53,7 +52,8 @@ namespace ELearning.Student
 
         protected void BtnNxtQstn_Click(object sender, EventArgs e)
         {
-             if(!RbAOptn.Checked && !RbBOptn.Checked && !RbCOptn.Checked && !RbDOptn.Checked)
+            counter++;
+            if (!RbAOptn.Checked && !RbBOptn.Checked && !RbCOptn.Checked && !RbDOptn.Checked)
              {
                 string nmbrcheck = LblQstnNo.Text.ToString();
                 string controlid = "Button" + nmbrcheck;
@@ -69,35 +69,31 @@ namespace ELearning.Student
                     }
                 }
              }
-             // counter++;
             objStud.Q_id = LblTest.Text.ToString();
             objStud.Qsn_no = Convert.ToInt32(LblQstnNo.Text.ToString());
             objStud.UpdateStatus();
-            RbAOptn.Checked = false;
-            RbBOptn.Checked = false;
-            RbCOptn.Checked = false;
-            RbDOptn.Checked = false;
             DataTable dtQuestion = new DataTable();
             dtQuestion = objStud.FetchQuizQuestion();
-            int qstncount = dtQuestion.Rows.Count;
-            if (qstncount > 0)
+            /// int qstncount = dtQuestion.Rows.Count;
+            if (dtQuestion.Rows.Count > 0)
             {
-
-                int nmbr = Convert.ToInt16(LblQstnNo.Text.ToString());
-                nmbr++;
-                LblQstnNo.Text = nmbr.ToString();
-                LblTest.Text= dtQuestion.Rows[0]["Qstn_Id"].ToString();
+                LblQstnNo.Text = dtQuestion.Rows[0]["Qstn_No"].ToString();
+                LblTest.Text = dtQuestion.Rows[0]["Qstn_Id"].ToString();
                 LblQstn.Text = dtQuestion.Rows[0]["Question"].ToString();
                 RbAOptn.Text = dtQuestion.Rows[0]["OptionA"].ToString();
                 RbBOptn.Text = dtQuestion.Rows[0]["OptionB"].ToString();
                 RbCOptn.Text = dtQuestion.Rows[0]["OptionC"].ToString();
                 RbDOptn.Text = dtQuestion.Rows[0]["OptionD"].ToString();
-                //}
             }
             else
             {
-                BtnSubmit.Visible = true;
+                BtnNxtQstn.Enabled = false;
             }
+            RbAOptn.Checked = false;
+            RbBOptn.Checked = false;
+            RbCOptn.Checked = false;
+            RbDOptn.Checked = false;
+           
         }
 
         protected void BtnSubmit_Click(object sender, EventArgs e)
@@ -106,10 +102,8 @@ namespace ELearning.Student
         }
         public void changecolor()
         {
-            // Button btn = new Button();
             string nmbrcheck = LblQstnNo.Text.ToString();
             string controlid = "Button" + nmbrcheck;
-            //btn.ID = controlid;
             foreach (Control c in PanelQstn.Controls)
             {
                 if (c.ID == controlid)
@@ -119,7 +113,6 @@ namespace ELearning.Student
                         ((Button)c).BackColor = Color.Green;
                     }
                 }
-
             }
         }
         protected void RbAOptn_CheckedChanged(object sender, EventArgs e)
@@ -152,6 +145,44 @@ namespace ELearning.Student
             objStud.Q_id = LblTest.Text.ToString();
             objStud.UpdateTemp();
             changecolor();
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            /*foreach (Control c in PanelQstn.Controls)
+            {
+                if (c is Button)
+                {
+
+                    string id = ((Button)c).Text.ToString();
+                    objStud.Btnqstn = Convert.ToInt16(id);
+                    DataTable dtqstnno = new DataTable();
+                    dtqstnno = objStud.QuestionFetch();
+                    LblQstnNo.Text = dtqstnno.Rows[0]["Qstn_No"].ToString();
+                    LblTest.Text = dtqstnno.Rows[0]["Qstn_Id"].ToString();
+                    LblQstn.Text = dtqstnno.Rows[0]["Question"].ToString();
+                    RbAOptn.Text = dtqstnno.Rows[0]["OptionA"].ToString();
+                    RbBOptn.Text = dtqstnno.Rows[0]["OptionB"].ToString();
+                    RbCOptn.Text = dtqstnno.Rows[0]["OptionC"].ToString();
+                    RbDOptn.Text = dtqstnno.Rows[0]["OptionD"].ToString();
+                }
+
+            }*/
+            string id = ((Button)sender).Text;
+            objStud.Btnqstn = Convert.ToInt16(id);
+            DataTable dtqstnno = new DataTable();
+            dtqstnno = objStud.QuestionFetch();
+            if(dtqstnno.Rows.Count>0)
+            {
+                LblQstnNo.Text = dtqstnno.Rows[0]["Qstn_No"].ToString();
+                LblTest.Text = dtqstnno.Rows[0]["Qstn_Id"].ToString();
+                LblQstn.Text = dtqstnno.Rows[0]["Question"].ToString();
+                RbAOptn.Text = dtqstnno.Rows[0]["OptionA"].ToString();
+                RbBOptn.Text = dtqstnno.Rows[0]["OptionB"].ToString();
+                RbCOptn.Text = dtqstnno.Rows[0]["OptionC"].ToString();
+                RbDOptn.Text = dtqstnno.Rows[0]["OptionD"].ToString();
+            }
+            
         }
     }
 }

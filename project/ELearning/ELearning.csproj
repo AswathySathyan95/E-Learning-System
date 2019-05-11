@@ -123,6 +123,7 @@
     <Content Include="Admin\Add_Category.aspx" />
     <Content Include="Admin\Add_Questions.aspx" />
     <Content Include="Admin\AdminHome.aspx" />
+    <Content Include="Admin\Document_Verification.aspx" />
     <Content Include="Admin\Quiz_Report.aspx" />
     <Content Include="Admin\Registration.aspx" />
     <Content Include="Admin\Reg_Home.aspx" />
@@ -241,6 +242,7 @@
     <Content Include="assets\js\bootstrap.min.js.map" />
     <Content Include="Faculty\FacultyMaster.Master" />
     <Content Include="Admin\AdminMaster.Master" />
+    <Content Include="WebForm2.aspx" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -306,6 +308,13 @@
     </Compile>
     <Compile Include="Admin\AdminMaster.Master.designer.cs">
       <DependentUpon>AdminMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Document_Verification.aspx.cs">
+      <DependentUpon>Document_Verification.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Document_Verification.aspx.designer.cs">
+      <DependentUpon>Document_Verification.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\Quiz_Report.aspx.cs">
       <DependentUpon>Quiz_Report.aspx</DependentUpon>
@@ -554,6 +563,13 @@
     </Compile>
     <Compile Include="WebForm1.aspx.designer.cs">
       <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm2.aspx.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm2.aspx.designer.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

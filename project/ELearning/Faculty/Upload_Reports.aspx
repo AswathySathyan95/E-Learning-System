@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Faculty/FacultyMaster.master" AutoEventWireup="true" CodeBehind="Upload_Reports.aspx.cs" Inherits="ELearning.Faculty.Upload_Reports" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="maincontent" runat="server">
-    <table class="nav-justified">
+    <table class="auto-style1">
         <tr>
             <td style="width: 205px; height: 22px;">
                 <asp:ScriptManager ID="ScriptManager1" runat="server">
@@ -144,3 +144,11 @@
         </tr>
     </table>
 </asp:Content>
+<asp:Content ID="Content2" runat="server" contentplaceholderid="headplaceholder">
+    <style type="text/css">
+        .auto-style1 {
+            width: 1239px;
+        }
+    </style>
+</asp:Content>
+

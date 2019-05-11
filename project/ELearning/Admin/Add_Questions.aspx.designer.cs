@@ -103,6 +103,15 @@ namespace ELearning.Admin {
         protected global::System.Web.UI.WebControls.TextBox TxtQuestion;
         
         /// <summary>
+        /// RequiredFieldValidator1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
+        
+        /// <summary>
         /// Label11 control.
         /// </summary>
         /// <remarks>
@@ -184,6 +193,15 @@ namespace ELearning.Admin {
         protected global::System.Web.UI.WebControls.TextBox TxtOptn4;
         
         /// <summary>
+        /// LblError control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LblError;
+        
+        /// <summary>
         /// LblAns control.
         /// </summary>
         /// <remarks>
@@ -236,6 +254,15 @@ namespace ELearning.Admin {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RadioButton RbOptnD;
+        
+        /// <summary>
+        /// LblErrorAns control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LblErrorAns;
         
         /// <summary>
         /// Label10 control.

@@ -28,6 +28,7 @@ namespace ELearning.Admin
                     DdlCategory.DataValueField = "C_Id";
                     DdlCategory.DataBind();
                 }
+
             }
         }
 
@@ -85,10 +86,19 @@ namespace ELearning.Admin
 
         protected void TxtOptn4_TextChanged(object sender, EventArgs e)
         {
-            RbOptnA.Text = TxtOptn1.Text.ToString();
-            RbOptnB.Text = TxtOptn2.Text.ToString();
-            RbOptnC.Text = TxtOptn3.Text.ToString();
-            RbOptnD.Text = TxtOptn4.Text.ToString();
+            if(TxtOptn1.Text.ToString()==""||TxtOptn2.Text.ToString() == ""||TxtOptn3.Text.ToString() == ""||TxtOptn4.Text.ToString() == "")
+            {
+                LblError.Visible = true;
+            }
+            else
+            {
+                RbOptnA.Text = TxtOptn1.Text.ToString();
+                RbOptnB.Text = TxtOptn2.Text.ToString();
+                RbOptnC.Text = TxtOptn3.Text.ToString();
+                RbOptnD.Text = TxtOptn4.Text.ToString();
+            }
+            
+            
            /* RbOptnA.Visible = true;
             RbOptnB.Visible = true;
             RbOptnC.Visible = true;

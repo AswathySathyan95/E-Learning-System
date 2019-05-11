@@ -3,7 +3,7 @@
     <div id="maincontent" style="height: 566px">
         <div id="heading" class="text-center" style="font-family: 'Tw Cen MT'">
             <br />
-            <strong><em><span style="font-size: xx-large; color: #003399; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Quiz Category</span></em></strong>
+            <span class="newStyle3">QUIZ CATEGORY </span>
         </div>
         <div id="categorycnt" style="height: 507px">
 
@@ -107,7 +107,7 @@
                         <asp:Panel ID="PanelSubctgry" runat="server" Height="240px" Visible="False" Width="1235px">
                             <table class="auto-style2">
                                 <tr>
-                                    <td class="text-center" colspan="3" style="color: #003399; font-size: xx-large; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; height: 64px;"><strong><em>Sub Category</em></strong></td>
+                                    <td class="text-center" colspan="3" style="color: #003399; font-size: xx-large; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; height: 64px;"><span class="newStyle4">Sub Category</span></td>
                                 </tr>
                                 <tr>
                                     <td style="width: 254px"><strong>
@@ -196,6 +196,27 @@
         .auto-style5 {
             height: 253px;
             width: 57px;
+        }
+        .newStyle1 {
+            font-family: "Colonna MT";
+            font-size: larger;
+            font-weight: bolder;
+            font-style: normal;
+        }
+        .newStyle2 {
+            font-family: "Colonna MT";
+        }
+        .newStyle3 {
+            font-family: "Colonna MT";
+            font-size: 50px;
+            font-weight: bolder;
+            color: #000080;
+        }
+        .newStyle4 {
+            font-family: "colonna MT";
+            font-size: 50px;
+            font-weight: bolder;
+            color: #000080;
         }
     </style>
 </asp:Content>

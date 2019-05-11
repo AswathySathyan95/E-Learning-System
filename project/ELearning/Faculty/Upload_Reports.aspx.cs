@@ -47,7 +47,7 @@ namespace ELearning.Faculty
         protected void btnReport_Click(object sender, EventArgs e)
         {
             //Setting document path
-            string pname = ddlSubject.SelectedItem.Text.ToString() + "_" + Session["u_id"].ToString();
+            string pname = ddlSubject.SelectedItem.Text.ToString().Substring(0, 5)+"_Report" + "_" + Session["u_id"].ToString();
             string filename = Path.GetFileName(fuReport.PostedFile.FileName);
             string ext = Path.GetExtension(filename);
             if (ext.ToLower() == ".doc" || ext.ToLower() == ".docx" || ext.ToLower() == ".html" || ext.ToLower() == ".htm" || ext.ToLower() == ".pdf" || ext.ToLower() == ".xls" || ext.ToLower() == ".ppt" || ext.ToLower() == ".pptx" || ext.ToLower() == ".txt")

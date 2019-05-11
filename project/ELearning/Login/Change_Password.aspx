@@ -12,7 +12,7 @@
         .auto-style3 {
             font-size: x-large;
             color: #000099;
-            width: 227px;
+            width: 236px;
         }
         .auto-style4 {
             width: 238px;
@@ -63,6 +63,9 @@
         .auto-style20 {
             height: 326px;
         }
+        .auto-style21 {
+            background-color: #9933FF;
+        }
     </style>
 </head>
 <body >
@@ -101,7 +104,7 @@
                     <td class="auto-style4">&nbsp;</td>
                     <td colspan="3" rowspan="16">
                         <fieldset class="auto-style5">
-                            <legend class="auto-style3" style="border: thick"><strong><em> Change Password</em></strong></legend>
+                            <legend class="auto-style3" style="border: thick"><strong><em> <span class="auto-style21">Change Password </span></em></strong></legend>
                             <div class="auto-style20">
                                 <table class="auto-style14">
                                     <tr>
