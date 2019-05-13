@@ -83,9 +83,9 @@
                                 <td class="auto-style7">
                                     <asp:DropDownList ID="DdlDocument" runat="server" AutoPostBack="True" Width="201px" OnSelectedIndexChanged="DdlDocument_SelectedIndexChanged">
                                         <asp:ListItem>---Select---</asp:ListItem>
-                                        <asp:ListItem>Video Tutorials</asp:ListItem>
+                                        <asp:ListItem>VideoTutorials</asp:ListItem>
                                         <asp:ListItem>Notes</asp:ListItem>
-                                        <asp:ListItem>Assignment/Seminar Reports</asp:ListItem>
+                                        <asp:ListItem>Reports</asp:ListItem>
                                     </asp:DropDownList>
                                 </td>
                             </tr>
@@ -104,9 +104,9 @@
                                         <asp:BoundField DataField="Description" HeaderText="Document Description" />
                                         <asp:TemplateField HeaderText="Download">
                                             <ItemTemplate>
-                                                <asp:LinkButton ID="btn_Download" runat="server" CssClass="btn" BackColor="#343A40" BorderStyle="None" ForeColor="White" CommandArgument='<%# Eval("Document_File") %>' CommandName="downloadDoc" OnClick="downloadfile_Click">
+                                               <asp:LinkButton ID="btn_Download" runat="server" CssClass="btn" BackColor="#343A40" BorderStyle="None" ForeColor="White" CommandArgument='<%# Eval("Document_File") %>' CommandName="downloadDoc" OnClick="downloadfile_Click" >
                                             <i class="fa fa-download" aria-hidden="true"></i> Download
-                                    </asp:LinkButton>
+                                            </asp:LinkButton>
                                             </ItemTemplate>
                                         </asp:TemplateField>
                                         <asp:TemplateField HeaderText="Verification">

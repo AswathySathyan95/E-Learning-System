@@ -32,10 +32,25 @@ namespace ELearning.Classes
         private string seleted_optn;
         private string q_id;
         private string user_id;
-        private string start_time;
-        private string end_time;
         private int qsn_no;
         private int btnqstn;
+        //Quiz Report
+        private string quiz_id;
+        private string quiz_date;
+        private string subctgry;
+        private DateTime start_time;
+        private DateTime end_time;
+        private Int32 correct_ans;
+        private Int32 wrong_ans;
+        private Int32 attended;
+        private Int32 score;
+        private double percent;
+        //values in class
+        private int crctans;
+        private int wrngans;
+        private int attend;
+        //quizcount
+        private int quizcount;
 
         public string Ctgry { get => ctgry; set => ctgry = value; }
         public string Subid { get => subid; set => subid = value; }
@@ -43,11 +58,23 @@ namespace ELearning.Classes
         public string Quiz_category { get => quiz_category; set => quiz_category = value; }
         public string Seleted_optn { get => seleted_optn; set => seleted_optn = value; }
         public string User_id { get => user_id; set => user_id = value; }
-        public string Start_time { get => start_time; set => start_time = value; }
-        public string End_time { get => end_time; set => end_time = value; }
         public int Qsn_no { get => qsn_no; set => qsn_no = value; }
         public string Q_id { get => q_id; set => q_id = value; }
         public int Btnqstn { get => btnqstn; set => btnqstn = value; }
+        public string Quiz_id { get => quiz_id; set => quiz_id = value; }
+        public string Subctgry { get => subctgry; set => subctgry = value; }
+        public int Correct_ans { get => correct_ans; set => correct_ans = value; }
+        public int Wrong_ans { get => wrong_ans; set => wrong_ans = value; }
+        public int Attended { get => attended; set => attended = value; }
+        public int Score { get => score; set => score = value; }
+        public double Percent { get => percent; set => percent = value; }
+        public string Quiz_date { get => quiz_date; set => quiz_date = value; }
+        public int Crctans { get => crctans; set => crctans = value; }
+        public int Wrngans { get => wrngans; set => wrngans = value; }
+        public int Attend { get => attend; set => attend = value; }
+        public DateTime Start_time { get => start_time; set => start_time = value; }
+        public DateTime End_time { get => end_time; set => end_time = value; }
+        public int Quizcount { get => quizcount; set => quizcount = value; }
 
         //Fetching Sub category from the table Quiz_Category
         public DataTable FetchSubCategory()
@@ -97,7 +124,16 @@ namespace ELearning.Classes
             return dtQuestion;
         }
 
-        //Update
+        //Drop Tempoaray_Quiz table
+        public void DeteleTable()
+        {
+            OpenConnection();
+            string qry = "drop table Temporary_Qstn";
+            SqlCommand cmd = new SqlCommand(qry, con);
+            cmd.ExecuteNonQuery();
+        }
+
+        //Update temporary Quiz table
         public void UpdateTemp()
         {
             OpenConnection();
@@ -130,11 +166,83 @@ namespace ELearning.Classes
             CloseConnection();
         }
 
+        //Fetch Correct answer from temporary table
+        public int Correct_Answer()
+        {
+            OpenConnection();
+            SqlCommand command = new SqlCommand("select count(Qstn_No) from Temporary_Qstn tm where tm.Answer=tm.Selected_Option", con);
+            object cnt = command.ExecuteScalar();
+            if (cnt != DBNull.Value)
+            {
+                Crctans = (int)cnt;
+            }
+            return Crctans;
+        }
+
+        //Fetch wrong answer from temporary table
+        public int Wrong_Answer()
+        {
+            OpenConnection();
+            SqlCommand command = new SqlCommand("select count(Qstn_No) from Temporary_Qstn tm where tm.Answer != tm.Selected_Option and tm.Selected_Option IS NOT NULL", con);
+            object cnt = command.ExecuteScalar();
+            if (cnt != DBNull.Value)
+            {
+                wrngans = (int)cnt;
+            }
+            return wrngans;
+        }
+
+        //Fetch Correct answer from temporary table
+        public int Attended_Qstn()
+        {
+            OpenConnection();
+            SqlCommand command = new SqlCommand("select count(Qstn_No) from Temporary_Qstn where Status='Attended'", con);
+            object cnt = command.ExecuteScalar();
+            if (cnt != DBNull.Value)
+            {
+                attend = (int)cnt;
+            }
+            return attend;
+        }
+
+        //insert values into quiz_report table
+        public void Quiz_Report()
+        {
+            OpenConnection();
+            SqlCommand command = new SqlCommand("select count(Quiz_Id) from Quiz_Report", con);
+            int count;
+            object cnt = command.ExecuteScalar();
+            if (cnt != DBNull.Value)
+            {
+                count = (int)cnt;
+                count++;
+            }
+            else
+            {
+                count = 1;
+            }
+            quiz_id = "Quiz" + count;
+            string qry = "insert into Quiz_Report values('"+quiz_id+ "',@cuserid,@cdate,@csub,@stime,@etime,@cans,@wans,@cattend,@cscore,@cper)";
+            SqlCommand cmd = new SqlCommand(qry, con);
+            cmd.Parameters.AddWithValue("@cuserid", user_id);
+            cmd.Parameters.AddWithValue("@cdate", quiz_date);
+            cmd.Parameters.AddWithValue("@csub", subctgry);
+            cmd.Parameters.AddWithValue("@stime", start_time);
+            cmd.Parameters.AddWithValue("@etime", end_time);
+            cmd.Parameters.AddWithValue("@cans", correct_ans);
+            cmd.Parameters.AddWithValue("@wans", wrong_ans);
+            cmd.Parameters.AddWithValue("@cattend", attended);
+            cmd.Parameters.AddWithValue("@cscore", score);
+            cmd.Parameters.AddWithValue("@cper", percent);
+            cmd.ExecuteNonQuery();
+            CloseConnection();
+        }
+
         //fetch and insert data into new table
         public void FetchQuestions()
         {
             OpenConnection();
-            string qry = "insert into Temporary_Qstn(Qstn_Id,Question,OptionA,OptionB,OptionC,OptionD,Answer)Select top 10 Q_Id,Question,Option_A,Option_B,Option_C,Option_D,Answer from Quiz_Questions where Category_Id=@rsubid ORDER BY NEWID() ";
+            string qry = "insert into Temporary_Qstn(Qstn_Id,Question,OptionA,OptionB,OptionC,OptionD,Answer)Select top 25 Q_Id,Question,Option_A,Option_B,Option_C,Option_D,Answer from Quiz_Questions where Category_Id=@rsubid ORDER BY NEWID() ";
             SqlCommand cmd = new SqlCommand(qry, con);
             cmd.Parameters.AddWithValue("@rsubid", rsubid);
             cmd.ExecuteNonQuery();
@@ -152,6 +260,32 @@ namespace ELearning.Classes
                 
             }
             return subid;
+        }
+        
+
+        public DataTable getCategory()
+        {
+            OpenConnection();
+            DataTable dtcategy = new DataTable();
+            SqlCommand command = new SqlCommand("SELECT distinct a.SubCategory,a.SubCat_Id FROM Quiz_Subcategory a JOIN Quiz_Report b ON a.SubCat_Id = b.SubCategory WHERE b.User_Id=@user", con);
+            command.Parameters.AddWithValue("@user", user_id);
+            SqlDataAdapter da = new SqlDataAdapter(command);
+            da.Fill(dtcategy);
+            CloseConnection();
+            return dtcategy;
+        }
+
+        public DataTable getQuizReports()
+        {
+            OpenConnection();
+            DataTable dtQuizReport = new DataTable();
+            SqlCommand command = new SqlCommand("select Date,Start_Time,End_Time,Correct_Answer,Incorrect_Answer,Attended_Qusers,Total_Score from Quiz_Report where User_Id=@user and SubCategory=@sid", con);
+            command.Parameters.AddWithValue("@user", user_id);
+            command.Parameters.AddWithValue("@sid", subid);
+            SqlDataAdapter da = new SqlDataAdapter(command);
+            da.Fill(dtQuizReport);
+            CloseConnection();
+            return dtQuizReport;
         }
     }
 }

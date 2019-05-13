@@ -44,6 +44,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=18.1.1.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <HintPath>..\packages\AjaxControlToolkit.18.1.1\lib\net40\AjaxControlToolkit.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.IdentityModel.Logging, Version=1.1.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.IdentityModel.Logging.1.1.2\lib\net451\Microsoft.IdentityModel.Logging.dll</HintPath>
@@ -124,13 +127,20 @@
     <Content Include="Admin\Add_Questions.aspx" />
     <Content Include="Admin\AdminHome.aspx" />
     <Content Include="Admin\Document_Verification.aspx" />
+    <Content Include="Admin\ManageQueries.aspx" />
     <Content Include="Admin\Quiz_Report.aspx" />
     <Content Include="Admin\Registration.aspx" />
     <Content Include="Admin\Reg_Home.aspx" />
     <Content Include="Admin\Reg_Qualification.aspx" />
+    <Content Include="Admin\Staff_Details.aspx" />
+    <Content Include="Admin\Staff_Full_Detailsaspx.aspx" />
+    <Content Include="Admin\StudentFullDetails.aspx" />
     <Content Include="Admin\Student_Details.aspx" />
     <Content Include="Admin\StudReg.aspx" />
+    <Content Include="Admin\Total_Questions.aspx" />
     <Content Include="Admin\View_Admin_profile.aspx" />
+    <Content Include="Admin\View_Replies.aspx" />
+    <Content Include="Admin\WebForm1.aspx" />
     <Content Include="assets\css\bootstrap-grid.css" />
     <Content Include="assets\css\bootstrap-grid.min.css" />
     <Content Include="assets\css\bootstrap-reboot.css" />
@@ -159,6 +169,7 @@
     <Content Include="Content\Site.css" />
     <Content Include="Default.aspx" />
     <Content Include="DesignImages\adminreg.png" />
+    <Content Include="DesignImages\doubt.png" />
     <Content Include="DesignImages\FacultyHome.jpg" />
     <Content Include="DesignImages\FacultyHome2.jpg" />
     <Content Include="DesignImages\facultyhome3.jpg" />
@@ -170,14 +181,18 @@
     <Content Include="DesignImages\sjcet-logo.jpg" />
     <Content Include="DesignImages\SJC_TOP-BANNER.jpg" />
     <Content Include="DesignImages\student-reg.jpg" />
+    <Content Include="Faculty\DetailedStudDetails.aspx" />
     <Content Include="Faculty\FacultyHome.aspx" />
     <Content Include="Faculty\FAdd_Category.aspx" />
     <Content Include="Faculty\FAdd_Qstn.aspx" />
     <Content Include="Faculty\Quiz_Report.aspx" />
+    <Content Include="Faculty\Reply_Query.aspx" />
     <Content Include="Faculty\Stud_Details.aspx" />
+    <Content Include="Faculty\Total_Qstn.aspx" />
     <Content Include="Faculty\Upload_Note.aspx" />
     <Content Include="Faculty\Upload_Reports.aspx" />
     <Content Include="Faculty\Upload_Video.aspx" />
+    <Content Include="Faculty\ViewQuery.aspx" />
     <Content Include="Faculty\View_Faculty_Profile.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -193,12 +208,24 @@
     <Content Include="Login\Change_Password.aspx" />
     <Content Include="Login\Forgot_Password.aspx" />
     <Content Include="Login\Login.aspx" />
+    <Content Include="mail\Compose_Mail.aspx" />
+    <Content Include="mail\Inbox.aspx" />
+    <Content Include="mail\Sent_Mail.aspx" />
+    <Content Include="Student\AllQuiz.aspx" />
+    <Content Include="Student\Inbox.aspx" />
     <Content Include="Student\Online_Quiz.aspx" />
+    <Content Include="Student\Post_Queries.aspx" />
     <Content Include="Student\Quiz_Category.aspx" />
     <Content Include="Student\Quiz_Instruction.aspx" />
+    <Content Include="Student\Quiz_Result.aspx" />
     <Content Include="Student\Quiz_SubCategory.aspx" />
+    <Content Include="Student\Send_Mail.aspx" />
     <Content Include="Student\StudentHome.aspx" />
+    <Content Include="Student\View_Notes.aspx" />
+    <Content Include="Student\View_Reply.aspx" />
+    <Content Include="Student\View_Reports.aspx" />
     <Content Include="Student\View_Student_Profile.aspx" />
+    <Content Include="Student\View_Video.aspx" />
     <Content Include="WebForm1.aspx" />
     <Content Include="assets\css\bootstrap.css.map" />
     <Content Include="assets\css\bootstrap.min.css.map" />
@@ -243,6 +270,7 @@
     <Content Include="Faculty\FacultyMaster.Master" />
     <Content Include="Admin\AdminMaster.Master" />
     <Content Include="WebForm2.aspx" />
+    <Content Include="mail\MailMaster.Master" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -316,6 +344,13 @@
     <Compile Include="Admin\Document_Verification.aspx.designer.cs">
       <DependentUpon>Document_Verification.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Admin\ManageQueries.aspx.cs">
+      <DependentUpon>ManageQueries.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ManageQueries.aspx.designer.cs">
+      <DependentUpon>ManageQueries.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admin\Quiz_Report.aspx.cs">
       <DependentUpon>Quiz_Report.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -344,6 +379,27 @@
     <Compile Include="Admin\Reg_Qualification.aspx.designer.cs">
       <DependentUpon>Reg_Qualification.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Admin\Staff_Details.aspx.cs">
+      <DependentUpon>Staff_Details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Staff_Details.aspx.designer.cs">
+      <DependentUpon>Staff_Details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Staff_Full_Detailsaspx.aspx.cs">
+      <DependentUpon>Staff_Full_Detailsaspx.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Staff_Full_Detailsaspx.aspx.designer.cs">
+      <DependentUpon>Staff_Full_Detailsaspx.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\StudentFullDetails.aspx.cs">
+      <DependentUpon>StudentFullDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\StudentFullDetails.aspx.designer.cs">
+      <DependentUpon>StudentFullDetails.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admin\Student_Details.aspx.cs">
       <DependentUpon>Student_Details.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -358,12 +414,33 @@
     <Compile Include="Admin\StudReg.aspx.designer.cs">
       <DependentUpon>StudReg.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Admin\Total_Questions.aspx.cs">
+      <DependentUpon>Total_Questions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Total_Questions.aspx.designer.cs">
+      <DependentUpon>Total_Questions.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admin\View_Admin_profile.aspx.cs">
       <DependentUpon>View_Admin_profile.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Admin\View_Admin_profile.aspx.designer.cs">
       <DependentUpon>View_Admin_profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\View_Replies.aspx.cs">
+      <DependentUpon>View_Replies.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\View_Replies.aspx.designer.cs">
+      <DependentUpon>View_Replies.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="About.aspx.cs">
@@ -375,9 +452,13 @@
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Classes\AdminClass.cs" />
+    <Compile Include="Classes\AdminNewClass.cs" />
     <Compile Include="Classes\FacultyClass.cs" />
+    <Compile Include="Classes\FacultyNewClass.cs" />
     <Compile Include="Classes\LoginClass.cs" />
+    <Compile Include="Classes\MailClass.cs" />
     <Compile Include="Classes\StudentClass.cs" />
+    <Compile Include="Classes\StudentNewClass.cs" />
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -391,6 +472,13 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Faculty\DetailedStudDetails.aspx.cs">
+      <DependentUpon>DetailedStudDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Faculty\DetailedStudDetails.aspx.designer.cs">
+      <DependentUpon>DetailedStudDetails.aspx</DependentUpon>
     </Compile>
     <Compile Include="Faculty\FacultyHome.aspx.cs">
       <DependentUpon>FacultyHome.aspx</DependentUpon>
@@ -427,12 +515,26 @@
     <Compile Include="Faculty\Quiz_Report.aspx.designer.cs">
       <DependentUpon>Quiz_Report.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Faculty\Reply_Query.aspx.cs">
+      <DependentUpon>Reply_Query.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Faculty\Reply_Query.aspx.designer.cs">
+      <DependentUpon>Reply_Query.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Faculty\Stud_Details.aspx.cs">
       <DependentUpon>Stud_Details.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Faculty\Stud_Details.aspx.designer.cs">
       <DependentUpon>Stud_Details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Faculty\Total_Qstn.aspx.cs">
+      <DependentUpon>Total_Qstn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Faculty\Total_Qstn.aspx.designer.cs">
+      <DependentUpon>Total_Qstn.aspx</DependentUpon>
     </Compile>
     <Compile Include="Faculty\Upload_Note.aspx.cs">
       <DependentUpon>Upload_Note.aspx</DependentUpon>
@@ -454,6 +556,13 @@
     </Compile>
     <Compile Include="Faculty\Upload_Video.aspx.designer.cs">
       <DependentUpon>Upload_Video.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Faculty\ViewQuery.aspx.cs">
+      <DependentUpon>ViewQuery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Faculty\ViewQuery.aspx.designer.cs">
+      <DependentUpon>ViewQuery.aspx</DependentUpon>
     </Compile>
     <Compile Include="Faculty\View_Faculty_Profile.aspx.cs">
       <DependentUpon>View_Faculty_Profile.aspx</DependentUpon>
@@ -486,6 +595,34 @@
     <Compile Include="Login\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
+    <Compile Include="mail\Compose_Mail.aspx.cs">
+      <DependentUpon>Compose_Mail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="mail\Compose_Mail.aspx.designer.cs">
+      <DependentUpon>Compose_Mail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="mail\Inbox.aspx.cs">
+      <DependentUpon>Inbox.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="mail\Inbox.aspx.designer.cs">
+      <DependentUpon>Inbox.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="mail\MailMaster.Master.cs">
+      <DependentUpon>MailMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="mail\MailMaster.Master.designer.cs">
+      <DependentUpon>MailMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="mail\Sent_Mail.aspx.cs">
+      <DependentUpon>Sent_Mail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="mail\Sent_Mail.aspx.designer.cs">
+      <DependentUpon>Sent_Mail.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
@@ -501,12 +638,33 @@
     <Compile Include="Site.Mobile.Master.designer.cs">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
     </Compile>
+    <Compile Include="Student\AllQuiz.aspx.cs">
+      <DependentUpon>AllQuiz.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Student\AllQuiz.aspx.designer.cs">
+      <DependentUpon>AllQuiz.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Student\Inbox.aspx.cs">
+      <DependentUpon>Inbox.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Student\Inbox.aspx.designer.cs">
+      <DependentUpon>Inbox.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Student\Online_Quiz.aspx.cs">
       <DependentUpon>Online_Quiz.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Student\Online_Quiz.aspx.designer.cs">
       <DependentUpon>Online_Quiz.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Student\Post_Queries.aspx.cs">
+      <DependentUpon>Post_Queries.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Student\Post_Queries.aspx.designer.cs">
+      <DependentUpon>Post_Queries.aspx</DependentUpon>
     </Compile>
     <Compile Include="Student\Quiz_Category.aspx.cs">
       <DependentUpon>Quiz_Category.aspx</DependentUpon>
@@ -522,12 +680,26 @@
     <Compile Include="Student\Quiz_Instruction.aspx.designer.cs">
       <DependentUpon>Quiz_Instruction.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Student\Quiz_Result.aspx.cs">
+      <DependentUpon>Quiz_Result.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Student\Quiz_Result.aspx.designer.cs">
+      <DependentUpon>Quiz_Result.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Student\Quiz_SubCategory.aspx.cs">
       <DependentUpon>Quiz_SubCategory.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Student\Quiz_SubCategory.aspx.designer.cs">
       <DependentUpon>Quiz_SubCategory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Student\Send_Mail.aspx.cs">
+      <DependentUpon>Send_Mail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Student\Send_Mail.aspx.designer.cs">
+      <DependentUpon>Send_Mail.aspx</DependentUpon>
     </Compile>
     <Compile Include="Student\StudentHome.aspx.cs">
       <DependentUpon>StudentHome.aspx</DependentUpon>
@@ -543,12 +715,40 @@
     <Compile Include="Student\StudentMaster.Master.designer.cs">
       <DependentUpon>StudentMaster.Master</DependentUpon>
     </Compile>
+    <Compile Include="Student\View_Notes.aspx.cs">
+      <DependentUpon>View_Notes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Student\View_Notes.aspx.designer.cs">
+      <DependentUpon>View_Notes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Student\View_Reply.aspx.cs">
+      <DependentUpon>View_Reply.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Student\View_Reply.aspx.designer.cs">
+      <DependentUpon>View_Reply.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Student\View_Reports.aspx.cs">
+      <DependentUpon>View_Reports.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Student\View_Reports.aspx.designer.cs">
+      <DependentUpon>View_Reports.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Student\View_Student_Profile.aspx.cs">
       <DependentUpon>View_Student_Profile.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Student\View_Student_Profile.aspx.designer.cs">
       <DependentUpon>View_Student_Profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Student\View_Video.aspx.cs">
+      <DependentUpon>View_Video.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Student\View_Video.aspx.designer.cs">
+      <DependentUpon>View_Video.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>

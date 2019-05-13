@@ -76,3 +76,4 @@ D:\Project\ELearning\ELearning\bin\Microsoft.IdentityModel.Tokens.xml
 D:\Project\ELearning\ELearning\bin\System.IdentityModel.Tokens.Jwt.xml
 D:\Project\ELearning\ELearning\bin\Twilio.xml
 D:\Project\ELearning\ELearning\obj\Debug\ELearning.csprojAssemblyReference.cache
+D:\Project\ELearning\ELearning\bin\AjaxControlToolkit.dll

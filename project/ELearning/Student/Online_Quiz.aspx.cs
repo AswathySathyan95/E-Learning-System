@@ -22,7 +22,7 @@ namespace ELearning.Student
                
                 Session["starttime"] = DateTime.Now.AddMinutes(25).ToString();
                 objStud.User_id = Session["u_id"].ToString();
-                objStud.Start_time =System.DateTime.Now.ToShortTimeString();
+                Session["start_time"] =System.DateTime.Now.ToShortTimeString();
                 DataTable dtQuestion = new DataTable();
                 dtQuestion = objStud.FetchQuizQuestion();
                 if (dtQuestion.Rows.Count > 0)
@@ -47,6 +47,8 @@ namespace ELearning.Student
             else
             {
                 TxtDisTime.Text = "Time Expired";
+                Session["end_time"] = System.DateTime.Now.ToShortTimeString();
+                Response.Redirect("Quiz_Result.aspx");
             }
         }
 
@@ -98,6 +100,8 @@ namespace ELearning.Student
 
         protected void BtnSubmit_Click(object sender, EventArgs e)
         {
+            Session["end_time"] = System.DateTime.Now.ToShortTimeString();
+            Response.Redirect("Quiz_Result.aspx");
 
         }
         public void changecolor()
@@ -149,25 +153,6 @@ namespace ELearning.Student
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            /*foreach (Control c in PanelQstn.Controls)
-            {
-                if (c is Button)
-                {
-
-                    string id = ((Button)c).Text.ToString();
-                    objStud.Btnqstn = Convert.ToInt16(id);
-                    DataTable dtqstnno = new DataTable();
-                    dtqstnno = objStud.QuestionFetch();
-                    LblQstnNo.Text = dtqstnno.Rows[0]["Qstn_No"].ToString();
-                    LblTest.Text = dtqstnno.Rows[0]["Qstn_Id"].ToString();
-                    LblQstn.Text = dtqstnno.Rows[0]["Question"].ToString();
-                    RbAOptn.Text = dtqstnno.Rows[0]["OptionA"].ToString();
-                    RbBOptn.Text = dtqstnno.Rows[0]["OptionB"].ToString();
-                    RbCOptn.Text = dtqstnno.Rows[0]["OptionC"].ToString();
-                    RbDOptn.Text = dtqstnno.Rows[0]["OptionD"].ToString();
-                }
-
-            }*/
             string id = ((Button)sender).Text;
             objStud.Btnqstn = Convert.ToInt16(id);
             DataTable dtqstnno = new DataTable();
@@ -181,6 +166,21 @@ namespace ELearning.Student
                 RbBOptn.Text = dtqstnno.Rows[0]["OptionB"].ToString();
                 RbCOptn.Text = dtqstnno.Rows[0]["OptionC"].ToString();
                 RbDOptn.Text = dtqstnno.Rows[0]["OptionD"].ToString();
+                foreach(Control c in PanelOptions.Controls)
+                {
+                    if(c is RadioButton)
+                    {
+                        String value = ((RadioButton)c).Text.ToString();
+                        if(value==dtqstnno.Rows[0]["Selected_Option"].ToString())
+                        {
+                            ((RadioButton)c).Checked = true;
+                        }
+                        else
+                        {
+                            ((RadioButton)c).Checked = false;
+                        }
+                    }
+                }
             }
             
         }

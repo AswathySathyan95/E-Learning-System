@@ -27,6 +27,7 @@ namespace ELearning.Faculty
                     ddlDepartment.DataValueField = "B_Id";
                     ddlDepartment.DataBind();
                 }
+                ddlDepartment.Items.Insert(0, new ListItem("---Select---", "0"));
             }
         }
 
@@ -42,6 +43,7 @@ namespace ELearning.Faculty
                 ddlSubject.DataValueField = "Sub_Id";
                 ddlSubject.DataBind();
             }
+            ddlSubject.Items.Insert(0, new ListItem("---Select---", "0"));
         }
 
         protected void btnReport_Click(object sender, EventArgs e)

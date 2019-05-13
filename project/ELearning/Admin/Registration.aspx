@@ -7,9 +7,7 @@
                 <asp:ScriptManager ID="ScriptManager1" runat="server">
                 </asp:ScriptManager>
             </td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
+            <td colspan="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="newStyle1">&nbsp;Staff Registration&nbsp;</span></td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
@@ -487,6 +485,12 @@
             width: 100%;
             height: 1048px;
         }
+    .newStyle1 {
+        font-family: "colonna MT";
+        font-size: 50px;
+        font-weight: bolder;
+        color: #000080;
+    }
     </style>
 </asp:Content>
 

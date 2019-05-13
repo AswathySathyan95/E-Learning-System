@@ -7,16 +7,11 @@
                 <asp:ScriptManager ID="ScriptManager1" runat="server">
                 </asp:ScriptManager>
             </td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
+            <td class="text-left" colspan="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="newStyle2">Student Registration</span></td>
         </tr>
         <tr>
             <td style="color: #FF0000; width: 33px">&nbsp;</td>
-            <td colspan="6" style="color: #FF0000"><strong>&nbsp; All Fields marked with * are Mandatory</strong></td>
+            <td colspan="6" style="color: #FF0000"><strong>&nbsp;<marquee><h2><b><i>All Fields marked with * are Mandatory</b></i></h2></marquee> </strong></td>
             <td style="color: #FF0000">&nbsp;</td>
         </tr>
         <tr>
@@ -504,3 +499,20 @@
         </tr>
     </table>
 </asp:Content>
+<asp:Content ID="Content2" runat="server" contentplaceholderid="headplaceholder">
+    <style type="text/css">
+        .newStyle1 {
+            font-family: "colonna MT";
+            font-size: 50px;
+            font-weight: bolder;
+            color: #000080;
+        }
+        .newStyle2 {
+            font-family: "colonna MT";
+            font-size: 50px;
+            font-weight: bolder;
+            color: #000080;
+        }
+    </style>
+</asp:Content>
+

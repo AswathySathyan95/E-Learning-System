@@ -2,14 +2,14 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="maincontent" runat="server">
     <table class="auto-style1">
         <tr>
-            <td></td>
-            <td class="auto-style4">
+            <td class="auto-style23"></td>
+            <td class="auto-style22">
                 <asp:ScriptManager ID="ScriptManager1" runat="server">
                 </asp:ScriptManager>
             </td>
-            <td class="auto-style5"></td>
-            <td></td>
-            <td></td>
+            <td class="auto-style24"></td>
+            <td class="auto-style23"></td>
+            <td class="auto-style23"></td>
         </tr>
         <tr>
             <td style="height: 20px"></td>
@@ -60,14 +60,14 @@
             <td style="height: 37px"></td>
         </tr>
         <tr>
-            <td>&nbsp;</td>
-            <td style="width: 311px"><strong>
+            <td class="auto-style25"></td>
+            <td class="auto-style26"><strong>
                 <asp:Label ID="Label2" runat="server" Text="Question"></asp:Label>
                 </strong></td>
-            <td class="auto-style5">
-                <asp:TextBox ID="TxtQuestion" runat="server" Height="76px" TextMode="MultiLine" Width="628px" CausesValidation="True"></asp:TextBox>
+            <td class="auto-style27">
+                <asp:TextBox ID="TxtQuestion" runat="server" Height="111px" TextMode="MultiLine" Width="628px" CausesValidation="True"></asp:TextBox>
             </td>
-            <td colspan="2"><strong>
+            <td colspan="2" class="auto-style25"><strong>
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="TxtQuestion" ErrorMessage="Please Enter Question" ForeColor="Red"></asp:RequiredFieldValidator>
                 </strong></td>
         </tr>
@@ -117,15 +117,15 @@
                 </strong></td>
         </tr>
         <tr>
-            <td style="height: 40px"></td>
-            <td style="width: 311px; height: 40px">
+            <td class="auto-style17"></td>
+            <td class="auto-style28">
                 <br />
                 <strong>
                 <asp:Label ID="LblAns" runat="server" Text="Correct Answer"></asp:Label>
                 </strong>
                 <br />
             </td>
-            <td class="auto-style15">
+            <td class="auto-style29">
                 <br />
                 <asp:UpdatePanel ID="UpdatePanel2" runat="server">
                     <ContentTemplate>
@@ -168,7 +168,7 @@
                 </strong>
                 </td>
             <td class="auto-style16">
-                <asp:TextBox ID="TxtDescription" runat="server" Height="82px" TextMode="MultiLine" Width="622px"></asp:TextBox>
+                <asp:TextBox ID="TxtDescription" runat="server" Height="97px" TextMode="MultiLine" Width="622px"></asp:TextBox>
             </td>
             <td style="height: 20px"></td>
             <td style="height: 20px"></td>
@@ -198,10 +198,6 @@
         </tr>
         <tr>
             <td>&nbsp;</td>
-            <td style="width: 311px">&nbsp;</td>
-            <td class="auto-style5">&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
         </tr>
         </table>
 </asp:Content>
@@ -209,7 +205,7 @@
     <style type="text/css">
         .auto-style1 {
             width: 1203px;
-            height: 1227px;
+            height: 979px;
         }
         .auto-style2 {
             height: 20px;
@@ -218,12 +214,6 @@
             font-weight: bold;
             font-size: xx-large;
             color: #003399;
-        }
-        .auto-style4 {
-            width: 311px;
-        }
-        .auto-style5 {
-            width: 647px;
         }
         .auto-style6 {
             height: 160px;
@@ -265,17 +255,13 @@
             height: 37px;
             width: 647px;
         }
-        .auto-style15 {
-            height: 40px;
-            width: 647px;
-        }
         .auto-style16 {
             height: 20px;
             width: 647px;
         }
         .auto-style17 {
-            height: 40px;
-        }
+        height: 27px;
+    }
         .auto-style18 {
             height: 45px;
         }
@@ -287,6 +273,36 @@
             width: 647px;
             height: 45px;
         }
+    .auto-style22 {
+        width: 311px;
+        height: 41px;
+    }
+    .auto-style23 {
+        height: 41px;
+    }
+    .auto-style24 {
+        width: 647px;
+        height: 41px;
+    }
+    .auto-style25 {
+        height: 147px;
+    }
+    .auto-style26 {
+        width: 311px;
+        height: 147px;
+    }
+    .auto-style27 {
+        width: 647px;
+        height: 147px;
+    }
+    .auto-style28 {
+        width: 311px;
+        height: 27px;
+    }
+    .auto-style29 {
+        height: 27px;
+        width: 647px;
+    }
     </style>
 </asp:Content>
 

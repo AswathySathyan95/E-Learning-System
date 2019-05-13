@@ -58,15 +58,6 @@ namespace ELearning.Faculty {
         protected global::System.Web.UI.WebControls.Label LblCtgry;
         
         /// <summary>
-        /// ImgCtgry control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Image ImgCtgry;
-        
-        /// <summary>
         /// Label2 control.
         /// </summary>
         /// <remarks>
@@ -128,15 +119,6 @@ namespace ELearning.Faculty {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList DdlCategory;
-        
-        /// <summary>
-        /// ImgSubCtgry control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Image ImgSubCtgry;
         
         /// <summary>
         /// Label4 control.

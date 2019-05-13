@@ -7,7 +7,7 @@
         </div>
         <div id="categorycnt" style="height: 507px">
 
-            <table class="nav-justified" style="height: 473px">
+            <table class="auto-style1">
                 <tr>
                     <td style="height: 20px"></td>
                     <td style="height: 20px; width: 218px;">
@@ -48,8 +48,7 @@
                         <br />
                     </td>
                     <td colspan="2" rowspan="5">
-                        <asp:Image ID="ImgCtgry" runat="server" Height="135px" Width="125px" />
-                    </td>
+                        &nbsp;</td>
                 </tr>
                 <tr>
                     <td>&nbsp;</td>
@@ -87,7 +86,7 @@
                     <td style="width: 218px">&nbsp;</td>
                     <td>
                         <strong>
-                        <asp:Button ID="BtnSubctgry" runat="server" Height="29px" OnClick="BtnSubctgry_Click" style="font-weight: bold" Text="Click To Add SubCategory" />
+                        <asp:Button ID="BtnSubctgry" runat="server" Height="39px" OnClick="BtnSubctgry_Click" style="font-weight: bold" Text="Click To Add SubCategory" />
                         </strong>
                     </td>
                     <td>&nbsp;</td>
@@ -118,8 +117,7 @@
                                         </asp:DropDownList>
                                     </td>
                                     <td class="text-right" rowspan="4">
-                                        <asp:Image ID="ImgSubCtgry" runat="server" Height="135px" Width="125px" />
-                                    </td>
+                                        &nbsp;</td>
                                 </tr>
                                 <tr>
                                     <td style="width: 254px"><strong>
@@ -176,3 +174,12 @@
         </div>
     </div>
 </asp:Content>
+<asp:Content ID="Content2" runat="server" contentplaceholderid="headplaceholder">
+    <style type="text/css">
+        .auto-style1 {
+            height: 473px;
+            width: 1408px;
+        }
+    </style>
+</asp:Content>
+

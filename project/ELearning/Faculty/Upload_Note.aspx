@@ -32,23 +32,23 @@
             <td style="height: 22px">&nbsp;</td>
         </tr>
         <tr>
-            <td style="height: 22px; width: 212px;"></td>
-            <td style="height: 22px"><strong>
-                <asp:Label ID="Label5" runat="server" Text="Department" Font-Size="Small"></asp:Label>
+            <td class="auto-style3"></td>
+            <td class="auto-style4"><strong>
+                <asp:Label ID="Label5" runat="server" Text="Department" Font-Size="Large" CssClass="auto-style10" Font-Bold="True" ForeColor="Black"></asp:Label>
                 </strong></td>
-            <td style="height: 22px">
+            <td class="auto-style4">
                 <asp:DropDownList ID="ddlDepartment" runat="server" OnSelectedIndexChanged="ddlDepartment_SelectedIndexChanged" AutoPostBack="True">
                 </asp:DropDownList>
             </td>
-            <td style="height: 22px"></td>
-            <td style="height: 22px"></td>
+            <td class="auto-style4"></td>
+            <td class="auto-style4"></td>
         </tr>
         <tr>
-            <td style="width: 212px">&nbsp;</td>
-            <td><strong>
-                <asp:Label ID="Label1" runat="server" Text="Subject" Font-Size="Small"></asp:Label>
+            <td class="auto-style5"></td>
+            <td class="auto-style6"><strong>
+                <asp:Label ID="Label1" runat="server" Text="Subject" Font-Size="Large" CssClass="auto-style9" Font-Bold="True" ForeColor="Black"></asp:Label>
                 </strong></td>
-            <td>
+            <td class="auto-style6">
                 <asp:UpdatePanel ID="UpdatePanel1" runat="server">
                     <ContentTemplate>
                         <asp:DropDownList ID="ddlSubject" runat="server">
@@ -59,30 +59,30 @@
                     </Triggers>
                 </asp:UpdatePanel>
             </td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
+            <td class="auto-style6"></td>
+            <td class="auto-style6"></td>
         </tr>
         <tr>
-            <td style="width: 212px">&nbsp;</td>
-            <td><strong>
-                <asp:Label ID="Label2" runat="server" Text="Topic" Font-Size="Small"></asp:Label>
+            <td class="auto-style3"></td>
+            <td class="auto-style4"><strong>
+                <asp:Label ID="Label2" runat="server" Text="Topic" Font-Size="Large" CssClass="auto-style9" Font-Bold="True" ForeColor="Black"></asp:Label>
                 </strong></td>
-            <td>
+            <td class="auto-style4">
                 <asp:TextBox ID="txtTopic" runat="server"></asp:TextBox>
             </td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
+            <td class="auto-style4"></td>
+            <td class="auto-style4"></td>
         </tr>
         <tr>
-            <td style="width: 212px">&nbsp;</td>
-            <td><strong>
-                <asp:Label ID="Label3" runat="server" Text="Upload Note" Font-Size="Small"></asp:Label>
+            <td class="auto-style7"></td>
+            <td class="auto-style8"><strong>
+                <asp:Label ID="Label3" runat="server" Text="Upload Note" Font-Size="Large" CssClass="auto-style9" Font-Bold="True" ForeColor="Black"></asp:Label>
                 </strong></td>
-            <td>
+            <td class="auto-style8">
                 <asp:FileUpload ID="fuNotes" runat="server" />
             </td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
+            <td class="auto-style8"></td>
+            <td class="auto-style8"></td>
         </tr>
         <tr>
             <td style="height: 21px; width: 212px;"></td>
@@ -96,7 +96,7 @@
             <td>&nbsp;</td>
             <td>
                 <strong>
-                <asp:Button ID="btnNoteUpload" runat="server" OnClick="btnNoteUpload_Click" Text="Upload Note" Font-Size="Medium" style="font-weight: bold" />
+                <asp:Button ID="btnNoteUpload" runat="server" OnClick="btnNoteUpload_Click" Text="Upload Note" Font-Size="Large" style="font-weight: bold" Font-Bold="True" ForeColor="Black" />
                 </strong>
             </td>
             <td>&nbsp;</td>
@@ -109,98 +109,7 @@
             <td>&nbsp;</td>
             <td>&nbsp;</td>
         </tr>
-        <tr>
-            <td style="width: 212px">&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td style="width: 212px">&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td style="width: 212px">&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td style="width: 212px">&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td style="width: 212px">&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td style="width: 212px">&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td style="width: 212px">&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td style="width: 212px">&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td style="width: 212px">&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td style="width: 212px">&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td style="width: 212px">&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td style="width: 212px">&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td style="width: 212px">&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-        </tr>
-    </table>
+        </table>
 </asp:Content>
 <asp:Content ID="Content2" runat="server" contentplaceholderid="headplaceholder">
     <style type="text/css">
@@ -216,6 +125,33 @@
             font-size: 50px;
             font-weight: bolder;
             color: #000080;
+        }
+        .auto-style3 {
+            width: 212px;
+            height: 48px;
+        }
+        .auto-style4 {
+            height: 48px;
+        }
+        .auto-style5 {
+            width: 212px;
+            height: 51px;
+        }
+        .auto-style6 {
+            height: 51px;
+        }
+        .auto-style7 {
+            width: 212px;
+            height: 43px;
+        }
+        .auto-style8 {
+            height: 43px;
+        }
+        .auto-style9 {
+            font-size: large;
+        }
+        .auto-style10 {
+            font-size: medium;
         }
     </style>
 </asp:Content>

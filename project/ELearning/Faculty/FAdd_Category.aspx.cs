@@ -46,8 +46,7 @@ namespace ELearning.Faculty
                 string src = Server.MapPath("~/CategoryImage") + "/" + pname + ".JPG";
                 FuCtgry.PostedFile.SaveAs(src);
                 string picpath = "~/CategoryImage/" + pname + ".JPG";
-                ImgCtgry.Visible = true;
-                ImgCtgry.ImageUrl = picpath;
+                
                 ViewState["photopath"] = picpath;
             }
             else
@@ -63,7 +62,7 @@ namespace ELearning.Faculty
             objFctly.CategoryDetails();
             Response.Write("<script LANGUAGE='JavaScript' >alert('Details added successfully!!!!')</script>");
             TxtCtgry.Text = "";
-            ImgCtgry.ImageUrl = "";
+            
         }
 
         protected void BtnSubctgry_Click(object sender, EventArgs e)
@@ -73,12 +72,12 @@ namespace ELearning.Faculty
             dtCtgry = objFctly.FetchCategory();
             if (dtCtgry.Rows.Count > 0)
             {
-                DdlCategory.Items.Add("---Select---");
                 DdlCategory.DataSource = dtCtgry;
                 DdlCategory.DataTextField = "Category";
                 DdlCategory.DataValueField = "C_Id";
                 DdlCategory.DataBind();
             }
+            DdlCategory.Items.Insert(0, new ListItem("---Select---", "0"));
         }
 
         protected void BtnSubSave_Click(object sender, EventArgs e)
@@ -92,8 +91,6 @@ namespace ELearning.Faculty
                 string src = Server.MapPath("~/CategoryImage") + "/" + subpname + ".JPG";
                 FuSubctgry.PostedFile.SaveAs(src);
                 string picsub = "~/CategoryImage/" + subpname + ".JPG";
-                ImgSubCtgry.Visible = true;
-                ImgSubCtgry.ImageUrl = picsub;
                 ViewState["subcgry"] = picsub;
             }
             else
@@ -109,7 +106,6 @@ namespace ELearning.Faculty
             objFctly.InsertSubCategory();
             Response.Write("<script LANGUAGE='JavaScript' >alert('Details added successfully!!!!')</script>");
             TxtSubctgry.Text = "";
-            ImgSubCtgry.ImageUrl = "";
         }
 
         protected void TxtCtgry_TextChanged(object sender, EventArgs e)

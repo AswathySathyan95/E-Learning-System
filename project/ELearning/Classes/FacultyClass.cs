@@ -67,6 +67,12 @@ namespace ELearning.Classes
         private string created_by;
         private string created_on;
 
+        //video
+        private string vsubject;
+        private string vtopic;
+        private string video;
+        private string vDesc;
+
         public string NDept { get => nDept; set => nDept = value; }
         public string NSubject { get => nSubject; set => nSubject = value; }
         public string NTopic { get => nTopic; set => nTopic = value; }
@@ -103,6 +109,10 @@ namespace ELearning.Classes
         public string Sub_id { get => sub_id; set => sub_id = value; }
         public string Ctgry_check { get => ctgry_check; set => ctgry_check = value; }
         public string Subctgry_check { get => subctgry_check; set => subctgry_check = value; }
+        public string Vsubject { get => vsubject; set => vsubject = value; }
+        public string Vtopic { get => vtopic; set => vtopic = value; }
+        public string Video { get => video; set => video = value; }
+        public string VDesc { get => vDesc; set => vDesc = value; }
 
         //Checking whether the category is already added or not
         public DataTable CheckCategory()
@@ -201,6 +211,35 @@ namespace ELearning.Classes
             cmd.Parameters.AddWithValue("@rtopic", rTopic);
             cmd.Parameters.AddWithValue("@rpath", reports);
             cmd.Parameters.AddWithValue("@rdscrptn", rDescription);
+            cmd.ExecuteNonQuery();
+            CloseConnection();
+        }
+
+        //Upload Video
+        public void UploadVideo()
+        {
+            OpenConnection();
+            doc_type = "VideoTutorials";
+            SqlCommand command = new SqlCommand("select count(Doc_Id) from Uploaded_Document where Doc_Type = '" + doc_type + "'", con);
+            int count;
+            object cnt = command.ExecuteScalar();
+            if (cnt != DBNull.Value)
+            {
+                count = (int)cnt;
+                count++;
+            }
+            else
+            {
+                count = 1;
+            }
+            doc_id = "Video" + count;
+            string qry = "insert into Uploaded_Document(Doc_Id,Doc_Type,User_Id,Subject,Topic,Document_File,Description)values('" + doc_id + "','" + doc_type + "',@ruserid,@rsub,@rtopic,@rpath,@rdscrptn)";
+            SqlCommand cmd = new SqlCommand(qry, con);
+            cmd.Parameters.AddWithValue("@ruserid", userid);
+            cmd.Parameters.AddWithValue("@rsub", vsubject);
+            cmd.Parameters.AddWithValue("@rtopic", vtopic);
+            cmd.Parameters.AddWithValue("@rpath", video);
+            cmd.Parameters.AddWithValue("@rdscrptn", vDesc);
             cmd.ExecuteNonQuery();
             CloseConnection();
         }

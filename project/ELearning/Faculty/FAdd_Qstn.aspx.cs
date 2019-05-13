@@ -28,6 +28,7 @@ namespace ELearning.Faculty
                     DdlCategory.DataValueField = "C_Id";
                     DdlCategory.DataBind();
                 }
+                DdlCategory.Items.Insert(0, new ListItem("---Select---", "0"));
             }
         }
 
@@ -80,6 +81,7 @@ namespace ELearning.Faculty
                 DdlSubcategory.DataValueField = "SubCat_Id";
                 DdlSubcategory.DataBind();
             }
+            DdlSubcategory.Items.Insert(0, new ListItem("---Select---", "0"));
         }
 
         protected void TxtOptn4_TextChanged(object sender, EventArgs e)

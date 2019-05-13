@@ -13,28 +13,28 @@
 
                         <table class="auto-style3">
                             <tr>
-                                <td class="auto-style5">
+                                <td class="auto-style19">
                                     <asp:ScriptManager ID="ScriptManager1" runat="server">
                                     </asp:ScriptManager>
                                 </td>
-                                <td class="auto-style9">
+                                <td class="auto-style20">
                                     <strong>
-                                    <asp:Label ID="Label1" runat="server" Text="Department" ForeColor="Black"></asp:Label>
+                                    <asp:Label ID="Label1" runat="server" Text="Department" ForeColor="Black" CssClass="auto-style18"></asp:Label>
                                     </strong>
                                 </td>
-                                <td>
+                                <td class="auto-style21">
                                     <asp:DropDownList ID="DdlDepartment" runat="server" AutoPostBack="True" OnSelectedIndexChanged="DdlDepartment_SelectedIndexChanged">
                                     </asp:DropDownList>
                                 </td>
                             </tr>
                             <tr>
-                                <td class="auto-style5">&nbsp;</td>
-                                <td class="auto-style9">
+                                <td class="auto-style22"></td>
+                                <td class="auto-style23">
                                     <strong>
-                                    <asp:Label ID="Label2" runat="server" Text="Subject" ForeColor="Black"></asp:Label>
+                                    <asp:Label ID="Label2" runat="server" Text="Subject" ForeColor="Black" CssClass="auto-style18"></asp:Label>
                                     </strong>
                                 </td>
-                                <td>
+                                <td class="auto-style24">
                                     <asp:UpdatePanel ID="UpdatePanel1" runat="server">
                                         <ContentTemplate>
                                             <asp:DropDownList ID="DdlSubject" runat="server">
@@ -50,7 +50,7 @@
                                 <td class="auto-style6"></td>
                                 <td class="auto-style10">
                                     <strong>
-                                    <asp:Label ID="Label3" runat="server" Text="Topic" ForeColor="Black"></asp:Label>
+                                    <asp:Label ID="Label3" runat="server" Text="Topic" ForeColor="Black" CssClass="auto-style18"></asp:Label>
                                     </strong>
                                 </td>
                                 <td class="auto-style7">
@@ -58,13 +58,13 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td class="auto-style5">&nbsp;</td>
-                                <td class="auto-style9">
+                                <td class="auto-style25"></td>
+                                <td class="auto-style26">
                                     <strong>
-                                    <asp:Label ID="Label4" runat="server" Text="Description" ForeColor="Black"></asp:Label>
+                                    <asp:Label ID="Label4" runat="server" Text="Description" ForeColor="Black" CssClass="auto-style18"></asp:Label>
                                     </strong>
                                 </td>
-                                <td>
+                                <td class="auto-style27">
                                     <asp:TextBox ID="TxtDescptn" runat="server" TextMode="MultiLine"></asp:TextBox>
                                 </td>
                             </tr>
@@ -72,7 +72,7 @@
                                 <td class="auto-style15"></td>
                                 <td class="auto-style16">
                                     <strong>
-                                    <asp:Label ID="Label5" runat="server" Text="Upload Video" ForeColor="Black"></asp:Label>
+                                    <asp:Label ID="Label5" runat="server" Text="Upload Video" ForeColor="Black" CssClass="auto-style18"></asp:Label>
                                     </strong>
                                 </td>
                                 <td class="auto-style17">
@@ -84,7 +84,7 @@
                                 <td class="auto-style9">&nbsp;</td>
                                 <td><strong>
                                     <br />
-                                    <asp:Button ID="BtnSave" runat="server" CssClass="auto-style14" OnClick="BtnSave_Click" style="height: 42px" Text="Upload Video" Width="204px" />
+                                    <asp:Button ID="BtnSave" runat="server" CssClass="auto-style14" OnClick="BtnSave_Click" style="height: 42px" Text="Upload Video" Width="204px" Font-Bold="True" Font-Size="Large" ForeColor="Black" />
                                     <br />
                                     </strong></td>
                             </tr>
@@ -124,34 +124,71 @@
         }
         .auto-style6 {
             width: 277px;
-            height: 32px;
+            height: 39px;
         }
         .auto-style7 {
-            height: 32px;
+            height: 39px;
         }
         .auto-style8 {
             width: 362px;
         }
         .auto-style9 {
-            width: 189px;
+            width: 250px;
         }
         .auto-style10 {
-            height: 32px;
-            width: 189px;
+            height: 39px;
+            width: 250px;
         }
         .auto-style14 {
             font-weight: bold;
         }
         .auto-style15 {
             width: 277px;
-            height: 17px;
+            height: 32px;
         }
         .auto-style16 {
-            height: 17px;
-            width: 189px;
+            height: 32px;
+            width: 250px;
         }
         .auto-style17 {
-            height: 17px;
+            height: 32px;
+        }
+        .auto-style18 {
+            font-size: large;
+            color: #000000;
+        }
+        .auto-style19 {
+            width: 277px;
+            height: 54px;
+        }
+        .auto-style20 {
+            width: 250px;
+            height: 54px;
+        }
+        .auto-style21 {
+            height: 54px;
+        }
+        .auto-style22 {
+            width: 277px;
+            height: 41px;
+        }
+        .auto-style23 {
+            width: 250px;
+            height: 41px;
+        }
+        .auto-style24 {
+            height: 41px;
+        }
+        .auto-style25 {
+            width: 277px;
+            height: 75px;
+        }
+        .auto-style26 {
+            width: 250px;
+            height: 75px;
+        }
+        .auto-style27 {
+            height: 75px;
         }
     </style>
 </asp:Content>

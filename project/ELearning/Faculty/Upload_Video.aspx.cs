@@ -27,6 +27,7 @@ namespace ELearning.Faculty
                     DdlDepartment.DataValueField = "B_Id";
                     DdlDepartment.DataBind();
                 }
+                DdlDepartment.Items.Insert(0, new ListItem("---Select---", "0"));
             }
         }
 
@@ -38,16 +39,17 @@ namespace ELearning.Faculty
             string ext = Path.GetExtension(filename);
             if (ext.ToLower() == ".mp4" || ext.ToLower() == ".wmv" || ext.ToLower() == ".flv" || ext.ToLower() == ".vob" || ext.ToLower() == ".dat" )
             {
-                string src = Server.MapPath("~/Documents") + "/" + pname + ".DOC";
+                string src = Server.MapPath("~/Documents") + "/" + pname + ".mp4";
                 FuVideo.PostedFile.SaveAs(src);
-                string doc = "~/Documents/" + pname + ".DOC";
+                string doc = "~/Documents/" + pname + ".mp4";
                 ViewState["DocPath"] = doc;
                 //Inserting values to database
                 objFclty.Userid = Session["u_id"].ToString();
-                objFclty.NSubject = DdlSubject.SelectedItem.Text.ToString();
-                objFclty.NTopic = TxtTopic.Text.ToString();
-                objFclty.Notes = Convert.ToString(ViewState["DocPath"]);
-                objFclty.UploadNotes();
+                objFclty.Vsubject = DdlSubject.SelectedItem.Text.ToString();
+                objFclty.Vtopic = TxtTopic.Text.ToString();
+                objFclty.Video = Convert.ToString(ViewState["DocPath"]);
+                objFclty.VDesc = TxtDescptn.Text.ToString();
+                objFclty.UploadVideo();
                 Response.Write("<script LANGUAGE='JavaScript' >alert('Successfully uploaded the document...')</script>");
                 TxtTopic.Text = "";
             }
@@ -69,6 +71,7 @@ namespace ELearning.Faculty
                 DdlSubject.DataValueField = "Sub_Id";
                 DdlSubject.DataBind();
             }
+            DdlSubject.Items.Insert(0, new ListItem("---Select---", "0"));
         }
     }
 }

@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Welcome Admin - Online Exam System</title>
+    <title>Welcome SJCET ELEarning Portal</title>
     <!-- Bootstrap core CSS-->
     <link href="~/assets/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom fonts for this template-->
@@ -24,7 +24,7 @@
     <form  runat="server" id="adminsmaster">
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
-        <a class="navbar-brand" href="index.aspx" >SJCET Elearning Portal</a>
+        <a class="navbar-brand" href="AdminHome.aspx" >SJCET Elearning Portal</a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -52,24 +52,26 @@
                         <span class="nav-link-text">Add Question</span>
                     </a>
                 </li>
-                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Result">
-                    <a class="nav-link" href="Quiz_Report.aspx">
-                        <i class="fa fa-trophy" aria-hidden="true"></i>
-                        <span class="nav-link-text"> Quiz Result</span>
-                    </a>
-                </li>
-                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Student List">
-                    <a class="nav-link" href="Student_Details.aspx">
-                        <i class="fa fa-list" aria-hidden="true"></i>
-                        <span class="nav-link-text"> Student List</span>
-                    </a>
-                </li>
                 <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Subject">
                     <a class="nav-link" href="Document_Verification.aspx">
                         <i class="fa fa-file" aria-hidden="true"></i>
                         <span class="nav-link-text"> Document Verification</span>
                     </a>
                 </li>
+
+                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Question">
+                    <a class="nav-link" href="ManageQueries.aspx">
+                        <i class="fa fa-comments"></i>
+                        <span class="nav-link-text">Queries & Replies</span>
+                    </a>
+                </li>
+                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Student List">
+                    <a class="nav-link" href="Staff_Details.aspx">
+                        <i class="fa fa-list" aria-hidden="true"></i>
+                        <span class="nav-link-text"> Staff Details</span>
+                    </a>
+                </li>
+                
                 
             </ul>
             <ul class="navbar-nav sidenav-toggler">
