@@ -24,7 +24,7 @@ namespace ELearning.Admin
                 DdlQuerySub.DataValueField = "Subject";
                 DdlQuerySub.DataBind();
             }
-            //DdlQuerySub.Items.Insert(0, new ListItem("---Select---"));
+            //DdlQuerySub.Items.Insert(0, new ListItem("---Select---", "0"));
         }
 
         protected void DdlQuerySub_SelectedIndexChanged(object sender, EventArgs e)

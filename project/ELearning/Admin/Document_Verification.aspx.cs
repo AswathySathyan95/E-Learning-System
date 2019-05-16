@@ -22,8 +22,7 @@ namespace ELearning.Admin
 
         protected void downloadfile_Click(object sender, EventArgs e)
         {
-            var cl = (Control)sender;
-            GridView row = (GridView)cl.NamingContainer;
+            
             
         }
 
@@ -66,11 +65,11 @@ namespace ELearning.Admin
 
         protected void GvDocument_RowCommand(object sender, GridViewCommandEventArgs e)
         {
-           /* if (e.CommandName == "downloadDoc")
+           if (e.CommandName == "downloadDoc")
             {
                 string filename = e.CommandArgument.ToString();
                 Response.Redirect(filename);
-            }*/
+            }
         }
         protected void GvDocument_PageIndexChanging(object sender, GridViewPageEventArgs e)
         {

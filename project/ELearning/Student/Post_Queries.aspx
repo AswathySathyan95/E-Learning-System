@@ -79,7 +79,7 @@
                     <asp:Label ID="Label2" runat="server" CssClass="auto-style3" Text="Question"></asp:Label>
                     </strong></td>
                 <td>
-                    <asp:TextBox ID="TxtQuestion" runat="server" Height="97px" TextMode="MultiLine"></asp:TextBox>
+                    <asp:TextBox ID="TxtQuestion" runat="server" Height="97px" TextMode="MultiLine" Width="740px"></asp:TextBox>
                 </td>
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>

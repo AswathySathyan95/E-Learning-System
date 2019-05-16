@@ -20,6 +20,7 @@ namespace ELearning.Admin
         public void BindDocument()
         {
             objadm.Dept = ddlDept.SelectedItem.Text.ToString();
+            objadm.Usertype = "Faculty";
             DataTable dtname = new DataTable();
             dtname = objadm.FacultyNameDetails();
             if (dtname.Rows.Count > 0)

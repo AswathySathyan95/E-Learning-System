@@ -42,6 +42,7 @@ namespace ELearning.Classes
         private int studcount;
         private string dept;
         private string fuserid;
+        private string usertype;
 
         public int Quizcount { get => quizcount; set => quizcount = value; }
         public int Qstn_count { get => qstn_count; set => qstn_count = value; }
@@ -56,6 +57,7 @@ namespace ELearning.Classes
         public int Studcount { get => studcount; set => studcount = value; }
         public string Dept { get => dept; set => dept = value; }
         public string Fuserid { get => fuserid; set => fuserid = value; }
+        public string Usertype { get => usertype; set => usertype = value; }
 
         //Get Quiz Count
         public int getCountQuiz()
@@ -239,8 +241,9 @@ namespace ELearning.Classes
         {
             OpenConnection();
             DataTable dtName = new DataTable();
-            SqlCommand command = new SqlCommand("Select User_Id,Name from User_Details where Department=@det", con);
+            SqlCommand command = new SqlCommand("Select User_Id,Name from User_Details where Department=@det and User_Type=@type", con);
             command.Parameters.AddWithValue("@det",dept );
+            command.Parameters.AddWithValue("@type", usertype);
             SqlDataAdapter da = new SqlDataAdapter(command);
             da.Fill(dtName);
             CloseConnection();

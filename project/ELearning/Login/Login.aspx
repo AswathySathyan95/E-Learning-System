@@ -1,58 +1,25 @@
-﻿
-<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="ELearning.Login.Loginaspx" %>
-
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="ELearning.Login.Loginaspx" %>
 <!DOCTYPE html>
+<html lang="en">
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-    <style type="text/css">
-        .auto-style1 {
-            width: 100%;
-        }
-        .auto-style2 {
-            width: 1182px;
-        }
-        .auto-style4 {
-            height: 360px;
-            width: 169px;
-            margin-top: 0px;
-        }
-        .auto-style7 {
-            font-weight: bold;
-        }
-        .auto-style9 {
-            width: 167px;
-            text-align: left;
-        }
-        .auto-style10 {
-            text-align: left;
-        }
-        .auto-style11 {
-            text-align: left;
-            width: 165px;
-        }
-        .auto-style12 {
-            text-align: left;
-            width: 162px;
-        }
-    </style>
-</head>
-<body>    
-        <table class="auto-style1">
-            <tr>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td class="auto-style2">&nbsp;</td>
-                <td>&nbsp;</td>
-            </tr>
-            <tr>
-                <td colspan="4">
-                    <asp:Image ID="Image1" runat="server" Height="665px" ImageUrl="~/DesignImages/login.jpg" Width="1206px" />
-                </td>
-                <td>
-                    <form id="form2" runat="server">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Login - Online exam sytem</title>
+    <!-- Bootstrap core CSS-->
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom fonts for login-->
+    <link href="../assets/css/custom.css" rel="stylesheet">
+    </head>
+
+<body class="bg-dark">
+    <div class="container">
+        <div class="card card-login mx-auto mt-5">
+            <div class="card-body">
+                 <form id="form2" runat="server">
                         &nbsp;&nbsp;
                     <fieldset class="auto-style4">
                         <legend><strong>LOGIN</strong></legend>
@@ -86,18 +53,12 @@
                             </strong>
                         </div>
                     </fieldset></form>
-                </td>
-            </tr>
-            <tr>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td class="auto-style2">&nbsp;</td>
-                <td>&nbsp;</td>
-            </tr>
-        </table>
-    
-    
+
+
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>
 

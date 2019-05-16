@@ -1,127 +1,63 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Forgot_Password.aspx.cs" Inherits="ELearning.Login.Forgot_Password" %>
 
 <!DOCTYPE html>
+<html lang="en">
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-    <style type="text/css">
-        .auto-style2 {
-            width: 100%;
-        }
-        .auto-style3 {
-            height: 304px;
-            width: 492px;
-            margin-left: 420px;
-        }
-        .auto-style4 {
-            height: 175px;
-            width: 432px;
-        }
-        .auto-style5 {
-            font-weight: bold;
-        }
-        .auto-style6 {
-            width: 89px;
-        }
-        .auto-style7 {
-            font-size: x-large;
-            color: #000099;
-        }
-    </style>
-</head>
-<body>
-    <form id="form1" runat="server">
-        
-       
-        <table class="auto-style2">
-            <tr>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-            </tr>
-            <tr>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-            </tr>
-            <tr>
-                <td>&nbsp;</td>
-                <td rowspan="3">
-                    <fieldset class="auto-style3">
-                        <legend class="auto-style7"><strong><em>Forgot Password</em></strong></legend>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Login - Online exam sytem</title>
+    <!-- Bootstrap core CSS-->
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom fonts for login-->
+    <link href="../assets/css/custom.css" rel="stylesheet">
+    </head>
+
+<body class="bg-dark">
+    <div class="container">
+        <div class="card card-login mx-auto mt-5">
+            <div class="card-body">
+                 <form id="form2" runat="server">
+                        &nbsp;&nbsp;
+                    <fieldset class="auto-style4">
+                        <legend><strong>Forgot Password</strong></legend>
                         <br />
-                        <div class="auto-style4">
-
-                            <table class="auto-style2">
-                                <tr>
-                                    <td class="auto-style6">&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                </tr>
-                                <tr>
-                                    <td class="auto-style6">&nbsp;</td>
-                                    <td><strong>
-                                        <asp:Label ID="Label1" runat="server" Font-Size="Large" Text="Enter Your Email Address"></asp:Label>
-                                        </strong></td>
-                                    <td>&nbsp;</td>
-                                </tr>
-                                <tr>
-                                    <td class="auto-style6">&nbsp;</td>
-                                    <td>
-                                        <asp:TextBox ID="TxtEmail" runat="server" Width="233px"></asp:TextBox>
-                                    </td>
-                                    <td>&nbsp;</td>
-                                </tr>
-                                <tr>
-                                    <td class="auto-style6">&nbsp;</td>
-                                    <td><strong>
-                                        <asp:Button ID="BtnSubmit" runat="server" CssClass="auto-style5" OnClick="BtnSubmit_Click" Text="Submit" />
-                                        </strong>
-                                        <asp:Label ID="LblMsg" runat="server" Visible="False"></asp:Label>
-                                    </td>
-                                    <td>&nbsp;</td>
-                                </tr>
-                                <tr>
-                                    <td class="auto-style6">&nbsp;</td>
-                                    <td><strong>
-                                        <asp:Label ID="LblPswd" runat="server" Text="Please Check Your Registered Email" Visible="False"></asp:Label>
-                                        </strong></td>
-                                    <td>&nbsp;</td>
-                                </tr>
-                            </table>
+                        <br />
+                        <div class="auto-style9">
+                            <strong>  
+                                <asp:Label ID="Label1" runat="server" Font-Size="Large" Text="Enter Your Email Address"></asp:Label>
+                            </strong>&nbsp;
 
                         </div>
-                    </fieldset>
-                    &nbsp;</td>
-                <td>&nbsp;</td>
-            </tr>
-            <tr>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-            </tr>
-            <tr>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-            </tr>
-            <tr>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-            </tr>
-            <tr>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-            </tr>
-            <tr>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-            </tr>
-        </table>
-        
-       
-    </form>
+                            <asp:TextBox ID="TxtEmail" runat="server" Width="233px"></asp:TextBox>                        
+                        <br />
+                        <div class="auto-style9">
+                            <br />
+                            <strong>
+                                 <asp:Button ID="BtnSubmit" runat="server" CssClass="auto-style5" OnClick="BtnSubmit_Click" Text="Submit" style="font-weight: bold" Width="191px" />
+                            </strong>
+                        </div>
+                        <div class="auto-style11">
+                               <asp:Label ID="LblMsg" runat="server" Visible="False"></asp:Label>
+                            &nbsp;</div>
+                         <div class="auto-style9">
+                            <br />
+                            <strong>
+                               <asp:Label ID="LblPswd" runat="server" Text="Please Check Your Registered Email" Visible="False"></asp:Label>
+                            </strong>
+                        </div>
+                      
+                    </fieldset></form>
+
+
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>
+
+

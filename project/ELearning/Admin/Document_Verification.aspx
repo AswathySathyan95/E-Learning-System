@@ -104,7 +104,7 @@
                                         <asp:BoundField DataField="Description" HeaderText="Document Description" />
                                         <asp:TemplateField HeaderText="Download">
                                             <ItemTemplate>
-                                               <asp:LinkButton ID="btn_Download" runat="server" CssClass="btn" BackColor="#343A40" BorderStyle="None" ForeColor="White" CommandArgument='<%# Eval("Document_File") %>' CommandName="downloadDoc" OnClick="downloadfile_Click" >
+                                               <asp:LinkButton ID="btn_Download" runat="server" CssClass="btn" BackColor="#343A40" BorderStyle="None" ForeColor="White" CommandArgument='<%# Eval("Document_File") %>' CommandName="downloadDoc"  >
                                             <i class="fa fa-download" aria-hidden="true"></i> Download
                                             </asp:LinkButton>
                                             </ItemTemplate>

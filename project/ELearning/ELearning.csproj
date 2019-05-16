@@ -138,6 +138,7 @@
     <Content Include="Admin\Student_Details.aspx" />
     <Content Include="Admin\StudReg.aspx" />
     <Content Include="Admin\Total_Questions.aspx" />
+    <Content Include="Admin\Verify_Document.aspx" />
     <Content Include="Admin\View_Admin_profile.aspx" />
     <Content Include="Admin\View_Replies.aspx" />
     <Content Include="Admin\WebForm1.aspx" />
@@ -174,6 +175,7 @@
     <Content Include="DesignImages\FacultyHome2.jpg" />
     <Content Include="DesignImages\facultyhome3.jpg" />
     <Content Include="DesignImages\facultyReg.jpg" />
+    <Content Include="DesignImages\homepage.jpg" />
     <Content Include="DesignImages\login.jpg" />
     <Content Include="DesignImages\Login1.jpg" />
     <Content Include="DesignImages\login2.jpg" />
@@ -420,6 +422,13 @@
     </Compile>
     <Compile Include="Admin\Total_Questions.aspx.designer.cs">
       <DependentUpon>Total_Questions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Verify_Document.aspx.cs">
+      <DependentUpon>Verify_Document.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Verify_Document.aspx.designer.cs">
+      <DependentUpon>Verify_Document.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\View_Admin_profile.aspx.cs">
       <DependentUpon>View_Admin_profile.aspx</DependentUpon>
