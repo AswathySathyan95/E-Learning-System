@@ -9,11 +9,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Login - Online exam sytem</title>
+    <title>Forgot Password - SJCET ELearning Portal</title>
     <!-- Bootstrap core CSS-->
     <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom fonts for login-->
     <link href="../assets/css/custom.css" rel="stylesheet">
+    <style>
+        .auto-style5
+        {
+            border-radius:5px;
+        }
+    </style>
     </head>
 
 <body class="bg-dark">
@@ -37,7 +43,7 @@
                         <div class="auto-style9">
                             <br />
                             <strong>
-                                 <asp:Button ID="BtnSubmit" runat="server" CssClass="auto-style5" OnClick="BtnSubmit_Click" Text="Submit" style="font-weight: bold" Width="191px" />
+                                 <asp:Button ID="BtnSubmit" runat="server" CssClass="auto-style5" OnClick="BtnSubmit_Click" Text="Forgot Password Reset" style="font-weight: bold" Width="254px" />
                             </strong>
                         </div>
                         <div class="auto-style11">

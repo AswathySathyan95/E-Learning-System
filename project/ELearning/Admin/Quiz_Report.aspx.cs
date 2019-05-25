@@ -28,7 +28,7 @@ namespace ELearning.Admin
                     DdlBranch.DataValueField = "Branch";
                     DdlBranch.DataBind();
                 }
-                DdlBranch.Items.Insert(0, new ListItem("---Select---", "0"));
+                DdlBranch.Items.Insert(0, "---Select---");
             }
         }
         protected void GvQuizReport_PageIndexChanging(object sender, GridViewPageEventArgs e)

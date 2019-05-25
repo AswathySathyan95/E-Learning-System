@@ -325,19 +325,10 @@
                 <asp:TextBox ID="txtDoa" runat="server" TextMode="Date"></asp:TextBox>
             </td>
             <td style="height: 20px">
-                <asp:Label ID="Label58" runat="server" Text="Department"></asp:Label>
+                <asp:Label ID="Label23" runat="server" Text="Admitted Program"></asp:Label>
             </td>
             <td style="height: 20px">
-                <asp:DropDownList ID="ddlDept" runat="server">
-                    <asp:ListItem>---Select---</asp:ListItem>
-                    <asp:ListItem>Civil Engineering</asp:ListItem>
-                    <asp:ListItem>Computer Science &amp; Engineering</asp:ListItem>
-                    <asp:ListItem>Electronics &amp; Communication Engineering</asp:ListItem>
-                    <asp:ListItem>ELectronics &amp; Instrumentation Engineering</asp:ListItem>
-                    <asp:ListItem>Electrical &amp; Electronics Engineering</asp:ListItem>
-                    <asp:ListItem>Mechanical Engineering</asp:ListItem>
-                    <asp:ListItem>Master of Computer Application</asp:ListItem>
-                    <asp:ListItem>Master of Business Administration</asp:ListItem>
+                <asp:DropDownList ID="ddlProgram" runat="server" OnSelectedIndexChanged="ddlProgram_SelectedIndexChanged" style="margin-bottom: 0">
                 </asp:DropDownList>
             </td>
             <td style="height: 20px"></td>
@@ -347,29 +338,23 @@
         <tr>
             <td style="width: 33px; height: 22px;"></td>
             <td style="height: 22px">
-                <asp:Label ID="Label23" runat="server" Text="Admitted Program"></asp:Label>
+                <asp:Label ID="Label58" runat="server" Text="Department"></asp:Label>
             </td>
             <td style="height: 22px">
-                <asp:DropDownList ID="ddlProgram" runat="server" AutoPostBack="True" OnSelectedIndexChanged="ddlProgram_SelectedIndexChanged" style="margin-bottom: 0">
-                    <asp:ListItem>---Select---</asp:ListItem>
-                    <asp:ListItem Value="1">Btech</asp:ListItem>
-                    <asp:ListItem Value="2">Mtech</asp:ListItem>
-                    <asp:ListItem Value="3">MCA</asp:ListItem>
-                    <asp:ListItem Value="4">MBA</asp:ListItem>
+                <asp:DropDownList ID="ddlDept" runat="server" AutoPostBack="True" OnSelectedIndexChanged="ddlDept_SelectedIndexChanged">
                 </asp:DropDownList>
             </td>
             <td style="height: 22px">
-                <asp:Label ID="Label24" runat="server" Text="Admitted Branch"></asp:Label>
+                <asp:Label ID="Label24" runat="server" Text="Admitted Branch" CssClass="auto-style1" ForeColor="Black"></asp:Label>
             </td>
             <td style="height: 22px">
                 <asp:UpdatePanel ID="UpdatePanel2" runat="server">
                     <ContentTemplate>
                         <asp:DropDownList ID="ddlBranch" runat="server">
-                            <asp:ListItem>---Select---</asp:ListItem>
                         </asp:DropDownList>
                     </ContentTemplate>
                     <Triggers>
-                        <asp:AsyncPostBackTrigger ControlID="ddlProgram" EventName="SelectedIndexChanged" />
+                        <asp:AsyncPostBackTrigger ControlID="ddlDept" EventName="SelectedIndexChanged" />
                     </Triggers>
                 </asp:UpdatePanel>
             </td>
@@ -512,6 +497,9 @@
             font-size: 50px;
             font-weight: bolder;
             color: #000080;
+        }
+        .auto-style1 {
+            color: #000000;
         }
     </style>
 </asp:Content>

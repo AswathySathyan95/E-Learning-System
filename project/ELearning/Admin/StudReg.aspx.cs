@@ -16,7 +16,29 @@ namespace ELearning.Admin
         AdminClass objAdmReg = new AdminClass();
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if(!IsPostBack)
+            {
+                DataTable dtDeptmnt = new DataTable();
+                dtDeptmnt = objAdmReg.DepartmentDetails();
+                if (dtDeptmnt.Rows.Count>0)
+                {
+                    ddlDept.DataSource = dtDeptmnt;
+                    ddlDept.DataTextField = "Department";
+                    ddlDept.DataValueField = "Dept_Id";
+                    ddlDept.DataBind();
+                }
+                ddlDept.Items.Insert(0,"---Select---");
+                DataTable dtPrgm = new DataTable();
+                dtPrgm = objAdmReg.ProgramDetails();
+                if(dtPrgm.Rows.Count>0)
+                {
+                    ddlProgram.DataSource = dtPrgm;
+                    ddlProgram.DataTextField = "Program";
+                    ddlProgram.DataValueField = "Prgm_Id";
+                    ddlProgram.DataBind();
+                }
+                ddlProgram.Items.Insert(0, "---Select---");
+            }
         }
 
         protected void btnRegister_Click(object sender, EventArgs e)
@@ -113,25 +135,28 @@ namespace ELearning.Admin
 
         protected void ddlProgram_SelectedIndexChanged(object sender, EventArgs e)
         {
-            objAdmReg.P_id = Convert.ToInt32(ddlProgram.SelectedValue.ToString());
-            DataTable dtABranch = new DataTable();
-            dtABranch = objAdmReg.AdmittedBranch();
-            if (dtABranch.Rows.Count > 0)
-            {
-                for (int i = 0; i < dtABranch.Rows.Count; i++)
-                {
-                    ddlBranch.Items.Add(dtABranch.Rows[i]["Branch_Name"].ToString());
-                }
-                /*ddlBranch.DataSource = dtABranch;
-                ddlBranch.DataTextField = "Branch_Name";
-                ddlBranch.DataValueField = "B_Id";
-                ddlBranch.DataBind();*/
-            }
+            
         }
 
         protected void txtPin_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        protected void ddlDept_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            objAdmReg.P_id = Convert.ToInt32(ddlProgram.SelectedValue.ToString());
+            objAdmReg.Dept_id = Convert.ToInt32(ddlDept.SelectedValue.ToString());
+            DataTable dtABranch = new DataTable();
+            dtABranch = objAdmReg.AdmittedBranch();
+            if (dtABranch.Rows.Count > 0)
+            {
+                ddlBranch.DataSource = dtABranch;
+                ddlBranch.DataTextField = "Branch_Name";
+                ddlBranch.DataValueField = "B_Id";
+                ddlBranch.DataBind();
+            }
+            ddlBranch.Items.Insert(0, "---Select---");
         }
     }
 }

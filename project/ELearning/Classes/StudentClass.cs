@@ -279,7 +279,7 @@ namespace ELearning.Classes
         {
             OpenConnection();
             DataTable dtQuizReport = new DataTable();
-            SqlCommand command = new SqlCommand("select Date,Start_Time,End_Time,Correct_Answer,Incorrect_Answer,Attended_Qusers,Total_Score from Quiz_Report where User_Id=@user and SubCategory=@sid", con);
+            SqlCommand command = new SqlCommand("select Date,Start_Time,End_Time,Correct_Answer,Incorrect_Answer,Attended_Qusers,Total_Score from Quiz_Report where User_Id=@user and SubCategory=@sid ORDER BY Total_Score DESC", con);
             command.Parameters.AddWithValue("@user", user_id);
             command.Parameters.AddWithValue("@sid", subid);
             SqlDataAdapter da = new SqlDataAdapter(command);

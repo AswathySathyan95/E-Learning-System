@@ -16,7 +16,20 @@ namespace ELearning.Admin
         AdminClass objAdmReg = new AdminClass();
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            if (!IsPostBack)
+            {
+                DataTable dtDeptmnt = new DataTable();
+                dtDeptmnt = objAdmReg.DepartmentDetails();
+                if (dtDeptmnt.Rows.Count > 0)
+                {
+                    ddlDept.DataSource = dtDeptmnt;
+                    ddlDept.DataTextField = "Department";
+                    ddlDept.DataValueField = "Dept_Id";
+                    ddlDept.DataBind();
+                }
+                ddlDept.Items.Insert(0, "---Select---");
+                
+            }
         }
 
         protected void btnRegister_Click(object sender, EventArgs e)

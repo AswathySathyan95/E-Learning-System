@@ -43,6 +43,9 @@ namespace ELearning.Classes
         private string dept;
         private string fuserid;
         private string usertype;
+        //Department
+        private string department;
+        private string prgmid;
 
         public int Quizcount { get => quizcount; set => quizcount = value; }
         public int Qstn_count { get => qstn_count; set => qstn_count = value; }
@@ -58,6 +61,8 @@ namespace ELearning.Classes
         public string Dept { get => dept; set => dept = value; }
         public string Fuserid { get => fuserid; set => fuserid = value; }
         public string Usertype { get => usertype; set => usertype = value; }
+        public string Department { get => department; set => department = value; }
+        public string Prgmid { get => prgmid; set => prgmid = value; }
 
         //Get Quiz Count
         public int getCountQuiz()
@@ -284,6 +289,29 @@ namespace ELearning.Classes
             da.Fill(dtQuiz);
             CloseConnection();
             return dtQuiz;
+        }
+        //Add Department 
+        public void DepartmentDetails()
+        {
+            OpenConnection();
+            string qry = "insert into Department_Details values(@dept)";
+            SqlCommand cmd = new SqlCommand(qry, con);
+            cmd.Parameters.AddWithValue("@dept", department);
+           // cmd.Parameters.AddWithValue("@prgm", prgmid);
+            cmd.ExecuteNonQuery();
+            CloseConnection();
+        }
+        //Check whether department already exists or not
+        public DataTable CheckDepartment()
+        {
+            OpenConnection();
+            DataTable dtDept = new DataTable();
+            SqlCommand command = new SqlCommand("Select Dept_Id from Department_Details where Department=@sdept", con);
+            command.Parameters.AddWithValue("@sdept", department);
+            SqlDataAdapter da = new SqlDataAdapter(command);
+            da.Fill(dtDept);
+            CloseConnection();
+            return dtDept;
         }
     }
 }

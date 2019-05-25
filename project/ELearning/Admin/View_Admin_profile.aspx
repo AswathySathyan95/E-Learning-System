@@ -16,7 +16,7 @@
         .auto-style2 {
             background-color: #CCCCCC;
             border-style: solid;
-            width : auto;
+            width : 100%;
             
         }
 
@@ -52,6 +52,7 @@
         .auto-style15 {
             font-size: large;
             color: #000000;
+            width:100%;
         }
 
         .auto-style16 {
@@ -86,7 +87,7 @@
             </asp:ScriptManager>
             <span class="auto-style21">Staff Details</span></div>    
         <div id="Personal" class="auto-style2">
-            <asp:Label ID="Lblpersonal" runat="server" Font-Bold="True" Font-Size="Large" ForeColor="Black" Text="Personal Details" CollapseControlID="Lblpersonal"></asp:Label>
+            <asp:Label ID="Lblpersonal" CssClass="auto-style15" runat="server" Font-Bold="True" Font-Size="Large" ForeColor="Black" Text="Personal Details" CollapseControlID="Lblpersonal"></asp:Label>
         </div>
         <div id="personalDetails">
 
@@ -264,7 +265,7 @@
             <ajaxToolkit:CollapsiblePanelExtender ID="CollapsiblePanelExtender2" runat="server" CollapseControlID="LblAdd" Collapsed="True" ExpandControlID="LblAdd" TargetControlID="PanelAddress" />
         </div>
          <div id="Admission" class="auto-style2">
-            <asp:Label ID="LblAddmission" runat="server" Font-Bold="True" Font-Size="Large" ForeColor="Black" Text="Admission Details"></asp:Label>
+            <asp:Label ID="LblAddmission" runat="server" Font-Bold="True" Font-Size="Large" CssClass="auto-style15" ForeColor="Black" Text="Admission Details"></asp:Label>
         </div>
         <div id="viewadmission">
             <asp:Panel ID="PanelAdmission" runat="server" BorderStyle="Solid" SuppressPostBack="true" Height="122px">

@@ -54,6 +54,7 @@ namespace ELearning.Classes
         private int sem;
         private int s_id;
         private int p_id;
+        private int dept_id;
         //Qualification
         private string qualification;
         private string specialization;
@@ -103,6 +104,10 @@ namespace ELearning.Classes
         private string doc_type;
         private string doc_id;
         private string docid;
+        //course registration
+        private int dptid;
+        private int prmid;
+        private string course;
 
         public string User_id { get => user_id; set => user_id = value; }
         public string User_type { get => user_type; set => user_type = value; }
@@ -171,6 +176,10 @@ namespace ELearning.Classes
         public string Doc_type { get => doc_type; set => doc_type = value; }
         public string Doc_id { get => doc_id; set => doc_id = value; }
         public string Docid { get => docid; set => docid = value; }
+        public int Dept_id { get => dept_id; set => dept_id = value; }
+        public int Dptid { get => dptid; set => dptid = value; }
+        public int Prmid { get => prmid; set => prmid = value; }
+        public string Course { get => course; set => course = value; }
 
         //Checking whether the category is already added or not
         public DataTable CheckCategory()
@@ -215,7 +224,9 @@ namespace ELearning.Classes
         {
             OpenConnection();
             DataTable dtABranch = new DataTable();
-            SqlCommand command = new SqlCommand("Select * from Branch_Details where P_Id='" + p_id + "' ", con);
+            SqlCommand command = new SqlCommand("Select * from Branch_Details where P_Id=@pid and Dept_Id=@deptid ", con);
+            command.Parameters.AddWithValue("@pid", p_id);
+            command.Parameters.AddWithValue("@deptid", dept_id);
             SqlDataAdapter da = new SqlDataAdapter(command);
             da.Fill(dtABranch);
             CloseConnection();
@@ -461,6 +472,19 @@ namespace ELearning.Classes
             CloseConnection();
         }
 
+        //Adding Course Details details to the table
+        public void InsertCourse()
+        {
+            OpenConnection();
+            string qry = "insert into Branch_Details values(@scourse,@prgm,@dept)";
+            SqlCommand cmd = new SqlCommand(qry, con);
+            cmd.Parameters.AddWithValue("@dept", dptid);
+            cmd.Parameters.AddWithValue("@prgm", prmid);
+            cmd.Parameters.AddWithValue("@scourse", course);
+            cmd.ExecuteNonQuery();
+            CloseConnection();
+        }
+
         //Updating the table USer_Details by adding Username and Password
         public void UpdateRegistration()
         {
@@ -485,7 +509,26 @@ namespace ELearning.Classes
             CloseConnection();
             return dtExp;
         }
-
+        public DataTable DepartmentDetails()
+        {
+            OpenConnection();
+            DataTable dtDeptmnt = new DataTable();
+            SqlCommand command = new SqlCommand("Select * from Department_Details", con);
+            SqlDataAdapter da = new SqlDataAdapter(command);
+            da.Fill(dtDeptmnt);
+            CloseConnection();
+            return dtDeptmnt;
+        }
+        public DataTable ProgramDetails()
+        {
+            OpenConnection();
+            DataTable dtPrgm = new DataTable();
+            SqlCommand command = new SqlCommand("Select * from Program_Details", con);
+            SqlDataAdapter da = new SqlDataAdapter(command);
+            da.Fill(dtPrgm);
+            CloseConnection();
+            return dtPrgm;
+        }
         public string CategoryIdGenerate()
         {
             OpenConnection();
@@ -587,5 +630,7 @@ namespace ELearning.Classes
             cmd.ExecuteNonQuery();
             CloseConnection();
         }
+
+      
     }
 }

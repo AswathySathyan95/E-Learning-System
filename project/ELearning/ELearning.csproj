@@ -126,6 +126,8 @@
     <Content Include="Admin\Add_Category.aspx" />
     <Content Include="Admin\Add_Questions.aspx" />
     <Content Include="Admin\AdminHome.aspx" />
+    <Content Include="Admin\Course_Registration.aspx" />
+    <Content Include="Admin\Department_Details.aspx" />
     <Content Include="Admin\Document_Verification.aspx" />
     <Content Include="Admin\ManageQueries.aspx" />
     <Content Include="Admin\Quiz_Report.aspx" />
@@ -338,6 +340,20 @@
     </Compile>
     <Compile Include="Admin\AdminMaster.Master.designer.cs">
       <DependentUpon>AdminMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Course_Registration.aspx.cs">
+      <DependentUpon>Course_Registration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Course_Registration.aspx.designer.cs">
+      <DependentUpon>Course_Registration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Department_Details.aspx.cs">
+      <DependentUpon>Department_Details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Department_Details.aspx.designer.cs">
+      <DependentUpon>Department_Details.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\Document_Verification.aspx.cs">
       <DependentUpon>Document_Verification.aspx</DependentUpon>

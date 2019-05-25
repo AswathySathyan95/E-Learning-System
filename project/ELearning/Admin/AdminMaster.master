@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Welcome SJCET ELEarning Portal</title>
+    <title>Welcome SJCET ELearning Portal</title>
     <!-- Bootstrap core CSS-->
     <link href="~/assets/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom fonts for this template-->
@@ -58,7 +58,18 @@
                         <span class="nav-link-text"> Document Verification</span>
                     </a>
                 </li>
-
+                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Question">
+                    <a class="nav-link" href="Department_Details.aspx">
+                        <i class="fa fa-building-o"></i>
+                        <span class="nav-link-text">Department</span>
+                    </a>
+                </li>
+                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Question">
+                    <a class="nav-link" href="Course_Registration.aspx">
+                        <i class="fa fa-book"></i>
+                        <span class="nav-link-text">Course Registration</span>
+                    </a>
+                </li>
                 <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Question">
                     <a class="nav-link" href="ManageQueries.aspx">
                         <i class="fa fa-comments"></i>

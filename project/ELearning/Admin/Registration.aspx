@@ -332,15 +332,6 @@
             </td>
             <td style="height: 20px">
                 <asp:DropDownList ID="ddlDept" runat="server">
-                    <asp:ListItem>---Select---</asp:ListItem>
-                    <asp:ListItem>Civil Engineering</asp:ListItem>
-                    <asp:ListItem>Computer Science &amp; Engineering</asp:ListItem>
-                    <asp:ListItem>Electronics &amp; Communication Engineering</asp:ListItem>
-                    <asp:ListItem>ELectronics &amp; Instrumentation Engineering</asp:ListItem>
-                    <asp:ListItem>Electrical &amp; Electronics Engineering</asp:ListItem>
-                    <asp:ListItem>Mechanical Engineering</asp:ListItem>
-                    <asp:ListItem>Master of Computer Application</asp:ListItem>
-                    <asp:ListItem>Master of Business Administration</asp:ListItem>
                 </asp:DropDownList>
             </td>
             <td style="height: 20px"></td>
