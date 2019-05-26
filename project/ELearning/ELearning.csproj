@@ -129,6 +129,7 @@
     <Content Include="Admin\Course_Registration.aspx" />
     <Content Include="Admin\Department_Details.aspx" />
     <Content Include="Admin\Document_Verification.aspx" />
+    <Content Include="Admin\Document_Verify.aspx" />
     <Content Include="Admin\ManageQueries.aspx" />
     <Content Include="Admin\Quiz_Report.aspx" />
     <Content Include="Admin\Registration.aspx" />
@@ -139,6 +140,7 @@
     <Content Include="Admin\StudentFullDetails.aspx" />
     <Content Include="Admin\Student_Details.aspx" />
     <Content Include="Admin\StudReg.aspx" />
+    <Content Include="Admin\Subject_Details.aspx" />
     <Content Include="Admin\Total_Questions.aspx" />
     <Content Include="Admin\Verify_Document.aspx" />
     <Content Include="Admin\View_Admin_profile.aspx" />
@@ -214,9 +216,10 @@
     <Content Include="Login\Login.aspx" />
     <Content Include="mail\Compose_Mail.aspx" />
     <Content Include="mail\Inbox.aspx" />
+    <Content Include="mail\ReadReply.aspx" />
+    <Content Include="mail\ReadSent.aspx" />
     <Content Include="mail\Sent_Mail.aspx" />
     <Content Include="Student\AllQuiz.aspx" />
-    <Content Include="Student\Inbox.aspx" />
     <Content Include="Student\Online_Quiz.aspx" />
     <Content Include="Student\Post_Queries.aspx" />
     <Content Include="Student\Quiz_Category.aspx" />
@@ -362,6 +365,13 @@
     <Compile Include="Admin\Document_Verification.aspx.designer.cs">
       <DependentUpon>Document_Verification.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Admin\Document_Verify.aspx.cs">
+      <DependentUpon>Document_Verify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Document_Verify.aspx.designer.cs">
+      <DependentUpon>Document_Verify.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admin\ManageQueries.aspx.cs">
       <DependentUpon>ManageQueries.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -431,6 +441,13 @@
     </Compile>
     <Compile Include="Admin\StudReg.aspx.designer.cs">
       <DependentUpon>StudReg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Subject_Details.aspx.cs">
+      <DependentUpon>Subject_Details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Subject_Details.aspx.designer.cs">
+      <DependentUpon>Subject_Details.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\Total_Questions.aspx.cs">
       <DependentUpon>Total_Questions.aspx</DependentUpon>
@@ -641,6 +658,20 @@
     <Compile Include="mail\MailMaster.Master.designer.cs">
       <DependentUpon>MailMaster.Master</DependentUpon>
     </Compile>
+    <Compile Include="mail\ReadReply.aspx.cs">
+      <DependentUpon>ReadReply.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="mail\ReadReply.aspx.designer.cs">
+      <DependentUpon>ReadReply.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="mail\ReadSent.aspx.cs">
+      <DependentUpon>ReadSent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="mail\ReadSent.aspx.designer.cs">
+      <DependentUpon>ReadSent.aspx</DependentUpon>
+    </Compile>
     <Compile Include="mail\Sent_Mail.aspx.cs">
       <DependentUpon>Sent_Mail.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -669,13 +700,6 @@
     </Compile>
     <Compile Include="Student\AllQuiz.aspx.designer.cs">
       <DependentUpon>AllQuiz.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Student\Inbox.aspx.cs">
-      <DependentUpon>Inbox.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Student\Inbox.aspx.designer.cs">
-      <DependentUpon>Inbox.aspx</DependentUpon>
     </Compile>
     <Compile Include="Student\Online_Quiz.aspx.cs">
       <DependentUpon>Online_Quiz.aspx</DependentUpon>

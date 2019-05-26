@@ -15,7 +15,7 @@
             color: #000080;
         }
         .auto-style3 {
-            margin-left: 333px;
+            width: 171px;
         }
     </style>
 </asp:Content>
@@ -29,15 +29,28 @@
 
             <table class="w-100">
                 <tr>
-                    <td>&nbsp;</td>
+                    <td class="auto-style3">&nbsp;</td>
                     <td>
-                        <asp:GridView ID="GvSent" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px" CellPadding="3" CssClass="auto-style3" ForeColor="Black" GridLines="Vertical" Width="785px">
+                        <asp:GridView ID="GVSentMail" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px" CellPadding="3" ForeColor="Black" GridLines="Vertical" Width="941px" OnRowCommand="GVSentMail_RowCommand">
                             <AlternatingRowStyle BackColor="#CCCCCC" />
                             <Columns>
-                                <asp:BoundField DataField="to_id" HeaderText="To Mail Id" />
-                                <asp:BoundField DataField="date" HeaderText="Date" />
-                                <asp:BoundField DataField="subject" HeaderText="Subject" />
-                                <asp:BoundField DataField="message" HeaderText="Message" />
+                                <asp:BoundField DataField="date" DataFormatString="{0:d}" HeaderText="Date" NullDisplayText="No Message Found" />
+                                <asp:BoundField DataField="to_id" HeaderText="To Id" NullDisplayText="No Message Found" />
+                                <asp:BoundField DataField="subject" HeaderText="Subject" NullDisplayText="No Message Found" />
+                                <asp:TemplateField HeaderText="Read Mail">
+                                    <ItemTemplate>
+                                        <asp:LinkButton ID="btn_Download" runat="server" CssClass="btn" BackColor="#343A40" BorderStyle="None" ForeColor="White" CommandArgument='<%# Eval("mid") %>' CommandName="ReadMessage" >
+                                        <i class="fa fa-angle-right" aria-hidden="true"></i> Read Message
+                                        </asp:LinkButton>
+                                    </ItemTemplate>
+                                </asp:TemplateField>
+                                <asp:TemplateField HeaderText="Delete Mail">
+                                    <ItemTemplate>
+                                        <asp:LinkButton ID="btn_Download0" runat="server" CssClass="btn" BackColor="#343A40" BorderStyle="None" ForeColor="White" CommandArgument='<%# Eval("mid") %>' CommandName="DeleteMsg" >
+                                        <i class="fa fa-trash" aria-hidden="true"></i> Delete
+                                        </asp:LinkButton>
+                                    </ItemTemplate>
+                                </asp:TemplateField>
                             </Columns>
                             <FooterStyle BackColor="#CCCCCC" />
                             <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />

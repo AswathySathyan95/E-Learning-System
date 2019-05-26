@@ -33,7 +33,7 @@ namespace ELearning.Faculty
 
         protected void ddlDepartment_SelectedIndexChanged(object sender, EventArgs e)
         {
-            objFctly.NDept = ddlDepartment.SelectedItem.Text.ToString();
+            objFctly.NDept = ddlDepartment.SelectedValue.ToString();
             DataTable dtSubject = new DataTable();
             dtSubject = objFctly.FetchSubject();
             if (dtSubject.Rows.Count > 0)

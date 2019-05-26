@@ -11,7 +11,7 @@
             color: #000080;
         }
         .auto-style2 {
-            width: 277px;
+            width: 99px;
         }
     </style>
 </asp:Content>
@@ -28,21 +28,36 @@
                 <tr>
                     <td class="auto-style2">&nbsp;&nbsp;</td>
                     <td>
-                        <asp:DataGrid ID="DataGrid1" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px" CellPadding="3" ForeColor="Black" GridLines="Vertical" Width="819px">
-                            <AlternatingItemStyle BackColor="#CCCCCC" />
+                        <asp:GridView ID="GVInbox" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px" CellPadding="3" ForeColor="Black" GridLines="Vertical" Width="764px" OnRowCommand="GVInbox_RowCommand">
+                            <AlternatingRowStyle BackColor="#CCCCCC" />
                             <Columns>
-                                <asp:BoundColumn DataField="mid" HeaderText="Mid" Visible="False"></asp:BoundColumn>
-                                <asp:BoundColumn DataField="from_id" HeaderText="From Mail"></asp:BoundColumn>
-                                <asp:BoundColumn DataField="date" HeaderText="Date"></asp:BoundColumn>
-                                <asp:BoundColumn DataField="subject" HeaderText="Subject"></asp:BoundColumn>
-                                <asp:ButtonColumn CommandName="Select" HeaderText="Read &amp; Reply" Text="Click Here"></asp:ButtonColumn>
-                                <asp:ButtonColumn CommandName="Delete" HeaderText="Delete" Text="Delete Message"></asp:ButtonColumn>
+                                <asp:BoundField DataField="date" DataFormatString="{0:d}" HeaderText="Date" NullDisplayText="No Message Found" />
+                                <asp:BoundField DataField="from_id" HeaderText="From Id" NullDisplayText="No Message Found" />
+                                <asp:BoundField DataField="subject" HeaderText="Subject" NullDisplayText="No Message Found" />
+                                <asp:TemplateField HeaderText="Read Mail">
+                                    <ItemTemplate>
+                                        <asp:LinkButton ID="btn_Download" runat="server" CssClass="btn" BackColor="#343A40" BorderStyle="None" ForeColor="White" CommandArgument='<%# Eval("mid") %>' CommandName="ReadReply" >
+                                        <i class="fa fa-reply" aria-hidden="true"></i> Read & Reply
+                                        </asp:LinkButton>
+                                    </ItemTemplate>
+                                </asp:TemplateField>
+                                <asp:TemplateField HeaderText="Delete Mail">
+                                    <ItemTemplate>
+                                        <asp:LinkButton ID="btn_Download0" runat="server" CssClass="btn" BackColor="#343A40" BorderStyle="None" ForeColor="White" CommandArgument='<%# Eval("mid") %>' CommandName="DeleteMsg" >
+                                        <i class="fa fa-trash" aria-hidden="true"></i> Delete
+                                        </asp:LinkButton>
+                                    </ItemTemplate>
+                                </asp:TemplateField>
                             </Columns>
                             <FooterStyle BackColor="#CCCCCC" />
                             <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />
                             <PagerStyle BackColor="#999999" ForeColor="Black" HorizontalAlign="Center" />
-                            <SelectedItemStyle BackColor="#000099" Font-Bold="True" ForeColor="White" />
-                        </asp:DataGrid>
+                            <SelectedRowStyle BackColor="#000099" Font-Bold="True" ForeColor="White" />
+                            <SortedAscendingCellStyle BackColor="#F1F1F1" />
+                            <SortedAscendingHeaderStyle BackColor="#808080" />
+                            <SortedDescendingCellStyle BackColor="#CAC9C9" />
+                            <SortedDescendingHeaderStyle BackColor="#383838" />
+                        </asp:GridView>
                     </td>
                     <td>&nbsp;</td>
                 </tr>

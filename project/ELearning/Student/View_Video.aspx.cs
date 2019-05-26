@@ -19,6 +19,7 @@ namespace ELearning.Student
         {
             if (!IsPostBack)
             {
+                objstud.Doctype = "VideoTutorials";
                 DataTable dtSubject = new DataTable();
                 dtSubject = objstud.FetchSubject();
                 if (dtSubject.Rows.Count > 0)
@@ -35,6 +36,7 @@ namespace ELearning.Student
         protected void DdlSubject_SelectedIndexChanged(object sender, EventArgs e)
         {
             objstud.Subject = DdlSubject.SelectedItem.Text.ToString();
+            objstud.Doctype = "VideoTutorials";
             DataTable dtTopic = new DataTable();
             dtTopic = objstud.FetchTopic();
             if (dtTopic.Rows.Count > 0)

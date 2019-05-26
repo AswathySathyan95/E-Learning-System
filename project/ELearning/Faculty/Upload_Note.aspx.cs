@@ -27,13 +27,13 @@ namespace ELearning.Faculty
                     ddlDepartment.DataValueField = "B_Id";
                     ddlDepartment.DataBind();
                 }
-                ddlDepartment.Items.Insert(0, new ListItem("---Select---", "0"));
+                ddlDepartment.Items.Insert(0,"---Select---");
             }
         }
 
         protected void ddlDepartment_SelectedIndexChanged(object sender, EventArgs e)
         {
-            objFclty.NDept = ddlDepartment.SelectedItem.Text.ToString();
+            objFclty.NDept = ddlDepartment.SelectedValue.ToString();
             DataTable dtSubject = new DataTable();
             dtSubject = objFclty.FetchSubject();
             if (dtSubject.Rows.Count > 0)

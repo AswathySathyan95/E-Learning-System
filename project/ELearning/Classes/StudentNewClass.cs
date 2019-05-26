@@ -56,7 +56,8 @@ namespace ELearning.Classes
         {
             OpenConnection();
             DataTable dtSubject = new DataTable();
-            SqlCommand command = new SqlCommand("Select distinct Subject from Uploaded_Document", con);
+            SqlCommand command = new SqlCommand("Select distinct Subject from Uploaded_Document where Status='Verified' and Doc_Type=@type", con);
+            command.Parameters.AddWithValue("@type", doctype);
             SqlDataAdapter da = new SqlDataAdapter(command);// this will query your database and return the result to your datatable
             da.Fill(dtSubject);
             CloseConnection();
@@ -67,8 +68,9 @@ namespace ELearning.Classes
         {
             OpenConnection();
             DataTable dtTopic = new DataTable();
-            SqlCommand command = new SqlCommand("Select distinct Topic from Uploaded_Document where Subject=@sub", con);
+            SqlCommand command = new SqlCommand("Select distinct Topic from Uploaded_Document where Subject=@sub and Status='Verified' and Doc_Type=@type", con);
             command.Parameters.AddWithValue("@sub", subject);
+            command.Parameters.AddWithValue("@type", doctype);
             SqlDataAdapter da = new SqlDataAdapter(command);// this will query your database and return the result to your datatable
             da.Fill(dtTopic);
             CloseConnection();

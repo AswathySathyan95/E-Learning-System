@@ -17,13 +17,13 @@ namespace ELearning.Admin
         AdminClass objAdm = new AdminClass();
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+
         }
 
         protected void downloadfile_Click(object sender, EventArgs e)
         {
-            
-            
+
+
         }
 
         protected void btnApprove_Click(object sender, EventArgs e)
@@ -47,7 +47,7 @@ namespace ELearning.Admin
                 GvDocument.DataBind();
             }
         }
-     
+
         protected void GvDocument_RowCommand(object sender, GridViewRowEventArgs e)
         {
             if (e.Row.RowType == DataControlRowType.DataRow)
@@ -65,7 +65,7 @@ namespace ELearning.Admin
 
         protected void GvDocument_RowCommand(object sender, GridViewCommandEventArgs e)
         {
-           if (e.CommandName == "downloadDoc")
+            if (e.CommandName == "downloadDoc")
             {
                 string filename = e.CommandArgument.ToString();
                 Response.Redirect(filename);

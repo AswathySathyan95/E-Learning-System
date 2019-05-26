@@ -61,7 +61,7 @@ namespace ELearning.Faculty
 
         protected void DdlDepartment_SelectedIndexChanged(object sender, EventArgs e)
         {
-            objFclty.NDept = DdlDepartment.SelectedItem.Text.ToString();
+            objFclty.NDept = DdlDepartment.SelectedValue.ToString();
             DataTable dtSubject = new DataTable();
             dtSubject = objFclty.FetchSubject();
             if (dtSubject.Rows.Count > 0)
@@ -71,7 +71,7 @@ namespace ELearning.Faculty
                 DdlSubject.DataValueField = "Sub_Id";
                 DdlSubject.DataBind();
             }
-            DdlSubject.Items.Insert(0, new ListItem("---Select---", "0"));
+            DdlSubject.Items.Insert(0,"---Select---");
         }
     }
 }

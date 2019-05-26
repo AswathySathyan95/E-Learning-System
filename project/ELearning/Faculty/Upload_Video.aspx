@@ -19,7 +19,7 @@
                                 </td>
                                 <td class="auto-style20">
                                     <strong>
-                                    <asp:Label ID="Label1" runat="server" Text="Department" ForeColor="Black" CssClass="auto-style18"></asp:Label>
+                                    <asp:Label ID="Label1" runat="server" Text="Course" ForeColor="Black" CssClass="auto-style18"></asp:Label>
                                     </strong>
                                 </td>
                                 <td class="auto-style21">

@@ -154,7 +154,7 @@ namespace ELearning.Classes
         {
             OpenConnection();
             DataTable dtSubject = new DataTable();
-            SqlCommand command = new SqlCommand("Select s.Sub_Id,s.Subject from Subject_Details s inner join Branch_Details b on s.Dept_Id=b.B_Id where b.Branch_Name='" + nDept + "'", con);
+            SqlCommand command = new SqlCommand("Select s.Sub_Id,s.Subject from Subject_Details s inner join Branch_Details b on s.B_Id=b.B_Id where b.B_Id='" + nDept + "'", con);
             SqlDataAdapter da = new SqlDataAdapter(command);// this will query your database and return the result to your datatable
             da.Fill(dtSubject);
             CloseConnection();

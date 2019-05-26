@@ -34,7 +34,7 @@
         <tr>
             <td class="auto-style3"></td>
             <td class="auto-style4"><strong>
-                <asp:Label ID="Label5" runat="server" Text="Department" Font-Size="Large" CssClass="auto-style10" Font-Bold="True" ForeColor="Black"></asp:Label>
+                <asp:Label ID="Label5" runat="server" Text="Course" Font-Size="Large" CssClass="auto-style10" Font-Bold="True" ForeColor="Black"></asp:Label>
                 </strong></td>
             <td class="auto-style4">
                 <asp:DropDownList ID="ddlDepartment" runat="server" OnSelectedIndexChanged="ddlDepartment_SelectedIndexChanged" AutoPostBack="True">

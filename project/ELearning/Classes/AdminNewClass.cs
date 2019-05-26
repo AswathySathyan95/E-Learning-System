@@ -46,6 +46,10 @@ namespace ELearning.Classes
         //Department
         private string department;
         private string prgmid;
+        //Course Registration
+        private string subjectDetail;
+        private int bid;
+
 
         public int Quizcount { get => quizcount; set => quizcount = value; }
         public int Qstn_count { get => qstn_count; set => qstn_count = value; }
@@ -63,6 +67,8 @@ namespace ELearning.Classes
         public string Usertype { get => usertype; set => usertype = value; }
         public string Department { get => department; set => department = value; }
         public string Prgmid { get => prgmid; set => prgmid = value; }
+        public string SubjectDetail { get => subjectDetail; set => subjectDetail = value; }
+        public int Bid { get => bid; set => bid = value; }
 
         //Get Quiz Count
         public int getCountQuiz()
@@ -312,6 +318,43 @@ namespace ELearning.Classes
             da.Fill(dtDept);
             CloseConnection();
             return dtDept;
+        }
+
+        //fetch Course
+        public DataTable FetchCourse()
+        {
+            OpenConnection();
+            DataTable dtCourse = new DataTable();
+            SqlCommand command = new SqlCommand("select * from Branch_Details", con);
+            SqlDataAdapter da = new SqlDataAdapter(command);
+            da.Fill(dtCourse);
+            CloseConnection();
+            return dtCourse;
+        }
+        //fetch Course
+        public DataTable CheckSubject()
+        {
+            OpenConnection();
+            DataTable dtSubject = new DataTable();
+            SqlCommand command = new SqlCommand("select * from Subject_Details where Subject=@sub and B_Id=@bid", con);
+            command.Parameters.AddWithValue("@sub", subjectDetail);
+            command.Parameters.AddWithValue("@bid", bid);
+            SqlDataAdapter da = new SqlDataAdapter(command);
+            da.Fill(dtSubject);
+            CloseConnection();
+            return dtSubject;
+        }
+
+        //Insert Subject Details
+        public void InsertSubject()
+        {
+            OpenConnection();
+            string qry = "insert into Subject_Details values(@subdet,@sbid)";
+            SqlCommand cmd = new SqlCommand(qry, con);
+            cmd.Parameters.AddWithValue("@sbid", bid);
+            cmd.Parameters.AddWithValue("@subdet", subjectDetail);
+            cmd.ExecuteNonQuery();
+            CloseConnection();
         }
     }
 }

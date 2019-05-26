@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Welcome SJCET ELEarning Portal</title>
+    <title>Welcome SJCET E-Learning Portal</title>
     <!-- Bootstrap core CSS-->
     <link href="~/assets/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom fonts for this template-->
@@ -47,7 +47,7 @@
                 </li>
                 
                 <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Question">
-                    <a class="nav-link" href="fa-reply.aspx">
+                    <a class="nav-link" href="Sent_Mail.aspx">
                         <i class="fa fa-question-circle"></i>
                         <span class="nav-link-text">Sent Mail</span>
                     </a>

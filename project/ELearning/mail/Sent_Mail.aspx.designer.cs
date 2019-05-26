@@ -13,12 +13,12 @@ namespace ELearning.mail {
     public partial class Sent_Mail {
         
         /// <summary>
-        /// GvSent control.
+        /// GVSentMail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GvSent;
+        protected global::System.Web.UI.WebControls.GridView GVSentMail;
     }
 }
