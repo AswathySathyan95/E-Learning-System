@@ -65,7 +65,7 @@ namespace ELearning.Admin
             objAdmReg.Pincode = Convert.ToInt32(txtPin.Text);
             objAdmReg.Doa = Convert.ToDateTime(txtDoa.Text.ToString());
             objAdmReg.Admsn_no = txtAdmsnNo.Text.ToString();
-            objAdmReg.Dept = ddlDept.SelectedItem.Text.ToString();
+            objAdmReg.Dept = ddlDept.SelectedValue.ToString();
             objAdmReg.F_name = txtFathername.Text.ToString();
             objAdmReg.Occupation = txtOccupation.Text.ToString();
             objAdmReg.Photo = Session["photopath"].ToString();

@@ -107,6 +107,17 @@ namespace ELearning.Classes
             CloseConnection();
             return dtCategory;
         }
+        //Fetch department
+        public DataTable DepartmentView()
+        {
+            OpenConnection();
+            DataTable dtDeptmnt = new DataTable();
+            SqlCommand command = new SqlCommand("Select * from Department_Details", con);
+            SqlDataAdapter da = new SqlDataAdapter(command);
+            da.Fill(dtDeptmnt);
+            CloseConnection();
+            return dtDeptmnt;
+        }
 
         //Fetch Questions
         public DataTable FetchQuestions()
@@ -193,7 +204,7 @@ namespace ELearning.Classes
         {
             OpenConnection();
             DataTable dtbranch = new DataTable();
-            SqlCommand command = new SqlCommand("Select distinct Branch from User_Details", con);
+            SqlCommand command = new SqlCommand("Select B_Id,Branch_Name from Branch_Details b join User_Details u on b.B_Id=u.Branch", con);
             SqlDataAdapter da = new SqlDataAdapter(command);
             da.Fill(dtbranch);
             CloseConnection();

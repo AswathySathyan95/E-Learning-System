@@ -23,8 +23,8 @@ namespace ELearning.Admin
                 if (dtbranch.Rows.Count > 0)
                 {
                     DdlBranch.DataSource = dtbranch;
-                    DdlBranch.DataTextField = "Branch";
-                    DdlBranch.DataValueField = "Branch";
+                    DdlBranch.DataTextField = "Branch_Name";
+                    DdlBranch.DataValueField = "B_Id";
                     DdlBranch.DataBind();
                 }
                 DdlBranch.Items.Insert(0, new ListItem("---Select---", "0"));
@@ -33,7 +33,7 @@ namespace ELearning.Admin
         
         public void BindDocument()
         {
-            objadm.Branch = DdlBranch.SelectedItem.Text.ToString();
+            objadm.Branch = DdlBranch.SelectedValue.ToString();
             objadm.Semester = DdlSemster.SelectedItem.Text.ToString();
             DataTable dtname = new DataTable();
             dtname = objadm.NameDetails();

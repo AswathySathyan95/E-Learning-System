@@ -130,6 +130,7 @@
     <Content Include="Admin\Department_Details.aspx" />
     <Content Include="Admin\Document_Verification.aspx" />
     <Content Include="Admin\Document_Verify.aspx" />
+    <Content Include="Admin\Edit.aspx" />
     <Content Include="Admin\ManageQueries.aspx" />
     <Content Include="Admin\Quiz_Report.aspx" />
     <Content Include="Admin\Registration.aspx" />
@@ -371,6 +372,13 @@
     </Compile>
     <Compile Include="Admin\Document_Verify.aspx.designer.cs">
       <DependentUpon>Document_Verify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Edit.aspx.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Edit.aspx.designer.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\ManageQueries.aspx.cs">
       <DependentUpon>ManageQueries.aspx</DependentUpon>

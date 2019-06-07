@@ -18,7 +18,7 @@ namespace ELearning.Admin
         AdminClass objAdmnReg = new AdminClass();
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["usertype"].ToString() == "Faculty" || Session["usertype"].ToString() == "Admin")
+            /*if (Session["usertype"].ToString() == "Faculty" || Session["usertype"].ToString() == "Admin")
             {
                 PanelExperience.Visible = true;
             }
@@ -27,7 +27,7 @@ namespace ELearning.Admin
                 BtnSubmit.Visible = true;
                 PanelExperience.Visible = false;
 
-            }
+            }*/
         }
 
         protected void BtnSaveQual_Click(object sender, EventArgs e)
@@ -44,12 +44,12 @@ namespace ELearning.Admin
             dtQual = objAdmnReg.QualificationDetails();
             if (dtQual.Rows.Count > 0)
             {
-                GvQual.Visible = true;
+                //GvQual.Visible = true;
                 GvQual.DataSource = dtQual;
                 GvQual.DataBind();
             }
             LblQual.Visible = true;
-            PanelQualification.Visible = false;
+           // PanelQualification.Visible = false;
         }
 
         protected void BtnAddQual_Click(object sender, EventArgs e)

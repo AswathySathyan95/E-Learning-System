@@ -2,29 +2,15 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="maincontent" runat="server">
     <table class="auto-style1">
         <tr>
-            <td>&nbsp;</td>
-            <td style="width: 311px">&nbsp;</td>
-            <td style="width: 677px">&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td style="height: 20px"></td>
-            <td class="auto-style22" colspan="3"><span class="newStyle1">Quiz Questions</span></td>
-            <td style="height: 20px"></td>
-        </tr>
-        <tr>
-            <td>&nbsp;</td>
-            <td style="width: 311px">
+            <td class="auto-style24">
                 <asp:ScriptManager ID="ScriptManager1" runat="server">
                 </asp:ScriptManager>
             </td>
-            <td style="width: 677px">&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
+            <td class="auto-style22" colspan="3"><span class="newStyle1">Quiz Questions</span></td>
+            <td class="auto-style23"></td>
         </tr>
         <tr>
-            <td>&nbsp;</td>
+            <td class="auto-style25">&nbsp;</td>
             <td style="width: 311px"><strong>
                 <asp:Label ID="Label1" runat="server" Text="Question Id"></asp:Label>
                 </strong></td>
@@ -35,7 +21,7 @@
             <td>&nbsp;</td>
         </tr>
         <tr>
-            <td style="height: 42px"></td>
+            <td class="auto-style26"></td>
             <td style="width: 311px; height: 42px"><strong>
                 <asp:Label ID="Label7" runat="server" Text="Category"></asp:Label>
                 </strong></td>
@@ -47,7 +33,7 @@
             <td style="height: 42px"></td>
         </tr>
         <tr>
-            <td style="height: 30px"></td>
+            <td class="auto-style27"></td>
             <td style="width: 311px; height: 30px;"><strong>
                 <asp:Label ID="Label8" runat="server" Text="Sub Category"></asp:Label>
                 </strong></td>
@@ -66,7 +52,7 @@
             <td style="height: 30px"></td>
         </tr>
         <tr>
-            <td>&nbsp;</td>
+            <td class="auto-style25">&nbsp;</td>
             <td style="width: 311px"><strong>
                 <asp:Label ID="Label2" runat="server" Text="Question"></asp:Label>
                 </strong></td>
@@ -77,7 +63,7 @@
             <td>&nbsp;</td>
         </tr>
         <tr>
-            <td class="auto-style2"></td>
+            <td class="auto-style28"></td>
             <td class="auto-style3"><strong>
                 <asp:Label ID="Label11" runat="server" Text="Options"></asp:Label>
                 </strong></td>
@@ -121,7 +107,7 @@
             <td class="auto-style2"></td>
         </tr>
         <tr>
-            <td class="auto-style8"></td>
+            <td class="auto-style32"></td>
             <td class="auto-style6">
                 <br />
                 <strong>
@@ -129,7 +115,7 @@
                 </strong>
                 <br />
             </td>
-            <td class="auto-style7">
+            <td class="auto-style33">
                 <br />
                 <asp:UpdatePanel ID="UpdatePanel2" runat="server">
                     <ContentTemplate>
@@ -160,11 +146,11 @@
 
                 <br />
             </td>
-            <td class="auto-style8"></td>
-            <td class="auto-style8"></td>
+            <td class="auto-style34"></td>
+            <td class="auto-style34"></td>
         </tr>
         <tr>
-            <td class="auto-style9"></td>
+            <td class="auto-style25"></td>
             <td class="auto-style10">
                 <strong>
                 <asp:Label ID="Label10" runat="server" Text="Description"></asp:Label>
@@ -173,11 +159,11 @@
             <td class="auto-style11">
                 <asp:TextBox ID="TxtDescription" runat="server" Height="82px" TextMode="MultiLine" Width="622px"></asp:TextBox>
             </td>
-            <td class="auto-style9"></td>
-            <td class="auto-style9"></td>
+            <td></td>
+            <td></td>
         </tr>
         <tr>
-            <td class="auto-style21"></td>
+            <td class="auto-style31"></td>
             <td class="auto-style13">
                 <br />
                 <br />
@@ -211,26 +197,14 @@
         }
         .auto-style6 {
             width: 311px;
-            height: 100px;
-        }
-        .auto-style7 {
-            width: 677px;
-            height: 100px;
-        }
-        .auto-style8 {
-            height: 100px;
-        }
-        .auto-style9 {
-            height: 10px;
+            height: 55px;
         }
         .auto-style10 {
             width: 311px;
-            height: 10px;
-        }
+            }
         .auto-style11 {
             width: 677px;
-            height: 10px;
-        }
+            }
         .auto-style13 {
             text-align: right;
             width: 311px;
@@ -244,7 +218,7 @@
             height: 82px;
         }
         .auto-style22 {
-            height: 20px;
+            height: 4px;
             text-align: center;
         }
         .newStyle1 {
@@ -252,6 +226,43 @@
             font-size: 50px;
             font-weight: bolder;
             color: #000080;
+        }
+        .auto-style23 {
+            height: 4px;
+        }
+        .auto-style24 {
+            height: 4px;
+            width: 216px;
+        }
+        .auto-style25 {
+            width: 216px;
+        }
+        .auto-style26 {
+            height: 42px;
+            width: 216px;
+        }
+        .auto-style27 {
+            height: 30px;
+            width: 216px;
+        }
+        .auto-style28 {
+            height: 121px;
+            width: 216px;
+        }
+        .auto-style31 {
+            height: 82px;
+            width: 216px;
+        }
+        .auto-style32 {
+            height: 55px;
+            width: 216px;
+        }
+        .auto-style33 {
+            width: 677px;
+            height: 55px;
+        }
+        .auto-style34 {
+            height: 55px;
         }
     </style>
 </asp:Content>

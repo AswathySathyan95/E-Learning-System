@@ -11,22 +11,22 @@
                         <asp:ScriptManager ID="ScriptManager1" runat="server">
                         </asp:ScriptManager>
                     </td>
-                    <td><strong>
-                        <asp:Label ID="Label1" runat="server" Text="Branch"></asp:Label>
+                    <td class="auto-style3"><strong>
+                        <asp:Label ID="Label1" runat="server" Text="Branch" Width="311px"></asp:Label>
                         </strong></td>
                     <td>
-                        <asp:DropDownList ID="DdlBranch" runat="server" AutoPostBack="True" OnSelectedIndexChanged="DdlBranch_SelectedIndexChanged">
+                        <asp:DropDownList ID="DdlBranch" runat="server" AutoPostBack="True" OnSelectedIndexChanged="DdlBranch_SelectedIndexChanged" Width="235px">
                         </asp:DropDownList>
                     </td>
                     <td>&nbsp;</td>
                 </tr>
                 <tr>
                     <td class="auto-style2">&nbsp;</td>
-                    <td><strong>
-                        <asp:Label ID="Label2" runat="server" Text="Semester"></asp:Label>
+                    <td class="auto-style3"><strong>
+                        <asp:Label ID="Label2" runat="server" Text="Semester" Width="279px"></asp:Label>
                         </strong></td>
                     <td>
-                        <asp:DropDownList ID="DdlSemster" runat="server" AutoPostBack="True" OnSelectedIndexChanged="DdlSemster_SelectedIndexChanged">
+                        <asp:DropDownList ID="DdlSemster" runat="server" AutoPostBack="True" OnSelectedIndexChanged="DdlSemster_SelectedIndexChanged" Width="235px">
                             <asp:ListItem>---Select---</asp:ListItem>
                             <asp:ListItem>1</asp:ListItem>
                             <asp:ListItem>2</asp:ListItem>
@@ -42,7 +42,7 @@
                 </tr>
                 <tr>
                     <td class="auto-style2">&nbsp;</td>
-                    <td>&nbsp;</td>
+                    <td class="auto-style3">&nbsp;</td>
                     <td>
                         &nbsp;</td>
                     <td>&nbsp;</td>
@@ -52,7 +52,7 @@
                     <td colspan="2" rowspan="3">
                         <asp:UpdatePanel ID="UpdatePanel1" runat="server">
                             <ContentTemplate>
-                                <asp:GridView ID="GvDetails" runat="server" AllowPaging="true" AutoGenerateColumns="False" BackColor="White" BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px" CellPadding="3" ForeColor="Black" GridLines="Vertical" OnPageIndexChanging="GvDetailsPageIndexChanging" OnRowCommand="GvDetails_RowCommand" PageSize="10">
+                                <asp:GridView ID="GvDetails" runat="server" AllowPaging="true" AutoGenerateColumns="False" BackColor="White" BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px" CellPadding="3" ForeColor="Black" GridLines="Vertical" OnPageIndexChanging="GvDetailsPageIndexChanging" OnRowCommand="GvDetails_RowCommand" PageSize="10" Width="732px">
                                     <AlternatingRowStyle BackColor="#CCCCCC" />
                                     <Columns>
                                         <asp:BoundField DataField="User_Id" HeaderText="Student Id" />
@@ -109,6 +109,9 @@
         }
         .auto-style2 {
             width: 213px;
+        }
+        .auto-style3 {
+            width: 11px;
         }
     </style>
 

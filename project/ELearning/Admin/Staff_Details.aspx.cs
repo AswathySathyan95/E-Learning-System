@@ -15,11 +15,24 @@ namespace ELearning.Admin
         AdminNewClass objadm = new AdminNewClass();
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+            {
+                DataTable dtDeptmnt = new DataTable();
+                dtDeptmnt = objadm.DepartmentView();
+                if (dtDeptmnt.Rows.Count > 0)
+                {
+                    ddlDept.DataSource = dtDeptmnt;
+                    ddlDept.DataTextField = "Department";
+                    ddlDept.DataValueField = "Dept_Id";
+                    ddlDept.DataBind();
+                }
+                ddlDept.Items.Insert(0, "---Select---");
 
+            }
         }
         public void BindDocument()
         {
-            objadm.Dept = ddlDept.SelectedItem.Text.ToString();
+            objadm.Dept = ddlDept.SelectedValue.ToString();
             objadm.Usertype = "Faculty";
             DataTable dtname = new DataTable();
             dtname = objadm.FacultyNameDetails();

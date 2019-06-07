@@ -22,13 +22,13 @@ namespace ELearning.Student {
         protected global::System.Web.UI.ScriptManager ScriptManager1;
         
         /// <summary>
-        /// Lblpersonal control.
+        /// Label20 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Lblpersonal;
+        protected global::System.Web.UI.WebControls.Label Label20;
         
         /// <summary>
         /// PanelPersonal control.
@@ -238,13 +238,13 @@ namespace ELearning.Student {
         protected global::System.Web.UI.WebControls.Panel PanelAddress;
         
         /// <summary>
-        /// Label20 control.
+        /// Label2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label20;
+        protected global::System.Web.UI.WebControls.Label Label2;
         
         /// <summary>
         /// LblAddress control.

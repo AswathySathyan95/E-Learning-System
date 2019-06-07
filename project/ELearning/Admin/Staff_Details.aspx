@@ -16,6 +16,13 @@
         .auto-style3 {
             font-size: large;
         }
+        .auto-style4 {
+            width: 231px;
+            height: 50px;
+        }
+        .auto-style5 {
+            height: 50px;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="maincontent" runat="server">
@@ -26,27 +33,18 @@
 
             <table class="w-100">
                 <tr>
-                    <td class="auto-style2">
+                    <td class="auto-style4">
                         <asp:ScriptManager ID="ScriptManager1" runat="server">
                         </asp:ScriptManager>
                     </td>
-                    <td><strong>
+                    <td class="auto-style5"><strong>
                         <asp:Label ID="Label1" runat="server" CssClass="auto-style3" Text="Department"></asp:Label>
                         </strong></td>
-                    <td>
+                    <td class="auto-style5">
                 <asp:DropDownList ID="ddlDept" runat="server" AutoPostBack="True" OnSelectedIndexChanged="ddlDept_SelectedIndexChanged" style="height: 34px">
-                    <asp:ListItem>---Select---</asp:ListItem>
-                    <asp:ListItem>Civil Engineering</asp:ListItem>
-                    <asp:ListItem>Computer Science &amp; Engineering</asp:ListItem>
-                    <asp:ListItem>Electronics &amp; Communication Engineering</asp:ListItem>
-                    <asp:ListItem>ELectronics &amp; Instrumentation Engineering</asp:ListItem>
-                    <asp:ListItem>Electrical &amp; Electronics Engineering</asp:ListItem>
-                    <asp:ListItem>Mechanical Engineering</asp:ListItem>
-                    <asp:ListItem>Master of Computer Application</asp:ListItem>
-                    <asp:ListItem>Master of Business Administration</asp:ListItem>
                 </asp:DropDownList>
                     </td>
-                    <td>&nbsp;</td>
+                    <td class="auto-style5"></td>
                 </tr>
                 <tr>
                     <td class="auto-style2">&nbsp;</td>

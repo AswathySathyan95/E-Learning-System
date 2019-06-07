@@ -7,7 +7,7 @@
 
                 <table class="auto-style2">
                     <tr>
-                        <td>&nbsp;</td>
+                        <td class="auto-style3">&nbsp;</td>
                         <td><strong>
                         <asp:Label ID="Label1" runat="server" Text="Branch"></asp:Label>
                         </strong></td>
@@ -18,7 +18,7 @@
                         <td>&nbsp;</td>
                     </tr>
                     <tr>
-                        <td>&nbsp;</td>
+                        <td class="auto-style3">&nbsp;</td>
                         <td><strong>
                         <asp:Label ID="Label2" runat="server" Text="Semester"></asp:Label>
                             <br />
@@ -42,7 +42,7 @@
                         <td>&nbsp;</td>
                     </tr>
                     <tr>
-                        <td>&nbsp;</td>
+                        <td class="auto-style3">&nbsp;</td>
                         <td colspan="2" rowspan="2">
                             <asp:GridView ID="GvQuizReport" runat="server" AllowPaging="True" AutoGenerateColumns="False" BackColor="White" BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px" CellPadding="3" ForeColor="Black" GridLines="Vertical" OnPageIndexChanging="GvQuizReport_PageIndexChanging" OnRowCommand="GvQuizReport_RowCommand" PageSize="5" Width="1163px">
                                 <AlternatingRowStyle BackColor="#CCCCCC" />
@@ -71,7 +71,7 @@
                         <td>&nbsp;</td>
                     </tr>
                     <tr>
-                        <td>&nbsp;</td>
+                        <td class="auto-style3">&nbsp;</td>
                         <td>&nbsp;</td>
                     </tr>
                 </table>
@@ -94,6 +94,9 @@
         .auto-style2 {
             width: 100%;
             height: 178px;
+        }
+        .auto-style3 {
+            width: 61px;
         }
     </style>
 </asp:Content>
