@@ -14,7 +14,13 @@
             width: 838px;
         }
         .auto-style3 {
-            width: 311px;
+            width: 265px;
+        }
+        .auto-style4 {
+            font-size: large;
+        }
+        .auto-style5 {
+            width: 139px;
         }
     </style>
 </asp:Content>
@@ -28,14 +34,14 @@
             <table class="w-100">
                 <tr>
                     <td class="auto-style3">
-                        <asp:ScriptManager ID="ScriptManager1" runat="server">
-                        </asp:ScriptManager>
-                    </td>
+                        &nbsp;</td>
                     <td class="auto-style2">
                         <table class="w-100">
                             <tr>
                                 <td>
-                                    <asp:Label ID="Label1" runat="server" Text="Subject"></asp:Label>
+                                    <strong>
+                                    <asp:Label ID="Label1" runat="server" Text="Subject" CssClass="auto-style4"></asp:Label>
+                                    </strong>
                                 </td>
                                 <td>
                                     <asp:DropDownList ID="DdlQuerySub" runat="server" AutoPostBack="True" OnSelectedIndexChanged="DdlQuerySub_SelectedIndexChanged">
@@ -47,15 +53,27 @@
                     <td>&nbsp;</td>
                 </tr>
                 <tr>
-                    <td class="auto-style3">&nbsp;</td>
+                    <td class="auto-style3">
+                        <asp:ScriptManager ID="ScriptManager1" runat="server">
+                        </asp:ScriptManager>
+                    </td>
                     <td class="auto-style2">
+                        &nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        <table class="w-100">
+                            <tr>
+                                <td class="auto-style5">&nbsp;</td>
+                                <td>
                         <asp:UpdatePanel ID="UpdatePanel1" runat="server">
                             <ContentTemplate>
-                                <asp:GridView ID="GvQuery" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px" CellPadding="3" ForeColor="Black" GridLines="Vertical" AllowPaging="True" OnPageIndexChanging="GvQuery_PageIndexChanging" Width="811px" PageSize="5" OnRowCommand="GvQuery_RowCommand"> 
+                                <asp:GridView ID="GvQuery" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px" CellPadding="3" ForeColor="Black" GridLines="Vertical" AllowPaging="True" OnPageIndexChanging="GvQuery_PageIndexChanging" Width="796px" PageSize="5" OnRowCommand="GvQuery_RowCommand"> 
                                     <AlternatingRowStyle BackColor="#CCCCCC" />
                                     <Columns>
                                         <asp:BoundField DataField="QUser_Id" HeaderText="Posted by" Visible="False" />
-                                        <asp:BoundField DataField="Date" HeaderText="Posted On" />
+                                        <asp:BoundField DataField="Date" HeaderText="Posted On" DataFormatString="{0:d}" />
                                         <asp:BoundField DataField="Query" HeaderText="Query" />
                                         <asp:TemplateField HeaderText="Reply">
                                             <ItemTemplate>
@@ -79,8 +97,11 @@
                                 <asp:AsyncPostBackTrigger ControlID="DdlQuerySub" EventName="SelectedIndexChanged" />
                             </Triggers>
                         </asp:UpdatePanel>
+                                </td>
+                                <td>&nbsp;</td>
+                            </tr>
+                        </table>
                     </td>
-                    <td>&nbsp;</td>
                 </tr>
             </table>
 

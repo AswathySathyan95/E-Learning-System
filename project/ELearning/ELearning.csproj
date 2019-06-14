@@ -133,6 +133,7 @@
     <Content Include="Admin\Edit.aspx" />
     <Content Include="Admin\ManageQueries.aspx" />
     <Content Include="Admin\Quiz_Report.aspx" />
+    <Content Include="Admin\RegisterStaff.aspx" />
     <Content Include="Admin\Registration.aspx" />
     <Content Include="Admin\Reg_Home.aspx" />
     <Content Include="Admin\Reg_Qualification.aspx" />
@@ -160,6 +161,8 @@
     <Content Include="assets\font-awesome\css\font-awesome.min.css" />
     <Content Include="assets\font-awesome\fonts\fontawesome-webfont.svg" />
     <Content Include="assets\image\login.jpg" />
+    <Content Include="assets\image\Login1.jpg" />
+    <Content Include="assets\image\loginn.jpg" />
     <Content Include="assets\image\logo.png" />
     <Content Include="assets\js\bootstrap.bundle.js" />
     <Content Include="assets\js\bootstrap.bundle.min.js" />
@@ -191,6 +194,7 @@
     <Content Include="Faculty\DetailedStudDetails.aspx" />
     <Content Include="Faculty\FacultyHome.aspx" />
     <Content Include="Faculty\FAdd_Category.aspx" />
+    <Content Include="Faculty\Fadd_CategorySub.aspx" />
     <Content Include="Faculty\FAdd_Qstn.aspx" />
     <Content Include="Faculty\Quiz_Report.aspx" />
     <Content Include="Faculty\Reply_Query.aspx" />
@@ -394,6 +398,13 @@
     <Compile Include="Admin\Quiz_Report.aspx.designer.cs">
       <DependentUpon>Quiz_Report.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Admin\RegisterStaff.aspx.cs">
+      <DependentUpon>RegisterStaff.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\RegisterStaff.aspx.designer.cs">
+      <DependentUpon>RegisterStaff.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admin\Registration.aspx.cs">
       <DependentUpon>Registration.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -550,6 +561,13 @@
     </Compile>
     <Compile Include="Faculty\FAdd_Category.aspx.designer.cs">
       <DependentUpon>FAdd_Category.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Faculty\Fadd_CategorySub.aspx.cs">
+      <DependentUpon>Fadd_CategorySub.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Faculty\Fadd_CategorySub.aspx.designer.cs">
+      <DependentUpon>Fadd_CategorySub.aspx</DependentUpon>
     </Compile>
     <Compile Include="Faculty\FAdd_Qstn.aspx.cs">
       <DependentUpon>FAdd_Qstn.aspx</DependentUpon>

@@ -16,17 +16,25 @@ namespace ELearning.Admin
         AdminClass objAdmn = new AdminClass();
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            if (!IsPostBack)
+            {
+                DataTable dtCtgry = new DataTable();
+                dtCtgry = objAdmn.FetchCategory();
+                if (dtCtgry.Rows.Count > 0)
+                {
+                    DdlCategory.DataSource = dtCtgry;
+                    DdlCategory.DataTextField = "Category";
+                    DdlCategory.DataValueField = "C_Id";
+                    DdlCategory.DataBind();
+                }
+                DdlCategory.Items.Insert(0, new ListItem("---Select---", "0"));
+            }
         }
 
-        protected void DdlCategory_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
 
         protected void BtnSubctgry_Click(object sender, EventArgs e)
         {
-            PanelSubctgry.Visible = true;
+            PanelSubCtgry.Visible = true;
             DataTable dtCtgry = new DataTable();
             dtCtgry = objAdmn.FetchCategory();
             if (dtCtgry.Rows.Count > 0)
@@ -38,11 +46,7 @@ namespace ELearning.Admin
                 DdlCategory.DataBind();
             }
         }
-
-        protected void BtnSaveCtgry_Click(object sender, EventArgs e)
-        {
-            
-        }
+        
 
         protected void BtnSubSave_Click(object sender, EventArgs e)
         {
@@ -55,8 +59,6 @@ namespace ELearning.Admin
                 string src = Server.MapPath("~/CategoryImage") + "/" + subpname + ".JPG";
                 FuSubctgry.PostedFile.SaveAs(src);
                 string picsub = "~/CategoryImage/" + subpname + ".JPG";
-               // ImgSubCtgry.Visible = true;
-               // ImgSubCtgry.ImageUrl = picsub;
                 ViewState["subcgry"] = picsub;
             }
             else
@@ -72,17 +74,8 @@ namespace ELearning.Admin
             objAdmn.InsertSubCategory();
             Response.Write("<script LANGUAGE='JavaScript' >alert('Details added successfully!!!!')</script>");
             TxtSubctgry.Text = "";
-           // ImgSubCtgry.ImageUrl = "";
         }
-        protected void BtnSave_Click(object sender, EventArgs e)
-        {
-
-        }
-        protected void BtnAddCategory_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        
         protected void BtnSaveCategory_Click(object sender, EventArgs e)
         {
             //Setting image path
@@ -118,23 +111,31 @@ namespace ELearning.Admin
         {
             objAdmn.Ctgry_check = TxtCtgry.Text.ToString();
             DataTable dtChkCategory = new DataTable();
-            dtChkCategory=objAdmn.CheckCategory();
-            if(dtChkCategory.Rows.Count>0)
+            dtChkCategory = objAdmn.CheckCategory();
+            if (dtChkCategory.Rows.Count > 0)
             {
                 LblCtgry.Visible = true;
                 TxtCtgry.Text = "";
+            }
+            else
+            {
+                LblCtgry.Visible = false;
             }
         }
 
         protected void TxtSubctgry_TextChanged(object sender, EventArgs e)
         {
-            objAdmn.Ctgry_check = TxtSubctgry.Text.ToString();
+            objAdmn.Subctgry_check = TxtSubctgry.Text.ToString();
             DataTable dtChkSubCategory = new DataTable();
-            dtChkSubCategory = objAdmn.CheckCategory();
+            dtChkSubCategory = objAdmn.CheckSubCategory();
             if (dtChkSubCategory.Rows.Count > 0)
             {
                 LblSubCtgry.Visible = true;
                 TxtSubctgry.Text = "";
+            }
+            else
+            {
+                LblSubCtgry.Visible = false;
             }
         }
     }

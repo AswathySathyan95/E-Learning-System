@@ -23,7 +23,7 @@ namespace ELearning.Admin
                 LblName.Text = dtDetails.Rows[0]["Name"].ToString();
                 LblGender.Text = dtDetails.Rows[0]["Gender"].ToString();
                 LblMob.Text = dtDetails.Rows[0]["Mobile_No"].ToString();
-                LblDob.Text = dtDetails.Rows[0]["Dob"].ToString();
+                LblDob.Text = (Convert.ToDateTime(dtDetails.Rows[0]["Dob"].ToString()).ToShortDateString()).ToString();
                 LblEmail.Text = dtDetails.Rows[0]["Email_Id"].ToString();
                 LblBlood.Text = dtDetails.Rows[0]["Blood_Group"].ToString();
                 LblReligion.Text = dtDetails.Rows[0]["Religion"].ToString();
@@ -37,7 +37,7 @@ namespace ELearning.Admin
                 LblFname.Text = dtDetails.Rows[0]["Father_Name"].ToString();
                 LblFMob.Text = dtDetails.Rows[0]["F_Mob_No"].ToString();
                 LblOccupation.Text = dtDetails.Rows[0]["Occupation"].ToString();
-                Lbldoa.Text = dtDetails.Rows[0]["Joining_Date"].ToString();
+                Lbldoa.Text = (Convert.ToDateTime(dtDetails.Rows[0]["Joining_Date"].ToString()).ToShortDateString()).ToString();
                 lblprogram.Text = dtDetails.Rows[0]["Admitted_Program"].ToString();
                 lbldept.Text = dtDetails.Rows[0]["Department"].ToString();
                 lbladmsnno.Text = dtDetails.Rows[0]["Admission_No"].ToString();

@@ -24,8 +24,8 @@ namespace ELearning.Faculty
                 if(dtbranch.Rows.Count>0)
                 {
                     DdlBranch.DataSource = dtbranch;
-                    DdlBranch.DataTextField = "Branch";
-                    DdlBranch.DataValueField = "Branch";
+                    DdlBranch.DataTextField = "Branch_Name";
+                    DdlBranch.DataValueField = "B_Id";
                     DdlBranch.DataBind();
                 }
                 DdlBranch.Items.Insert(0, new ListItem("---Select---", "0"));
@@ -39,7 +39,7 @@ namespace ELearning.Faculty
         }
         public void BindDocument()
         {
-            objFclty.Branch = DdlBranch.SelectedItem.Text.ToString();
+            objFclty.Branch = DdlBranch.SelectedValue.ToString();
             objFclty.Semseter = DdlSemster.SelectedItem.Text.ToString();
             DataTable dtname = new DataTable();
             dtname = objFclty.NameDetails();

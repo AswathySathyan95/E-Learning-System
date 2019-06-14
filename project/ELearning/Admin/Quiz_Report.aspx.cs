@@ -24,8 +24,8 @@ namespace ELearning.Admin
                 if (dtbranch.Rows.Count > 0)
                 {
                     DdlBranch.DataSource = dtbranch;
-                    DdlBranch.DataTextField = "Branch";
-                    DdlBranch.DataValueField = "Branch";
+                    DdlBranch.DataTextField = "Branch_Name";
+                    DdlBranch.DataValueField = "B_Id";
                     DdlBranch.DataBind();
                 }
                 DdlBranch.Items.Insert(0, "---Select---");

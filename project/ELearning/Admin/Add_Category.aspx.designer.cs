@@ -13,6 +13,15 @@ namespace ELearning.Admin {
     public partial class Add_Category {
         
         /// <summary>
+        /// LblCategory control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LblCategory;
+        
+        /// <summary>
         /// ScriptManager1 control.
         /// </summary>
         /// <remarks>
@@ -20,6 +29,15 @@ namespace ELearning.Admin {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.ScriptManager ScriptManager1;
+        
+        /// <summary>
+        /// PanelCategory control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel PanelCategory;
         
         /// <summary>
         /// Label1 control.
@@ -85,22 +103,31 @@ namespace ELearning.Admin {
         protected global::System.Web.UI.WebControls.Button BtnSaveCategory;
         
         /// <summary>
-        /// BtnSubctgry control.
+        /// CollapsiblePanelExtender1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtnSubctgry;
+        protected global::AjaxControlToolkit.CollapsiblePanelExtender CollapsiblePanelExtender1;
         
         /// <summary>
-        /// PanelSubctgry control.
+        /// LblSubCatgy control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel PanelSubctgry;
+        protected global::System.Web.UI.WebControls.Label LblSubCatgy;
+        
+        /// <summary>
+        /// PanelSubCtgry control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel PanelSubCtgry;
         
         /// <summary>
         /// Label3 control.
@@ -121,13 +148,13 @@ namespace ELearning.Admin {
         protected global::System.Web.UI.WebControls.DropDownList DdlCategory;
         
         /// <summary>
-        /// Label4 control.
+        /// Label7 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label4;
+        protected global::System.Web.UI.WebControls.Label Label7;
         
         /// <summary>
         /// TxtSubctgry control.
@@ -157,13 +184,13 @@ namespace ELearning.Admin {
         protected global::System.Web.UI.WebControls.Label LblSubCtgry;
         
         /// <summary>
-        /// Label5 control.
+        /// Label8 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label5;
+        protected global::System.Web.UI.WebControls.Label Label8;
         
         /// <summary>
         /// FuSubctgry control.
@@ -182,5 +209,14 @@ namespace ELearning.Admin {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button BtnSubSave;
+        
+        /// <summary>
+        /// CollapsiblePanelExtender2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.CollapsiblePanelExtender CollapsiblePanelExtender2;
     }
 }

@@ -14,9 +14,10 @@
 
         .auto-style11 {
             color: #000000;
+            margin-right: 0px;
         }
         .auto-style12 {
-            width: 243px;
+            width: 260px;
         }
         .newStyle9 {
             font-family: "colonna MT";
@@ -25,22 +26,27 @@
             color: #000080;
         }
 
+        .auto-style13 {
+            text-align: left;
+            width: 172px;
+        }
+
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="maincontent" runat="server">
     <div class="auto-style1">
         <div class="text-center">
 
-            <span class="newStyle9">Quiz Details</span><table class="w-100">
+            <span class="newStyle9">&nbsp; Quiz Details</span><table class="w-100">
                 <tr>
                     <td class="auto-style12"></td>
-                    <td class="text-left"><strong>
-                        <asp:Label ID="Label8" runat="server" CssClass="auto-style11" Text="Category"></asp:Label>
+                    <td class="auto-style13"><strong>
+                        <asp:Label ID="Label8" runat="server" CssClass="auto-style11" Text="Category" Width="170px"></asp:Label>
                         <br />
                         </strong>
                         <br /></td>
                     <td class="text-left">
-                        <asp:DropDownList ID="DdlCategory" runat="server" AutoPostBack="True" Width="117px" OnSelectedIndexChanged="DdlCategory_SelectedIndexChanged">
+                        <asp:DropDownList ID="DdlCategory" runat="server" AutoPostBack="True" Width="355px" OnSelectedIndexChanged="DdlCategory_SelectedIndexChanged">
                         </asp:DropDownList>
                         <br />
                         <br /></td>
@@ -53,8 +59,8 @@
                 <AlternatingRowStyle BackColor="#CCCCCC" />
                 <Columns>
                     <asp:BoundField DataField="Date" HeaderText="Date" DataFormatString="{0:d}" />
-                    <asp:BoundField DataField="Start_Time" HeaderText="Start Time" DataFormatString="{0:T}" />
-                    <asp:BoundField DataField="End_Time" HeaderText="End Time" DataFormatString="{0:T}" />
+                    <asp:BoundField DataField="Start_Time" HeaderText="Start Time" DataFormatString="{0:t}" />
+                    <asp:BoundField DataField="End_Time" HeaderText="End Time" DataFormatString="{0:t}" />
                     <asp:BoundField DataField="Attended_Qusers" HeaderText="No. Of Questions Attended" />
                     <asp:BoundField DataField="Correct_Answer" HeaderText="Correct Answers" />
                     <asp:BoundField DataField="Incorrect_Answer" HeaderText="No. of Wrong Answers" />

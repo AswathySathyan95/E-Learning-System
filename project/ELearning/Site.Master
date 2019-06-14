@@ -17,7 +17,7 @@
 
     <style type="text/css">
         .auto-style1 {
-            height: 30px;
+            height: 31px;
             background-color: #343A40;
         }
         .auto-style2 {
@@ -25,6 +25,8 @@
         }
         .auto-style3 {
             font-size: medium;
+            background-color: #FFFFFF;
+            height: 35px;
         }
         .auto-style4 {
             float: left;
@@ -33,6 +35,9 @@
             font-size: 18px;
             line-height: 20px;
             color: #FFFFFF;
+        }
+        .auto-style5 {
+            color: #000000;
         }
     </style>
 
@@ -89,7 +94,7 @@
         </div>
         <div id="footerr" class="auto-style1">
             <footer>
-                <p class="auto-style3"><strong>&copy;</strong><span class="auto-style2"> <strong> <%: DateTime.Now.Year %> SjcetElearningPortal.com</strong></span></p>
+                <p class="auto-style3"><span class="auto-style5"><strong>&nbsp; &copy;</strong></span><span class="auto-style2"> </span> <strong> <span class="auto-style5"> <%: DateTime.Now.Year %> </span><span class="auto-style2"> <span class="auto-style5"> SjcetElearningPortal.com</span></span></strong></p>
             </footer>
         </div>
         

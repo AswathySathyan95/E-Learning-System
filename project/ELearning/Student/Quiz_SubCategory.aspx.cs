@@ -26,8 +26,9 @@ namespace ELearning.Student
                     ImageButton img = new ImageButton();
                     img.ID = dtSubCategory.Rows[i]["SubCat_Id"].ToString();
                     img.ImageUrl = dtSubCategory.Rows[i]["Image"].ToString();
-                    img.Width=Unit.Pixel(300);
-                    img.Height = Unit.Pixel(200);                   
+                    img.Width=Unit.Pixel(350);
+                    img.Height = Unit.Pixel(200);
+                    img.Style.Add("padding", "25px");
                     img.Click += new ImageClickEventHandler(img_Click);
                     PanelSubCtgry.Controls.Add(img);
                 }

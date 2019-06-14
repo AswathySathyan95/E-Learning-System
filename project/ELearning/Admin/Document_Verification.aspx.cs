@@ -33,7 +33,7 @@ namespace ELearning.Admin
             string firstCellText = row.Cells[0].Text;
             objAdm.Doc_id = firstCellText;
             objAdm.UpdateTable();
-            BindDocument();
+            //BindDocument();
         }
 
         private void BindDocument()

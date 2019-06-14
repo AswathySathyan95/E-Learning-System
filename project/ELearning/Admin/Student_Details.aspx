@@ -15,7 +15,7 @@
                         <asp:Label ID="Label1" runat="server" Text="Branch" Width="311px"></asp:Label>
                         </strong></td>
                     <td>
-                        <asp:DropDownList ID="DdlBranch" runat="server" AutoPostBack="True" OnSelectedIndexChanged="DdlBranch_SelectedIndexChanged" Width="235px">
+                        <asp:DropDownList ID="DdlBranch" runat="server" OnSelectedIndexChanged="DdlBranch_SelectedIndexChanged" Width="235px">
                         </asp:DropDownList>
                     </td>
                     <td>&nbsp;</td>

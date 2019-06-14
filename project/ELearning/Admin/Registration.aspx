@@ -13,9 +13,9 @@
             <td>&nbsp;</td>
         </tr>
         <tr>
-            <td style="color: #FF0000; width: 33px">&nbsp;</td>
-            <td colspan="6" style="color: #FF0000"><strong>&nbsp; All Fields marked with * are Mandatory</strong></td>
-            <td style="color: #FF0000">&nbsp;</td>
+            <td style="color: #FF0000; " class="auto-style2"></td>
+            <td colspan="6" style="color: #FF0000" class="auto-style3"><strong>&nbsp; All Fields marked with * are Mandatory</strong></td>
+            <td style="color: #FF0000" class="auto-style3"></td>
         </tr>
         <tr>
             <td style="width: 33px">&nbsp;</td>
@@ -209,22 +209,22 @@
             </td>
         </tr>
         <tr>
-            <td style="width: 33px">&nbsp;</td>
-            <td>
+            <td class="auto-style4"></td>
+            <td class="auto-style5">
                 <asp:Label ID="Label15" runat="server" Text="House No. /House Name"></asp:Label>
             </td>
-            <td>
+            <td class="auto-style5">
                 <asp:TextBox ID="txtAddress" runat="server"></asp:TextBox>
             </td>
-            <td>
+            <td class="auto-style5">
                 <asp:Label ID="Label16" runat="server" Text="Street"></asp:Label>
             </td>
-            <td>
+            <td class="auto-style5">
                 <asp:TextBox ID="txtStreet" runat="server"></asp:TextBox>
             </td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
+            <td class="auto-style5"></td>
+            <td class="auto-style5"></td>
+            <td class="auto-style5"></td>
         </tr>
         <tr>
             <td style="width: 33px; height: 22px;"></td>
@@ -296,7 +296,7 @@
                 <asp:Label ID="Label20" runat="server" Text="Pin Code"></asp:Label>
             </td>
             <td style="height: 22px">
-                <asp:TextBox ID="txtPin" runat="server" OnTextChanged="txtPin_TextChanged"></asp:TextBox>
+                <asp:TextBox ID="txtPin" runat="server" ></asp:TextBox>
             </td>
             <td style="height: 22px"></td>
             <td style="height: 22px"></td>
@@ -482,6 +482,20 @@
         font-weight: bolder;
         color: #000080;
     }
+        .auto-style2 {
+            width: 33px;
+            height: 32px;
+        }
+        .auto-style3 {
+            height: 32px;
+        }
+        .auto-style4 {
+            width: 33px;
+            height: 36px;
+        }
+        .auto-style5 {
+            height: 36px;
+        }
     </style>
 </asp:Content>
 

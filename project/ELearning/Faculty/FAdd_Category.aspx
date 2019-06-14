@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Faculty/FacultyMaster.master" AutoEventWireup="true" CodeBehind="FAdd_Category.aspx.cs" Inherits="ELearning.Faculty.FAdd_Category" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="maincontent" runat="server">
-       <div id="maincontent" style="height: 566px">
+       <div id="maincontent" class="auto-style2">
         <div id="heading" class="text-center" style="font-family: 'Tw Cen MT'">
             <br />
             <strong><em><span style="font-size: xx-large; color: #003399; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Quiz Category</span></em></strong>
@@ -179,6 +179,9 @@
         .auto-style1 {
             height: 473px;
             width: 1408px;
+        }
+        .auto-style2 {
+            height: 566px;
         }
     </style>
 </asp:Content>

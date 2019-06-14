@@ -52,7 +52,7 @@
                     </a>
                 </li>
                 <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Category">
-                    <a class="nav-link" href="FAdd_Category.aspx">
+                    <a class="nav-link" href="Fadd_CategorySub.aspx">
                          <i class="fa fa-folder-o" aria-hidden="true"></i>
                          <span class="nav-link-text">Quiz Category</span>
                     </a>

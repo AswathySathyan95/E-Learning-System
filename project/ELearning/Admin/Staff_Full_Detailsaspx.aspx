@@ -378,7 +378,7 @@
     </div>
     <div id="collapseFive">
       <div class="card-body">
-        <asp:Panel ID="PanelExperience" runat="server" SuppressPostBack="true" Width="1053px">
+        <asp:Panel ID="PanelExperience" runat="server" SuppressPostBack="true" Width="1075px">
                 <asp:GridView ID="GvExperience" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px" CellPadding="3" CssClass="auto-style32" ForeColor="Black" GridLines="Vertical" Width="1041px">
                                 <AlternatingRowStyle BackColor="#CCCCCC" />
                                 <Columns>
@@ -386,8 +386,8 @@
                                     <asp:BoundField DataField="User_Id" HeaderText="User_Id" Visible="False" />
                                     <asp:BoundField DataField="Organization_Worked" HeaderText="Organization Worked      " />
                                     <asp:BoundField DataField="Designation" HeaderText="Designation" />
-                                    <asp:BoundField DataField="From_Date" HeaderText="Wroked From" />
-                                    <asp:BoundField DataField="To_Date" HeaderText="Worked Till" />
+                                    <asp:BoundField DataField="From_Date" HeaderText="Wroked From" DataFormatString="{0:d}" />
+                                    <asp:BoundField DataField="To_Date" HeaderText="Worked Till" DataFormatString="{0:d}" />
                                     <asp:BoundField DataField="Duration" HeaderText="Duration" />
                                 </Columns>
                                 <FooterStyle BackColor="#CCCCCC" />

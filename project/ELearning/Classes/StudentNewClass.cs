@@ -96,7 +96,8 @@ namespace ELearning.Classes
         {
             OpenConnection();
             DataTable dtSubject = new DataTable();
-            SqlCommand command = new SqlCommand("Select Subject from Subject_Details", con);
+            SqlCommand command = new SqlCommand("Select s.Sub_Id,s.Subject from Subject_Details s join User_Details u on u.Branch=s.B_Id where u.User_Id=@uid", con);
+            command.Parameters.AddWithValue("@uid", userid);
             SqlDataAdapter da = new SqlDataAdapter(command);// this will query your database and return the result to your datatable
             da.Fill(dtSubject);
             CloseConnection();
@@ -212,5 +213,7 @@ namespace ELearning.Classes
             CloseConnection();
             return dtReplyQ;
         }
+       
+
     }
 }

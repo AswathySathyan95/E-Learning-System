@@ -17,8 +17,8 @@ namespace ELearning.Student
         {
             int c_ans= objStud.Correct_Answer();
             objStud.User_id= Session["u_id"].ToString();
-            objStud.Start_time =Convert.ToDateTime(Session["start_time"].ToString());
-            objStud.End_time = Convert.ToDateTime(Session["end_time"].ToString());
+            objStud.Start_time =(Convert.ToDateTime(Session["start_time"].ToString())).ToShortTimeString();
+            objStud.End_time = (Convert.ToDateTime(Session["end_time"].ToString())).ToShortTimeString();
             objStud.Quiz_date =Convert.ToString(System.DateTime.Now.ToShortDateString());
             objStud.Subctgry= Session["subcategory"].ToString();
             objStud.Correct_ans = objStud.Correct_Answer();
@@ -27,7 +27,7 @@ namespace ELearning.Student
             objStud.Score= objStud.Correct_Answer();
             double per = (c_ans / 25)*100;
             objStud.Percent = per;
-            TimeSpan diff = objStud.End_time.Subtract(objStud.Start_time);
+            TimeSpan diff =Convert.ToDateTime(objStud.End_time).Subtract(Convert.ToDateTime(objStud.Start_time));
             ViewState["timetaken"] = diff.Minutes + ":" + diff.Seconds;
             LblTime.Text = ViewState["timetaken"].ToString();
             LblAttempted.Text = objStud.Attended.ToString();

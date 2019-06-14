@@ -7,26 +7,26 @@
         <div>
             <table class="w-100">
                 <tr>
-                    <td class="auto-style2">
+                    <td class="auto-style4">
                         <asp:ScriptManager ID="ScriptManager1" runat="server">
                         </asp:ScriptManager>
                     </td>
-                    <td><strong>
+                    <td class="auto-style5"><strong>
                         <asp:Label ID="Label1" runat="server" Text="Branch"></asp:Label>
                         </strong></td>
-                    <td>
-                        <asp:DropDownList ID="DdlBranch" runat="server" AutoPostBack="True" OnSelectedIndexChanged="DdlBranch_SelectedIndexChanged">
+                    <td class="auto-style6">
+                        <asp:DropDownList ID="DdlBranch" runat="server" OnSelectedIndexChanged="DdlBranch_SelectedIndexChanged" Width="350px">
                         </asp:DropDownList>
                     </td>
-                    <td>&nbsp;</td>
+                    <td class="auto-style6"></td>
                 </tr>
                 <tr>
                     <td class="auto-style2">&nbsp;</td>
-                    <td><strong>
+                    <td class="auto-style3"><strong>
                         <asp:Label ID="Label2" runat="server" Text="Semester"></asp:Label>
                         </strong></td>
                     <td>
-                        <asp:DropDownList ID="DdlSemster" runat="server" AutoPostBack="True" OnSelectedIndexChanged="DdlSemster_SelectedIndexChanged">
+                        <asp:DropDownList ID="DdlSemster" runat="server" AutoPostBack="True" OnSelectedIndexChanged="DdlSemster_SelectedIndexChanged" Width="350px">
                             <asp:ListItem>---Select---</asp:ListItem>
                             <asp:ListItem>1</asp:ListItem>
                             <asp:ListItem>2</asp:ListItem>
@@ -42,17 +42,20 @@
                 </tr>
                 <tr>
                     <td class="auto-style2">&nbsp;</td>
-                    <td>&nbsp;</td>
+                    <td class="auto-style3">&nbsp;</td>
                     <td>
                         &nbsp;</td>
                     <td>&nbsp;</td>
                 </tr>
                 <tr>
-                    <td class="auto-style2">&nbsp;</td>
-                    <td colspan="2" rowspan="3">
+                    <td colspan="4">
+                        <table class="w-100">
+                            <tr>
+                                <td class="auto-style7">&nbsp;</td>
+                                <td>
                         <asp:UpdatePanel ID="UpdatePanel1" runat="server">
                             <ContentTemplate>
-                                <asp:GridView ID="GvDetails" runat="server" AllowPaging="true" AutoGenerateColumns="False" BackColor="White" BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px" CellPadding="3" ForeColor="Black" GridLines="Vertical" OnPageIndexChanging="GvDetailsPageIndexChanging" OnRowCommand="GvDetails_RowCommand" PageSize="10">
+                                <asp:GridView ID="GvDetails" runat="server" AllowPaging="true" AutoGenerateColumns="False" BackColor="White" BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px" CellPadding="3" ForeColor="Black" GridLines="Vertical" OnPageIndexChanging="GvDetailsPageIndexChanging" OnRowCommand="GvDetails_RowCommand" PageSize="10" Width="770px">
                                     <AlternatingRowStyle BackColor="#CCCCCC" />
                                     <Columns>
                                         <asp:BoundField DataField="User_Id" HeaderText="Student Id" />
@@ -79,18 +82,13 @@
                                 <asp:AsyncPostBackTrigger ControlID="DdlSemster" EventName="SelectedIndexChanged" />
                             </Triggers>
                         </asp:UpdatePanel>
+                                </td>
+                                <td>&nbsp;</td>
+                            </tr>
+                        </table>
                     </td>
-                    <td>&nbsp;</td>
                 </tr>
-                <tr>
-                    <td class="auto-style2">&nbsp;</td>
-                    <td>&nbsp;</td>
-                </tr>
-                <tr>
-                    <td class="auto-style2">&nbsp;</td>
-                    <td>&nbsp;</td>
-                </tr>
-            </table>
+                </table>
 
         </div>
     </div>
@@ -109,6 +107,23 @@
         }
         .auto-style2 {
             width: 213px;
+        }
+        .auto-style3 {
+            width: 257px;
+        }
+        .auto-style4 {
+            width: 213px;
+            height: 63px;
+        }
+        .auto-style5 {
+            width: 257px;
+            height: 63px;
+        }
+        .auto-style6 {
+            height: 63px;
+        }
+        .auto-style7 {
+            width: 158px;
         }
     </style>
 

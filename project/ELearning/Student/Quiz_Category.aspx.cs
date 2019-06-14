@@ -18,15 +18,16 @@ namespace ELearning.Student
             DataTable dtCategory = new DataTable();
             dtCategory = objStudt.FetchCategory();
             int ctgy_count = dtCategory.Rows.Count;
-            if ( ctgy_count> 0)
+            if (ctgy_count> 0)
             {
                 for (int i = 0; i < ctgy_count; i++)
                 {
                     ImageButton img = new ImageButton();
                     img.ID = dtCategory.Rows[i]["C_Id"].ToString();
                     img.ImageUrl = dtCategory.Rows[i]["Image"].ToString();
-                    img.Width = Unit.Pixel(300);
+                    img.Width = Unit.Pixel(350);
                     img.Height = Unit.Pixel(200);
+                    img.Style.Add("padding", "25px");
                     img.Click += new ImageClickEventHandler(img_Click);
                     PanelCategory.Controls.Add(img);
                 }

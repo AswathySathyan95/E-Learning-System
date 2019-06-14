@@ -18,8 +18,9 @@ namespace ELearning.Student
         {
             if (!IsPostBack)
             {
+                objstud.Userid = Session["u_id"].ToString();
                 DataTable dtSubject = new DataTable();
-                dtSubject = objstud.FetchSubject();
+                dtSubject = objstud.SubjectDetails();
                 if (dtSubject.Rows.Count > 0)
                 {
                     DdlSubject.DataSource = dtSubject;

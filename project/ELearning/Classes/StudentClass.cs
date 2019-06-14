@@ -38,8 +38,8 @@ namespace ELearning.Classes
         private string quiz_id;
         private string quiz_date;
         private string subctgry;
-        private DateTime start_time;
-        private DateTime end_time;
+        private string start_time;
+        private string end_time;
         private Int32 correct_ans;
         private Int32 wrong_ans;
         private Int32 attended;
@@ -72,9 +72,9 @@ namespace ELearning.Classes
         public int Crctans { get => crctans; set => crctans = value; }
         public int Wrngans { get => wrngans; set => wrngans = value; }
         public int Attend { get => attend; set => attend = value; }
-        public DateTime Start_time { get => start_time; set => start_time = value; }
-        public DateTime End_time { get => end_time; set => end_time = value; }
         public int Quizcount { get => quizcount; set => quizcount = value; }
+        public string Start_time { get => start_time; set => start_time = value; }
+        public string End_time { get => end_time; set => end_time = value; }
 
         //Fetching Sub category from the table Quiz_Category
         public DataTable FetchSubCategory()
@@ -227,8 +227,8 @@ namespace ELearning.Classes
             cmd.Parameters.AddWithValue("@cuserid", user_id);
             cmd.Parameters.AddWithValue("@cdate", quiz_date);
             cmd.Parameters.AddWithValue("@csub", subctgry);
-            cmd.Parameters.AddWithValue("@stime", start_time);
-            cmd.Parameters.AddWithValue("@etime", end_time);
+            cmd.Parameters.AddWithValue("@stime", Start_time);
+            cmd.Parameters.AddWithValue("@etime", End_time);
             cmd.Parameters.AddWithValue("@cans", correct_ans);
             cmd.Parameters.AddWithValue("@wans", wrong_ans);
             cmd.Parameters.AddWithValue("@cattend", attended);

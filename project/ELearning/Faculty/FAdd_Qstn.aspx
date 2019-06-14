@@ -2,20 +2,19 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="maincontent" runat="server">
     <table class="auto-style1">
         <tr>
-            <td class="auto-style24">
+            <td class="auto-style23" colspan="5">
+                <span class="newStyle1">Quiz Questions</span></td>
+        </tr>
+        <tr>
+            <td class="auto-style25">
                 <asp:ScriptManager ID="ScriptManager1" runat="server">
                 </asp:ScriptManager>
             </td>
-            <td class="auto-style22" colspan="3"><span class="newStyle1">Quiz Questions</span></td>
-            <td class="auto-style23"></td>
-        </tr>
-        <tr>
-            <td class="auto-style25">&nbsp;</td>
             <td style="width: 311px"><strong>
                 <asp:Label ID="Label1" runat="server" Text="Question Id"></asp:Label>
                 </strong></td>
             <td style="width: 677px">
-                <asp:TextBox ID="TxtQ_Id" runat="server"></asp:TextBox>
+                <asp:TextBox ID="TxtQ_Id" runat="server" Width="138px" BorderStyle="None"></asp:TextBox>
             </td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
@@ -26,7 +25,7 @@
                 <asp:Label ID="Label7" runat="server" Text="Category"></asp:Label>
                 </strong></td>
             <td style="height: 42px; width: 677px;">
-                <asp:DropDownList ID="DdlCategory" runat="server" AutoPostBack="True" OnSelectedIndexChanged="DdlCategory_SelectedIndexChanged" Height="25px" Width="222px">
+                <asp:DropDownList ID="DdlCategory" runat="server" AutoPostBack="True" OnSelectedIndexChanged="DdlCategory_SelectedIndexChanged" Height="25px" Width="300px">
                 </asp:DropDownList>
             </td>
             <td style="height: 42px"></td>
@@ -40,7 +39,7 @@
             <td style="width: 677px; height: 30px;">
                 <asp:UpdatePanel ID="UpdatePanel1" runat="server">
                     <ContentTemplate>
-                        <asp:DropDownList ID="DdlSubcategory" runat="server" Height="25px" Width="224px">
+                        <asp:DropDownList ID="DdlSubcategory" runat="server" Height="25px" Width="300px">
                         </asp:DropDownList>
                     </ContentTemplate>
                     <Triggers>
@@ -57,7 +56,7 @@
                 <asp:Label ID="Label2" runat="server" Text="Question"></asp:Label>
                 </strong></td>
             <td style="width: 677px">
-                <asp:TextBox ID="TxtQuestion" runat="server" Height="76px" TextMode="MultiLine" Width="628px"></asp:TextBox>
+                <asp:TextBox ID="TxtQuestion" runat="server" Height="76px" TextMode="MultiLine" Width="620px"></asp:TextBox>
             </td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
@@ -122,10 +121,10 @@
                        
                         <table class="nav-justified" style="width: 95%; height: 77px">
                             <tr>
-                                <td style="height: 25px">
+                                <td class="auto-style35">
                                     <asp:RadioButton ID="RbOptnA" runat="server" GroupName="ca" Text="A" />
                                 </td>
-                                <td style="height: 25px">
+                                <td class="auto-style35">
                                     <asp:RadioButton ID="RbOptnB" runat="server" GroupName="ca" Text="B" />
                                 </td>
                             </tr>
@@ -143,8 +142,6 @@
                         <asp:AsyncPostBackTrigger ControlID="TxtOptn4" EventName="TextChanged" />
                     </Triggers>
                 </asp:UpdatePanel>
-
-                <br />
             </td>
             <td class="auto-style34"></td>
             <td class="auto-style34"></td>
@@ -157,7 +154,7 @@
                 </strong>
                 </td>
             <td class="auto-style11">
-                <asp:TextBox ID="TxtDescription" runat="server" Height="82px" TextMode="MultiLine" Width="622px"></asp:TextBox>
+                <asp:TextBox ID="TxtDescription" runat="server" Height="82px" TextMode="MultiLine" Width="620px"></asp:TextBox>
             </td>
             <td></td>
             <td></td>
@@ -217,10 +214,6 @@
         .auto-style21 {
             height: 82px;
         }
-        .auto-style22 {
-            height: 4px;
-            text-align: center;
-        }
         .newStyle1 {
             font-family: "Colonna MT";
             font-size: 50px;
@@ -229,33 +222,30 @@
         }
         .auto-style23 {
             height: 4px;
-        }
-        .auto-style24 {
-            height: 4px;
-            width: 216px;
+            text-align: center;
         }
         .auto-style25 {
-            width: 216px;
+            width: 193px;
         }
         .auto-style26 {
             height: 42px;
-            width: 216px;
+            width: 193px;
         }
         .auto-style27 {
             height: 30px;
-            width: 216px;
+            width: 193px;
         }
         .auto-style28 {
             height: 121px;
-            width: 216px;
+            width: 193px;
         }
         .auto-style31 {
             height: 82px;
-            width: 216px;
+            width: 193px;
         }
         .auto-style32 {
             height: 55px;
-            width: 216px;
+            width: 193px;
         }
         .auto-style33 {
             width: 677px;
@@ -263,6 +253,9 @@
         }
         .auto-style34 {
             height: 55px;
+        }
+        .auto-style35 {
+            height: 25px;
         }
     </style>
 </asp:Content>

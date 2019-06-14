@@ -46,20 +46,20 @@
             <tr>
                 <td class="auto-style2">&nbsp;</td>
                 <td colspan="2" rowspan="2">
-                    <asp:GridView ID="GvDocument" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px" CellPadding="3" ForeColor="Black" GridLines="Vertical" OnRowCommand="GvDocument_RowCommand" AllowPaging="True" PageSize="5" OnPageIndexChanging="GvDocument_PageIndexChanging" Width="1079px">
+                    <asp:GridView ID="GvDocument" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px" CellPadding="3" ForeColor="Black" GridLines="Vertical" AllowPaging="True" PageSize="5" OnPageIndexChanging="GvDocument_PageIndexChanging" Width="1079px">
                         <AlternatingRowStyle BackColor="#CCCCCC" />
                         <Columns>
                             <asp:BoundField DataField="Doc_Id" HeaderText="Doc_Id" Visible="False" />
                             <asp:BoundField DataField="Subject" HeaderText="Subject" />
                             <asp:BoundField DataField="Topic" HeaderText="Topic" />
                             <asp:BoundField DataField="Description" HeaderText="Document Description" />
-                            <asp:TemplateField HeaderText="View Document">
-                                <ItemTemplate>
-                                    <asp:LinkButton ID="btn_Download" runat="server" CssClass="btn" BackColor="#343A40" BorderStyle="None" ForeColor="White" CommandArgument='<%# Eval("Document_File") %>' CommandName="downloadDoc"  >
-                                    <i class="fa fa-angle-right" aria-hidden="true"></i> View
-                                    </asp:LinkButton>
-                                </ItemTemplate>
-                            </asp:TemplateField>
+                            <asp:TemplateField HeaderText="Download">
+                                            <ItemTemplate>
+                                               <asp:LinkButton ID="btn_Download" runat="server" CssClass="btn" BackColor="#343A40" BorderStyle="None" ForeColor="White" CommandArgument='<%# Eval("Document_File") %>' CommandName="downloadDoc"  >
+                                            <i class="fa fa-download" aria-hidden="true"></i> Download
+                                            </asp:LinkButton>
+                                            </ItemTemplate>
+                                        </asp:TemplateField>
                             <asp:TemplateField HeaderText="Verification">
                                 <ItemTemplate>
                                     <asp:HiddenField ID="hdnApp" runat="server" Value='<%# Eval("Status") %>' />

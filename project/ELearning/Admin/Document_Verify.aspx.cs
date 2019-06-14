@@ -26,7 +26,7 @@ namespace ELearning.Admin
             string firstCellText = row.Cells[0].Text;
             objAdm.Doc_id = firstCellText;
             objAdm.UpdateTable();
-            BindDocument();
+            //BindDocument();
         }
 
         private void BindDocument()
@@ -40,7 +40,7 @@ namespace ELearning.Admin
                 GvDocument.DataBind();
             }
         }
-        protected void GvDocument_RowCommand(object sender, GridViewRowEventArgs e)
+        protected void GvDocument_RowCommand(object sender, GridViewRowEventArgs e, GridViewCommandEventArgs c)
         {
             if (e.Row.RowType == DataControlRowType.DataRow)
             {
@@ -53,15 +53,13 @@ namespace ELearning.Admin
                     (e.Row.FindControl("Button1") as Button).Enabled = false;
                 }
             }
-        }
-        protected void GvDocument_RowCommand(object sender, GridViewCommandEventArgs e)
-        {
-            if (e.CommandName == "downloadDoc")
+            if (c.CommandName == "downloadDoc")
             {
-                string filename = e.CommandArgument.ToString();
+                string filename = c.CommandArgument.ToString();
                 Response.Redirect(filename);
             }
         }
+        
         protected void GvDocument_PageIndexChanging(object sender, GridViewPageEventArgs e)
         {
             GvDocument.PageIndex = e.NewPageIndex;

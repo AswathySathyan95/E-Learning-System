@@ -143,7 +143,7 @@ namespace ELearning.Classes
         {
             OpenConnection();
             DataTable dtbranch = new DataTable();
-            SqlCommand command = new SqlCommand("Select distinct Branch from User_Details where Department=@deptmnt", con);
+            SqlCommand command = new SqlCommand("Select B_Id,Branch_Name from Branch_Details b join User_Details u on b.B_Id=u.Branch", con);
             command.Parameters.AddWithValue("@deptmnt", dept);
             SqlDataAdapter da = new SqlDataAdapter(command);
             da.Fill(dtbranch);

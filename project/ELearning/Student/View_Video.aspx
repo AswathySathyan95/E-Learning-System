@@ -10,12 +10,9 @@
         .auto-style1 {
             height: 32px;
         }
-        .auto-style2 {
-             width: 296px;
-         }
         .auto-style3 {
             height: 32px;
-            width: 296px;
+            width: 158px;
         }
          .auto-style4 {
              text-align: center;
@@ -24,6 +21,23 @@
          .auto-style5 {
              color: #000000;
          }
+        .auto-style6 {
+            width: 190px;
+        }
+        .auto-style7 {
+            width: 158px;
+        }
+        .auto-style8 {
+            width: 158px;
+            height: 35px;
+        }
+        .auto-style9 {
+            width: 190px;
+            height: 35px;
+        }
+        .auto-style10 {
+            height: 35px;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="maincontent" runat="server">
@@ -31,27 +45,27 @@
 
         <table class="w-100">
             <tr>
-                <td class="auto-style4" colspan="4"><span class="newStyle1">View Video Tutorials</span></td>
+                <td class="auto-style4" colspan="4"><span class="newStyle1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; View Video Tutorials</span></td>
             </tr>
             <tr>
-                <td class="auto-style2">
+                <td class="auto-style8">
                     <asp:ScriptManager ID="ScriptManager1" runat="server">
                     </asp:ScriptManager>
                 </td>
-                <td>
+                <td class="auto-style9">
                     <strong>
                     <asp:Label ID="Label1" runat="server" Text="Subject" CssClass="auto-style5"></asp:Label>
                     </strong>
                 </td>
-                <td>
-                    <asp:DropDownList ID="DdlSubject" runat="server" AutoPostBack="True" OnSelectedIndexChanged="DdlSubject_SelectedIndexChanged">
+                <td class="auto-style10">
+                    <asp:DropDownList ID="DdlSubject" runat="server" AutoPostBack="True" OnSelectedIndexChanged="DdlSubject_SelectedIndexChanged" Width="350px">
                     </asp:DropDownList>
                 </td>
-                <td>&nbsp;</td>
+                <td class="auto-style10"></td>
             </tr>
             <tr>
-                <td class="auto-style2">&nbsp;</td>
-                <td>
+                <td class="auto-style7">&nbsp;</td>
+                <td class="auto-style6">
                     <strong>
                     <asp:Label ID="Label2" runat="server" Text="Topic" CssClass="auto-style5"></asp:Label>
                     </strong>
@@ -59,7 +73,7 @@
                 <td>
                     <asp:UpdatePanel ID="UpdatePanel1" runat="server">
                         <ContentTemplate>
-                            <asp:DropDownList ID="DdlTopic" runat="server" AutoPostBack="True" OnSelectedIndexChanged="DdlTopic_SelectedIndexChanged">
+                            <asp:DropDownList ID="DdlTopic" runat="server" AutoPostBack="True" OnSelectedIndexChanged="DdlTopic_SelectedIndexChanged" Width="350px">
                             </asp:DropDownList>
                         </ContentTemplate>
                         <Triggers>
@@ -70,7 +84,7 @@
                 <td>&nbsp;</td>
             </tr>
             <tr>
-                <td class="auto-style2">&nbsp;</td>
+                <td class="auto-style7">&nbsp;</td>
                 <td colspan="2" rowspan="6">
                     <asp:UpdatePanel ID="UpdatePanel2" runat="server">
                         <ContentTemplate>
@@ -106,19 +120,19 @@
                 <td>&nbsp;</td>
             </tr>
             <tr>
-                <td class="auto-style2">&nbsp;</td>
+                <td class="auto-style7">&nbsp;</td>
                 <td>&nbsp;</td>
             </tr>
             <tr>
-                <td class="auto-style2">&nbsp;</td>
+                <td class="auto-style7">&nbsp;</td>
                 <td>&nbsp;</td>
             </tr>
             <tr>
-                <td class="auto-style2">&nbsp;</td>
+                <td class="auto-style7">&nbsp;</td>
                 <td>&nbsp;</td>
             </tr>
             <tr>
-                <td class="auto-style2">&nbsp;</td>
+                <td class="auto-style7">&nbsp;</td>
                 <td>&nbsp;</td>
             </tr>
             <tr>
@@ -126,8 +140,8 @@
                 <td class="auto-style1"></td>
             </tr>
             <tr>
-                <td class="auto-style2">&nbsp;</td>
-                <td>&nbsp;</td>
+                <td class="auto-style7">&nbsp;</td>
+                <td class="auto-style6">&nbsp;</td>
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
             </tr>

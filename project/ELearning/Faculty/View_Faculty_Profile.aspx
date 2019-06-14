@@ -374,8 +374,8 @@
                                     <asp:BoundField DataField="User_Id" HeaderText="User_Id" Visible="False" />
                                     <asp:BoundField DataField="Organization_Worked" HeaderText="Organization Worked      " />
                                     <asp:BoundField DataField="Designation" HeaderText="Designation" />
-                                    <asp:BoundField DataField="From_Date" HeaderText="Wroked From" />
-                                    <asp:BoundField DataField="To_Date" HeaderText="Worked Till" />
+                                    <asp:BoundField DataField="From_Date" HeaderText="Wroked From" DataFormatString="{0:d}" />
+                                    <asp:BoundField DataField="To_Date" HeaderText="Worked Till" DataFormatString="{0:d}" />
                                     <asp:BoundField DataField="Duration" HeaderText="Duration" />
                                 </Columns>
                                 <FooterStyle BackColor="#CCCCCC" />
