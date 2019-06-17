@@ -368,10 +368,18 @@
         </tr>
         <tr>
             <td style="width: 33px">&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
+            <td>
+                        <asp:Label ID="Label27" runat="server" Text="Father Name"></asp:Label>
+                    </td>
+            <td>
+                        <asp:TextBox ID="txtFathername" runat="server"></asp:TextBox>
+                        </td>
+            <td>
+                        <asp:Label ID="Label28" runat="server" Text="Mobile No"></asp:Label>
+                    </td>
+            <td>
+                        <asp:TextBox ID="txtFMob" runat="server" ></asp:TextBox>
+                        </td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
@@ -379,23 +387,20 @@
         <tr>
             <td style="width: 33px">&nbsp;</td>
             <td colspan="7">
-                <asp:Label ID="Label26" runat="server" ForeColor="Black" style="font-weight: 700" Text="Guardian Details"></asp:Label>
-            </td>
+                        <asp:Label ID="Label29" runat="server" Text="Occupation"></asp:Label>
+                        <asp:TextBox ID="txtOccupation" runat="server" style="margin-bottom: 4"></asp:TextBox>
+                    </td>
         </tr>
         <tr>
             <td style="width: 33px">&nbsp;</td>
             <td>
-                <asp:Label ID="Label27" runat="server" Text="Father Name"></asp:Label>
-            </td>
+                &nbsp;</td>
             <td>
-                <asp:TextBox ID="txtFathername" runat="server"></asp:TextBox>
-            </td>
+                &nbsp;</td>
             <td>
-                <asp:Label ID="Label29" runat="server" Text="Occupation"></asp:Label>
-            </td>
+                &nbsp;</td>
             <td>
-                <asp:TextBox ID="txtOccupation" runat="server" style="margin-bottom: 4"></asp:TextBox>
-            </td>
+                &nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
@@ -403,11 +408,9 @@
         <tr>
             <td style="width: 33px">&nbsp;</td>
             <td>
-                <asp:Label ID="Label28" runat="server" Text="Mobile No"></asp:Label>
-            </td>
+                &nbsp;</td>
             <td>
-                <asp:TextBox ID="txtFMob" runat="server"></asp:TextBox>
-            </td>
+                &nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>

@@ -442,7 +442,7 @@
                   <asp:Button ID="btnRegister" runat="server" OnClick="btnRegister_Click" Style="font-weight: bold" Text="Save and Continue" Width="204px" />
               </strong></td>
               <td><strong>
-                  <asp:Button ID="btnClear" runat="server" Style="font-weight: bold" Text="Clear" Width="99px" />
+                  <asp:Button ID="btnClear" runat="server" Style="font-weight: bold" Text="Clear" Width="99px" OnClick="btnClear_Click" />
               </strong></td>
               <td>&nbsp;</td>
               <td>&nbsp;</td>

@@ -81,7 +81,7 @@
                       </tr>
                         <tr>
                             <td class="text-center" colspan="2" style="height: 26px"><strong>
-                                <asp:Button ID="BtnSaveQual" runat="server" CollapseControlID="BtnSaveQual" OnClick="BtnSaveQual_Click" style="font-weight: bold" Text="Save" Visible="False" Width="99px" />
+                                <asp:Button ID="BtnSaveQual" runat="server" CollapseControlID="BtnSaveQual" OnClick="BtnSaveQual_Click" style="font-weight: bold" Text="Save" Width="99px" />
                                 </strong></td>
                        </tr>
                       </table>
@@ -159,10 +159,10 @@
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td>
+                                            <td class="auto-style13">
                                                 <asp:Label ID="Label60" runat="server" style="font-weight: 700" Text="Designation"></asp:Label>
                                             </td>
-                                            <td>
+                                            <td class="auto-style13">
                                                 <asp:TextBox ID="TxtDesg" runat="server"></asp:TextBox>
                                             </td>
                                         </tr>
@@ -227,13 +227,12 @@
                             </td>
                         </tr>
                         <tr>
-                            <td class="text-center"><strong>
-                                <asp:Button ID="BtnSubmitAll" runat="server" Font-Size="Large" Height="42px" style="font-weight: bold" Text="Submit " Width="151px" OnClick="BtnSubmitAll_Click" />
-                                </strong></td>
+                            <td class="text-center">&nbsp;</td>
                         </tr>
                     </table>
                 </asp:Panel>
-                    &nbsp;</td>
+                    &nbsp;<strong __designer:mapid="28b"><asp:Button ID="BtnSubmitAll" runat="server" Font-Size="Large" Height="42px" style="font-weight: bold" Text="Submit " Width="151px" OnClick="BtnSubmitAll_Click" />
+                                </strong></td>
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
             </tr>
@@ -275,6 +274,9 @@
         }
         .auto-style12 {
             height: 49px;
+        }
+        .auto-style13 {
+            height: 36px;
         }
     </style>
 </asp:Content>

@@ -21,7 +21,7 @@ namespace ELearning.Admin
         protected void imgbtnFaculty_Click(object sender, ImageClickEventArgs e)
         {
             Session["usertype"] = "Faculty";
-            Response.Redirect("~/Admin/Registration.aspx");
+            Response.Redirect("~/Admin/RegisterStaff.aspx");
         }
 
         protected void imgbtnStudent_Click(object sender, ImageClickEventArgs e)
@@ -33,7 +33,7 @@ namespace ELearning.Admin
         protected void imgbtnAdmin_Click(object sender, ImageClickEventArgs e)
         {
             Session["usertype"] = "Admin";
-            Response.Redirect("~/Admin/Registration.aspx");
+            Response.Redirect("~/Admin/RegisterStaff.aspx");
         }
     }
 }

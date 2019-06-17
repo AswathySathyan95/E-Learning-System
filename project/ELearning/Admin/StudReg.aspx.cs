@@ -85,12 +85,7 @@ namespace ELearning.Admin
             objAdmReg.InsertDetails();
             Session["userid"] = objAdmReg.User_id;
             Session["utype"] = objAdmReg.User_type;
-            Response.Redirect("~/Admin/Reg_Qualification.aspx");
-        }
-
-        protected void Button1_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("~/Admin/StudReg.aspx");
+            Response.Redirect("~/Admin/Register_Qualification.aspx");
         }
 
         protected void ddlState_SelectedIndexChanged(object sender, EventArgs e)
@@ -143,7 +138,13 @@ namespace ELearning.Admin
 
         }
 
-        protected void ddlDept_SelectedIndexChanged(object sender, EventArgs e)
+        
+        protected void btnClear_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Admin/StudReg.aspx");
+        }
+
+        protected void ddlDept_SelectedIndexChanged1(object sender, EventArgs e)
         {
             objAdmReg.P_id = Convert.ToInt32(ddlProgram.SelectedValue.ToString());
             objAdmReg.Dept_id = Convert.ToInt32(ddlDept.SelectedValue.ToString());

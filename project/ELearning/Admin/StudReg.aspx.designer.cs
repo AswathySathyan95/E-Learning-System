@@ -22,13 +22,22 @@ namespace ELearning.Admin {
         protected global::System.Web.UI.ScriptManager ScriptManager1;
         
         /// <summary>
-        /// Label2 control.
+        /// Label20 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label2;
+        protected global::System.Web.UI.WebControls.Label Label20;
+        
+        /// <summary>
+        /// PanelPersonal control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel PanelPersonal;
         
         /// <summary>
         /// Label1 control.
@@ -40,13 +49,13 @@ namespace ELearning.Admin {
         protected global::System.Web.UI.WebControls.Label Label1;
         
         /// <summary>
-        /// Label34 control.
+        /// Label46 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label34;
+        protected global::System.Web.UI.WebControls.Label Label46;
         
         /// <summary>
         /// txtfname control.
@@ -164,6 +173,15 @@ namespace ELearning.Admin {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtMobNo;
+        
+        /// <summary>
+        /// imgPhoto control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image imgPhoto;
         
         /// <summary>
         /// Label6 control.
@@ -301,13 +319,13 @@ namespace ELearning.Admin {
         protected global::System.Web.UI.WebControls.Label Label12;
         
         /// <summary>
-        /// Label43 control.
+        /// Label47 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label43;
+        protected global::System.Web.UI.WebControls.Label Label47;
         
         /// <summary>
         /// fuPhoto control.
@@ -328,31 +346,40 @@ namespace ELearning.Admin {
         protected global::System.Web.UI.WebControls.Button BtnUploadd;
         
         /// <summary>
-        /// imgPhoto control.
+        /// CollapsiblePanelExtender1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image imgPhoto;
+        protected global::AjaxControlToolkit.CollapsiblePanelExtender CollapsiblePanelExtender1;
         
         /// <summary>
-        /// Label14 control.
+        /// LblAdd control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label14;
+        protected global::System.Web.UI.WebControls.Label LblAdd;
         
         /// <summary>
-        /// Label44 control.
+        /// Label49 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label44;
+        protected global::System.Web.UI.WebControls.Label Label49;
+        
+        /// <summary>
+        /// PanelAddress control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel PanelAddress;
         
         /// <summary>
         /// Label15 control.
@@ -454,13 +481,13 @@ namespace ELearning.Admin {
         protected global::System.Web.UI.WebControls.DropDownList ddlState;
         
         /// <summary>
-        /// Label20 control.
+        /// Label48 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label20;
+        protected global::System.Web.UI.WebControls.Label Label48;
         
         /// <summary>
         /// txtPin control.
@@ -472,22 +499,40 @@ namespace ELearning.Admin {
         protected global::System.Web.UI.WebControls.TextBox txtPin;
         
         /// <summary>
-        /// Label21 control.
+        /// CollapsiblePanelExtender2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label21;
+        protected global::AjaxControlToolkit.CollapsiblePanelExtender CollapsiblePanelExtender2;
         
         /// <summary>
-        /// Label45 control.
+        /// LblAddmission control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label45;
+        protected global::System.Web.UI.WebControls.Label LblAddmission;
+        
+        /// <summary>
+        /// Label50 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label50;
+        
+        /// <summary>
+        /// PanelAdmission control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel PanelAdmission;
         
         /// <summary>
         /// Label22 control.
@@ -607,13 +652,31 @@ namespace ELearning.Admin {
         protected global::System.Web.UI.WebControls.TextBox TxtSemester;
         
         /// <summary>
-        /// Label26 control.
+        /// CollapsiblePanelExtender3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label26;
+        protected global::AjaxControlToolkit.CollapsiblePanelExtender CollapsiblePanelExtender3;
+        
+        /// <summary>
+        /// LblGuardian control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LblGuardian;
+        
+        /// <summary>
+        /// PanelGuardian control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel PanelGuardian;
         
         /// <summary>
         /// Label27 control.
@@ -634,6 +697,24 @@ namespace ELearning.Admin {
         protected global::System.Web.UI.WebControls.TextBox txtFathername;
         
         /// <summary>
+        /// Label28 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label28;
+        
+        /// <summary>
+        /// txtFMob control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtFMob;
+        
+        /// <summary>
         /// Label29 control.
         /// </summary>
         /// <remarks>
@@ -652,22 +733,13 @@ namespace ELearning.Admin {
         protected global::System.Web.UI.WebControls.TextBox txtOccupation;
         
         /// <summary>
-        /// Label28 control.
+        /// CollapsiblePanelExtender4 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label28;
-        
-        /// <summary>
-        /// txtFMob control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtFMob;
+        protected global::AjaxControlToolkit.CollapsiblePanelExtender CollapsiblePanelExtender4;
         
         /// <summary>
         /// btnRegister control.

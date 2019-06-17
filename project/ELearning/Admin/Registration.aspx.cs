@@ -124,5 +124,7 @@ namespace ELearning.Admin
         {
             Response.Redirect("~/Admin/Registration.aspx");
         }
+
+        
     }
 }

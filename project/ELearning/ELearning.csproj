@@ -128,12 +128,11 @@
     <Content Include="Admin\AdminHome.aspx" />
     <Content Include="Admin\Course_Registration.aspx" />
     <Content Include="Admin\Department_Details.aspx" />
-    <Content Include="Admin\Document_Verification.aspx" />
-    <Content Include="Admin\Document_Verify.aspx" />
     <Content Include="Admin\Edit.aspx" />
     <Content Include="Admin\ManageQueries.aspx" />
     <Content Include="Admin\Quiz_Report.aspx" />
     <Content Include="Admin\RegisterStaff.aspx" />
+    <Content Include="Admin\Register_Qualification.aspx" />
     <Content Include="Admin\Registration.aspx" />
     <Content Include="Admin\Reg_Home.aspx" />
     <Content Include="Admin\Reg_Qualification.aspx" />
@@ -144,7 +143,7 @@
     <Content Include="Admin\StudReg.aspx" />
     <Content Include="Admin\Subject_Details.aspx" />
     <Content Include="Admin\Total_Questions.aspx" />
-    <Content Include="Admin\Verify_Document.aspx" />
+    <Content Include="Admin\Verification_Document.aspx" />
     <Content Include="Admin\View_Admin_profile.aspx" />
     <Content Include="Admin\View_Replies.aspx" />
     <Content Include="Admin\WebForm1.aspx" />
@@ -363,20 +362,6 @@
     <Compile Include="Admin\Department_Details.aspx.designer.cs">
       <DependentUpon>Department_Details.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\Document_Verification.aspx.cs">
-      <DependentUpon>Document_Verification.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Admin\Document_Verification.aspx.designer.cs">
-      <DependentUpon>Document_Verification.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\Document_Verify.aspx.cs">
-      <DependentUpon>Document_Verify.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Admin\Document_Verify.aspx.designer.cs">
-      <DependentUpon>Document_Verify.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Admin\Edit.aspx.cs">
       <DependentUpon>Edit.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -404,6 +389,13 @@
     </Compile>
     <Compile Include="Admin\RegisterStaff.aspx.designer.cs">
       <DependentUpon>RegisterStaff.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Register_Qualification.aspx.cs">
+      <DependentUpon>Register_Qualification.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Register_Qualification.aspx.designer.cs">
+      <DependentUpon>Register_Qualification.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\Registration.aspx.cs">
       <DependentUpon>Registration.aspx</DependentUpon>
@@ -475,12 +467,12 @@
     <Compile Include="Admin\Total_Questions.aspx.designer.cs">
       <DependentUpon>Total_Questions.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\Verify_Document.aspx.cs">
-      <DependentUpon>Verify_Document.aspx</DependentUpon>
+    <Compile Include="Admin\Verification_Document.aspx.cs">
+      <DependentUpon>Verification_Document.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\Verify_Document.aspx.designer.cs">
-      <DependentUpon>Verify_Document.aspx</DependentUpon>
+    <Compile Include="Admin\Verification_Document.aspx.designer.cs">
+      <DependentUpon>Verification_Document.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\View_Admin_profile.aspx.cs">
       <DependentUpon>View_Admin_profile.aspx</DependentUpon>
@@ -864,6 +856,35 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Word">
+      <Guid>{00020905-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>8</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

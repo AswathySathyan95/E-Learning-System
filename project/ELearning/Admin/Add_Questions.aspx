@@ -2,20 +2,13 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="maincontent" runat="server">
     <table class="auto-style1">
         <tr>
-            <td class="auto-style23"></td>
-            <td class="auto-style22">
+            <td class="auto-style30"></td>
+            <td class="auto-style2" colspan="3">
+                <span class="newStyle2">
                 <asp:ScriptManager ID="ScriptManager1" runat="server">
                 </asp:ScriptManager>
-            </td>
-            <td class="auto-style24"></td>
-            <td class="auto-style23"></td>
-            <td class="auto-style23"></td>
-        </tr>
-        <tr>
-            <td style="height: 20px"></td>
-            <td class="auto-style2" colspan="3">
-                <span class="newStyle2">QUIZ QUESTIONS</span></td>
-            <td style="height: 20px"></td>
+                QUIZ QUESTIONS</span></td>
+            <td class="auto-style30"></td>
         </tr>
         <tr>
             <td class="auto-style18"></td>
@@ -72,11 +65,11 @@
                 </strong></td>
         </tr>
         <tr>
-            <td class="auto-style6"></td>
-            <td class="auto-style7"><strong>
+            <td class="auto-style31"></td>
+            <td class="auto-style32"><strong>
                 <asp:Label ID="Label11" runat="server" Text="Options"></asp:Label>
                 </strong></td>
-            <td class="auto-style8">
+            <td class="auto-style33">
                     <table class="nav-justified" style="height: 85px" __designer:mapid="1b">
                         <tr __designer:mapid="1c">
                             <td class="modal-sm" style="width: 345px; height: 20px;" __designer:mapid="1d"><strong __designer:mapid="1e">
@@ -112,7 +105,7 @@
                         </tr>
                         </table>
                 </td>
-            <td class="auto-style6" colspan="2"><strong>
+            <td class="auto-style31" colspan="2"><strong>
                 <asp:Label ID="LblError" runat="server" ForeColor="Red" Text="Please Enter all Options" Visible="False"></asp:Label>
                 </strong></td>
         </tr>
@@ -126,7 +119,6 @@
                 <br />
             </td>
             <td class="auto-style29">
-                <br />
                 <asp:UpdatePanel ID="UpdatePanel2" runat="server">
                     <ContentTemplate>
                        
@@ -154,7 +146,6 @@
                     </Triggers>
                 </asp:UpdatePanel>
 
-                <br />
             </td>
             <td class="auto-style17" colspan="2"><strong>
                 <asp:Label ID="LblErrorAns" runat="server" ForeColor="Red" Text="Please Select Answer" Visible="False"></asp:Label>
@@ -172,13 +163,6 @@
             </td>
             <td style="height: 20px"></td>
             <td style="height: 20px"></td>
-        </tr>
-        <tr>
-            <td style="height: 20px">&nbsp;</td>
-            <td style="width: 311px; height: 20px;">&nbsp;</td>
-            <td class="auto-style16">&nbsp;</td>
-            <td style="height: 20px">&nbsp;</td>
-            <td style="height: 20px">&nbsp;</td>
         </tr>
         <tr>
             <td class="auto-style11"></td>
@@ -208,23 +192,12 @@
             height: 979px;
         }
         .auto-style2 {
-            height: 20px;
+            height: 97px;
             text-align: center;
             font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
             font-weight: bold;
             font-size: xx-large;
             color: #003399;
-        }
-        .auto-style6 {
-            height: 160px;
-        }
-        .auto-style7 {
-            width: 311px;
-            height: 160px;
-        }
-        .auto-style8 {
-            width: 647px;
-            height: 160px;
         }
         .auto-style10 {
             text-align: right;
@@ -273,27 +246,16 @@
             width: 647px;
             height: 45px;
         }
-    .auto-style22 {
-        width: 311px;
-        height: 41px;
-    }
-    .auto-style23 {
-        height: 41px;
-    }
-    .auto-style24 {
-        width: 647px;
-        height: 41px;
-    }
     .auto-style25 {
-        height: 147px;
-    }
+            height: 127px;
+        }
     .auto-style26 {
         width: 311px;
-        height: 147px;
+        height: 127px;
     }
     .auto-style27 {
         width: 647px;
-        height: 147px;
+        height: 127px;
     }
     .auto-style28 {
         width: 311px;
@@ -303,6 +265,20 @@
         height: 27px;
         width: 647px;
     }
+        .auto-style30 {
+            height: 97px;
+        }
+        .auto-style31 {
+            height: 124px;
+        }
+        .auto-style32 {
+            width: 311px;
+            height: 124px;
+        }
+        .auto-style33 {
+            width: 647px;
+            height: 124px;
+        }
     </style>
 </asp:Content>
 
