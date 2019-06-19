@@ -15,7 +15,12 @@
         <tr>
             <td>&nbsp;</td>
             <td>
-                <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+                <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False">
+                    <Columns>
+                        <asp:BoundField DataField="Name" HeaderText="Name" />
+                        <asp:BoundField DataField="Qualification" HeaderText="Qualification" />
+                    </Columns>
+                </asp:GridView>
             </td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
@@ -25,8 +30,7 @@
         <tr>
             <td>&nbsp;</td>
             <td>
-                <asp:Button ID="Button1" runat="server" BackColor="White" BorderStyle="None" Text="Button" />
-            </td>
+                &nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>

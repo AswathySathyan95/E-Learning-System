@@ -61,7 +61,6 @@ namespace ELearning.Admin
                 string filename = e.CommandArgument.ToString();
                 Response.Redirect(filename);
             }
-           
         }
       
         protected void GvDocument_RowDataBound(object sender, GridViewRowEventArgs e)

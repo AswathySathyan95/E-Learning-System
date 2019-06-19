@@ -65,7 +65,6 @@ namespace ELearning.Admin
             {
                 objAdmnQ.Answer = RbOptnD.Text.ToString();
             }
-                
             objAdmnQ.Q_id = TxtQ_Id.Text.ToString();
             objAdmnQ.Ctgy = DdlCategory.SelectedItem.ToString();
             objAdmnQ.Sub_catgy = DdlSubcategory.SelectedValue.ToString();
@@ -80,9 +79,7 @@ namespace ELearning.Admin
             objAdmnQ.Created_on = System.DateTime.Now.ToShortDateString();
             objAdmnQ.InsertQuestions();
             Response.Write("<script LANGUAGE='JavaScript' >alert('Details Added Successfully!!!')</script>");
-
             Response.Redirect("Add_Questions.aspx");
-
         }
 
         protected void TxtOptn4_TextChanged(object sender, EventArgs e)
@@ -98,8 +95,6 @@ namespace ELearning.Admin
                 RbOptnC.Text = TxtOptn3.Text.ToString();
                 RbOptnD.Text = TxtOptn4.Text.ToString();
             }
-            
-            
            /* RbOptnA.Visible = true;
             RbOptnB.Visible = true;
             RbOptnC.Visible = true;

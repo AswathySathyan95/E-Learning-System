@@ -31,6 +31,15 @@ namespace ELearning.Admin {
         protected global::System.Web.UI.HtmlControls.HtmlForm adminsmaster;
         
         /// <summary>
+        /// navbarDropdownMenuLink control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor navbarDropdownMenuLink;
+        
+        /// <summary>
         /// link_loginout control.
         /// </summary>
         /// <remarks>

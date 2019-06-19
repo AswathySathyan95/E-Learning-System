@@ -80,6 +80,11 @@ namespace ELearning.Student
                 string filename = e.CommandArgument.ToString();
                 Response.Redirect(filename);
             }
+            else if(e.CommandName== "AskDoubt")
+            {
+                Session["docid"] = e.CommandArgument.ToString();
+                Response.Redirect("Post_Queries.aspx");
+            }
         }
     }
 }

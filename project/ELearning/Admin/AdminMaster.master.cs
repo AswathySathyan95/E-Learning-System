@@ -12,8 +12,18 @@ namespace ELearning.Admin
 {
     public partial class AdminMaster : System.Web.UI.MasterPage
     {
+        AdminNewClass obj = new AdminNewClass();
         protected void Page_Load(object sender, EventArgs e)
         {
+
+           /* DataTable dtName = new DataTable();
+            obj.Userid = Session["u_id"].ToString();
+            dtName = obj.FetchName();
+            if(dtName.Rows.Count>0)
+            {
+                navbarDropdownMenuLink.Name = dtName.Rows[0]["Name"].ToString();
+            }*/
+            
             if (IsPostBack || !IsPostBack)
             {
                 HttpCookie usercookie = Request.Cookies["user_cookies"];

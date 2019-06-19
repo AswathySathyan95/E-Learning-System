@@ -7,25 +7,25 @@
 
                 <table class="auto-style2">
                     <tr>
-                        <td>&nbsp;</td>
+                        <td class="auto-style3">&nbsp;</td>
                         <td><strong>
                         <asp:Label ID="Label1" runat="server" Text="Branch"></asp:Label>
                         </strong></td>
                         <td>
-                        <asp:DropDownList ID="DdlBranch" runat="server" AutoPostBack="True">
+                        <asp:DropDownList ID="DdlBranch" runat="server" Width="150px">
                         </asp:DropDownList>
                         </td>
                         <td>&nbsp;</td>
                     </tr>
                     <tr>
-                        <td>&nbsp;</td>
+                        <td class="auto-style3">&nbsp;</td>
                         <td><strong>
                         <asp:Label ID="Label2" runat="server" Text="Semester"></asp:Label>
                             <br />
                             <br />
                         </strong></td>
                         <td>
-                        <asp:DropDownList ID="DdlSemster" runat="server" AutoPostBack="True" OnSelectedIndexChanged="DdlSemster_SelectedIndexChanged">
+                        <asp:DropDownList ID="DdlSemster" runat="server" AutoPostBack="True" OnSelectedIndexChanged="DdlSemster_SelectedIndexChanged" Width="150px">
                             <asp:ListItem>---Select---</asp:ListItem>
                             <asp:ListItem>1</asp:ListItem>
                             <asp:ListItem>2</asp:ListItem>
@@ -42,13 +42,12 @@
                         <td>&nbsp;</td>
                     </tr>
                     <tr>
-                        <td>&nbsp;</td>
-                        <td colspan="2" rowspan="2">
+                        <td colspan="4">
                             <asp:GridView ID="GvQuizReport" runat="server" AllowPaging="True" AutoGenerateColumns="False" BackColor="White" BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px" CellPadding="3" ForeColor="Black" GridLines="Vertical" OnPageIndexChanging="GvQuizReport_PageIndexChanging" PageSize="5" Width="1163px">
                                 <AlternatingRowStyle BackColor="#CCCCCC" />
                                 <Columns>
                                     <asp:BoundField DataField="Quiz_Id" HeaderText="Quiz_Id" />
-                                    <asp:BoundField DataField="User_Id" HeaderText="Student Id" />
+                                    <asp:BoundField DataField="Name" HeaderText="Student Name" />
                                     <asp:BoundField DataField="Date" DataFormatString="{0:d}" HeaderText="Date" />
                                     <asp:BoundField DataField="SubCategory" HeaderText="Quiz Category" />
                                     <asp:BoundField DataField="Start_Time" HeaderText="Start Time" />
@@ -68,13 +67,8 @@
                                 <SortedDescendingHeaderStyle BackColor="#383838" />
                             </asp:GridView>
                         </td>
-                        <td>&nbsp;</td>
                     </tr>
-                    <tr>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                    </tr>
-                </table>
+                    </table>
 
             </div>
     </div>
@@ -94,6 +88,9 @@
         .auto-style2 {
             width: 100%;
             height: 178px;
+        }
+        .auto-style3 {
+            width: 165px;
         }
     </style>
 </asp:Content>

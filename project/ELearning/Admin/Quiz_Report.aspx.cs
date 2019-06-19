@@ -39,7 +39,7 @@ namespace ELearning.Admin
 
         public void BindData()
         {
-            obj.Branch = DdlBranch.SelectedItem.Text.ToString();
+            obj.Branch = DdlBranch.SelectedValue.ToString();
             obj.Semester = DdlSemster.SelectedItem.Text.ToString();
             DataTable dtQuiz = new DataTable();
             dtQuiz = obj.QuizReport();

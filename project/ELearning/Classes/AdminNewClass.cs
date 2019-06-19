@@ -50,6 +50,7 @@ namespace ELearning.Classes
         private string subjectDetail;
         private int bid;
 
+        private string username;
 
         public int Quizcount { get => quizcount; set => quizcount = value; }
         public int Qstn_count { get => qstn_count; set => qstn_count = value; }
@@ -69,6 +70,7 @@ namespace ELearning.Classes
         public string Prgmid { get => prgmid; set => prgmid = value; }
         public string SubjectDetail { get => subjectDetail; set => subjectDetail = value; }
         public int Bid { get => bid; set => bid = value; }
+        public string Username { get => username; set => username = value; }
 
         //Get Quiz Count
         public int getCountQuiz()
@@ -299,7 +301,7 @@ namespace ELearning.Classes
         {
             OpenConnection();
             DataTable dtQuiz = new DataTable();
-            SqlCommand command = new SqlCommand("Select r.Quiz_Id,r.User_Id,r.Date,r.SubCategory,r.Start_Time,r.End_Time,r.Correct_Answer,r.Incorrect_Answer,r.Attended_Qusers,r.Total_Score from Quiz_Report r left join User_Details u on u.User_Id=r.User_Id where u.Branch=@sbranch and u.Semester=@sem", con);
+            SqlCommand command = new SqlCommand("Select r.Quiz_Id,u.Name,r.Date,r.SubCategory,r.Start_Time,r.End_Time,r.Correct_Answer,r.Incorrect_Answer,r.Attended_Qusers,r.Total_Score from Quiz_Report r left join User_Details u on u.User_Id=r.User_Id where u.Branch=@sbranch and u.Semester=@sem", con);
             command.Parameters.AddWithValue("@sbranch", branch);
             command.Parameters.AddWithValue("@sem", semester);
             SqlDataAdapter da = new SqlDataAdapter(command);
@@ -354,6 +356,19 @@ namespace ELearning.Classes
             da.Fill(dtSubject);
             CloseConnection();
             return dtSubject;
+        }
+
+        //fetch name
+        public DataTable FetchName()
+        {
+            OpenConnection();
+            DataTable dtName = new DataTable();
+            SqlCommand cmd = new SqlCommand("select Name from User_Details where User_Id=@urid", con);
+            cmd.Parameters.AddWithValue("@urid", userid);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dtName);
+            CloseConnection();
+            return dtName;
         }
 
         //Insert Subject Details

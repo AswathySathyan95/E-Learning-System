@@ -2,13 +2,13 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="maincontent" runat="server">
     <table class="auto-style1">
         <tr>
-            <td class="auto-style30"></td>
+            <td class="auto-style34"></td>
             <td class="auto-style2" colspan="3">
                 <span class="newStyle2">
                 <asp:ScriptManager ID="ScriptManager1" runat="server">
                 </asp:ScriptManager>
                 QUIZ QUESTIONS</span></td>
-            <td class="auto-style30"></td>
+            <td class="auto-style34"></td>
         </tr>
         <tr>
             <td class="auto-style18"></td>
@@ -192,7 +192,7 @@
             height: 979px;
         }
         .auto-style2 {
-            height: 97px;
+            height: 73px;
             text-align: center;
             font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
             font-weight: bold;
@@ -265,9 +265,6 @@
         height: 27px;
         width: 647px;
     }
-        .auto-style30 {
-            height: 97px;
-        }
         .auto-style31 {
             height: 124px;
         }
@@ -278,6 +275,9 @@
         .auto-style33 {
             width: 647px;
             height: 124px;
+        }
+        .auto-style34 {
+            height: 73px;
         }
     </style>
 </asp:Content>

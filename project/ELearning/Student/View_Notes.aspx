@@ -85,7 +85,13 @@
                                             </asp:LinkButton>
                                         </ItemTemplate>
                                     </asp:TemplateField>
-                                    
+                                    <asp:TemplateField HeaderText="Document">
+                                        <ItemTemplate>
+                                             <asp:LinkButton ID="btn_Doubt" runat="server" CssClass="btn" BackColor="#343A40" BorderStyle="None" ForeColor="White" CommandArgument='<%# Eval("Doc_Id") %>' CommandName="AskDoubt" >
+                                            <i class="fa fa-question-circle" aria-hidden="true"></i> Ask Doubt
+                                            </asp:LinkButton>
+                                        </ItemTemplate>
+                                    </asp:TemplateField>
                                 </Columns>
                                 <FooterStyle BackColor="#CCCCCC" />
                                 <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />
