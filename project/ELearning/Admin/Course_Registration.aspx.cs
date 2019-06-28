@@ -42,14 +42,33 @@ namespace ELearning.Admin
 
         protected void BtnSave_Click(object sender, EventArgs e)
         {
-            objAdmReg.Dptid =Convert.ToInt32(ddlDept.SelectedValue.ToString());
-            objAdmReg.Prmid =Convert.ToInt32(ddlProgram.SelectedValue.ToString());
-            objAdmReg.Course = TxtCourse.Text.ToString();
-            objAdmReg.InsertCourse();
+            if(TxtCourse.Text.ToString()=="")
+            {
+                LblMsg.Visible = true;
+            }
+            else
+            {
+                objAdmReg.Dptid = Convert.ToInt32(ddlDept.SelectedValue.ToString());
+                objAdmReg.Prmid = Convert.ToInt32(ddlProgram.SelectedValue.ToString());
+                objAdmReg.Course = TxtCourse.Text.ToString();
+                objAdmReg.InsertCourse();
+                TxtCourse.Text = "";
+                ddlDept.ClearSelection();
+                ddlProgram.ClearSelection();
+                Response.Write("<script LANGUAGE='JavaScript' >alert('Course Registration Has Been Successfully Completed.')</script>");
+            }
+        }
+
+        protected void ddlDept_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            LblMsg.Visible = false;
+        }
+
+        protected void BtnClear_Click(object sender, EventArgs e)
+        {
             TxtCourse.Text = "";
             ddlDept.ClearSelection();
             ddlProgram.ClearSelection();
-            Response.Write("<script LANGUAGE='JavaScript' >alert('Course Registration Has Been Successfully Completed.')</script>");
         }
     }
 }

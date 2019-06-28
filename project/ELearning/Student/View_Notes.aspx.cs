@@ -65,6 +65,12 @@ namespace ELearning.Student
                 GvNotes.DataSource = dtDocument;
                 GvNotes.DataBind();
             }
+            else
+            {
+                DataTable dt = new DataTable();
+                GvNotes.DataSource = dt;
+                GvNotes.DataBind();
+            }
         }
 
         protected void GvNotes_PageIndexChanging(object sender, GridViewPageEventArgs e)
@@ -83,7 +89,8 @@ namespace ELearning.Student
             else if(e.CommandName== "AskDoubt")
             {
                 Session["docid"] = e.CommandArgument.ToString();
-                Response.Redirect("Post_Queries.aspx");
+                Session["type"] = "Notes";
+                Response.Redirect("Ask_Doubts.aspx");
             }
         }
     }

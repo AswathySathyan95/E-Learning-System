@@ -25,8 +25,6 @@ namespace ELearning.Student
             objStud.Wrong_ans = objStud.Wrong_Answer();
             objStud.Attended = objStud.Attended_Qstn();
             objStud.Score= objStud.Correct_Answer();
-            double per = (c_ans / 25)*100;
-            objStud.Percent = per;
             TimeSpan diff =Convert.ToDateTime(objStud.End_time).Subtract(Convert.ToDateTime(objStud.Start_time));
             ViewState["timetaken"] = diff.Minutes + ":" + diff.Seconds;
             LblTime.Text = ViewState["timetaken"].ToString();
@@ -34,7 +32,6 @@ namespace ELearning.Student
             LblCorrect.Text = objStud.Correct_ans.ToString();
             LblWrong.Text = objStud.Wrong_ans.ToString();
             LblScore.Text = objStud.Correct_ans.ToString() + " / 25";
-            LblPercentage.Text = per.ToString();
             objStud.Quiz_Report();
         }
     }

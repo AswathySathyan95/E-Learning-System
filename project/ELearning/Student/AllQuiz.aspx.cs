@@ -41,6 +41,12 @@ namespace ELearning.Student
                 GvDetails.DataSource = dtQuizReport;
                 GvDetails.DataBind();
             }
+            else
+            {
+                DataTable dt = new DataTable();
+                GvDetails.DataSource = dt;
+                GvDetails.DataBind();
+            }
         }
     }
 }

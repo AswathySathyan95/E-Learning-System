@@ -30,6 +30,12 @@ namespace ELearning.Admin
                 GvDocument.DataSource = dtDoc;
                 GvDocument.DataBind();
             }
+            else
+            {
+                DataTable dt = new DataTable();
+                GvDocument.DataSource = dt;
+                GvDocument.DataBind();
+            }
         }
 
         protected void btnApprove_Click(object sender, EventArgs e)

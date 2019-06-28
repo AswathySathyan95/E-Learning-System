@@ -2,16 +2,17 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="maincontent" runat="server">
     <table class="nav-justified" style="height: 659px">
         <tr>
-            <td style="width: 195px; height: 482px;"></td>
+            <td class="auto-style2"></td>
             <td style="width: 836px; height: 482px;">
                 <div id="content" class="auto-style1">
-                    <asp:Panel ID="Panel1" runat="server" Height="511px">
+                    <asp:Panel ID="Panel1" runat="server" Height="489px">
                         <div id="heading" class="text-center">
                             <br />
-                            &nbsp;<span style="color: #000099; font-size: xx-large; font-family: Algerian"><strong><em><span class="newStyle1">INSTRUCTIONS</span></em></strong></span>
+                            <span style="color: #000099; font-size: xx-large; font-family: Algerian"><strong><em><span class="newStyle1">INSTRUCTIONS</span></em></strong></span>
+                            <br />
                             <br />
                         </div>
-                        <div id="main" style="height: 388px">
+                        <div id="main" class="auto-style3">
                             <br />
                              <strong><span style="font-size: large">Read The Following Instructions Carefully :<br />
                             <br />
@@ -43,6 +44,7 @@
                                 </li>
                             </ul>
                             <div id="submitbtn" class="text-center">
+                                <br />
                             <asp:Button ID="BtnStart" runat="server" BackColor="#009D00" Font-Bold="True" Font-Size="Large" ForeColor="Black" Text="START TEST" OnClick="BtnStart_Click" />
                             <br />
                         </div>
@@ -58,7 +60,7 @@
 <asp:Content ID="Content2" runat="server" contentplaceholderid="headplaceholder">
     <style type="text/css">
         .auto-style1 {
-            height: 485px;
+            height: 600px;
         }
         .newStyle1 {
             font-family: "Colonna MT";
@@ -66,6 +68,13 @@
             font-weight: bolder;
             color: #000080;
             font-style: normal;
+        }
+        .auto-style2 {
+            height: 482px;
+            width: 195px;
+        }
+        .auto-style3 {
+            height: 440px;
         }
     </style>
 </asp:Content>

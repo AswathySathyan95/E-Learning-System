@@ -77,6 +77,13 @@
     .auto-style52 {
         height: 53px;
     }
+        .auto-style53 {
+            height: 40px;
+        }
+        .auto-style54 {
+            width: 224px;
+            height: 40px;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="maincontent" runat="server">
@@ -133,12 +140,12 @@
                                 <td>&nbsp;</td>
                             </tr>
                             <tr>
-                                <td>&nbsp;</td>
-                                <td class="auto-style39">&nbsp;</td>
-                                <td><strong>
-                                    <asp:Button ID="BtnSaveCategory" runat="server" OnClick="BtnSaveCategory_Click" style="font-weight: bold" Text="Save Details" />
+                                <td class="auto-style53"></td>
+                                <td class="auto-style54"></td>
+                                <td class="auto-style53"><strong>
+                                    <asp:Button ID="BtnSaveCategory" runat="server" OnClick="BtnSaveCategory_Click" style="font-weight: bold" Text="Save Details" BorderStyle="Inset" CssClass="auto-style6" />
                                     </strong></td>
-                                <td>&nbsp;</td>
+                                <td class="auto-style53"></td>
                             </tr>
                             <tr>
                                 <td>&nbsp;</td>
@@ -213,7 +220,7 @@
                             <tr>
                                 <td class="auto-style40">&nbsp;</td>
                                 <td class="auto-style41"><strong>
-                                    <asp:Button ID="BtnSubSave" runat="server" OnClick="BtnSubSave_Click" style="font-weight: bold" Text="Save Details" />
+                                    <asp:Button ID="BtnSubSave" runat="server" OnClick="BtnSubSave_Click" style="font-weight: bold" Text="Save Details" BorderStyle="Inset" />
                                     </strong></td>
                                 <td>&nbsp;</td>
                             </tr>

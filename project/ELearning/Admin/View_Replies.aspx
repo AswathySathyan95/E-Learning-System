@@ -11,22 +11,32 @@
             color: #000080;
         }
         .auto-style2 {
-            width: 249px;
+            width: 46px;
+        }
+        .auto-style3 {
+            margin-left: 0px;
         }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="maincontent" runat="server">
     <div class="auto-style1">
-        <div class="text-center">
+        <div class="text-left">
 
-            <span class="newStyle1">View Replies</span></div>
+            <span class="newStyle1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; View Replies</span></div>
         <div>
 
             <table class="w-100">
                 <tr>
                     <td class="auto-style2">&nbsp;</td>
                     <td>
-                        <asp:GridView ID="GvReply" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px" CellPadding="3" ForeColor="Black" GridLines="Vertical" AllowPaging="True" OnPageIndexChanging="GvReply_PageIndexChanging" Width="882px" PageSize="5" OnRowCommand="GvReply_RowCommand"> 
+                        &nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                
+                <tr>
+                    <td class="auto-style2">&nbsp;</td>
+                    <td>
+                        <asp:GridView ID="GvReply" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px" CellPadding="3" ForeColor="Black" GridLines="Vertical" AllowPaging="True" OnPageIndexChanging="GvReply_PageIndexChanging" Width="882px" PageSize="5" OnRowCommand="GvReply_RowCommand" CssClass="auto-style3"> 
                                     <AlternatingRowStyle BackColor="#CCCCCC" />
                                     <Columns>
                                         <asp:BoundField DataField="RUser_Id" HeaderText="RUser_Id" Visible="False" />

@@ -10,15 +10,22 @@
             font-weight: bolder;
             color: #000080;
         }
+        .auto-style2 {
+            width: 16px;
+        }
+        .auto-style3 {
+            width: 179px;
+        }
+        .auto-style4 {
+            width: 125px;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="maincontent" runat="server">
     <div id="mainn" class="auto-style1">
-        <div class="text-center">
-
-            <strong class="newStyle1">View/Delete Queries</strong></div>
+        <div class="text-left">
+            <strong class="newStyle1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; View/Delete Queries</strong></div>
         <div>
-
             <table class="w-100">
                 <tr>
                     <td class="auto-style3">
@@ -26,26 +33,32 @@
                         </asp:ScriptManager>
                     </td>
                     <td class="auto-style2">
-                        <table class="w-100">
-                            <tr>
-                                <td>
-                                    <asp:Label ID="Label1" runat="server" Text="Subject"></asp:Label>
-                                </td>
-                                <td>
-                                    <asp:DropDownList ID="DdlQuerySub" runat="server" AutoPostBack="True" OnSelectedIndexChanged="DdlQuerySub_SelectedIndexChanged">
-                                    </asp:DropDownList>
-                                </td>
-                            </tr>
-                        </table>
+                        <strong>
+                                    <asp:Label ID="Label1" runat="server" Text="Subject" Width="214px"></asp:Label>
+                                </strong>
                     </td>
-                    <td>&nbsp;</td>
+                    <td><strong>
+                                    <asp:DropDownList ID="DdlQuerySub" runat="server" AutoPostBack="True" OnSelectedIndexChanged="DdlQuerySub_SelectedIndexChanged" Width="300px">
+                                    </asp:DropDownList>
+                                </strong></td>
                 </tr>
                 <tr>
-                    <td class="auto-style3">&nbsp;</td>
+                    <td class="auto-style3">
+                        &nbsp;</td>
                     <td class="auto-style2">
-                        <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                        &nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+            </table>
+            <div>
+
+                <table class="w-100">
+                    <tr>
+                        <td class="auto-style4">&nbsp;</td>
+                        <td>
+                            <asp:UpdatePanel ID="UpdatePanel1" runat="server">
                             <ContentTemplate>
-                                <asp:GridView ID="GvQuery" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px" CellPadding="3" ForeColor="Black" GridLines="Vertical" AllowPaging="True" OnPageIndexChanging="GvQuery_PageIndexChanging" Width="882px" PageSize="5" OnRowCommand="GvQuery_RowCommand"> 
+                                <asp:GridView ID="GvQuery" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px" CellPadding="3" ForeColor="Black" GridLines="Vertical" AllowPaging="True" OnPageIndexChanging="GvQuery_PageIndexChanging" Width="882px" PageSize="5" OnRowCommand="GvQuery_RowCommand" ShowHeaderWhenEmpty="True"> 
                                     <AlternatingRowStyle BackColor="#CCCCCC" />
                                     <Columns>
                                         <asp:BoundField DataField="QUser_Id" HeaderText="Posted by" Visible="False" />
@@ -63,6 +76,7 @@
                                         </ItemTemplate>
                                         </asp:TemplateField>
                                     </Columns>
+                                    <EmptyDataTemplate>No Record Found</EmptyDataTemplate>
                                     <FooterStyle BackColor="#CCCCCC" />
                                     <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />
                                     <PagerStyle BackColor="#999999" ForeColor="Black" HorizontalAlign="Center" />
@@ -77,11 +91,12 @@
                                 <asp:AsyncPostBackTrigger ControlID="DdlQuerySub" EventName="SelectedIndexChanged" />
                             </Triggers>
                         </asp:UpdatePanel>
-                    </td>
-                    <td>&nbsp;</td>
-                </tr>
-            </table>
+                            &nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                </table>
 
+            </div>
         </div>
     </div>
 </asp:Content>

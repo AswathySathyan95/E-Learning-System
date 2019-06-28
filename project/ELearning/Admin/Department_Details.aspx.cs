@@ -20,11 +20,18 @@ namespace ELearning.Admin
 
         protected void BtnSave_Click(object sender, EventArgs e)
         {
-            obj.Department = TxtDept.Text.ToString();
-            obj.DepartmentDetails();
-            TxtDept.Text = "";
-            LblDept.Visible = false;
-            Response.Write("<script LANGUAGE='JavaScript' >alert('Department Registration Has Been Successfully Completed.')</script>");
+            if(TxtDept.Text.ToString()=="")
+            {
+                LblMsg.Visible = true;
+            }
+            else
+            {
+                obj.Department = TxtDept.Text.ToString();
+                obj.DepartmentDetails();
+                TxtDept.Text = "";
+                LblDept.Visible = false;
+                Response.Write("<script LANGUAGE='JavaScript' >alert('Department Registration Has Been Successfully Completed.')</script>");
+            }
         }
 
         protected void BtnClear_Click(object sender, EventArgs e)

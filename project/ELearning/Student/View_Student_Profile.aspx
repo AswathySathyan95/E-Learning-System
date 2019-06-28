@@ -1,19 +1,13 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Student/StudentMaster.master" AutoEventWireup="true" CodeBehind="View_Student_Profile.aspx.cs" Inherits="ELearning.Student.View_Student_Profile" %>
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
 <asp:Content ID="Content2" ContentPlaceHolderID="headplaceholder" runat="server">
-   <style type="text/css">
+    <style type="text/css">
      .auto-style2 {
             height: 1096px;
             width: 1418px;
         }
-        .auto-style3 {
-            width: 1056px;
-        }
         .auto-style11 {
             width: 654px;
-        }
-        .auto-style12 {
-            width: 722px;
         }
         .auto-style13 {
             font-size: small;
@@ -47,16 +41,56 @@
         .auto-style35 {
             width: 97px;
         }
-        .auto-style36 {
-            width: 295px;
-        }
-        .auto-style37 {
-            width: 279px;
-        }
         .auto-style38 {
             width: 138px;
             font-size: large;
             font-weight: bold;
+        }
+        .auto-style40 {
+            font-size: small;
+            width: 330px;
+        }
+        .auto-style41 {
+            width: 330px;
+        }
+        .auto-style43 {
+            width: 638px;
+        }
+        .auto-style44 {
+            width: 360px;
+        }
+        .auto-style45 {
+            width: 182px;
+        }
+        .auto-style46 {
+            width: 200px;
+        }
+        .auto-style47 {
+            height: 33px;
+        }
+        .auto-style48 {
+            height: 33px;
+            width: 209px;
+        }
+        .auto-style49 {
+            width: 209px;
+        }
+        .auto-style50 {
+            height: 33px;
+            width: 309px;
+        }
+        .auto-style51 {
+            width: 254px;
+        }
+        .auto-style52 {
+            height: 33px;
+            width: 221px;
+        }
+        .auto-style53 {
+            width: 221px;
+        }
+        .auto-style54 {
+            width: 309px;
         }
     </style>
 </asp:Content>
@@ -78,20 +112,20 @@
                     <asp:Panel ID="PanelPersonal" runat="server" SuppressPostBack="true" Width="1042px">
                         <table class="auto-style30">
                             <tr>
-                                <td class="auto-style6">
+                                <td class="auto-style44">
                                     <strong>
-                                        <asp:Label ID="Label1" runat="server" ForeColor="Black" Text="Name" CssClass="auto-style13"></asp:Label>
+                                        <asp:Label ID="Label1" runat="server" ForeColor="Black" Text="Name" CssClass="auto-style13" Width="150px"></asp:Label>
                                     </strong>
                                 </td>
                                 <td class="auto-style8">
                                     <asp:Label ID="LblName" runat="server" ForeColor="Black" CssClass="auto-style13"></asp:Label>
                                 </td>
-                                <td class="auto-style3">
+                                <td class="auto-style41">
                                     <strong>
-                                        <asp:Label ID="Label3" runat="server" ForeColor="Black" Text="Gender" CssClass="auto-style13"></asp:Label>
+                                        <asp:Label ID="Label3" runat="server" ForeColor="Black" Text="Gender" CssClass="auto-style13" Width="150px"></asp:Label>
                                     </strong>
                                 </td>
-                                <td class="auto-style4">
+                                <td class="auto-style43">
                                     <asp:Label ID="LblGender" runat="server" ForeColor="Black" CssClass="auto-style13"></asp:Label>
                                 </td>
                                 <td rowspan="4">
@@ -99,70 +133,70 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td class="auto-style12">
+                                <td class="auto-style44">
                                     <strong>
-                                        <asp:Label ID="Label5" runat="server" ForeColor="Black" Text="Date Of Birth" CssClass="auto-style13"></asp:Label>
+                                        <asp:Label ID="Label5" runat="server" ForeColor="Black" Text="Date Of Birth" CssClass="auto-style13" Width="150px"></asp:Label>
                                     </strong>
                                 </td>
                                 <td class="auto-style11">
                                     <asp:Label ID="LblDob" runat="server" ForeColor="Black" CssClass="auto-style13"></asp:Label>
                                 </td>
-                                <td class="auto-style13">
+                                <td class="auto-style40">
                                     <strong>
-                                        <asp:Label ID="Label8" runat="server" ForeColor="Black" Text="Mobile No"></asp:Label>
+                                        <asp:Label ID="Label8" runat="server" ForeColor="Black" Text="Mobile No" Width="150px"></asp:Label>
                                     </strong>
                                 </td>
-                                <td class="auto-style5">
+                                <td class="auto-style43">
                                     <asp:Label ID="LblMob" runat="server" ForeColor="Black" CssClass="auto-style13"></asp:Label>
                                 </td>
                             </tr>
                             <tr>
-                                <td class="auto-style12">
+                                <td class="auto-style44">
                                     <strong>
-                                        <asp:Label ID="Label6" runat="server" ForeColor="Black" Text="Email Id" CssClass="auto-style13"></asp:Label>
+                                        <asp:Label ID="Label6" runat="server" ForeColor="Black" Text="Email Id" CssClass="auto-style13" Width="150px"></asp:Label>
                                     </strong>
                                 </td>
                                 <td class="auto-style11">
                                     <asp:Label ID="LblEmail" runat="server" ForeColor="Black" CssClass="auto-style13"></asp:Label>
                                 </td>
-                                <td class="auto-style13">
+                                <td class="auto-style40">
                                     <strong>
-                                        <asp:Label ID="Label19" runat="server" ForeColor="Black" Text="Nationality"></asp:Label>
+                                        <asp:Label ID="Label19" runat="server" ForeColor="Black" Text="Nationality" Width="150px"></asp:Label>
                                     </strong>
                                 </td>
-                                <td class="auto-style5">
+                                <td class="auto-style43">
                                     <asp:Label ID="LblNationality" runat="server" ForeColor="Black" CssClass="auto-style13"></asp:Label>
                                 </td>
                             </tr>
                             <tr>
-                                <td class="auto-style12">
+                                <td class="auto-style44">
                                     <strong>
-                                        <asp:Label ID="Label7" runat="server" ForeColor="Black" Text="Religion" CssClass="auto-style13"></asp:Label>
+                                        <asp:Label ID="Label7" runat="server" ForeColor="Black" Text="Religion" CssClass="auto-style13" Width="150px"></asp:Label>
                                     </strong>
                                 </td>
                                 <td class="auto-style11">
                                     <asp:Label ID="LblReligion" runat="server" ForeColor="Black" CssClass="auto-style13"></asp:Label>
                                 </td>
-                                <td class="auto-style13">
+                                <td class="auto-style40">
                                     <strong>
-                                        <asp:Label ID="Label16" runat="server" ForeColor="Black" Text="Category"></asp:Label>
+                                        <asp:Label ID="Label16" runat="server" ForeColor="Black" Text="Category" Width="150px"></asp:Label>
                                     </strong>
                                 </td>
-                                <td class="auto-style5">
+                                <td class="auto-style43">
                                     <asp:Label ID="LblCategory" runat="server" ForeColor="Black" CssClass="auto-style13"></asp:Label>
                                 </td>
                             </tr>
                             <tr>
-                                <td class="auto-style12">
+                                <td class="auto-style44">
                                     <strong>
-                                        <asp:Label ID="Label9" runat="server" ForeColor="Black" Text="Blood Group" CssClass="auto-style13"></asp:Label>
+                                        <asp:Label ID="Label9" runat="server" ForeColor="Black" Text="Blood Group" CssClass="auto-style13" Width="150px"></asp:Label>
                                     </strong>
                                 </td>
                                 <td class="auto-style11">
                                     <asp:Label ID="LblBlood" runat="server" ForeColor="Black" CssClass="auto-style13"></asp:Label>
                                 </td>
-                                <td class="auto-style13">&nbsp;</td>
-                                <td class="auto-style5">&nbsp;</td>
+                                <td class="auto-style40">&nbsp;</td>
+                                <td class="auto-style43">&nbsp;</td>
                                 <td>&nbsp;</td>
                             </tr>
                         </table>
@@ -184,17 +218,17 @@
                     <asp:Panel ID="PanelAddress" runat="server" SuppressPostBack="true" Width="1043px">
                         <table class="auto-style17">
                             <tr>
-                                <td class="auto-style37">
+                                <td class="auto-style45">
                                     <strong>
-                                        <asp:Label ID="Label2" runat="server" ForeColor="Black" Text="Address" CssClass="auto-style13"></asp:Label>
+                                        <asp:Label ID="Label2" runat="server" ForeColor="Black" Text="Address" CssClass="auto-style13" Width="150px"></asp:Label>
                                     </strong>
                                 </td>
                                 <td class="auto-style35">
                                     <asp:Label ID="LblAddress" runat="server" ForeColor="Black" Height="30px" Width="300px" CssClass="auto-style13"></asp:Label>
                                 </td>
-                                <td class="auto-style36">
+                                <td class="auto-style46">
                                     <strong>
-                                        <asp:Label ID="Label24" runat="server" ForeColor="Black" Text="District" CssClass="auto-style13"></asp:Label>
+                                        <asp:Label ID="Label24" runat="server" ForeColor="Black" Text="District" CssClass="auto-style13" Width="150px"></asp:Label>
                                     </strong>
                                 </td>
                                 <td class="auto-style32">
@@ -203,17 +237,17 @@
                                 <td class="auto-style20">&nbsp;</td>
                             </tr>
                             <tr>
-                                <td class="auto-style37">
+                                <td class="auto-style45">
                                     <strong>
-                                        <asp:Label ID="Label22" runat="server" ForeColor="Black" Text="State" CssClass="auto-style13"></asp:Label>
+                                        <asp:Label ID="Label22" runat="server" ForeColor="Black" Text="State" CssClass="auto-style13" Width="150px"></asp:Label>
                                     </strong>
                                 </td>
                                 <td class="auto-style35">
                                     <asp:Label ID="LblState" runat="server" ForeColor="Black" CssClass="auto-style13"></asp:Label>
                                 </td>
-                                <td class="auto-style36">
+                                <td class="auto-style46">
                                     <strong>
-                                        <asp:Label ID="Label26" runat="server" ForeColor="Black" Text="Pincode" CssClass="auto-style13"></asp:Label>
+                                        <asp:Label ID="Label26" runat="server" ForeColor="Black" Text="Pincode" CssClass="auto-style13" Width="150px"></asp:Label>
                                     </strong>
                                 </td>
                                 <td class="auto-style32">
@@ -222,17 +256,17 @@
                                 <td class="auto-style16">&nbsp;</td>
                             </tr>
                             <tr>
-                                <td class="auto-style37">
+                                <td class="auto-style45">
                                     <strong>
-                                        <asp:Label ID="Label27" runat="server" ForeColor="Black" Text="Father Name" CssClass="auto-style13"></asp:Label>
+                                        <asp:Label ID="Label27" runat="server" ForeColor="Black" Text="Father Name" CssClass="auto-style13" Width="150px"></asp:Label>
                                     </strong>
                                 </td>
                                 <td class="auto-style35">
                                     <asp:Label ID="LblFname" runat="server" ForeColor="Black" CssClass="auto-style13"></asp:Label>
                                 </td>
-                                <td class="auto-style36">
+                                <td class="auto-style46">
                                     <strong>
-                                        <asp:Label ID="Label29" runat="server" ForeColor="Black" Text="Occupation" CssClass="auto-style13"></asp:Label>
+                                        <asp:Label ID="Label29" runat="server" ForeColor="Black" Text="Occupation" CssClass="auto-style13" Width="150px"></asp:Label>
                                     </strong>
                                 </td>
                                 <td class="auto-style32">
@@ -241,15 +275,15 @@
                                 <td>&nbsp;</td>
                             </tr>
                             <tr>
-                                <td class="auto-style37">
+                                <td class="auto-style45">
                                     <strong>
-                                        <asp:Label ID="Label31" runat="server" Text="Mobile Number" CssClass="auto-style13"></asp:Label>
+                                        <asp:Label ID="Label31" runat="server" Text="Mobile Number" CssClass="auto-style13" Width="150px"></asp:Label>
                                     </strong>
                                 </td>
                                 <td class="auto-style35">
                                     <asp:Label ID="LblFMob" runat="server" Text="" CssClass="auto-style13"></asp:Label>
                                     &nbsp;</td>
-                                <td class="auto-style36">&nbsp;</td>
+                                <td class="auto-style46">&nbsp;</td>
                                 <td class="auto-style32">&nbsp;</td>
                                 <td>&nbsp;</td>
                             </tr>
@@ -272,42 +306,42 @@
                     <asp:Panel ID="PanelAdmission" runat="server" SuppressPostBack="true" Height="122px" Width="1045px">
                         <table class="auto-style17">
                             <tr>
-                                <td><strong>
-                                    <asp:Label ID="Label34" runat="server" ForeColor="Black" Text="Date Of Admission" CssClass="auto-style13"></asp:Label>
+                                <td class="auto-style48"><strong>
+                                    <asp:Label ID="Label34" runat="server" ForeColor="Black" Text="Date Of Admission" CssClass="auto-style13" Width="200px"></asp:Label>
                                 </strong></td>
-                                <td>
+                                <td class="auto-style50">
                                     <asp:Label ID="Lbldoa" runat="server" ForeColor="Black" CssClass="auto-style13"></asp:Label>
                                 </td>
-                                <td><strong>
-                                    <asp:Label ID="Label45" runat="server" ForeColor="Black" Text="Department" CssClass="auto-style13"></asp:Label>
+                                <td class="auto-style52"><strong>
+                                    <asp:Label ID="Label45" runat="server" ForeColor="Black" Text="Department" CssClass="auto-style13" Width="200px"></asp:Label>
                                 </strong></td>
-                                <td>
+                                <td class="auto-style47">
                                     <asp:Label ID="lbldept" runat="server" ForeColor="Black" CssClass="auto-style13"></asp:Label>
                                 </td>
                             </tr>
                             <tr>
-                                <td><strong>
-                                    <asp:Label ID="Label33" runat="server" ForeColor="Black" Text="Admitted Program" CssClass="auto-style13"></asp:Label>
+                                <td class="auto-style49"><strong>
+                                    <asp:Label ID="Label33" runat="server" ForeColor="Black" Text="Admitted Program" CssClass="auto-style13" Width="200px"></asp:Label>
                                 </strong></td>
-                                <td>
+                                <td class="auto-style54">
                                     <asp:Label ID="lblprogram" runat="server" ForeColor="Black" CssClass="auto-style13"></asp:Label>
                                 </td>
-                                <td><strong>
-                                    <asp:Label ID="Label44" runat="server" ForeColor="Black" Text="Admitted Branch" CssClass="auto-style13"></asp:Label>
+                                <td class="auto-style53"><strong>
+                                    <asp:Label ID="Label44" runat="server" ForeColor="Black" Text="Admitted Branch" CssClass="auto-style13" Width="200px"></asp:Label>
                                 </strong></td>
                                 <td>
                                     <asp:Label ID="lblbranch" runat="server" ForeColor="Black" CssClass="auto-style13"></asp:Label>
                                 </td>
                             </tr>
                             <tr>
-                                <td><strong>
-                                    <asp:Label ID="Label32" runat="server" ForeColor="Black" Text="Admission No" CssClass="auto-style13"></asp:Label>
+                                <td class="auto-style49"><strong>
+                                    <asp:Label ID="Label32" runat="server" ForeColor="Black" Text="Admission No" CssClass="auto-style13" Width="200px"></asp:Label>
                                 </strong></td>
-                                <td>
+                                <td class="auto-style54">
                                     <asp:Label ID="lbladmsnno" runat="server" ForeColor="Black" CssClass="auto-style13"></asp:Label>
                                 </td>
-                                <td><strong>
-                                    <asp:Label ID="Label43" runat="server" ForeColor="Black" Text="Semester" CssClass="auto-style13"></asp:Label>
+                                <td class="auto-style53"><strong>
+                                    <asp:Label ID="Label43" runat="server" ForeColor="Black" Text="Semester" CssClass="auto-style13" Width="200px"></asp:Label>
                                 </strong></td>
                                 <td>
                                     <asp:Label ID="lblsem" runat="server" ForeColor="Black" CssClass="auto-style13"></asp:Label>

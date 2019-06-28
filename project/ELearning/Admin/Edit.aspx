@@ -18,7 +18,11 @@
                 <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False">
                     <Columns>
                         <asp:BoundField DataField="Name" HeaderText="Name" />
-                        <asp:BoundField DataField="Qualification" HeaderText="Qualification" />
+                        <asp:TemplateField>
+                            <ItemTemplate>
+                                <asp:Image ID="Image1" runat="server" ImageUrl='<%# Eval("Photo") %>'/>
+                            </ItemTemplate>
+                        </asp:TemplateField>
                     </Columns>
                 </asp:GridView>
             </td>

@@ -42,10 +42,10 @@
                 <div class="card-body-icon">
                     <i class="fa fa-fw fa-comments"></i>
                 </div>
-                <div class="mr-5"><asp:Label ID="lbltotalstudents" runat="server"></asp:Label></div>
+                <div class="mr-5">You have Uploaded <asp:Label ID="lbltotaldocuments" runat="server"> </asp:Label> Documents</div>
             </div>
-            <a class="card-footer text-white clearfix small z-1" href="studentList.aspx">
-                <span class="float-left"></span>
+            <a class="card-footer text-white clearfix small z-1" href="Documents_View.aspx">
+                <span class="float-left">View Details</span>
                 <span class="float-right">
                     <i class="fa fa-angle-right"></i>
                 </span>

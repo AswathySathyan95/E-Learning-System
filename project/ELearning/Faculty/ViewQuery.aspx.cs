@@ -39,10 +39,16 @@ namespace ELearning.Faculty
         {
             objfclty.Subject = DdlQuerySub.SelectedItem.Text.ToString();
             DataTable dtquery = new DataTable();
-            dtquery = objfclty.FetchQuery();
+            dtquery = objfclty.FetchCommonQuery();
             if (dtquery.Rows.Count > 0)
             {
                 GvQuery.DataSource = dtquery;
+                GvQuery.DataBind();
+            }
+            else
+            {
+                DataTable dt = new DataTable();
+                GvQuery.DataSource = dt;
                 GvQuery.DataBind();
             }
         }

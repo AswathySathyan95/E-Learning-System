@@ -15,6 +15,7 @@ namespace ELearning.Admin
         AdminNewClass objAdm = new AdminNewClass();
         protected void Page_Load(object sender, EventArgs e)
         {
+            //LblError.Visible = false;
             if(!IsPostBack)
             {
                 DataTable dtCourse = new DataTable();
@@ -45,17 +46,30 @@ namespace ELearning.Admin
 
         protected void BtnSave_Click(object sender, EventArgs e)
         {
-            objAdm.Bid =Convert.ToInt32(DdlCourse.SelectedValue.ToString());
-            objAdm.SubjectDetail = TxtSubject.Text.ToString();
-            objAdm.InsertSubject();
-            DdlCourse.ClearSelection();
-            TxtSubject.Text = "";
-            Response.Write("<script LANGUAGE='JavaScript' >alert('Subject Details added successfully....')</script>");
+            if(TxtSubject.Text.ToString()=="")
+            {
+                LblError.Visible = false;
+            }
+            else
+            {
+                objAdm.Bid = Convert.ToInt32(DdlCourse.SelectedValue.ToString());
+                objAdm.SubjectDetail = TxtSubject.Text.ToString();
+                objAdm.InsertSubject();
+                DdlCourse.ClearSelection();
+                TxtSubject.Text = "";
+                Response.Write("<script LANGUAGE='JavaScript' >alert('Subject Details added successfully....')</script>");
+            }
         }
 
         protected void DdlCourse_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        protected void BtnClear_Click(object sender, EventArgs e)
+        {
+            TxtSubject.Text = "";
+            DdlCourse.ClearSelection();
         }
     }
 }

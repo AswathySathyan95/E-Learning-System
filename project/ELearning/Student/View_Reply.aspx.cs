@@ -20,12 +20,18 @@ namespace ELearning.Student
         public void BindDocument()
         {
             obj.Userid = Session["u_id"].ToString();
-            obj.Qryid =Convert.ToInt32( obj.getQueryId());
+            obj.Qryid =Convert.ToString(obj.getQueryId());
             DataTable dtReplyQ = new DataTable();
             dtReplyQ = obj.FetchQueryReply();
             if (dtReplyQ.Rows.Count > 0)
             {
                 GvReply.DataSource = dtReplyQ;
+                GvReply.DataBind();
+            }
+            else
+            {
+                DataTable dt = new DataTable();
+                GvReply.DataSource = dt;
                 GvReply.DataBind();
             }
         }

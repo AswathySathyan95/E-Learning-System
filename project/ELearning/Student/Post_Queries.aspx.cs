@@ -38,7 +38,7 @@ namespace ELearning.Student
             objstud.Subject = DdlSubject.SelectedItem.ToString();
             objstud.Query = TxtQuestion.Text.ToString();
             objstud.Date = Convert.ToDateTime(System.DateTime.Now.ToShortDateString());
-            objstud.QueryInsert();
+            objstud.QueryDoubtInsert();
             Response.Write("<script LANGUAGE='JavaScript' >alert('Your Query has been successfully saved!!!')</script>");
             TxtQuestion.Text = "";
             DdlSubject.ClearSelection();

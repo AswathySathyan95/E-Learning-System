@@ -382,5 +382,17 @@ namespace ELearning.Classes
             cmd.ExecuteNonQuery();
             CloseConnection();
         }
+
+        public DataTable Test()
+        {
+            OpenConnection();
+            DataTable dtName = new DataTable();
+            SqlCommand cmd = new SqlCommand("select Name,Photo from User_Details where User_Type='Faculty'", con);
+            
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dtName);
+            CloseConnection();
+            return dtName;
+        }
     }
 }

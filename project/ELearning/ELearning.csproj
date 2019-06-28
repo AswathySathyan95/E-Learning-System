@@ -178,6 +178,7 @@
     <Content Include="Default.aspx" />
     <Content Include="DesignImages\adminreg.png" />
     <Content Include="DesignImages\doubt.png" />
+    <Content Include="DesignImages\elearning.jpg" />
     <Content Include="DesignImages\FacultyHome.jpg" />
     <Content Include="DesignImages\FacultyHome2.jpg" />
     <Content Include="DesignImages\facultyhome3.jpg" />
@@ -187,10 +188,13 @@
     <Content Include="DesignImages\Login1.jpg" />
     <Content Include="DesignImages\login2.jpg" />
     <Content Include="DesignImages\logo.jpg" />
+    <Content Include="DesignImages\Sjc113-1.jpg" />
     <Content Include="DesignImages\sjcet-logo.jpg" />
     <Content Include="DesignImages\SJC_TOP-BANNER.jpg" />
     <Content Include="DesignImages\student-reg.jpg" />
     <Content Include="Faculty\DetailedStudDetails.aspx" />
+    <Content Include="Faculty\Documents_View.aspx" />
+    <Content Include="Faculty\Doubts_Doc.aspx" />
     <Content Include="Faculty\FacultyHome.aspx" />
     <Content Include="Faculty\FAdd_Category.aspx" />
     <Content Include="Faculty\Fadd_CategorySub.aspx" />
@@ -203,7 +207,10 @@
     <Content Include="Faculty\Upload_Reports.aspx" />
     <Content Include="Faculty\Upload_Video.aspx" />
     <Content Include="Faculty\ViewQuery.aspx" />
+    <Content Include="Faculty\View_DocDoubt.aspx" />
+    <Content Include="Faculty\View_Doubts.aspx" />
     <Content Include="Faculty\View_Faculty_Profile.aspx" />
+    <Content Include="Faculty\WebForm1.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -224,6 +231,7 @@
     <Content Include="mail\ReadSent.aspx" />
     <Content Include="mail\Sent_Mail.aspx" />
     <Content Include="Student\AllQuiz.aspx" />
+    <Content Include="Student\Ask_Doubts.aspx" />
     <Content Include="Student\Online_Quiz.aspx" />
     <Content Include="Student\Post_Queries.aspx" />
     <Content Include="Student\Quiz_Category.aspx" />
@@ -533,6 +541,20 @@
     <Compile Include="Faculty\DetailedStudDetails.aspx.designer.cs">
       <DependentUpon>DetailedStudDetails.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Faculty\Documents_View.aspx.cs">
+      <DependentUpon>Documents_View.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Faculty\Documents_View.aspx.designer.cs">
+      <DependentUpon>Documents_View.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Faculty\Doubts_Doc.aspx.cs">
+      <DependentUpon>Doubts_Doc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Faculty\Doubts_Doc.aspx.designer.cs">
+      <DependentUpon>Doubts_Doc.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Faculty\FacultyHome.aspx.cs">
       <DependentUpon>FacultyHome.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -624,12 +646,33 @@
     <Compile Include="Faculty\ViewQuery.aspx.designer.cs">
       <DependentUpon>ViewQuery.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Faculty\View_DocDoubt.aspx.cs">
+      <DependentUpon>View_DocDoubt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Faculty\View_DocDoubt.aspx.designer.cs">
+      <DependentUpon>View_DocDoubt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Faculty\View_Doubts.aspx.cs">
+      <DependentUpon>View_Doubts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Faculty\View_Doubts.aspx.designer.cs">
+      <DependentUpon>View_Doubts.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Faculty\View_Faculty_Profile.aspx.cs">
       <DependentUpon>View_Faculty_Profile.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Faculty\View_Faculty_Profile.aspx.designer.cs">
       <DependentUpon>View_Faculty_Profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Faculty\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Faculty\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -718,6 +761,13 @@
     </Compile>
     <Compile Include="Student\AllQuiz.aspx.designer.cs">
       <DependentUpon>AllQuiz.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Student\Ask_Doubts.aspx.cs">
+      <DependentUpon>Ask_Doubts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Student\Ask_Doubts.aspx.designer.cs">
+      <DependentUpon>Ask_Doubts.aspx</DependentUpon>
     </Compile>
     <Compile Include="Student\Online_Quiz.aspx.cs">
       <DependentUpon>Online_Quiz.aspx</DependentUpon>

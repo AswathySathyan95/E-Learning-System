@@ -17,7 +17,7 @@ namespace ELearning.Student
         {
             objStud.Userid = Session["u_id"].ToString();
             lbltotalquiz.Text=objStud.getQuizCount().ToString();
-            objStud.Qryid=Convert.ToInt32(objStud.getQueryId());
+            objStud.Qryid=Convert.ToString(objStud.getQueryId());
             lblreply.Text = objStud.getreplycount().ToString();
         }
     }

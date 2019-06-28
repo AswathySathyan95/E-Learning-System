@@ -2,12 +2,24 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="maincontent" runat="server">
     <table class="auto-style1">
         <tr>
-            <td class="auto-style11" colspan="5"><span class="newStyle1">Upload Notes</span></td>
+            <td class="auto-style11" colspan="5">
+                <asp:ScriptManager ID="ScriptManager1" runat="server">
+                </asp:ScriptManager>
+                <span class="newStyle1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Upload Notes</span></td>
         </tr>
         <tr>
             <td class="auto-style3">
-                <asp:ScriptManager ID="ScriptManager1" runat="server">
-                </asp:ScriptManager>
+                
+                &nbsp;</td>
+            <td class="auto-style4">&nbsp;</td>
+            <td class="auto-style4">
+                &nbsp;</td>
+            <td class="auto-style4">&nbsp;</td>
+            <td class="auto-style4">&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style3">
+                
             </td>
             <td class="auto-style4"><strong>
                 <asp:Label ID="Label5" runat="server" Text="Course" Font-Size="Large" CssClass="auto-style10" Font-Bold="True" ForeColor="Black"></asp:Label>
@@ -61,20 +73,17 @@
             <td class="auto-style8"></td>
         </tr>
         <tr>
-            <td class="auto-style12"></td>
-            <td style="height: 21px"></td>
-            <td style="height: 21px"></td>
-            <td style="height: 21px"></td>
-            <td style="height: 21px"></td>
+            <td class="auto-style14"></td>
+            <td class="auto-style15"></td>
+            <td class="auto-style15"></td>
+            <td class="auto-style15"></td>
+            <td class="auto-style15"></td>
         </tr>
         <tr>
             <td class="auto-style13">&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>
-                <strong>
-                <asp:Button ID="btnNoteUpload" runat="server" OnClick="btnNoteUpload_Click" Text="Upload Note" Font-Size="Large" style="font-weight: bold" Font-Bold="True" ForeColor="Black" />
-                </strong>
-            </td>
+            <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:Button ID="btnNoteUpload" runat="server" OnClick="btnNoteUpload_Click" Text="Upload Note" Font-Size="Large" Font-Bold="True" ForeColor="Black" BorderStyle="Inset" Height="57px" Width="246px" />
+                &nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
         </tr>
@@ -99,21 +108,21 @@
             color: #000080;
         }
         .auto-style3 {
-            width: 313px;
+            width: 93px;
             height: 48px;
         }
         .auto-style4 {
             height: 48px;
         }
         .auto-style5 {
-            width: 313px;
+            width: 93px;
             height: 51px;
         }
         .auto-style6 {
             height: 51px;
         }
         .auto-style7 {
-            width: 313px;
+            width: 93px;
             height: 43px;
         }
         .auto-style8 {
@@ -127,14 +136,17 @@
         }
         .auto-style11 {
             height: 22px;
-            text-align: center;
-        }
-        .auto-style12 {
-            height: 21px;
-            width: 313px;
+            text-align: left;
         }
         .auto-style13 {
-            width: 313px;
+            width: 93px;
+        }
+        .auto-style14 {
+            width: 93px;
+            height: 53px;
+        }
+        .auto-style15 {
+            height: 53px;
         }
     </style>
 </asp:Content>

@@ -40,7 +40,7 @@ namespace ELearning.Faculty
             obj.Ruserid = Session["u_id"].ToString();
             obj.Reply = TxtAnswer.Text.ToString();
             obj.Rdate = Convert.ToDateTime(System.DateTime.Now.ToShortDateString());
-            obj.InsertReply();
+            obj.ReplyCommon();
             Response.Write("<script LANGUAGE='JavaScript' >alert('Your Reply has been successfully saved!!!')</script>");
             Response.Redirect("ViewQuery.aspx");
         }

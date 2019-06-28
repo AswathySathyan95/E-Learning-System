@@ -17,10 +17,6 @@
         .auto-style3 {
             width: 266px;
         }
-        .auto-style4 {
-            text-align: left;
-            width: 266px;
-        }
         .auto-style5 {
             color: #000000;
             font-size: large;
@@ -63,44 +59,38 @@
         .auto-style15 {
             width: 276px;
         }
-        .auto-style16 {
-            width: 317px;
-            text-align: left;
+        .auto-style17 {
+            text-align: center;
+            height: 120px;
+            width: 1397px;
+        }
+        .auto-style18 {
+            width: 98%;
+            height: 163px;
         }
         </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="maincontent" runat="server">
     <div id="main" class="auto-style1">
-        <div id="heading" class="text-center">
-
-            <table class="w-100">
-                <tr>
-                    <td colspan="4">
-
-            <strong class="newStyle1">Department Registration</strong></td>
-                </tr>
-                <tr>
-                    <td class="auto-style16">
-                        <asp:ScriptManager ID="ScriptManager1" runat="server">
-                        </asp:ScriptManager>
-                    </td>
-                    <td class="auto-style4">&nbsp;</td>
-                    <td class="text-left">
-                        &nbsp;</td>
-                    <td>&nbsp;</td>
-                </tr>
+        <div id="heading" class="auto-style17">
+            <asp:ScriptManager ID="ScriptManager1" runat="server">
+            </asp:ScriptManager>
+            <div class="text-left">
+            <strong class="newStyle1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Department Registration</strong>
+            </div>
+        </div>
+        <div>
+            <table class="auto-style18">
                 <tr>
                     <td class="auto-style11"></td>
-                    <td class="auto-style12">
-                        <strong>
+                    <td class="auto-style12"><strong>
                         <asp:Label ID="Label1" runat="server" Text="Department" CssClass="auto-style5"></asp:Label>
-                        </strong>
-                    </td>
+                        </strong></td>
                     <td class="auto-style13">
                         <table class="w-100">
                             <tr>
                                 <td class="auto-style15">
-                        <asp:TextBox ID="TxtDept" runat="server" OnTextChanged="TxtDept_TextChanged" AutoPostBack="True"></asp:TextBox>
+                                    <asp:TextBox ID="TxtDept" runat="server" OnTextChanged="TxtDept_TextChanged" AutoPostBack="True" CausesValidation="True"></asp:TextBox>
                                 </td>
                                 <td>
                                     <asp:UpdatePanel ID="UpdatePanel1" runat="server">
@@ -122,47 +112,25 @@
                 <tr>
                     <td class="auto-style7"></td>
                     <td class="auto-style8"></td>
-                    <td class="auto-style9">&nbsp;</td>
+                    <td class="auto-style9"><strong>
+                        <asp:Label ID="LblMsg" runat="server" ForeColor="Red" Text="Please Enter Department Name" Visible="False"></asp:Label>
+                        </strong></td>
                     <td class="auto-style10"></td>
+                </tr>
+                <tr>
+                    <td class="auto-style7">&nbsp;</td>
+                    <td class="auto-style8">&nbsp;</td>
+                    <td class="auto-style9">&nbsp;</td>
+                    <td class="auto-style10">&nbsp;</td>
                 </tr>
                 <tr>
                     <td class="auto-style2">&nbsp;</td>
                     <td class="auto-style3"><strong>
-                        <asp:Button ID="BtnClear" runat="server" CssClass="auto-style6" OnClick="BtnClear_Click" Text="Clear" Width="105px" />
+                        <asp:Button ID="BtnClear" runat="server" CssClass="auto-style6" OnClick="BtnClear_Click" Text="Clear" Width="150px" />
                         </strong></td>
                     <td class="text-left"><strong>
-                        <asp:Button ID="BtnSave" runat="server" CssClass="auto-style6" OnClick="BtnSave_Click" Text="Save" Width="106px" />
+                        <asp:Button ID="BtnSave" runat="server" CssClass="auto-style6" OnClick="BtnSave_Click" Text="Save" Width="150px" />
                         </strong></td>
-                    <td>&nbsp;</td>
-                </tr>
-                <tr>
-                    <td class="auto-style7"></td>
-                    <td class="auto-style8"></td>
-                    <td class="auto-style10"></td>
-                    <td class="auto-style10"></td>
-                </tr>
-                <tr>
-                    <td class="auto-style2">&nbsp;</td>
-                    <td class="auto-style3">&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                </tr>
-                <tr>
-                    <td class="auto-style2">&nbsp;</td>
-                    <td class="auto-style3">&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                </tr>
-                <tr>
-                    <td class="auto-style2">&nbsp;</td>
-                    <td class="auto-style3">&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                </tr>
-                <tr>
-                    <td class="auto-style2">&nbsp;</td>
-                    <td class="auto-style3">&nbsp;</td>
-                    <td>&nbsp;</td>
                     <td>&nbsp;</td>
                 </tr>
             </table>

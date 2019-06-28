@@ -45,6 +45,11 @@ namespace ELearning.Classes
         private string fdept;
         private int qstn_count;
         private string ctgry;
+        //Doc Delete
+        private string doc_type;
+        private string facultyid;
+        private string docUser;
+        private string docid;
 
         public string Quserid { get => quserid; set => quserid = value; }
         public string Ruserid { get => ruserid; set => ruserid = value; }
@@ -62,12 +67,16 @@ namespace ELearning.Classes
         public string Fdept { get => fdept; set => fdept = value; }
         public string Ctgry { get => ctgry; set => ctgry = value; }
         public int Qstn_count { get => qstn_count; set => qstn_count = value; }
+        public string Doc_type { get => doc_type; set => doc_type = value; }
+        public string Facultyid { get => facultyid; set => facultyid = value; }
+        public string DocUser { get => docUser; set => docUser = value; }
+        public string Docid { get => docid; set => docid = value; }
 
         public DataTable FetchSubject()
         {
             OpenConnection();
             DataTable dtsub = new DataTable();
-            SqlCommand command = new SqlCommand("Select distinct Subject from Query_Details", con);
+            SqlCommand command = new SqlCommand("Select distinct Subject from Common_Query", con);
             SqlDataAdapter da = new SqlDataAdapter(command);
             da.Fill(dtsub);
             CloseConnection();
@@ -78,7 +87,19 @@ namespace ELearning.Classes
         {
             OpenConnection();
             DataTable dtquery = new DataTable();
-            SqlCommand command = new SqlCommand("Select QUser_Id,Date,Query,Query_Id from Query_Details where Subject=@sub", con);
+            SqlCommand command = new SqlCommand("select q.Query_Id,q.Doc_Id,d.Name,q.Date,q.Query,u.Document_File from Query_Details q join Uploaded_Document u on q.Doc_Id=u.Doc_Id join User_Details d on q.QUser_Id=d.User_Id where q.Subject=@sub", con);
+            command.Parameters.AddWithValue("@sub", subject);
+            SqlDataAdapter da = new SqlDataAdapter(command);
+            da.Fill(dtquery);
+            CloseConnection();
+            return dtquery;
+        }
+
+        public DataTable FetchCommonQuery()
+        {
+            OpenConnection();
+            DataTable dtquery = new DataTable();
+            SqlCommand command = new SqlCommand("select q.Query_Id,d.Name,q.Date,q.Query from Common_Query q join User_Details d on q.QUser_Id=d.User_Id where q.Subject=@sub", con);
             command.Parameters.AddWithValue("@sub", subject);
             SqlDataAdapter da = new SqlDataAdapter(command);
             da.Fill(dtquery);
@@ -89,7 +110,22 @@ namespace ELearning.Classes
         public int getquerycount()
         {
             OpenConnection();
-            SqlCommand command = new SqlCommand("select count(Query_Id) from Query_Details", con);
+            SqlCommand command = new SqlCommand("select count(q.Query_Id) from Query_Details q join Uploaded_Document u on u.Doc_Id=q.Doc_Id where u.User_Id=@userid", con);
+            command.Parameters.AddWithValue("@userid", userid);
+            object cnt = command.ExecuteScalar();
+            if (cnt != DBNull.Value)
+            {
+                querycount = (int)cnt;
+
+            }
+            return querycount;
+        }
+
+        public int getDocumentcount()
+        {
+            OpenConnection();
+            SqlCommand command = new SqlCommand("select count(Doc_Id) from Uploaded_Document where User_Id=@userid", con);
+            command.Parameters.AddWithValue("@userid", userid);
             object cnt = command.ExecuteScalar();
             if (cnt != DBNull.Value)
             {
@@ -103,13 +139,27 @@ namespace ELearning.Classes
         {
             OpenConnection();
             DataTable dtquery = new DataTable();
-            SqlCommand command = new SqlCommand("Select * from Query_Details where Query_Id=@qid", con);
+            SqlCommand command = new SqlCommand("select d.Name,q.Query from Query_Details q join User_Details d on q.QUser_Id=d.User_Id where q.Query_Id=@qid", con);
             command.Parameters.AddWithValue("@qid", queryid);
             SqlDataAdapter da = new SqlDataAdapter(command);
             da.Fill(dtquery);
             CloseConnection();
             return dtquery;
         }
+
+        public void ReplyCommon()
+        {
+            OpenConnection();
+            string qry = "insert into Common_Reply values(@qid,@ruser,@reply,@rdate)";
+            SqlCommand cmd = new SqlCommand(qry, con);
+            cmd.Parameters.AddWithValue("@qid", queryid);
+            cmd.Parameters.AddWithValue("@ruser", ruserid);
+            cmd.Parameters.AddWithValue("@reply", reply);
+            cmd.Parameters.AddWithValue("@rdate", rdate);
+            cmd.ExecuteNonQuery();
+            CloseConnection();
+        }
+
         //save query reply
         public void InsertReply()
         {
@@ -222,7 +272,7 @@ namespace ELearning.Classes
         {
             OpenConnection();
             DataTable dtQuiz = new DataTable();
-            SqlCommand command = new SqlCommand("Select r.Quiz_Id,r.User_Id,r.Date,r.SubCategory,r.Start_Time,r.End_Time,r.Correct_Answer,r.Incorrect_Answer,r.Attended_Qusers,r.Total_Score from Quiz_Report r left join User_Details u on u.User_Id=r.User_Id where u.Branch=@sbranch and u.Semester=@sem", con);
+            SqlCommand command = new SqlCommand("Select r.Quiz_Id,u.Name,r.Date,r.SubCategory,r.Start_Time,r.End_Time,r.Correct_Answer,r.Incorrect_Answer,r.Attended_Qusers,r.Total_Score from Quiz_Report r left join User_Details u on u.User_Id=r.User_Id where u.Branch=@sbranch and u.Semester=@sem", con);
             command.Parameters.AddWithValue("@sbranch", branch);
             command.Parameters.AddWithValue("@sem", semseter);
             SqlDataAdapter da = new SqlDataAdapter(command);
@@ -267,6 +317,43 @@ namespace ELearning.Classes
                 Qstn_count = (int)cnt;
             }
             return Qstn_count;
+        }
+
+        //Fetch Questions
+        public DataTable FetchDocuments()
+        {
+            OpenConnection();
+            DataTable dtDocument = new DataTable();
+            SqlCommand command = new SqlCommand("Select Doc_Id,Subject,Topic,Description,Status,Document_File from Uploaded_Document where Doc_Type=@doctype and User_Id=@user", con);
+            command.Parameters.AddWithValue("@doctype", doc_type);
+            command.Parameters.AddWithValue("@user", facultyid);
+            SqlDataAdapter da = new SqlDataAdapter(command);
+            da.Fill(dtDocument);
+            CloseConnection();
+            return dtDocument;
+        }
+
+        public DataTable FetchSubjectDoc()
+        {
+            OpenConnection();
+            DataTable dtSubject = new DataTable();
+            SqlCommand command = new SqlCommand("select Subject from Subject_Details where B_Id in (select B_Id from Branch_Details where Dept_Id in (select Department from User_Details where User_Id=@uid))", con);
+            command.Parameters.AddWithValue("@uid", userid);
+            SqlDataAdapter da = new SqlDataAdapter(command);
+            da.Fill(dtSubject);
+            CloseConnection();
+            return dtSubject;
+        }
+
+        //Delete Documents
+        public void DeleteDocument()
+        {
+            OpenConnection();
+            string qry = "delete from Uploaded_Document where Doc_Id=@dcid ";
+            SqlCommand cmd = new SqlCommand(qry, con);
+            cmd.Parameters.AddWithValue("@dcid", docid);
+            cmd.ExecuteNonQuery();
+            CloseConnection();
         }
     }
 }

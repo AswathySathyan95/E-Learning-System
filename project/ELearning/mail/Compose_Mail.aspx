@@ -132,7 +132,7 @@
                     <td class="auto-style5">&nbsp;</td>
                     <td colspan="2">
                         <strong>
-                        <asp:Button ID="Button1" runat="server" Text="Send" Font-Bold="True" Font-Size="Large" ForeColor="Black" Width="180px" OnClick="Button1_Click" />
+                        <asp:Button ID="Button1" runat="server" Text="Send" Font-Bold="True" Font-Size="Large" ForeColor="Black" Width="193px" OnClick="Button1_Click" BorderStyle="Inset" Height="54px" />
                         </strong>
                     </td>
                     <td>&nbsp;</td>

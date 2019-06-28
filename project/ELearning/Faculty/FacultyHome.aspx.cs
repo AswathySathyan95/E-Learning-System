@@ -15,8 +15,10 @@ namespace ELearning.Faculty
         FacultyNewClass obj = new FacultyNewClass();
         protected void Page_Load(object sender, EventArgs e)
         {
+            obj.Userid = Session["u_id"].ToString();
             lbltotalquery.Text =obj.getquerycount().ToString();
             lbltotalquestion.Text = obj.getQuestionCount().ToString();
+            lbltotaldocuments.Text = obj.getDocumentcount().ToString();
         }
     }
 }

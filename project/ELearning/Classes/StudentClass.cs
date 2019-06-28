@@ -222,7 +222,7 @@ namespace ELearning.Classes
                 count = 1;
             }
             quiz_id = "Quiz" + count;
-            string qry = "insert into Quiz_Report values('"+quiz_id+ "',@cuserid,@cdate,@csub,@stime,@etime,@cans,@wans,@cattend,@cscore,@cper)";
+            string qry = "insert into Quiz_Report values('"+quiz_id+ "',@cuserid,@cdate,@csub,@stime,@etime,@cans,@wans,@cattend,@cscore)";
             SqlCommand cmd = new SqlCommand(qry, con);
             cmd.Parameters.AddWithValue("@cuserid", user_id);
             cmd.Parameters.AddWithValue("@cdate", quiz_date);
@@ -233,7 +233,6 @@ namespace ELearning.Classes
             cmd.Parameters.AddWithValue("@wans", wrong_ans);
             cmd.Parameters.AddWithValue("@cattend", attended);
             cmd.Parameters.AddWithValue("@cscore", score);
-            cmd.Parameters.AddWithValue("@cper", percent);
             cmd.ExecuteNonQuery();
             CloseConnection();
         }

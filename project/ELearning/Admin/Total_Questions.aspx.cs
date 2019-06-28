@@ -39,6 +39,12 @@ namespace ELearning.Admin
                 GvQuestions.DataSource = dtquestions;
                 GvQuestions.DataBind();
             }
+            else
+            {
+                DataTable dt = new DataTable();
+                GvQuestions.DataSource = dt;
+                GvQuestions.DataBind();
+            }
         }
 
       protected void DdlCtgry_SelectedIndexChanged(object sender, EventArgs e)

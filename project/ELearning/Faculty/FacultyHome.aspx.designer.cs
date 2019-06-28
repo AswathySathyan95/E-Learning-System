@@ -31,12 +31,12 @@ namespace ELearning.Faculty {
         protected global::System.Web.UI.WebControls.Label lbltotalquestion;
         
         /// <summary>
-        /// lbltotalstudents control.
+        /// lbltotaldocuments control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbltotalstudents;
+        protected global::System.Web.UI.WebControls.Label lbltotaldocuments;
     }
 }

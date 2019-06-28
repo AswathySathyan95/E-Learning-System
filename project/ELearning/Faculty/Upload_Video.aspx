@@ -4,12 +4,24 @@
 
         <table class="auto-style3">
             <tr>
-                <td class="text-center" colspan="4"><span class="newStyle1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Upload Video Tutorials</span></td>
+                <td class="text-left" colspan="4">
+                    <asp:ScriptManager ID="ScriptManager1" runat="server">
+                    </asp:ScriptManager>
+                    <span class="newStyle1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Upload Video Tutorials</span></td>
             </tr>
             <tr>
                 <td class="auto-style8">
-                                    <asp:ScriptManager ID="ScriptManager1" runat="server">
-                                    </asp:ScriptManager>
+                                    
+                                &nbsp;</td>
+                <td class="auto-style6">
+                                    &nbsp;</td>
+                <td>
+                                    &nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td class="auto-style8">
+                                    
                                 </td>
                 <td class="auto-style6">
                                     <strong>
@@ -61,7 +73,7 @@
                                     </strong>
                                 </td>
                 <td>
-                                    <asp:TextBox ID="TxtDescptn" runat="server" TextMode="MultiLine" Width="350px"></asp:TextBox>
+                                    <asp:TextBox ID="TxtDescptn" runat="server" TextMode="MultiLine" Width="350px" Height="73px"></asp:TextBox>
                                 </td>
                 <td>&nbsp;</td>
             </tr>
@@ -80,12 +92,20 @@
                 <td class="auto-style2"></td>
             </tr>
             <tr>
+                <td class="auto-style9">&nbsp;</td>
+                <td class="auto-style7">
+                                    &nbsp;</td>
+                <td class="auto-style2">
+                                    &nbsp;</td>
+                <td class="auto-style2">&nbsp;</td>
+            </tr>
+            <tr>
                 <td class="auto-style8">&nbsp;</td>
-                <td class="auto-style6">&nbsp;</td>
-                <td>
+                <td colspan="2">
                     <br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <strong>
-                                    <asp:Button ID="BtnSave" runat="server" CssClass="auto-style14" OnClick="BtnSave_Click" style="height: 42px" Text="Upload Video" Width="204px" Font-Bold="True" Font-Size="Large" ForeColor="Black" />
+                                    <asp:Button ID="BtnSave" runat="server" CssClass="auto-style14" OnClick="BtnSave_Click" Text="Upload Video" Width="243px" Font-Bold="True" Font-Size="Large" ForeColor="Black" BorderStyle="Inset" Height="56px" />
                                     </strong></td>
                 <td>&nbsp;</td>
             </tr>
@@ -120,11 +140,11 @@
             width: 289px;
         }
         .auto-style8 {
-            width: 211px;
+            width: 103px;
         }
         .auto-style9 {
             height: 38px;
-            width: 211px;
+            width: 103px;
         }
 
     </style>

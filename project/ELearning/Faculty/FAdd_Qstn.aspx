@@ -3,12 +3,13 @@
     <table class="auto-style1">
         <tr>
             <td class="auto-style23" colspan="5">
-                <span class="newStyle1">Quiz Questions</span></td>
+                <asp:ScriptManager ID="ScriptManager1" runat="server">
+                </asp:ScriptManager>
+                <span class="newStyle1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Quiz Questions</span></td>
         </tr>
         <tr>
             <td class="auto-style25">
-                <asp:ScriptManager ID="ScriptManager1" runat="server">
-                </asp:ScriptManager>
+                
             </td>
             <td style="width: 311px"><strong>
                 <asp:Label ID="Label1" runat="server" Text="Question Id"></asp:Label>
@@ -161,18 +162,23 @@
         </tr>
         <tr>
             <td class="auto-style31"></td>
-            <td class="auto-style13">
+            <td class="auto-style13" colspan="2">
                 <br />
-                <br />
-            </td>
-            <td class="auto-style20">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <strong>
-                <asp:Button ID="BtnSave" runat="server" style="font-weight: bold" Text="Save Question" OnClick="BtnSave_Click" />
+                <asp:Button ID="BtnSave" runat="server" style="font-weight: bold" Text="Save Question" OnClick="BtnSave_Click" BorderStyle="Inset" CssClass="auto-style36" Height="56px" Width="229px" />
                 </strong>
                 <br />
             </td>
             <td class="auto-style21"></td>
             <td class="auto-style21"></td>
+        </tr>
+        <tr>
+            <td class="auto-style31">&nbsp;</td>
+            <td class="auto-style13" colspan="2">
+                &nbsp;</td>
+            <td class="auto-style21">&nbsp;</td>
+            <td class="auto-style21">&nbsp;</td>
         </tr>
         </table>
 </asp:Content>
@@ -203,12 +209,7 @@
             width: 677px;
             }
         .auto-style13 {
-            text-align: right;
-            width: 311px;
-            height: 82px;
-        }
-        .auto-style20 {
-            width: 677px;
+            text-align: left;
             height: 82px;
         }
         .auto-style21 {
@@ -222,30 +223,30 @@
         }
         .auto-style23 {
             height: 4px;
-            text-align: center;
+            text-align: left;
         }
         .auto-style25 {
-            width: 193px;
+            width: 80px;
         }
         .auto-style26 {
             height: 42px;
-            width: 193px;
+            width: 80px;
         }
         .auto-style27 {
             height: 30px;
-            width: 193px;
+            width: 80px;
         }
         .auto-style28 {
             height: 121px;
-            width: 193px;
+            width: 80px;
         }
         .auto-style31 {
             height: 82px;
-            width: 193px;
+            width: 80px;
         }
         .auto-style32 {
             height: 55px;
-            width: 193px;
+            width: 80px;
         }
         .auto-style33 {
             width: 677px;
@@ -256,6 +257,9 @@
         }
         .auto-style35 {
             height: 25px;
+        }
+        .auto-style36 {
+            font-size: large;
         }
     </style>
 </asp:Content>

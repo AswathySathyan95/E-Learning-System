@@ -15,16 +15,19 @@ namespace ELearning.Admin
         AdminNewClass obj = new AdminNewClass();
         protected void Page_Load(object sender, EventArgs e)
         {
-            DataTable dtsub = new DataTable();
-            dtsub = obj.querysubject();
-            if (dtsub.Rows.Count > 0)
+            if(!IsPostBack)
             {
-                DdlQuerySub.DataSource = dtsub;
-                DdlQuerySub.DataTextField = "Subject";
-                DdlQuerySub.DataValueField = "Subject";
-                DdlQuerySub.DataBind();
+                DataTable dtsub = new DataTable();
+                dtsub = obj.querysubject();
+                if (dtsub.Rows.Count > 0)
+                {
+                    DdlQuerySub.DataSource = dtsub;
+                    DdlQuerySub.DataTextField = "Subject";
+                    DdlQuerySub.DataValueField = "Subject";
+                    DdlQuerySub.DataBind();
+                }
+                DdlQuerySub.Items.Insert(0, "---Select---");
             }
-            DdlQuerySub.Items.Insert(0, "---Select---");
         }
 
         protected void DdlQuerySub_SelectedIndexChanged(object sender, EventArgs e)
@@ -39,6 +42,12 @@ namespace ELearning.Admin
             if (dtquery.Rows.Count > 0)
             {
                 GvQuery.DataSource = dtquery;
+                GvQuery.DataBind();
+            }
+            else
+            {
+                DataTable dt = new DataTable();
+                GvQuery.DataSource = dt;
                 GvQuery.DataBind();
             }
         }

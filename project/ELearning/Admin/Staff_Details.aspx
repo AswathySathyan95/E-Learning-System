@@ -10,9 +10,6 @@
             font-weight: bolder;
             color: #000080;
         }
-        .auto-style2 {
-            width: 231px;
-        }
         .auto-style3 {
             font-size: large;
         }
@@ -23,6 +20,16 @@
         .auto-style5 {
             height: 50px;
         }
+        .auto-style6 {
+            height: 50px;
+            width: 308px;
+        }
+        .auto-style7 {
+            margin-left: 9px;
+        }
+        .auto-style8 {
+            width: 129px;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="maincontent" runat="server">
@@ -30,34 +37,48 @@
         <div>
             <span class="newStyle1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Staff Details</span></div>
         <div>
-
             <table class="w-100">
+                <tr>
+                    <td class="auto-style4">
+                        &nbsp;</td>
+                    <td class="auto-style6">&nbsp;</td>
+                    <td class="auto-style5">
+                        &nbsp;</td>
+                    <td class="auto-style5">&nbsp;</td>
+                </tr>
                 <tr>
                     <td class="auto-style4">
                         <asp:ScriptManager ID="ScriptManager1" runat="server">
                         </asp:ScriptManager>
                     </td>
-                    <td class="auto-style5"><strong>
-                        <asp:Label ID="Label1" runat="server" CssClass="auto-style3" Text="Department"></asp:Label>
+                    <td class="auto-style6"><strong>
+                        <asp:Label ID="Label1" runat="server" CssClass="auto-style3" Text="Department" Width="300px"></asp:Label>
                         </strong></td>
                     <td class="auto-style5">
-                <asp:DropDownList ID="ddlDept" runat="server" AutoPostBack="True" OnSelectedIndexChanged="ddlDept_SelectedIndexChanged" style="height: 34px">
+                <asp:DropDownList ID="ddlDept" runat="server" AutoPostBack="True" OnSelectedIndexChanged="ddlDept_SelectedIndexChanged" style="height: 34px" Width="300px">
                 </asp:DropDownList>
                     </td>
                     <td class="auto-style5"></td>
                 </tr>
                 <tr>
-                    <td class="auto-style2">&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
+                    <td class="auto-style4">
+                        &nbsp;</td>
+                    <td class="auto-style6">&nbsp;</td>
+                    <td class="auto-style5">
+                        &nbsp;</td>
+                    <td class="auto-style5">&nbsp;</td>
                 </tr>
+            </table>
+        </div>
+        <div>
+
+            <table class="w-100">
                 <tr>
-                    <td class="auto-style2">&nbsp;</td>
-                    <td colspan="2" rowspan="2">
+                    <td class="auto-style8">&nbsp;</td>
+                    <td>
                         <asp:UpdatePanel ID="UpdatePanel1" runat="server">
                             <ContentTemplate>
-                                <asp:GridView ID="GvDetails" runat="server" AllowPaging="true" AutoGenerateColumns="False" BackColor="White" BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px" CellPadding="3" ForeColor="Black" GridLines="Vertical" OnPageIndexChanging="GvDetailsPageIndexChanging" OnRowCommand="GvDetails_RowCommand" PageSize="10">
+                                <asp:GridView ID="GvDetails" runat="server" AllowPaging="true" AutoGenerateColumns="False" BackColor="White" BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px" CellPadding="3" ForeColor="Black" GridLines="Vertical" OnPageIndexChanging="GvDetailsPageIndexChanging" OnRowCommand="GvDetails_RowCommand" PageSize="10" Width="900px" ShowHeaderWhenEmpty="True">
                                     <AlternatingRowStyle BackColor="#CCCCCC" />
                                     <Columns>
                                         <asp:BoundField DataField="User_Id" HeaderText="Student Id" />
@@ -70,6 +91,7 @@
                                             </ItemTemplate>
                                         </asp:TemplateField>
                                     </Columns>
+                                    <EmptyDataTemplate> No Record Found</EmptyDataTemplate>
                                     <FooterStyle BackColor="#CCCCCC" />
                                     <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />
                                     <PagerStyle BackColor="#999999" ForeColor="Black" HorizontalAlign="Center" />
@@ -84,11 +106,7 @@
                                 <asp:AsyncPostBackTrigger ControlID="ddlDept" EventName="SelectedIndexChanged" />
                             </Triggers>
                         </asp:UpdatePanel>
-                    </td>
-                    <td>&nbsp;</td>
-                </tr>
-                <tr>
-                    <td class="auto-style2">&nbsp;</td>
+                        &nbsp;</td>
                     <td>&nbsp;</td>
                 </tr>
             </table>

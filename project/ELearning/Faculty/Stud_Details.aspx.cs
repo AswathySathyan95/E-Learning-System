@@ -48,6 +48,12 @@ namespace ELearning.Faculty
                 GvDetails.DataSource = dtname;
                 GvDetails.DataBind();
             }
+            else
+            {
+                DataTable dt = new DataTable();
+                GvDetails.DataSource = dt;
+                GvDetails.DataBind();
+            }
         }
         protected void GvDetailsPageIndexChanging(object sender, GridViewPageEventArgs e)
         {

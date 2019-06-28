@@ -17,7 +17,7 @@
             margin-right: 0px;
         }
         .auto-style12 {
-            width: 260px;
+            width: 199px;
         }
         .newStyle9 {
             font-family: "colonna MT";
@@ -28,7 +28,11 @@
 
         .auto-style13 {
             text-align: left;
-            width: 172px;
+            width: 180px;
+        }
+
+        .auto-style14 {
+            width: 71px;
         }
 
     </style>
@@ -37,7 +41,10 @@
     <div class="auto-style1">
         <div class="text-center">
 
-            <span class="newStyle9">&nbsp; Quiz Details</span><table class="w-100">
+            <div class="text-left">
+                <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+            <span class="newStyle9">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Quiz Details</span></div>
+            <table class="w-100">
                 <tr>
                     <td class="auto-style12"></td>
                     <td class="auto-style13"><strong>
@@ -52,29 +59,54 @@
                         <br /></td>
                     <td>&nbsp;</td>
                 </tr>
+                <tr>
+                    <td class="auto-style12">&nbsp;</td>
+                    <td class="auto-style13">&nbsp;</td>
+                    <td class="text-left">
+                        &nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
             </table>
         </div>
         <div class="text-center">
-            <asp:GridView ID="GvDetails" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px" CellPadding="3" ForeColor="Black" GridLines="Vertical" Height="261px" Width="1104px">
-                <AlternatingRowStyle BackColor="#CCCCCC" />
-                <Columns>
-                    <asp:BoundField DataField="Date" HeaderText="Date" DataFormatString="{0:d}" />
-                    <asp:BoundField DataField="Start_Time" HeaderText="Start Time" DataFormatString="{0:t}" />
-                    <asp:BoundField DataField="End_Time" HeaderText="End Time" DataFormatString="{0:t}" />
-                    <asp:BoundField DataField="Attended_Qusers" HeaderText="No. Of Questions Attended" />
-                    <asp:BoundField DataField="Correct_Answer" HeaderText="Correct Answers" />
-                    <asp:BoundField DataField="Incorrect_Answer" HeaderText="No. of Wrong Answers" />
-                    <asp:BoundField DataField="Total_Score" HeaderText="Total Score" />
-                </Columns>
-                <FooterStyle BackColor="#CCCCCC" />
-                <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />
-                <PagerStyle BackColor="#999999" ForeColor="Black" HorizontalAlign="Center" />
-                <SelectedRowStyle BackColor="#000099" Font-Bold="True" ForeColor="White" />
-                <SortedAscendingCellStyle BackColor="#F1F1F1" />
-                <SortedAscendingHeaderStyle BackColor="#808080" />
-                <SortedDescendingCellStyle BackColor="#CAC9C9" />
-                <SortedDescendingHeaderStyle BackColor="#383838" />
-            </asp:GridView>
+            <table class="w-100">
+                <tr>
+                    <td class="auto-style14">&nbsp;</td>
+                    <td>
+                        <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                            <ContentTemplate>
+                                <asp:GridView ID="GvDetails" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px" CellPadding="3" ForeColor="Black" GridLines="Vertical" Height="261px" Width="1104px" ShowHeaderWhenEmpty="True">
+                                    <AlternatingRowStyle BackColor="#CCCCCC" />
+                                    <Columns>
+                                        <asp:BoundField DataField="Date" DataFormatString="{0:d}" HeaderText="Date" />
+                                        <asp:BoundField DataField="Start_Time" DataFormatString="{0:t}" HeaderText="Start Time" />
+                                        <asp:BoundField DataField="End_Time" DataFormatString="{0:t}" HeaderText="End Time" />
+                                        <asp:BoundField DataField="Attended_Qusers" HeaderText="No. Of Questions Attended" />
+                                        <asp:BoundField DataField="Correct_Answer" HeaderText="Correct Answers" />
+                                        <asp:BoundField DataField="Incorrect_Answer" HeaderText="No. of Wrong Answers" />
+                                        <asp:BoundField DataField="Total_Score" HeaderText="Total Score" />
+                                    </Columns>
+                                    <EmptyDataTemplate>
+                                        No Record Found
+                                    </EmptyDataTemplate>
+                                    <FooterStyle BackColor="#CCCCCC" />
+                                    <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />
+                                    <PagerStyle BackColor="#999999" ForeColor="Black" HorizontalAlign="Center" />
+                                    <SelectedRowStyle BackColor="#000099" Font-Bold="True" ForeColor="White" />
+                                    <SortedAscendingCellStyle BackColor="#F1F1F1" />
+                                    <SortedAscendingHeaderStyle BackColor="#808080" />
+                                    <SortedDescendingCellStyle BackColor="#CAC9C9" />
+                                    <SortedDescendingHeaderStyle BackColor="#383838" />
+                                </asp:GridView>
+                            </ContentTemplate>
+                            <Triggers>
+                                <asp:AsyncPostBackTrigger ControlID="DdlCategory" EventName="SelectedIndexChanged" />
+                            </Triggers>
+                        </asp:UpdatePanel>
+                    </td>
+                    <td>&nbsp;</td>
+                </tr>
+            </table>
         </div>
     </div>
 </asp:Content>

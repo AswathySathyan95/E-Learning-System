@@ -29,15 +29,18 @@
                 <tr>
                     <td>&nbsp;</td>
                     <td>
-                        <asp:GridView ID="GvReply" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px" CellPadding="3" CssClass="auto-style3" ForeColor="Black" GridLines="Vertical" Width="889px" AllowPaging="True" OnPageIndexChanging="GvReply_PageIndexChanging" PageSize="5">
+                        <asp:GridView ID="GvReply" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px" CellPadding="3" CssClass="auto-style3" ForeColor="Black" GridLines="Vertical" Width="889px" AllowPaging="True" OnPageIndexChanging="GvReply_PageIndexChanging" PageSize="5" ShowHeaderWhenEmpty="True">
                             <AlternatingRowStyle BackColor="#CCCCCC" />
                             <Columns>
-                                <asp:BoundField DataField="Reply_id" HeaderText="Reply Id" />
-                                <asp:BoundField DataField="Query_Id" HeaderText="Query_Id" Visible="False" />
-                                <asp:BoundField DataField="RUser_Id" HeaderText="RUser_Id" Visible="False" />
+                                <asp:BoundField DataField="Reply_id" HeaderText="Reply Id" Visible="False" />
                                 <asp:BoundField DataField="Date" DataFormatString="{0:d}" HeaderText="Posted On" />
+                                <asp:BoundField DataField="Name" HeaderText="Name" />
+                                <asp:BoundField DataField="Query" HeaderText="Query" />
                                 <asp:BoundField DataField="Reply" HeaderText="Reply" />
                             </Columns>
+                            <EmptyDataTemplate>
+                                No Record Found
+                            </EmptyDataTemplate>
                             <FooterStyle BackColor="#CCCCCC" />
                             <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />
                             <PagerStyle BackColor="#999999" ForeColor="Black" HorizontalAlign="Center" />

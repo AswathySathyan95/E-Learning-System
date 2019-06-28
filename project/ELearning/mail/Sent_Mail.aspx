@@ -3,7 +3,7 @@
     <style type="text/css">
         .auto-style1 {
             height: 100px;
-            text-align: center;
+            text-align: left;
         }
         .auto-style2 {
             height: 454px;
@@ -15,14 +15,14 @@
             color: #000080;
         }
         .auto-style3 {
-            width: 171px;
+            width: 79px;
         }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="maincontent" runat="server">
     <div class="auto-style2">
         <div class="auto-style1">
-            <span class="newStyle1">Sent Mail<br />
+            <span class="newStyle1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sent Mail<br />
             </span>
         </div>
         <div>

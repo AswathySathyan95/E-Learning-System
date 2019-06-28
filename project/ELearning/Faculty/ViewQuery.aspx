@@ -10,66 +10,70 @@
             font-weight: bolder;
             color: #000080;
         }
-        .auto-style2 {
-            width: 838px;
-        }
         .auto-style3 {
-            width: 265px;
+            width: 227px;
         }
         .auto-style4 {
             font-size: large;
         }
         .auto-style5 {
-            width: 139px;
+            width: 255px;
+        }
+        .auto-style6 {
+            width: 129px;
         }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="maincontent" runat="server">
     <div class="auto-style1">
-        <div class="text-center">
+        <div class="text-left">
 
-            <span class="newStyle1">View Queries</span></div>
+            <span class="newStyle1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;View Queries</span></div>
         <div>
-
             <table class="w-100">
                 <tr>
                     <td class="auto-style3">
                         &nbsp;</td>
-                    <td class="auto-style2">
-                        <table class="w-100">
-                            <tr>
-                                <td>
-                                    <strong>
-                                    <asp:Label ID="Label1" runat="server" Text="Subject" CssClass="auto-style4"></asp:Label>
-                                    </strong>
-                                </td>
-                                <td>
-                                    <asp:DropDownList ID="DdlQuerySub" runat="server" AutoPostBack="True" OnSelectedIndexChanged="DdlQuerySub_SelectedIndexChanged">
-                                    </asp:DropDownList>
-                                </td>
-                            </tr>
-                        </table>
-                    </td>
-                    <td>&nbsp;</td>
+                    <td class="auto-style5">
+                                    &nbsp;</td>
+                    <td>
+                                    &nbsp;</td>
                 </tr>
                 <tr>
                     <td class="auto-style3">
                         <asp:ScriptManager ID="ScriptManager1" runat="server">
                         </asp:ScriptManager>
                     </td>
-                    <td class="auto-style2">
-                        &nbsp;</td>
-                    <td>&nbsp;</td>
+                    <td class="auto-style5">
+                                    <strong>
+                                    <asp:Label ID="Label1" runat="server" Text="Subject" CssClass="auto-style4" Width="250px"></asp:Label>
+                                    </strong>
+                    </td>
+                    <td>
+                                    <asp:DropDownList ID="DdlQuerySub" runat="server" AutoPostBack="True" OnSelectedIndexChanged="DdlQuerySub_SelectedIndexChanged" CssClass="offset-sm-0" Width="300px">
+                                    </asp:DropDownList>
+                                </td>
                 </tr>
                 <tr>
-                    <td colspan="3">
-                        <table class="w-100">
-                            <tr>
-                                <td class="auto-style5">&nbsp;</td>
-                                <td>
+                    <td class="auto-style3">
+                        &nbsp;</td>
+                    <td class="auto-style5">
+                                    &nbsp;</td>
+                    <td>
+                                    &nbsp;</td>
+                </tr>
+                </table>
+
+        </div>
+        <div>
+            
+            <table class="w-100">
+                <tr>
+                    <td class="auto-style6">&nbsp;</td>
+                    <td>
                         <asp:UpdatePanel ID="UpdatePanel1" runat="server">
                             <ContentTemplate>
-                                <asp:GridView ID="GvQuery" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px" CellPadding="3" ForeColor="Black" GridLines="Vertical" AllowPaging="True" OnPageIndexChanging="GvQuery_PageIndexChanging" Width="796px" PageSize="5" OnRowCommand="GvQuery_RowCommand"> 
+                                <asp:GridView ID="GvQuery" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px" CellPadding="3" ForeColor="Black" GridLines="Vertical" AllowPaging="True" OnPageIndexChanging="GvQuery_PageIndexChanging" Width="796px" PageSize="5" OnRowCommand="GvQuery_RowCommand" ShowHeaderWhenEmpty="True"> 
                                     <AlternatingRowStyle BackColor="#CCCCCC" />
                                     <Columns>
                                         <asp:BoundField DataField="QUser_Id" HeaderText="Posted by" Visible="False" />
@@ -83,6 +87,9 @@
                                         </ItemTemplate>
                                         </asp:TemplateField>
                                     </Columns>
+                                    <EmptyDataTemplate>
+                                        No Record Found
+                                    </EmptyDataTemplate>
                                     <FooterStyle BackColor="#CCCCCC" />
                                     <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />
                                     <PagerStyle BackColor="#999999" ForeColor="Black" HorizontalAlign="Center" />
@@ -97,14 +104,11 @@
                                 <asp:AsyncPostBackTrigger ControlID="DdlQuerySub" EventName="SelectedIndexChanged" />
                             </Triggers>
                         </asp:UpdatePanel>
-                                </td>
-                                <td>&nbsp;</td>
-                            </tr>
-                        </table>
-                    </td>
+                        &nbsp;</td>
+                    <td>&nbsp;</td>
                 </tr>
             </table>
-
+            
         </div>
     </div>
 </asp:Content>

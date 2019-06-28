@@ -1,6 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Faculty/FacultyMaster.Master" AutoEventWireup="true" CodeBehind="Total_Qstn.aspx.cs" Inherits="ELearning.Faculty.Total_Qstn" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="headplaceholder" runat="server">
-    
+<asp:Content ID="Content1" ContentPlaceHolderID="headplaceholder" runat="server">    
     <style type="text/css">
         .auto-style1 {
             height: 453px;
@@ -41,37 +40,50 @@
             text-align: left;
         }
         .auto-style12 {
-            width: 229px;
+            width: 221px;
             text-align: left;
         }
         .auto-style13 {
-            width: 229px;
+            width: 221px;
+        }
+        .auto-style14 {
+            width: 29px;
         }
     </style>
     
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="maincontent" runat="server">
     <div class="auto-style1">
+        <div>
+            <asp:ScriptManager ID="ScriptManager1" runat="server">
+            </asp:ScriptManager>
+            <span class="newStyle3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Quiz Questions &nbsp;</span>
+        </div>
         <div class="text-center">
             <table class="auto-style2">
                 <tr>
-                    <td colspan="4">
-                        <span class="newStyle3">Quiz Questions
-                        &nbsp;</span></td>
+                    <td class="auto-style12">
+                        &nbsp;</td>
+                    <td class="auto-style11">
+                        &nbsp;</td>
+                    <td class="text-left">
+                        &nbsp;</td>
+                    <td>
+                        
+                        &nbsp;</td>
                 </tr>
                 <tr>
                     <td class="auto-style12">
                         &nbsp;</td>
                     <td class="auto-style11">
-                    <asp:Label ID="Label1" runat="server" Font-Bold="True" Font-Size="Large" ForeColor="Black" Text="Category" Width="128px" CssClass="auto-style7"></asp:Label>
+                    <asp:Label ID="Label1" runat="server" Font-Bold="True" Font-Size="Large" ForeColor="Black" Text="Category" Width="200px" CssClass="auto-style7"></asp:Label>
                             </td>
                     <td class="text-left">
-                    <asp:DropDownList ID="DdlCtgry" runat="server" AutoPostBack="True" OnSelectedIndexChanged="DdlCtgry_SelectedIndexChanged">
+                    <asp:DropDownList ID="DdlCtgry" runat="server" AutoPostBack="True" OnSelectedIndexChanged="DdlCtgry_SelectedIndexChanged" Width="300px">
                     </asp:DropDownList>
                             </td>
                     <td>
-                        <asp:ScriptManager ID="ScriptManager1" runat="server">
-                        </asp:ScriptManager>
+                        
                     </td>
                 </tr>
                 <tr>
@@ -83,16 +95,18 @@
                         &nbsp;</td>
                     <td>&nbsp;</td>
                 </tr>
+            </table>
+        </div>
+        <div id="cntnt" class="auto-style3">
+            
+            <table class="w-100">
                 <tr>
-                    <td colspan="4">
-                        <table class="w-100">
-                            <tr>
-                                <td>&nbsp;</td>
-                                <td>
-            <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                    <td class="auto-style14">&nbsp;</td>
+                    <td>
+                        <asp:UpdatePanel ID="UpdatePanel1" runat="server">
                 <ContentTemplate>
                     <div class="text-left">
-                        <asp:GridView ID="GvQuestions" runat="server" AllowPaging="True" AutoGenerateColumns="False" BackColor="White" BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px" CellPadding="3" CssClass="auto-style7" ForeColor="Black" GridLines="Vertical" Height="236px" OnPageIndexChanging="GvQuestions_PageIndexChanging" PageSize="5" Width="1130px">
+                        <asp:GridView ID="GvQuestions" runat="server" AllowPaging="True" AutoGenerateColumns="False" BackColor="White" BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px" CellPadding="3" CssClass="auto-style7" ForeColor="Black" GridLines="Vertical" Height="236px" OnPageIndexChanging="GvQuestions_PageIndexChanging" PageSize="5" Width="1130px" ShowHeaderWhenEmpty="True">
                             <AlternatingRowStyle BackColor="#CCCCCC" />
                             <Columns>
                                 <asp:BoundField DataField="Q_Id" HeaderText="Question Id" />
@@ -104,6 +118,9 @@
                                 <asp:BoundField DataField="Answer" HeaderText="Answer" />
                                 <asp:BoundField DataField="Description" HeaderText="Description" />
                             </Columns>
+                            <EmptyDataTemplate>
+                                No Record Found
+                            </EmptyDataTemplate>
                             <FooterStyle BackColor="#CCCCCC" />
                             <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />
                             <PagerStyle BackColor="#999999" ForeColor="Black" HorizontalAlign="Center" />
@@ -119,16 +136,10 @@
                     <asp:AsyncPostBackTrigger ControlID="DdlCtgry" EventName="SelectedIndexChanged" />
                 </Triggers>
             </asp:UpdatePanel>
-                                </td>
-                                <td>&nbsp;</td>
-                            </tr>
-                        </table>
-                    </td>
+                        &nbsp;</td>
+                    <td>&nbsp;</td>
                 </tr>
             </table>
-            
-        </div>
-        <div id="cntnt" class="auto-style3">
             
         </div>
     </div>

@@ -13,6 +13,10 @@
         .auto-style2 {
             width: 99px;
         }
+        .auto-style3 {
+            width: 100%;
+            height: 233px;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="maincontent" runat="server">
@@ -24,7 +28,7 @@
         </div>
         <div class="text-center">
 
-            <table class="w-100">
+            <table class="auto-style3">
                 <tr>
                     <td class="auto-style2">&nbsp;&nbsp;</td>
                     <td>

@@ -54,6 +54,12 @@ namespace ELearning.Faculty
                 GvQuizReport.DataSource = dtQuiz;
                 GvQuizReport.DataBind();
             }
+            else
+            {
+                DataTable dt = new DataTable();
+                GvQuizReport.DataSource = dt;
+                GvQuizReport.DataBind();
+            }
         }
 
         protected void DdlSemster_SelectedIndexChanged(object sender, EventArgs e)

@@ -22,11 +22,11 @@
             height: 378px;
         }
         .auto-style5 {
-            width: 221px;
+            width: 147px;
         }
         .auto-style6 {
             height: 32px;
-            width: 221px;
+            width: 147px;
         }
         .auto-style7 {
             color: #000000;
@@ -35,9 +35,9 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="maincontent" runat="server">
     <div id="mainn" class="auto-style1">
-        <div class="text-center">
+        <div class="text-left">
 
-            <span class="newStyle1">Compose Mail</span></div>
+            <span class="newStyle1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Compose Mail</span></div>
         <div class="auto-style2">
 
             <table class="auto-style4">
@@ -60,8 +60,15 @@
                     <td class="auto-style5">
                         &nbsp;</td>
                     <td colspan="2">
-                        <asp:TextBox ID="TxtFrom" runat="server" Width="500px" ReadOnly="True"></asp:TextBox>
+                        <asp:TextBox ID="TxtFrom" runat="server" Width="500px" ReadOnly="True" BorderStyle="None"></asp:TextBox>
                     </td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="auto-style5">
+                        &nbsp;</td>
+                    <td colspan="2">
+                        &nbsp;</td>
                     <td>&nbsp;</td>
                 </tr>
                 <tr>
@@ -76,9 +83,15 @@
                 <tr>
                     <td class="auto-style5">&nbsp;</td>
                     <td colspan="2">
-                        <asp:TextBox ID="TxtToId" runat="server" Width="500px" ReadOnly="True"></asp:TextBox>
+                        <asp:TextBox ID="TxtToId" runat="server" Width="500px" ReadOnly="True" BorderStyle="None"></asp:TextBox>
                         <br />
                     </td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="auto-style5">&nbsp;</td>
+                    <td colspan="2">
+                        &nbsp;</td>
                     <td>&nbsp;</td>
                 </tr>
                 <tr>
@@ -93,9 +106,15 @@
                 <tr>
                     <td class="auto-style6"></td>
                     <td class="auto-style3" colspan="2">
-                        <asp:TextBox ID="TxtSubject" runat="server" Width="500px" ReadOnly="True"></asp:TextBox>
+                        <asp:TextBox ID="TxtSubject" runat="server" Width="500px" ReadOnly="True" BorderStyle="None"></asp:TextBox>
                     </td>
                     <td class="auto-style3"></td>
+                </tr>
+                <tr>
+                    <td class="auto-style6">&nbsp;</td>
+                    <td class="auto-style3" colspan="2">
+                        &nbsp;</td>
+                    <td class="auto-style3">&nbsp;</td>
                 </tr>
                 <tr>
                     <td class="auto-style5">&nbsp;</td>
@@ -109,7 +128,7 @@
                 <tr>
                     <td class="auto-style5">&nbsp;</td>
                     <td colspan="2">
-                        <asp:TextBox ID="TxtMessage" runat="server" TextMode="MultiLine" Width="596px" Height="196px" ReadOnly="True"></asp:TextBox>
+                        <asp:TextBox ID="TxtMessage" runat="server" TextMode="MultiLine" Width="596px" Height="196px" ReadOnly="True" BorderStyle="None"></asp:TextBox>
                     </td>
                     <td>&nbsp;</td>
                 </tr>

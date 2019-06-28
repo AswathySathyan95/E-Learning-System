@@ -36,8 +36,10 @@ namespace ELearning.Classes
         private DateTime date;
         private string queryid;
         private int replycount;
-        private int qryid;
+        private string qryid;
         private int quizcount;
+        private string doc_id;
+
 
         public string Userid { get => userid; set => userid = value; }
         public string Subject { get => subject; set => subject = value; }
@@ -48,7 +50,8 @@ namespace ELearning.Classes
         public string Queryid { get => queryid; set => queryid = value; }
         public int Replycount { get => replycount; set => replycount = value; }
         public int Quizcount { get => quizcount; set => quizcount = value; }
-        public int Qryid { get => qryid; set => qryid = value; }
+        public string Doc_id { get => doc_id; set => doc_id = value; }
+        public string Qryid { get => qryid; set => qryid = value; }
 
 
         //Fetch subject
@@ -108,7 +111,7 @@ namespace ELearning.Classes
         public void QueryInsert()
         {
             OpenConnection();
-            /*SqlCommand command = new SqlCommand("select count(Query_Id) from Query_Details", con);
+            SqlCommand command = new SqlCommand("select count(Query_Id) from Query_Details", con);
             int count;
             object cnt = command.ExecuteScalar();
             if (cnt != DBNull.Value)
@@ -120,8 +123,35 @@ namespace ELearning.Classes
             {
                 count = 1;
             }
-            queryid = "Qry" + count;*/
-            string qry = "insert into Query_Details values (@user,@sub,@query,@date)";
+            queryid = "Qry" + count;
+            string qry = "insert into Query_Details values ('"+queryid+"',@user,@docid,@sub,@query,@date)";
+            SqlCommand cmd = new SqlCommand(qry, con);
+            cmd.Parameters.AddWithValue("@user", userid);
+            cmd.Parameters.AddWithValue("@docid", doc_id);
+            cmd.Parameters.AddWithValue("@sub", subject);
+            cmd.Parameters.AddWithValue("@query", query);
+            cmd.Parameters.AddWithValue("@date", date);
+            cmd.ExecuteNonQuery();
+            CloseConnection();
+        }
+
+        public void QueryDoubtInsert()
+        {
+            OpenConnection();
+            SqlCommand command = new SqlCommand("select count(Query_Id) from Common_Query", con);
+            int count;
+            object cnt = command.ExecuteScalar();
+            if (cnt != DBNull.Value)
+            {
+                count = (int)cnt;
+                count++;
+            }
+            else
+            {
+                count = 1;
+            }
+            queryid = "Qry" + count;
+            string qry = "insert into Common_Query(Query_Id,QUser_Id,Subject,Query,Date)values ('" + queryid + "',@user,@sub,@query,@date)";
             SqlCommand cmd = new SqlCommand(qry, con);
             cmd.Parameters.AddWithValue("@user", userid);
             cmd.Parameters.AddWithValue("@sub", subject);
@@ -130,7 +160,6 @@ namespace ELearning.Classes
             cmd.ExecuteNonQuery();
             CloseConnection();
         }
-
         //fetch student details
         public DataTable StudentDetails()
         {
@@ -184,7 +213,7 @@ namespace ELearning.Classes
             }
             return replycount;
         }
-        public int getQueryId()
+        public string getQueryId()
         {
             OpenConnection();
             SqlCommand command1 = new SqlCommand("select Query_Id from Query_Details where QUser_Id=@suser", con);
@@ -192,28 +221,35 @@ namespace ELearning.Classes
             object cnt1 = command1.ExecuteScalar();
             if (cnt1 != DBNull.Value)
             {
-                qryid = (int)cnt1;
+                Qryid = (string)cnt1;
 
             }
-            else
-            {
-                qryid = 0;
-            }
-            return qryid;
+            return Qryid;
         }
 
         public DataTable FetchQueryReply()
         {
             OpenConnection();
             DataTable dtReplyQ = new DataTable();
-            SqlCommand command = new SqlCommand("Select * from Query_Reply where Query_Id=@qyid", con);
+            SqlCommand command = new SqlCommand("select u.Name,q.Query,r.Reply_id,r.Reply,r.Date from Query_Reply r join User_Details u on r.RUser_Id=u.User_Id join Query_Details q on q.Query_Id=r.Query_Id where r.Query_Id=@qyid", con);
             command.Parameters.AddWithValue("@qyid", Qryid);
             SqlDataAdapter da = new SqlDataAdapter(command);
             da.Fill(dtReplyQ);
             CloseConnection();
             return dtReplyQ;
         }
-       
+
+        public DataTable FetchDocSubject()
+        {
+            OpenConnection();
+            DataTable dtSubject = new DataTable();
+            SqlCommand command = new SqlCommand("Select * from Uploaded_Document where Doc_Id=@dcid", con);
+            command.Parameters.AddWithValue("@dcid",doc_id);
+            SqlDataAdapter da = new SqlDataAdapter(command);
+            da.Fill(dtSubject);
+            CloseConnection();
+            return dtSubject;
+        }
 
     }
 }

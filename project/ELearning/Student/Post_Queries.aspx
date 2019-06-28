@@ -23,13 +23,13 @@
             color: #000080;
         }
         .auto-style6 {
-            width: 164px;
+            width: 99px;
         }
         .auto-style7 {
             width: 256px;
         }
         .auto-style8 {
-            width: 164px;
+            width: 99px;
             height: 61px;
         }
         .auto-style9 {
@@ -46,7 +46,7 @@
 
         <table class="w-100">
             <tr>
-                <td colspan="4" class="text-center"><span class="newStyle2">Ask Doubts</span></td>
+                <td colspan="4" class="text-left"><span class="newStyle2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ask Doubts</span></td>
             </tr>
             <tr>
                 <td class="auto-style8"></td>
@@ -77,10 +77,9 @@
             </tr>
             <tr>
                 <td class="auto-style6">&nbsp;</td>
-                <td class="auto-style7">&nbsp;</td>
-                <td>
-                    <asp:Button ID="BtnQuery" runat="server" Font-Bold="True" Font-Size="Large" ForeColor="Black" OnClick="BtnQuery_Click" Text="Post Query" />
-                </td>
+                <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:Button ID="BtnQuery" runat="server" Font-Bold="True" Font-Size="Large" ForeColor="Black" OnClick="BtnQuery_Click" Text="Post Query" BorderStyle="Inset" Height="57px" Width="198px" />
+                    &nbsp;</td>
                 <td>&nbsp;</td>
             </tr>
             <tr>

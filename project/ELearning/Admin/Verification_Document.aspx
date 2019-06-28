@@ -8,30 +8,37 @@
             color: #000080;
         }
         .auto-style1 {
-            width: 127px;
+            width: 256px;
+        }
+        .auto-style2 {
+            width: 254px;
         }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="maincontent" runat="server">
     <div>
-
-        <table class="w-100">
-            <tr>
-                <td></td>
-                <td class="text-center" colspan="3">
-                    <asp:ScriptManager ID="ScriptManager1" runat="server">
+        <div>
+            <asp:ScriptManager ID="ScriptManager2" runat="server">
                     </asp:ScriptManager>
-                    <span class="newStyle1">Document Verification</span></td>
+                    <span class="newStyle1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Document Verification</span>
+        </div>
+        <div>
+            <table class="w-100">
+            <tr>
+                <td class="auto-style1">&nbsp;</td>
+                <td class="auto-style2">&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
             </tr>
             <tr>
                 <td class="auto-style1">&nbsp;</td>
-                <td>&nbsp;</td>
+                <td class="auto-style2">&nbsp;</td>
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
             </tr>
             <tr>
                 <td class="auto-style1">&nbsp;</td>
-                <td>
+                <td class="auto-style2">
                                     <asp:Label ID="Label1" runat="server" Font-Bold="True" Font-Size="Large" ForeColor="Black" Text="Document Type"></asp:Label>
                                 </td>
                 <td>
@@ -46,16 +53,28 @@
             </tr>
             <tr>
                 <td class="auto-style1">&nbsp;</td>
-                <td>&nbsp;</td>
+                <td class="auto-style2">&nbsp;</td>
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
             </tr>
             <tr>
                 <td class="auto-style1">&nbsp;</td>
                 <td colspan="2" rowspan="5">
-                    <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                    
+                </td>
+                <td>&nbsp;</td>
+            </tr>
+        </table>
+        </div>
+        <div>
+
+            <table class="w-100">
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>
+                        <asp:UpdatePanel ID="UpdatePanel1" runat="server">
                             <ContentTemplate>
-                                <asp:GridView ID="GvDocument" runat="server" AllowPaging="True" AutoGenerateColumns="False" BackColor="White" BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px" CellPadding="3" CssClass="table table-bordered" ForeColor="Black" GridLines="None" OnPageIndexChanging="GvDocument_PageIndexChanging" PageSize="5">
+                                <asp:GridView ID="GvDocument" runat="server" AllowPaging="True" AutoGenerateColumns="False" BackColor="White" BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px" CellPadding="3" CssClass="table table-bordered" ForeColor="Black" GridLines="None" OnPageIndexChanging="GvDocument_PageIndexChanging" PageSize="5" ShowHeaderWhenEmpty="True">
                                     <AlternatingRowStyle BackColor="#CCCCCC" />
                                     <Columns>
                                         <asp:BoundField DataField="Doc_Id" HeaderText="Document ID" />
@@ -94,32 +113,12 @@
                                 <asp:AsyncPostBackTrigger ControlID="DdlDocument" EventName="SelectedIndexChanged" />
                             </Triggers>
                         </asp:UpdatePanel>
-                </td>
-                <td>&nbsp;</td>
-            </tr>
-            <tr>
-                <td class="auto-style1">&nbsp;</td>
-                <td>&nbsp;</td>
-            </tr>
-            <tr>
-                <td class="auto-style1">&nbsp;</td>
-                <td>&nbsp;</td>
-            </tr>
-            <tr>
-                <td class="auto-style1">&nbsp;</td>
-                <td>&nbsp;</td>
-            </tr>
-            <tr>
-                <td class="auto-style1">&nbsp;</td>
-                <td>&nbsp;</td>
-            </tr>
-            <tr>
-                <td class="auto-style1">&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-            </tr>
-        </table>
+                        &nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+            </table>
+
+        </div>
 
     </div>
 </asp:Content>

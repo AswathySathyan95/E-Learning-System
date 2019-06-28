@@ -156,19 +156,7 @@
                                         </strong>
                                     </td>
                                 </tr>
-                                <tr>
-                                    <td class="auto-style10">
-                                        <strong><em>
-                                        <asp:Label ID="Label7" runat="server" Text="Quiz Score(in %)" CssClass="newStyle8" Font-Bold="True"></asp:Label>
-                                        </em></strong>
-                                    </td>
-                                    <td class="auto-style10">
-                                        <strong>
-                                        <asp:Label ID="LblPercentage" runat="server" Text="Label" CssClass="newStyle8"></asp:Label>
-                                        </strong>
-                                    </td>
-                                </tr>
-                            </table>
+                                </table>
 
                         </div>
                     </div>
